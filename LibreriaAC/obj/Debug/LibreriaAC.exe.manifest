@@ -102,7 +102,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vtx2j6F/auKnwCCFQkfIZc2GJGmpUx1xRSNMIE51YGY=</dsig:DigestValue>
+        <dsig:DigestValue>K+skFFxG57W0NRsRHdvAOEDSJo9qpxu4GBK9zVVF+98=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1266,19 +1266,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yHw6cISD92PtgkKF8nC6JyJpfw7iXsfbEFvYPYDEG5s=</dsig:DigestValue>
+        <dsig:DigestValue>/FUv1PK+EiMiUxoOOA925PdzmHHnBQSZevcBfXxrowU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaAC.exe" size="1223680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaAC.exe" size="1218560">
       <assemblyIdentity name="LibreriaAC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/h3P506b1FzVUk0LtExlhsIiXj0W61p+DQcEABLsuys=</dsig:DigestValue>
+        <dsig:DigestValue>pCRe+cP0lHiVloGjPX/LOUotDZO2LewNZP/yxJyjPys=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1290,7 +1290,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5EyswiGMGxGt/Cha+Zx4oHI2nLib0tz+X770wvkC3Zc=</dsig:DigestValue>
+        <dsig:DigestValue>vKSeD1fP/TNJhlacXCpLSqUC2Jzp3nqDjvz3QnaNf5I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1331,14 +1331,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.VSHelp.dll" size="27168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.VSHelp.dll" size="27384">
       <assemblyIdentity name="Microsoft.VisualStudio.VSHelp" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a8GRxBL4X9L8oqHfLEBnLDNkqJEWIWSe2H7BOw/+4EM=</dsig:DigestValue>
+        <dsig:DigestValue>KdgvCS+4wk4jorRqttLdkzb+KszSMp4yCbKjifZ8hGA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -49,8 +49,8 @@ namespace Presentacion
                 if (Globales.ip == null)
                 {
                 //  Globales.ip = "200.51.42.91";
-                 Globales.ip = "localhost";
-                //Globales.ip = "10.1.10.202";
+                //Globales.ip = "localhost";
+                Globales.ip = "10.1.10.202";
 
                 /*Configuration conf = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
                 ConnectionStringsSection css = conf.ConnectionStrings;

@@ -68,3 +68,14 @@ C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaNegocios.csproj.GenerateRes
 C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaL.dll
 C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaL.pdb
 C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\LogicaL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\LogicaL.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\DatosL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\WhatsAppApi.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\DatosL.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\MySql.Data.xml
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Debug\LogicaNegocios.Properties.Resources.resources
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Debug\LogicaNegocios.csproj.GenerateResource.Cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Debug\LogicaL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Debug\LogicaL.pdb

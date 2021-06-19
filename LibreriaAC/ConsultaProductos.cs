@@ -82,10 +82,11 @@ namespace Presentacion
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Boolean respuesta;
+            /*Boolean respuesta;
             string x = "X";
             string p = "P";
-            respuesta = this.axPrinterFiscal1.CloseJournal(ref x,ref p);
+          //  respuesta = this.axPrinterFiscal1.CloseJournal(ref x,ref p);
+          */
 
         }
 

@@ -38,8 +38,8 @@ namespace AccesoaDatos
             {
                 //server = "200.51.42.91";
                 //  server = "200.51.42.91"; 
-               server = "127.0.0.1"; 
-               //server = "10.1.10.202";
+               //server = "localhost"; 
+               server = "10.1.10.202";
             }
 
             else
@@ -48,7 +48,7 @@ namespace AccesoaDatos
             }
             database = basededatos;
             uid = "root";
-            password = "Libreria99";
+            password = "123123";
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
             connectionString1 = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
         }
@@ -58,7 +58,7 @@ namespace AccesoaDatos
           //  server = "200.51.42.91";
             database = "libreria";
             uid = "root";
-            password = "Libreria99";
+            password = "123123";
             return connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
         }
 

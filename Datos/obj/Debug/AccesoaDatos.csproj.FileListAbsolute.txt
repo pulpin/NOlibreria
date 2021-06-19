@@ -41,3 +41,9 @@ C:\servidor nuevo\Libreria AC\Datos\bin\Debug\MySql.Data.xml
 C:\servidor nuevo\Libreria AC\Datos\obj\Debug\DatosL.dll
 C:\servidor nuevo\Libreria AC\Datos\obj\Debug\DatosL.pdb
 C:\servidor nuevo\Libreria AC\Datos\obj\Debug\AccesoaDatos.csprojResolveAssemblyReference.cache
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\bin\Debug\DatosL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\bin\Debug\DatosL.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\bin\Debug\MySql.Data.xml
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\obj\Debug\AccesoaDatos.csprojResolveAssemblyReference.cache
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\obj\Debug\DatosL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\obj\Debug\DatosL.pdb
