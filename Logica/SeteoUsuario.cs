@@ -1,0 +1,325 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using AccesoaDatos;
+using MySql.Data.MySqlClient;
+
+namespace LogicaNegocios
+{
+    public class SeteoUsuario
+    {
+        string _colorfondo;
+        int _usuide;
+        public bool tryLogin(string username, string password)
+        {
+            try
+            {
+                
+                Conexion con = new Conexion("libreria",Globales.ip);
+                con.AbrirConexio();
+                
+
+                MySqlDataReader reader = null;
+                reader = con.Consultas("SELECT * FROM usuarios.usuarios WHERE USU_NOMBRE = '" + username + "' AND USU_CONTRASE = '" + password + "';");
+                //reader = con.Consultas("SELECT * FROM usuarios.usuarios as us WHERE USU_USUARIO = '" + username + "' AND USU_CONTRASENIA = '" + password + "';");
+
+                if (reader.Read() != false)
+                {
+                    if (reader.IsDBNull(0) == true)
+                    {
+                        reader.Dispose();
+                        return false;
+                    }
+                    else
+                    {
+                        LogicaNegocios.Globales.gbUsuario = reader["USU_NOMBRE"].ToString();
+                        LogicaNegocios.Globales.gbLocalidad = "Río Gallegos";
+                        LogicaNegocios.Globales.gbLocalide = 1;
+                        LogicaNegocios.Globales.gbUsuide = Convert.ToInt32(reader["USU_IDE"].ToString());
+                        LogicaNegocios.Globales.gbtipousuario = "Administrativo";
+
+
+                       // Conexion con1 = new Conexion("usuarios",Globales.ip);
+                        con.AbrirConexio();
+                        MySqlDataReader reader1 = null;
+                        /*reader1 = con.Consultas("SELECT menu_nombre,per_acceder,per_modificar " +
+                            " From usuarios.permisos " +
+                            " LEFT JOIN usuarios.menu ON menu_ide=per_menu_ide and menu_prog_ide=per_prog_ide " +
+                            " WHERE per_usu_ide= " + LogicaNegocios.Globales.gbUsuide + " AND per_prog_ide= 16;");
+                            */
+                        /*  reader1 = con.Consultas("SELECT MOD_NOMBRE,PER_TIPO FROM usuarios.permisos LEFT JOIN " +
+                                                  " usuarios.modulo on PER_MOD_IDE = MOD_IDE where " +
+                                                  " PER_USU_IDE = "+ Globales.gbUsuide +" and MOD_PROG_IDE = 2 order by PER_MOD_IDE; ");
+
+                          */
+
+                        LogicaNegocios.Globales.accesoaproductos = 0;
+                        LogicaNegocios.Globales.eliminarproductos = 0;
+                        LogicaNegocios.Globales.registrodeventas = 0;
+                        LogicaNegocios.Globales.accesoareservas = 0;
+                        LogicaNegocios.Globales.accesoaeditoriales = 0;
+                        LogicaNegocios.Globales.accesoaclientes = 0;
+                        LogicaNegocios.Globales.accesoacuentacorriente = 0;
+                        LogicaNegocios.Globales.accesoaconsignas = 0;
+                        LogicaNegocios.Globales.accesoarendiciones = 0;
+                        LogicaNegocios.Globales.accesoainteres = 0;
+                        LogicaNegocios.Globales.accesoacargarapida = 0;
+                        LogicaNegocios.Globales.accesoapedidos = 0;
+                        LogicaNegocios.Globales.accesoausuarios = 0;
+                        LogicaNegocios.Globales.imprimirfactura = 0;
+
+                        reader1 = con.Consultas(" SELECT menu_nombre,per_acceder,per_modificar " +
+                                                                " FROM usuarios.menu " +
+                                                                " LEFT JOIN usuarios.permisos ON(menu_ide = per_menu_ide) AND(menu_prog_ide = per_prog_ide) AND(per_usu_ide = " + Globales.gbUsuide + ") " +
+                                                                " WHERE menu_prog_ide = 2 " +
+                                                                " ORDER BY menu_codigo");
+
+                        if (reader1.HasRows == false)
+                        {
+                            LogicaNegocios.Globales.gbtipousuario = "Administrativo";
+                        }
+
+                        while (reader1.Read())
+                        {
+                            //menu modificar
+                            if ((reader1["menu_nombre"].ToString() == "Productos"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaproductos = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaproductos = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Eliminar productos"))
+                            {
+                                // if (!reader1.IsDBNull(reader1.GetOrdinal("per_acceder")))
+                                //myReader2.GetInt32(myReader2.GetOrdinal("prog_version")
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                              /*  if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.eliminarproductos = 1;
+                                }*/
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.eliminarproductos = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Registro de ventas"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.registrodeventas = 1;
+                                }
+                               
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Reservas"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoareservas = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoareservas = 2;
+                                }
+                            }
+                            if ((reader1["menu_nombre"].ToString() == "Editoriales"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaeditoriales = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaeditoriales = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Clientes"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaclientes = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaclientes = 2;
+                                }
+                            }
+                            if ((reader1["menu_nombre"].ToString() == "Cuenta Corriente"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoacuentacorriente = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoacuentacorriente = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Consignas"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaconsignas = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoaconsignas = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Rendiciones"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoarendiciones = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoarendiciones = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Interes"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoainteres = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoainteres = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Carga rapida"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoacargarapida = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoacargarapida = 2;
+                                }
+                            }
+                            if ((reader1["menu_nombre"].ToString() == "Pedidos"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoapedidos = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoapedidos = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Usuarios"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoausuarios = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesoausuarios = 2;
+                                }
+                            }
+                            
+
+                            if ((reader1["menu_nombre"].ToString() == "Imprimir factura"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.imprimirfactura = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.imprimirfactura = 2;
+                                }
+                            }
+
+
+
+
+
+                        }
+
+
+                        reader.Dispose();
+                        
+                        return true;
+
+                    }
+
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+            catch (MySqlException)
+            {
+                //       MessageBox.Show("Se produjo un error al conectar a la Base de datos" + Convert.ToString(ex));
+                return false;
+            }
+        }
+        public void ModificarColorFondo()
+        {
+            Conexion con = new Conexion("usuarios", Globales.ip);
+            con.AbrirConexio();
+            string query = "UPDATE usuarios.usuarios SET USU_COLOR = '"+ Colorfondo + "' where USU_IDE = "+ Usuide +"";
+            con.InsertarYactualiza(query);
+        }
+
+        public string Colorfondo
+        {
+            set { this._colorfondo = value; }
+            get { return this._colorfondo; }
+        }
+        public int Usuide
+        {
+            set { this._usuide = value; }
+            get { return this._usuide; }
+        }
+    }
+}

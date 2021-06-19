@@ -1,0 +1,647 @@
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe.config
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe.manifest
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.application
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.pdb
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Logica.dll
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Datos.dll
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.exe.manifest
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.application
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.exe
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.pdb
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ElegirDestino.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaAfi.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaDiag.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaEsp.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaPres.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.Imagenes.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.Rechazo.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.Subirimagen.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ModificarDeri.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Principal.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Login.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.DerivacionUIa.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizados.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.AgregarAcom.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaProvee.resources
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.btnhotel.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe.config
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.exe
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.AgregarAcom.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.btnhotel.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizados.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaAfi.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaDiag.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaEsp.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.BusquedaPres.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaProvee.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.DerivacionUIa.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ElegirDestino.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.Imagenes.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Login.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ModificarDeri.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Principal.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.Rechazo.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\LogicaNegocios.Subirimagen.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe.manifest
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.application
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Logica.dll
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Datos.dll
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Logica.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Datos.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.exe.manifest
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.application
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\RdlCompile.cache
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\RdlCompile.compiled
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpActa.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpPasajes.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpHotel.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpSegui.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Impresumen.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\deri\derivacionesNew\bin\Debug\derivaciones.exe.config
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\deri\derivacionesNew\obj\Debug\derivaciones.exe
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\deri\derivacionesNew\obj\Debug\derivaciones.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.AgregaTurnos.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpCome.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarRhotel.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.RenovarHC.resources
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarRComedor.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\derivaciones.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Datos.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.AgregarAcom.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.AgregaTurnos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Autorizados.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizados.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaPres.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaProvee.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarRhotel.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarRcomedor.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarImportes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaPres1.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizadosF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarHistorico.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarDerivaciones.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizadosSF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarTicket.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.CargarTicket.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaLoc.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.DevoTicket.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Finalizar.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Importestramos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpCome.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Impresumen.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpHotel.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpSegui.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Principal.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.DerivacionUI.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ElegirDestino.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpActa.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpPasajes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Login.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ModificarDeri.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.RenovarHC.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\RdlCompile.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\RdlCompile.compiled
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\derivaciones.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BuscarAfiliado.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.VerDerivacion.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Comentarios.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImpSeguimiento.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.ImagenCompleta.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Subirimagen.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Imagenes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.VerDerivacionUI.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaDiag.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.BusquedaEsp.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Rechazo.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\derivaciones.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\derivaciones.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\derivaciones.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\derivaciones.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\derivaciones.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\derivaciones.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\derivaciones.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\Datos.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.AgregarAcom.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.AgregaTurnos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Autorizados.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarAfiliado.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizados.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaDiag.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaEsp.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaPres.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaProvee.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarRhotel.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarRcomedor.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarImportes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaPres1.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizadosF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarHistorico.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarDerivaciones.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarAutorizadosSF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BuscarTicket.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.CargarTicket.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.BusquedaLoc.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Comentarios.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.VerDerivacionUI.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImagenCompleta.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImpSeguimiento.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.VerDerivacion.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.DevoTicket.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Finalizar.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Importestramos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImpCome.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Impresumen.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImpHotel.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImpSegui.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Principal.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.DerivacionUI.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ElegirDestino.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Imagenes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImpActa.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ImpPasajes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Login.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.ModificarDeri.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Rechazo.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.RenovarHC.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.Subirimagen.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\RdlCompile.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\RdlCompile.compiled
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\derivaciones.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\derivacionesNew\obj\Debug\derivaciones.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones viejo\derivacionesNew\bin\Debug\derivaciones.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones viejo\derivacionesNew\obj\Debug\derivaciones.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones viejo\derivacionesNew\obj\Debug\derivaciones.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\derivacionesNew\obj\Debug\Presentacion.Barra.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Principal.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Login.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Datos.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Viajes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.CargaViaje.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.CargaHorarios.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Turnos.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Turnos.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Turnos.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Turnos.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Turnos.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Turnos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.ListadoDias.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.DiasF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Sobreturno.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.CambiaFecha.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.Aviso.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Turnos.exe.licenses
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.csprojFakesResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\b\DevExpress.Data.v14.1.Fakes.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\b\DevExpress.Data.v14.1.Fakes.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\b\DevExpress.Data.v14.1.Fakes.xml
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\b\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.ah
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.ch
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.cs
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.csproj
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.fakes
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.fakesconfig
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\f.snk
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\o\DevExpress.Data.v14.1.Fakes.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\o\DevExpress.Data.v14.1.Fakes.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\o\f.csproj.FileListAbsolute.txt
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\ded141\o\f.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Fakes\fakes.args
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.CargarAfiliado.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.HistoriaAtencion.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\Presentacion.ImprimirPacientes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\RdlCompile.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\derivacionesNew\obj\Debug\RdlCompile.compiled
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\Turnos.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\Turnos.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\Turnos.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.csprojFakesResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Aviso.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.BusquedaPacientes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.CambiaFecha.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.CargaHorarios.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.CargarAfiliado.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.CargaViaje.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.DiasF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.HistoriaAtencion.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.ImprimirPacientes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.ListadoDias.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Principal.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Login.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Sobreturno.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Turnos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.TurnosdeHoy.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.Viajes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Turnos.exe.licenses
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\RdlCompile.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\RdlCompile.compiled
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Turnos.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Turnos.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\obj\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\LogicaT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\LogicaT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\itextsharp.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\DevExpress.Data.v14.1.Fakes.fakesconfig
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\DatosT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\DerivacionesNew\bin\Debug\DatosT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\DerivacionesNew\bin\Debug\Turnos.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\DerivacionesNew\obj\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\DerivacionesNew\obj\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.exe.config
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.exe
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\itextsharp.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\LogicaT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\DatosT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\LogicaT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\bin\Debug\DatosT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.csprojFakesResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Aviso.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaPacientes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CambiaFecha.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CargaHorarios.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CargarAfiliado.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CargaViaje.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.DiasF.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.HistoriaAtencion.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.ImprimirPacientes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.ListadoDias.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Principal.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Login.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Sobreturno.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Turnos.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.TurnosdeHoy.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Viajes.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.exe.licenses
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\RdlCompile.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\RdlCompile.compiled
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.exe.manifest
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.application
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaAfiV.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaTurV.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.DatosAfiliados.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Turnos2.resources
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Listadoporloc.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.exe.config
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.exe
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.pdb
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Aviso.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaPacientes.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CambiaFecha.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CargaHorarios.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CargarAfiliado.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.CargaViaje.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.DiasF.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.BusquedaAfiV.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.HistoriaAtencion.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.ListadoDias.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Principal.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Login.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Properties.Resources.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Sobreturno.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Turnos.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Turnos2.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.Viajes.resources
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.exe.licenses
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.exe.manifest
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.application
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.exe
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\Turnos.pdb
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\LogicaT.dll
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\MySql.Data.dll
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\DatosT.dll
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\LogicaT.pdb
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\MySql.Data.xml
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\DatosT.pdb
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.exe.manifest
+C:\servidor nuevo\Turno alberdi\TurnosAlberdi\obj\Debug\Turnos.application
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\Turnos.exe.config
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\Turnos.exe.manifest
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\Turnos.application
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\Turnos.exe
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\Turnos.pdb
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\LogicaT.dll
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\MySql.Data.dll
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\DatosT.dll
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\LogicaT.pdb
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\MySql.Data.xml
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\DatosT.pdb
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Aviso.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.BusquedaAfi.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.BusquedaPacientes.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.CambiaFecha.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.CargaHorarios.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.CargarAfiliado.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.CargaViaje.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.DiasF.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.BusquedaAfiV.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.HistoriaAtencion.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.ListadoDias.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Principal.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Login.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Properties.Resources.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Sobreturno.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Turnos.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Turnos2.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.Viajes.resources
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Turnos.exe.licenses
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Turnos.exe.manifest
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Turnos.application
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Turnos.exe
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\obj\Debug\Turnos.pdb
+C:\servidor nuevo\Libreria AC\TurnosAlberdi\bin\Debug\LibreriaAC.exe.config
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LibreriaAC.exe.config
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LibreriaAC.exe.manifest
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LibreriaAC.application
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LibreriaAC.exe
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LibreriaAC.pdb
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.Common.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.Interop.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.StructuralParser.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.VSCore.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Data.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.Data.v6.3.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.Utils.v6.3.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.XtraBars.v6.3.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.XtraEditors.v6.3.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.XtraTreeList.v6.3.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Decompiler.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Localization.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.MetaData.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Parser.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Platform.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.IntelliRush.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Utils.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraBars.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraGrid.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraLayout.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraPrinting.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraScheduler.v15.1.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraScheduler.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LogicaL.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\MySql.Data.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\WhatsAppApi.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DatosL.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.XtraLayout.v6.3.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.AssemblyResolver.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Mvvm.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Mvvm.UI.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.RichEdit.v15.1.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraTreeList.v15.1.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\Microsoft.MSXML.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Office.v15.1.Core.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\LogicaL.pdb
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.Common.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.Core.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.StructuralParser.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.CodeRush.VSCore.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Data.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.MetaData.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.DXCore.Parser.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Utils.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraBars.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraGrid.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraLayout.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraPrinting.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraScheduler.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraScheduler.v15.1.Core.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\MySql.Data.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DatosL.pdb
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.RichEdit.v15.1.Core.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.XtraTreeList.v15.1.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\DevExpress.Office.v15.1.Core.xml
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraBars.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraBars.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraBars.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraBars.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraLayout.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraLayout.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraLayout.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraLayout.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraPrinting.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraPrinting.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraPrinting.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraPrinting.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraScheduler.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraScheduler.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraScheduler.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraScheduler.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.RichEdit.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.RichEdit.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.RichEdit.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.RichEdit.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.XtraTreeList.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.XtraTreeList.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.XtraTreeList.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.XtraTreeList.v15.1.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\de\DevExpress.Office.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\es\DevExpress.Office.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ja\DevExpress.Office.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\Interop.EPSON_Impresora_Fiscal.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\bin\Debug\AxInterop.EPSON_Impresora_Fiscal.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Interop.EPSON_Impresora_Fiscal.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\AxInterop.EPSON_Impresora_Fiscal.dll
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.csproj.ResolveComReference.cache
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaProducto.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.CantiInte.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.CargarCantidad.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Cobrar.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaPrecios.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaProductosAgrega.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaProductos.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Elegirpto.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.EnvioWhats.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Facturar.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ImagenCompleta.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaInteres.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Principal.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Login.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Properties.Resources.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.exe.licenses
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.exe.manifest
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.application
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.exe
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.pdb
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.IngresoClave.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaCliente.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaCliente.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaconsignaMae.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasConsignas.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasConsignasD.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaProductoConsigna.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaProductosAgregaC.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasRendiciones.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasRendicionesD.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaRendicionMae.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaUsuarios.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaPermisos.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaVentas.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaVentasProduc.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaUsuario.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaReserva.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaClienteLi.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaProductosAgregaRe.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ModificaReserva.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.IngresoClaveRe.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Cargarapida.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaMoviVtas.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasEditoriales.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.CambioPrecio.resources
+C:\servidor nuevo\Libreria ACn\LibreriaAC\bin\Debug\LibreriaAC.exe.config
+C:\servidor nuevo\Libreria ACn\LibreriaAC\obj\Debug\Interop.EPSON_Impresora_Fiscal.dll
+C:\servidor nuevo\Libreria ACn\LibreriaAC\obj\Debug\AxInterop.EPSON_Impresora_Fiscal.dll
+C:\servidor nuevo\Libreria ACn\LibreriaAC\obj\Debug\Presentacion.csproj.ResolveComReference.cache
+C:\servidor nuevo\Libreria ACn\LibreriaAC\obj\Debug\LibreriaAC.exe
+C:\servidor nuevo\Libreria ACn\LibreriaAC\obj\Debug\LibreriaAC.pdb
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaEditoriales.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaEditorial.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaCC.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaClienteCC.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.csproj.LibreriaAC.exe.config
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ventasentrefechas1.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaAjustes.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaAjuste.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasLugares.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaDeposito.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasLugaresHis.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.AltaPedido.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.reservasentrefecha.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.hacerpedido.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaPedidosR.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.lbstock.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.DevolucionConsigna.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ControlaConsignas.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.MovimientosdeProducto.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Proforma.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaProfor.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaPedidosRealizados.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaReservas.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.Viejo.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasHistoricoDev.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultasHistoricoD.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.ConsultaCuentaCorriente.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.PagarCC.resources
+C:\servidor nuevo\Libreria AC\LibreriaAC\obj\Debug\Presentacion.NotadeCredito.resources
+C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\bin\Debug\LibreriaAC.exe.config
+C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\obj\Debug\Presentacion.csproj.ResolveComReference.cache
+C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.exe
+C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.pdb

@@ -1,0 +1,70 @@
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Logica.dll
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Datos.dll
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\Logica.dll
+C:\Users\hmarsiglia.CSS\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Logica.dll
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Datos.dll
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Datos.pdb
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\Logica.dll
+C:\Users\homarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Datos.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\derivaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\obj\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\obj\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\bin\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\bin\Debug\Datos.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\para interior\Logica\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\bin\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\bin\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\bin\Debug\Datos.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\bin\Debug\Datos.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\obj\Debug\Logica.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turnos\Logica\obj\Debug\Logica.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\LogicaT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\LogicaT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\obj\Debug\LogicaT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\obj\Debug\LogicaT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\DatosT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\DatosT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\bin\Debug\LogicaT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\bin\Debug\LogicaT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\bin\Debug\DatosT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\bin\Debug\DatosT.pdb
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\obj\Debug\LogicaT.dll
+C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno alberdi\Logica\obj\Debug\LogicaT.pdb
+C:\servidor nuevo\Turno alberdi\Logica\bin\Debug\LogicaT.dll
+C:\servidor nuevo\Turno alberdi\Logica\bin\Debug\LogicaT.pdb
+C:\servidor nuevo\Turno alberdi\Logica\bin\Debug\DatosT.dll
+C:\servidor nuevo\Turno alberdi\Logica\bin\Debug\MySql.Data.dll
+C:\servidor nuevo\Turno alberdi\Logica\bin\Debug\DatosT.pdb
+C:\servidor nuevo\Turno alberdi\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\servidor nuevo\Turno alberdi\Logica\obj\Debug\LogicaT.dll
+C:\servidor nuevo\Turno alberdi\Logica\obj\Debug\LogicaT.pdb
+C:\servidor nuevo\Turno alberdi\Logica\bin\Debug\MySql.Data.xml
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\LogicaL.dll
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\LogicaL.pdb
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\DatosL.dll
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\MySql.Data.dll
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\WhatsAppApi.dll
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\DatosL.pdb
+C:\servidor nuevo\Libreria AC\Logica\bin\Debug\MySql.Data.xml
+C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaNegocios.Properties.Resources.resources
+C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaNegocios.csproj.GenerateResource.Cache
+C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaL.dll
+C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaL.pdb
+C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
