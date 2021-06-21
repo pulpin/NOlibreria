@@ -646,11 +646,6 @@ C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\obj\Debug\Presentacion.csproj.Reso
 C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.exe
 C:\Users\hugoo\Desktop\Libreria AC\LibreriaAC\obj\Debug\LibreriaAC.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\LibreriaAC.exe.config
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Interop.EPSON_Impresora_Fiscal.dll
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\AxInterop.EPSON_Impresora_Fiscal.dll
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.csproj.ResolveComReference.cache
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.exe
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\LibreriaAC.exe.manifest
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\LibreriaAC.application
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\LibreriaAC.exe
@@ -685,6 +680,7 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\DevExpress.XtraSch
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\DevExpress.XtraScheduler.v15.1.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\LogicaL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\MySql.Data.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\WhatsAppApi.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\DatosL.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\DevExpress.DXCore.Controls.XtraLayout.v6.3.dll
@@ -768,7 +764,6 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\de\DevExpress.Xtra
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\es\DevExpress.XtraVerticalGrid.v15.1.resources.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.1.resources.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.1.resources.dll
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\de\DevExpress.RichEdit.v15.1.Core.resources.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\es\DevExpress.RichEdit.v15.1.Core.resources.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\ja\DevExpress.RichEdit.v15.1.Core.resources.dll
@@ -785,6 +780,9 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\Interop.EPSON_Impr
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\bin\Debug\AxInterop.EPSON_Impresora_Fiscal.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.csproj.LibreriaAC.exe.config
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Interop.EPSON_Impresora_Fiscal.dll
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\AxInterop.EPSON_Impresora_Fiscal.dll
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.csproj.ResolveComReference.cache
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.NotadeCredito.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.PagarCC.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.AltaPedido.resources
@@ -857,3 +855,5 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.cspro
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.exe.licenses
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.exe.manifest
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.application
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.exe
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.pdb

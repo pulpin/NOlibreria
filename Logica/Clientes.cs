@@ -12,7 +12,7 @@ namespace LogicaNegocios
     public class Clientes
     {
         string _cuit, _razonsocial, _domicilio, _telefono, _nombre;
-        int _situacion, _alta, _clienteide, _dni, _cliide, _consultapornombre;
+        int _situacion, _alta, _clienteide, _dni, _consultapornombre;
         public DataTable Mostrar_clientes()
         {
             Conexion con = new Conexion("libreria", Globales.ip);

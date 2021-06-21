@@ -16,7 +16,7 @@ namespace Presentacion
 {
     public partial class CambioPrecio : Form
     {
-        int tipop = 0;
+       // int tipop = 0;
        // string server = "127.0.0.1";
         string server = "10.1.10.202";
         string database = "libreria";
@@ -24,7 +24,7 @@ namespace Presentacion
                     string password = "123123";
 
         Productos pro = new Productos();
-        int rendicionide;
+        //int rendicionide;
         int codigoproveeausar, contar = 0;
         Thread hilo, hilonuevo;
         public CambioPrecio()

@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="LibreriaAC.exe.manifest" size="82498">
+    <dependentAssembly dependencyType="install" codebase="LibreriaAC.exe.manifest" size="81033">
       <assemblyIdentity name="LibreriaAC.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jFt/xMsc+nlGiSoAV3ylKhO+alzekID3rl6E75/5t/4=</dsig:DigestValue>
+        <dsig:DigestValue>k3Bfw2+GUq2Bv5GSvjDVXi8I01YMtGsHCY5ujBbgw8E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

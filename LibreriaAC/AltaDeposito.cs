@@ -17,7 +17,7 @@ namespace Presentacion
         private int _alta, _cantidad, _clienteide, _tipo, _usuide,_numero, _ide, _lugar, _habia;
         private string _codigo, _cuit, _razonsocial, _domicilio, _telefono;
         private string _nombre, _nombrecompleto, _contra, _contravta;
-        string _titulo, _calle, _localidad, _provincia, _cliente,_precio;
+        string _titulo, _calle, _localidad, _provincia, _cliente;
         public AltaDeposito()
         {
             InitializeComponent();

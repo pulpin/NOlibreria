@@ -71,6 +71,7 @@ C:\servidor nuevo\Libreria AC\Logica\obj\Debug\LogicaNegocios.csprojResolveAssem
 C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\LogicaL.dll
 C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\LogicaL.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\DatosL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\MySql.Data.dll
 C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\WhatsAppApi.dll
 C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\DatosL.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Debug\MySql.Data.xml
