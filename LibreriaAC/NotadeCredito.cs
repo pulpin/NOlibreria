@@ -253,10 +253,10 @@ pnombrecli, pcuit, pdire, ptipo;
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Boolean respuesta;
+         /*   Boolean respuesta;
             string x = "X";
             string p = "P";
-            respuesta = this.axPrinterFiscal1.CloseJournal(ref x, ref p);
+            respuesta = this.axPrinterFiscal1.CloseJournal(ref x, ref p);*/
         }
 
         private void imprimirticket()
@@ -270,20 +270,20 @@ pnombrecli, pcuit, pdire, ptipo;
             string controlinterno = "Codigo interno: 1546";
 
             string argumento = "G";
-            respuesta = this.axPrinterFiscal1.OpenTicket(ref argumento);
+           // respuesta = this.axPrinterFiscal1.OpenTicket(ref argumento);
 
             string estado = "C";
-            respuesta = this.axPrinterFiscal1.Status(ref estado);
+            //respuesta = this.axPrinterFiscal1.Status(ref estado);
 
             string establece = "S";
             string linea11 = "11";
             string linea12 = "12";
             string linea13 = "13";
 
-            this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea11, ref controlinterno);
+          /*  this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea11, ref controlinterno);
             this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea12, ref atendido);
             this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea13, ref cantiarti);
-
+            */
             string articulo = "Mochila negra palo";
             string cantidad = Convert.ToString(1 * 1000);
             string precioUnitario = Convert.ToString(1 * 100);
@@ -300,7 +300,7 @@ pnombrecli, pcuit, pdire, ptipo;
             string importeabona = Convert.ToString(1 * 100);
             string descripcion = "T";
 
-            this.axPrinterFiscal1.SendTicketItem(ref articulo, ref cantidad, ref precioUnitario, ref iva, ref venta, ref bultos, ref ImpuestosInternos);
+         /*   this.axPrinterFiscal1.SendTicketItem(ref articulo, ref cantidad, ref precioUnitario, ref iva, ref venta, ref bultos, ref ImpuestosInternos);
 
             this.axPrinterFiscal1.GetTicketSubtotal(ref printer, ref texto);
 
@@ -308,7 +308,7 @@ pnombrecli, pcuit, pdire, ptipo;
 
             this.axPrinterFiscal1.CloseTicket();
 
-            this.nroticket = this.axPrinterFiscal1.AnswerField_3;
+            this.nroticket = this.axPrinterFiscal1.AnswerField_3;*/
             MessageBox.Show("el número del ticket es:" + nroticket);
            // puntodevta = this.axPrinterFiscal1.AnswerField_4;
            // MessageBox.Show("punto de venta:" + puntodevta);
@@ -316,7 +316,7 @@ pnombrecli, pcuit, pdire, ptipo;
 
         private void imprimirticketNueva()
         {
-            int tipocomprobante = 1, id_modificador = 200; //1 es ticket 200 agregar venta
+            int tipocomprobante = 3, id_modificador = 200; //1 es ticket 200 agregar venta
             string productodesc = string.Empty; //descripción del producto
             string cantidad, precio, iva, codigointerno;
             double preciod;
@@ -435,7 +435,7 @@ pnombrecli, pcuit, pdire, ptipo;
         }
         private void imprimirticketNuevaB()
         {
-            int tipocomprobante = 2, id_modificador = 200, ptipodeiva=0; //1 es ticket 200 agregar venta
+            int tipocomprobante = 3, id_modificador = 200, ptipodeiva=0; //1 es ticket 200 agregar venta
             string productodesc = string.Empty; //descripción del producto
             string cantidad, precio, iva, codigointerno;
             double preciod;
@@ -582,7 +582,7 @@ pnombrecli, pcuit, pdire, ptipo;
         }
         private void imprimirticketNuevaA()
         {
-            int tipocomprobante = 2, id_modificador = 200, ptipodeiva = 0; //1 es ticket 200 agregar venta
+            int tipocomprobante = 3, id_modificador = 200, ptipodeiva = 0; //1 es ticket 200 agregar venta
             string productodesc = string.Empty; //descripción del producto
             string cantidad, precio, iva, codigointerno;
             double preciod;
@@ -1324,6 +1324,22 @@ pnombrecli, pcuit, pdire, ptipo;
             this.UltimaNota = this.Ultimavta;
             this.guardarnotadecreditodetalle();
                 //borrar el temporal
+                if (MessageBox.Show("¿Desea imprimir la nota de crédito?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (vta.ventipofactura == "T")
+                    {
+                        this.imprimirticketNueva();
+                    }
+                    else if (vta.ventipofactura == "A")
+                    {
+                        this.imprimirticketNuevaA();
+                    }
+                    else
+                    {
+                        this.imprimirticketNuevaB();
+                    }
+
+                }
             }
             this.resetearloscontroles();
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotadeCredito));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,7 +42,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lbfecha = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.axPrinterFiscal1 = new AxEPSON_Impresora_Fiscal.AxPrinterFiscal();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.lbtotalg = new System.Windows.Forms.Label();
@@ -78,7 +76,6 @@
             this.txtobs = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LUComprobante.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axPrinterFiscal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.conMSdebito.SuspendLayout();
             this.conMScredito.SuspendLayout();
@@ -212,15 +209,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // axPrinterFiscal1
-            // 
-            this.axPrinterFiscal1.Enabled = true;
-            this.axPrinterFiscal1.Location = new System.Drawing.Point(211, -9);
-            this.axPrinterFiscal1.Name = "axPrinterFiscal1";
-            this.axPrinterFiscal1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPrinterFiscal1.OcxState")));
-            this.axPrinterFiscal1.Size = new System.Drawing.Size(32, 32);
-            this.axPrinterFiscal1.TabIndex = 200;
             // 
             // dgvProductos
             // 
@@ -614,7 +602,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.axPrinterFiscal1);
             this.Controls.Add(this.lbfecha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.LUComprobante);
@@ -630,7 +617,6 @@
             this.Text = "Nota de crédito";
             this.Load += new System.EventHandler(this.Facturar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LUComprobante.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axPrinterFiscal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.conMSdebito.ResumeLayout(false);
             this.conMScredito.ResumeLayout(false);
@@ -653,7 +639,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Button button2;
-        private AxEPSON_Impresora_Fiscal.AxPrinterFiscal axPrinterFiscal1;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbtotalg;
