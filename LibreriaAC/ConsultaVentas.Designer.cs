@@ -86,6 +86,7 @@
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
+            this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // VEN_IDE
             // 
