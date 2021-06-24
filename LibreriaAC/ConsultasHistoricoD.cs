@@ -28,7 +28,7 @@ namespace Presentacion
         }
         private void cargar()
         {
-            double importeren=0,porcen;
+            //double importeren=0,porcen;
             ren.Codigo = this.Codigo;
             gConsulta.DataSource = ren.Mostrar_devolucionesdetalle();
            // gConsulta2.DataSource = ren.Mostrar_rendicionesdetallesagrupados();

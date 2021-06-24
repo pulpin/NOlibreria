@@ -213,7 +213,7 @@ namespace Presentacion
 
         private void Modificarprecioarticulos()
         {
-            string npproveedor, npcodigo, costo, nalta, modif;
+            string npproveedor, npcodigo, costo, modif;
             Decimal valor1, valor2, valor3,valor4,nuevovalor, nuevovalor2,diferencia;
 
           //  npproveedor = gridViewPintarFilas.GetRowCellValue(0, "proveedor").ToString();
@@ -323,7 +323,7 @@ namespace Presentacion
         private void dardealtaNuevaGrilla(Productos pro, int i)
         {
 
-            string precio2;
+           // string precio2;
             //precio2 = gridViewPintarFilas.GetRowCellValue(i, "precio").ToString();
             //precio2 = Convert.ToString(row.Cells[0].Value);
             //si es vacio es que no existe el articulo, crear nuevo
@@ -366,7 +366,7 @@ namespace Presentacion
 
         private void modificarproducto(Productos pro, int i)
         {
-            int titu=0,aut=0,edit=0;
+            int titu=0,edit=0;
 
             //titulo y autor
             if (chbTitulo.Checked == true)
@@ -929,8 +929,8 @@ namespace Presentacion
         private void recorrergrillasp1Articulos()
         {
             int Valor_Retornado = 0;
-            string cadenaconexion;
-            int contador = 0;
+          //  string cadenaconexion;
+           // int contador = 0;
           //  string server = "10.1.10.202";
            /* string server = "127.0.0.1";
             string database = "libreria";
@@ -1213,7 +1213,7 @@ namespace Presentacion
                 {
                     //dardealta(pro, i);
                     MessageBox.Show("ALTA");
-                    string precio2;
+                   // string precio2;
                    /* precio2 = gridViewPintarFilas.GetRowCellValue(i, "precio").ToString();
                     si es vacio es que no existe el articulo, crear nuevo
                     pro.Titulo = gridViewPintarFilas.GetRowCellValue(i, "titulo").ToString();
@@ -1482,10 +1482,10 @@ namespace Presentacion
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            string algo = "9789875645213";
+           /* string algo = "9789875645213";
             algo = algo.Substring(algo.Length-10);
             MessageBox.Show(algo);
-            string isbn = "950123654";
+            string isbn = "950123654";*/
         }
 
         private void button3_Click(object sender, EventArgs e)

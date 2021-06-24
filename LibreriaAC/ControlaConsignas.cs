@@ -131,7 +131,7 @@ namespace Presentacion
         private void cargar()
         {
 
-            int todos;
+           // int todos;
             LogicaNegocios.Venta ve = new LogicaNegocios.Venta();
 
             

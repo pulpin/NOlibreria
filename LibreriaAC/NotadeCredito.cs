@@ -145,9 +145,9 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         string pcantidadelegida,pcodigo, pnombre, peditorialu,ppreciou, psubtotal, ppreciouc,psubtotalc, pivavalor, pimportedeliva, piva, ppivavalor, ppimportedeliva, ppivavalor10, ppimportedeliva10,
 pnombrecli, pcuit, pdire, ptipo;
         string ptipofactu, ptipopag;
-        int ptipopagide, ptipopagideNuevo, retornar,pusuariopedidoide, pventemporalaborrar = 0, _notaparcial;
+        int ptipopagide, ptipopagideNuevo=0, retornar=0,pusuariopedidoide, pventemporalaborrar = 0, _notaparcial;
         double pventotal,pexento;
-        string nroticket;
+        string nroticket=string.Empty;
         public static int clientecuentacorriente;
         int _tipopago, _ultimavta, _ultimanota, nopedirclienteA = 0;
         object[] rowsenviar;

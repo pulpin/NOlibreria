@@ -99,6 +99,7 @@
             this.gConsulta.TabIndex = 195;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
+            
             // 
             // cmdmenugrid
             // 

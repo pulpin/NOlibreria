@@ -27,6 +27,8 @@ namespace Presentacion
         private void cargar()
         {
             gConsulta.DataSource = ve.Mostrar_ventas100();
+           // fechadesde.EditValue = DateTime.Today;
+           // fechahasta.EditValue = DateTime.Today;
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -156,6 +158,23 @@ namespace Presentacion
             ndc.Ultimavta = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["VEN_IDE"]));
             ndc.NotaParcial = 3;
             ndc.ShowDialog();
+        }
+
+        private void bbuscar_Click(object sender, EventArgs e)
+        {
+            DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
+            string fdesdee = fdesde.ToString("yyyy-MM-dd");
+
+            DateTime fhasta = Convert.ToDateTime(fechahasta.EditValue);
+            string fhastae = fhasta.ToString("yyyy-MM-dd");
+            int nrofac = 0;
+            if (txtnrofactu.Text != string.Empty)
+            {
+                nrofac = Convert.ToInt32(txtnrofactu.Text);
+            }
+
+            gConsulta.DataSource = ve.Mostrar_ventasporparametro(fdesdee, fhastae, nrofac);
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Presentacion
     public partial class Viejo : Form
     {
         Productos pro = new Productos();
-        int rendicionide;
+       // int rendicionide;
         int codigoproveeausar;
         int tipop = 0;
 

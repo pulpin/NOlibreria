@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class ConsultaCuentaCorriente : Form
     {
-        string senores, domi, dominro, tele;
+        string senores=string.Empty, domi=string.Empty, dominro=string.Empty, tele=string.Empty;
         int _codigo;
         Rendiciones ren = new Rendiciones();
         public ConsultaCuentaCorriente()
@@ -28,7 +28,7 @@ namespace Presentacion
         }
         private void cargar()
         {
-            double importe = 0, supago=0,totalapagar=0, porcen;
+           // double supago=0,totalapagar=0, porcen;
             // ren.Codigo = this.Codigo;
             Clientes cli = new Clientes();
             cli.Clienteide = this.Codigo;
