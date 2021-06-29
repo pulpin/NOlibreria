@@ -102,7 +102,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>csPVC23A5whPZr62sIulou8/GjqTcsI5UpD1GmoLTGM=</dsig:DigestValue>
+        <dsig:DigestValue>H/y/kuWsDVxLA668W5D71um92D+bay1S9OzOAaDaWas=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1271,14 +1271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaAC.exe" size="1218048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaAC.exe" size="1221632">
       <assemblyIdentity name="LibreriaAC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fDy/wtxE0PtB6gahL6ejNDYaLCIPIVY6wnP7zWmNEH0=</dsig:DigestValue>
+        <dsig:DigestValue>/VfFBt9wPoh/6yPhNw2druCwHLLZpnU32rYonz85844=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1290,7 +1290,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ir0+USOqW/YyAemdx9unlzltZiCKe4jcSB1sI4/JNM0=</dsig:DigestValue>
+        <dsig:DigestValue>IzmY8I6mAQOMnTIW0oMka8lauz1IKlsJyjxKS2Wfr8I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

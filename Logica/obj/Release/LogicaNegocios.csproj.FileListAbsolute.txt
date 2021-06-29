@@ -21,3 +21,15 @@ C:\servidor nuevo\Turno alberdi\Logica\bin\Release\DatosT.pdb
 C:\servidor nuevo\Turno alberdi\Logica\bin\Release\MySql.Data.xml
 C:\servidor nuevo\Turno alberdi\Logica\obj\Release\LogicaT.dll
 C:\servidor nuevo\Turno alberdi\Logica\obj\Release\LogicaT.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\LogicaL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\LogicaL.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\DatosL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\MySql.Data.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\WhatsAppApi.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\DatosL.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\bin\Release\MySql.Data.xml
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Release\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Release\LogicaNegocios.Properties.Resources.resources
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Release\LogicaNegocios.csproj.GenerateResource.Cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Release\LogicaL.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\obj\Release\LogicaL.pdb

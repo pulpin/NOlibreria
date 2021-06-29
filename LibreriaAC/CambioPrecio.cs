@@ -19,8 +19,10 @@ namespace Presentacion
        // int tipop = 0;
        // string server = "127.0.0.1";
         string server = "10.1.10.202";
+       // string server = "192.168.0.106";
         string database = "libreria";
-                    string uid = "cambioprecio";
+                  //  string uid = "cambioprecio";
+                    string uid = "root";
                     string password = "123123";
 
         Productos pro = new Productos();
@@ -760,8 +762,8 @@ namespace Presentacion
             MySqlCommand myCommand;
             // for (int i = 0; i < gridViewPintarFilas.DataRowCount; i++)
             //{
-            string pbarra, isbn=string.Empty;
-            int codigoeditorial=0;
+            string pbarra, isbn=string.Empty, codigoprovee = string.Empty;
+            int codigoeditorial=0,cambioprove=0,cambioedito=0;
 
 
             foreach (DataGridViewRow row in dgvProductos.Rows)
@@ -777,11 +779,21 @@ namespace Presentacion
                     {
                         codigoeditorial = Convert.ToInt32(lUEditorial.EditValue);
                         pprecio = Convert.ToDecimal(row.Cells[3].Value);
+                        if (chkprovee.Checked == true)
+                        { 
+                            codigoprovee = Convert.ToString(row.Cells[4].Value);
+                            cambioprove = 1;
+                        }
                     }
                     else
                     {
                         codigoeditorial = Convert.ToInt32(row.Cells[3].Value);
                         pprecio = Convert.ToDecimal(row.Cells[4].Value);
+                        if (chkprovee.Checked == true)
+                        {
+                           codigoprovee = Convert.ToString(row.Cells[5].Value);
+                            cambioprove = 1;
+                        }
                     }
 
                     string ptitulo = (Convert.ToString(row.Cells[1].Value)).ToUpper();
@@ -802,6 +814,10 @@ namespace Presentacion
                     {
                         pautor = "VARIOS";
                     }
+                    if (chbEditorial.Checked == true)
+                    {
+                        cambioedito = 1;
+                    }
                     // int peditorial = Convert.ToInt32(row.Cells[3].Value);
                     try
                     {
@@ -814,13 +830,27 @@ namespace Presentacion
                         if (numerodigitos == 13)
                         {
                             isbn = pbarra.Substring(pbarra.Length - 10);
-                            myCommand.CommandText = "spPrecioAutomatico";
+                            if (chksinimportarpre.Checked == true)
+                            {
+                                myCommand.CommandText = "spPrecioAutomaticos";
+                            }
+                            else
+                            { 
+                                myCommand.CommandText = "spPrecioAutomatico";
+                            }
                         }
                         else if (numerodigitos == 10)
                         {
                             isbn = pbarra;
                             pbarra = "978" + pbarra;
-                            myCommand.CommandText = "spPrecioAutomaticoi";
+                            if (chksinimportarpre.Checked == true)
+                            {
+                                myCommand.CommandText = "spPrecioAutomaticois";
+                            }
+                            else
+                            {
+                                myCommand.CommandText = "spPrecioAutomaticoi";
+                            }
                         }
                         myCommand.CommandType = CommandType.StoredProcedure;
                         myCommand.Parameters.AddWithValue("nbarra", pbarra);
@@ -830,6 +860,9 @@ namespace Presentacion
                         myCommand.Parameters.AddWithValue("neditorial", codigoeditorial);
                         myCommand.Parameters.AddWithValue("usuide", Globales.gbUsuide);
                         myCommand.Parameters.AddWithValue("nisbn", isbn);
+                        myCommand.Parameters.AddWithValue("ncambioe", cambioedito);
+                        myCommand.Parameters.AddWithValue("ncambiocp", cambioprove);
+                        myCommand.Parameters.AddWithValue("ncodprovee", codigoprovee);
 
                         MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                         //MySqlParameter ValorRetorno = new MySqlParameter("RETURN_VALUE", SqlDbType.Decimal);
@@ -1436,6 +1469,8 @@ namespace Presentacion
               //  lUEditorial.Visible = true;
               //  label3.Visible = true;
                 btndiferencia.Visible = true;
+                groupBox4.Visible = false;
+                groupBox5.Visible = true;
             }
         }
 
@@ -1446,6 +1481,8 @@ namespace Presentacion
                // lUEditorial.Visible = false;
                // label3.Visible = false;
                 btndiferencia.Visible = false;
+                groupBox4.Visible = true;
+                groupBox5.Visible = false;
             }
         }
 
@@ -1486,6 +1523,30 @@ namespace Presentacion
             algo = algo.Substring(algo.Length-10);
             MessageBox.Show(algo);
             string isbn = "950123654";*/
+        }
+
+        private void lUEditorial_EditValueChanged(object sender, EventArgs e)
+        {
+            if (lUEditorial.EditValue != null)
+            {
+                label6.Visible = false;
+            }
+            else
+            {
+                label6.Visible = true;
+            }
+        }
+
+        private void chkprovee_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkprovee.Checked == true)
+            {
+                label7.Visible = true;
+            }
+            else
+            {
+                label7.Visible = false;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

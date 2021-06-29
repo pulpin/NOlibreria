@@ -66,15 +66,71 @@ namespace Presentacion
         private void Altaeditorial()
         {
             Editorial edi = new Editorial();
-            edi.Titulo = txteditorial.Text;
-            edi.Calle = txtcalle.Text;
-            edi.Numero = Convert.ToInt32(txtnumero.Text);
-            edi.Porcentaje = Convert.ToInt32(txtporcentaje.Text);
-            edi.Localidad = txtlocalidad.Text;
-            edi.Provincia = txtprovincia.Text;
-            edi.Telefono = txttelefono.Text;
-            edi.Cuit = txtcuit.Text;
-            edi.Cliente = txtcliente.Text;
+            edi.Titulo = (txteditorial.Text).ToUpper();
+            if (txtcalle.Text == string.Empty)
+            {
+                edi.Calle = string.Empty;
+            }
+            else
+            {
+                edi.Calle = txtcalle.Text;
+            }
+            if (txtnumero.Text == string.Empty)
+            {
+                edi.Numero = 0;
+            }
+            else
+            {
+                edi.Numero = Convert.ToInt32(txtnumero.Text);
+            }
+            if (txtporcentaje.Text == string.Empty)
+            {
+                edi.Porcentaje = 0;
+            }
+            else
+            {
+                edi.Porcentaje = Convert.ToInt32(txtporcentaje.Text);
+            }
+            if (txtlocalidad.Text == string.Empty)
+            {
+                edi.Localidad = string.Empty;
+            }
+            else
+            {
+                edi.Localidad = txtlocalidad.Text;
+            }
+            if (txtprovincia.Text == string.Empty)
+            {
+                edi.Provincia = string.Empty;
+            }
+            else
+            {
+                edi.Provincia = txtprovincia.Text;
+            }
+            if (txttelefono.Text == string.Empty)
+            {
+                edi.Telefono = string.Empty;
+            }
+            else
+            {
+                edi.Telefono = txttelefono.Text;
+            }
+            if (txtcuit.Text == string.Empty)
+            {
+                edi.Cuit = string.Empty;
+            }
+            else
+            {
+                edi.Cuit = txtcuit.Text;
+            }
+            if (txtcliente.Text == string.Empty)
+            {
+                edi.Cliente = string.Empty;
+            }
+            else
+            {
+                edi.Cliente = txtcliente.Text;
+            }
             edi.Alta = 1;
             int resultado = edi.spAgregarEditorial();
             if (resultado == 0)
