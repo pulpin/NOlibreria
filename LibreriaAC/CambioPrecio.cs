@@ -21,9 +21,10 @@ namespace Presentacion
         string server = "10.1.10.202";
        // string server = "192.168.0.106";
         string database = "libreria";
-                  //  string uid = "cambioprecio";
-                    string uid = "root";
-                    string password = "123123";
+        string uid = "cambioprecio";
+
+        //string uid = "hugo";
+        string password = "123123";
 
         Productos pro = new Productos();
         //int rendicionide;

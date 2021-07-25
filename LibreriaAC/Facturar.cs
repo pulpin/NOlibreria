@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogicaNegocios;
 using MySql.Data.MySqlClient;
+using System.Drawing.Printing;
 
 namespace Presentacion
 {
@@ -730,6 +731,210 @@ pnombrecli, pcuit, pdire, ptipo;
                 MessageBox.Show("Error al desconectar impresora: " + error.ToString());
             }
         }
+        private void imprimirtiqueadora()
+        {
+            string cabecera = "DISTRIBUIDORA AC SANTA CRUZ";
+            string dire = "Fagnano 197/9  Tel. 02966-437670";
+            string dire2 = "(9400) Rio Gallegos - Santa Cruz";
+            string dire3 = "e-mail libreriaacsantacruz@gmail.com";
+            string dire4 = "ALVADO JUAN CARLOS";
+            string dire5 = "CUIT Nro.: 20-13393350-7";
+            string dire6 = "IVA RESPONSABLE INSCRIPTO";
+            string dire7 = "A CONSUMIDOR FINAL";
+            string dire8 = "P.V. Nro.:0006 ";
+            string dire9 = "Nro.                             0000" + this.Ultimavta;
+            string dire10 = "Fecha: " + DateTime.Now;
+            
+
+            PrintDocument p = new PrintDocument();
+            p.PrintPage += (s, e) =>
+            {
+                e.Graphics.DrawString(cabecera,
+                                         new Font("Times New Roman", 13),
+                                         new SolidBrush(Color.Black),
+                                         new RectangleF(15, 5, p.DefaultPageSettings.PrintableArea.Width,
+                                                         p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire,
+                                     new Font("Times New Roman", 12),
+                                     new SolidBrush(Color.Black),
+                                     new RectangleF(5, 35, p.DefaultPageSettings.PrintableArea.Width,
+                                                     p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire2,
+                                     new Font("Times New Roman", 12),
+                                     new SolidBrush(Color.Black),
+                                     new RectangleF(5, 60, p.DefaultPageSettings.PrintableArea.Width,
+                                                     p.DefaultPageSettings.PrintableArea.Height));
+                e.Graphics.DrawString(dire3,
+                                     new Font("Times New Roman", 12),
+                                     new SolidBrush(Color.Black),
+                                     new RectangleF(5, 85, p.DefaultPageSettings.PrintableArea.Width,
+                                                     p.DefaultPageSettings.PrintableArea.Height));
+                e.Graphics.DrawString(dire4,
+                                     new Font("Times New Roman", 12),
+                                     new SolidBrush(Color.Black),
+                                     new RectangleF(5, 110, p.DefaultPageSettings.PrintableArea.Width,
+                                                     p.DefaultPageSettings.PrintableArea.Height));
+                e.Graphics.DrawString(dire5,
+                                    new Font("Times New Roman", 12),
+                                    new SolidBrush(Color.Black),
+                                    new RectangleF(5, 135, p.DefaultPageSettings.PrintableArea.Width,
+                                                    p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire6,
+                                   new Font("Times New Roman", 12),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, 160, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire7,
+                                   new Font("Times New Roman", 12),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, 185, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire8,
+                                   new Font("Times New Roman", 12),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, 210, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire9,
+                                   new Font("Times New Roman", 12),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, 235, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(dire10,
+                                   new Font("Times New Roman", 12),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, 260, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+
+                //imprime productos
+                string productodesc, cantidad , precio, iva, codigointerno, imprimeproducto, imprimeprecioporcanti, preciosubim,preciototalim;
+                double preciod,preciosub,preciototal;
+                int linea = 310;
+                int linea2 = 0;
+                foreach (DataGridViewRow row in dgvProductos.Rows)
+                {
+
+                    productodesc = Convert.ToString(row.Cells[2].Value);
+                    cantidad = Convert.ToString(row.Cells[0].Value);
+                    preciod = Convert.ToDouble(row.Cells[4].Value);
+                    preciosub = Convert.ToDouble(row.Cells[5].Value);
+                    precio = string.Format("{0:N4}", preciod);
+                    preciosubim = string.Format("{0:N4}", preciosub);
+                    //precio = Convert.ToString(preciod);
+                    // precio = precio.Replace(',', '.');
+                    iva = Convert.ToString(row.Cells[10].Value);
+                    codigointerno = Convert.ToString(row.Cells[1].Value);
+
+                    imprimeproducto = productodesc.Substring(0,20);
+                    imprimeprecioporcanti = cantidad + ",0000 X " + precio;
+
+                    e.Graphics.DrawString(imprimeprecioporcanti,
+                                   new Font("Times New Roman", 10),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+                    e.Graphics.DrawString(preciosubim,
+                                  new Font("Times New Roman", 10),
+                                  new SolidBrush(Color.Black),
+                                  new RectangleF(210, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                  p.DefaultPageSettings.PrintableArea.Height));
+
+                    linea2 = linea + 15;
+                    e.Graphics.DrawString(imprimeproducto,
+                                   new Font("Times New Roman", 10),
+                                   new SolidBrush(Color.Black),
+                                   new RectangleF(5, linea2, p.DefaultPageSettings.PrintableArea.Width,
+                                                   p.DefaultPageSettings.PrintableArea.Height));
+
+                    linea = linea + 35;
+                    
+
+                }
+                linea = linea + 10;
+                preciototal = Convert.ToDouble(lbtotalg.Text);
+                preciototalim = string.Format("{0:N4}", preciototal);
+                e.Graphics.DrawString("TOTAL",
+                                  new Font("Times New Roman", 11),
+                                  new SolidBrush(Color.Black),
+                                  new RectangleF(10, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                  p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(preciototalim,
+                                  new Font("Times New Roman", 11),
+                                  new SolidBrush(Color.Black),
+                                  new RectangleF(210, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                  p.DefaultPageSettings.PrintableArea.Height));
+
+                linea = linea + 40;
+                e.Graphics.DrawString("Efectivo",
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(preciototalim,
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(210, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+                linea = linea + 30;
+                e.Graphics.DrawString("La suma de sus pagos",
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString(preciototalim,
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(210, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+                linea = linea + 30;
+                e.Graphics.DrawString("Su vuelto",
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+                e.Graphics.DrawString("0,00",
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(210, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+                linea = linea + 30;
+                e.Graphics.DrawString("Vendedor: Hugo",
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+                linea = linea + 30;
+                e.Graphics.DrawString("Cant. Artículos: " + lbcantidadpro.Text,
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+                linea = linea + 30;
+                e.Graphics.DrawString("Gracias por su compra",
+                                 new Font("Times New Roman", 10),
+                                 new SolidBrush(Color.Black),
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                                 p.DefaultPageSettings.PrintableArea.Height));
+
+            };
+            
+        p.Print();
+        }
 
         private void LUComprobante_EditValueChanged(object sender, EventArgs e)
         {
@@ -1332,7 +1537,11 @@ pnombrecli, pcuit, pdire, ptipo;
                 {
                     this.imprimirticketNuevaB();
                 }
-                
+
+            }
+            else //imprimir en la tiqueadora
+            {
+                this.imprimirtiqueadora();
             }
             this.resetearloscontroles();
         }
