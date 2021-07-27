@@ -750,64 +750,64 @@ pnombrecli, pcuit, pdire, ptipo;
             p.PrintPage += (s, e) =>
             {
                 e.Graphics.DrawString(cabecera,
-                                         new Font("Times New Roman", 13),
+                                         new Font("Times New Roman", 12),
                                          new SolidBrush(Color.Black),
                                          new RectangleF(15, 5, p.DefaultPageSettings.PrintableArea.Width,
                                                          p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire,
-                                     new Font("Times New Roman", 12),
+                                     new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
                                      new RectangleF(5, 35, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire2,
-                                     new Font("Times New Roman", 12),
+                                     new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
                                      new RectangleF(5, 60, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
                 e.Graphics.DrawString(dire3,
-                                     new Font("Times New Roman", 12),
+                                     new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
                                      new RectangleF(5, 85, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
                 e.Graphics.DrawString(dire4,
-                                     new Font("Times New Roman", 12),
+                                     new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
                                      new RectangleF(5, 110, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
                 e.Graphics.DrawString(dire5,
-                                    new Font("Times New Roman", 12),
+                                    new Font("Times New Roman", 11),
                                     new SolidBrush(Color.Black),
                                     new RectangleF(5, 135, p.DefaultPageSettings.PrintableArea.Width,
                                                     p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire6,
-                                   new Font("Times New Roman", 12),
+                                   new Font("Times New Roman", 11),
                                    new SolidBrush(Color.Black),
                                    new RectangleF(5, 160, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire7,
-                                   new Font("Times New Roman", 12),
+                                   new Font("Times New Roman", 11),
                                    new SolidBrush(Color.Black),
                                    new RectangleF(5, 185, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire8,
-                                   new Font("Times New Roman", 12),
+                                   new Font("Times New Roman", 11),
                                    new SolidBrush(Color.Black),
                                    new RectangleF(5, 210, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire9,
-                                   new Font("Times New Roman", 12),
+                                   new Font("Times New Roman", 11),
                                    new SolidBrush(Color.Black),
                                    new RectangleF(5, 235, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire10,
-                                   new Font("Times New Roman", 12),
+                                   new Font("Times New Roman", 11),
                                    new SolidBrush(Color.Black),
                                    new RectangleF(5, 260, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
@@ -826,7 +826,7 @@ pnombrecli, pcuit, pdire, ptipo;
                     preciod = Convert.ToDouble(row.Cells[4].Value);
                     preciosub = Convert.ToDouble(row.Cells[5].Value);
                     precio = string.Format("{0:N4}", preciod);
-                    preciosubim = string.Format("{0:N4}", preciosub);
+                    preciosubim = string.Format("{0:N2}", preciosub);
                     //precio = Convert.ToString(preciod);
                     // precio = precio.Replace(',', '.');
                     iva = Convert.ToString(row.Cells[10].Value);
@@ -841,18 +841,21 @@ pnombrecli, pcuit, pdire, ptipo;
                                    new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
 
+                    linea2 = linea + 15;
+
+                    e.Graphics.DrawString(imprimeproducto,
+                                  new Font("Times New Roman", 10),
+                                  new SolidBrush(Color.Black),
+                                  new RectangleF(5, linea2, p.DefaultPageSettings.PrintableArea.Width,
+                                                  p.DefaultPageSettings.PrintableArea.Height));
                     e.Graphics.DrawString(preciosubim,
                                   new Font("Times New Roman", 10),
                                   new SolidBrush(Color.Black),
-                                  new RectangleF(210, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                  new RectangleF(210, linea2, p.DefaultPageSettings.PrintableArea.Width,
                                                   p.DefaultPageSettings.PrintableArea.Height));
 
-                    linea2 = linea + 15;
-                    e.Graphics.DrawString(imprimeproducto,
-                                   new Font("Times New Roman", 10),
-                                   new SolidBrush(Color.Black),
-                                   new RectangleF(5, linea2, p.DefaultPageSettings.PrintableArea.Width,
-                                                   p.DefaultPageSettings.PrintableArea.Height));
+                    
+                   
 
                     linea = linea + 35;
                     
@@ -860,7 +863,7 @@ pnombrecli, pcuit, pdire, ptipo;
                 }
                 linea = linea + 10;
                 preciototal = Convert.ToDouble(lbtotalg.Text);
-                preciototalim = string.Format("{0:N4}", preciototal);
+                preciototalim = string.Format("{0:N2}", preciototal);
                 e.Graphics.DrawString("TOTAL",
                                   new Font("Times New Roman", 11),
                                   new SolidBrush(Color.Black),
@@ -926,7 +929,7 @@ pnombrecli, pcuit, pdire, ptipo;
                                                  p.DefaultPageSettings.PrintableArea.Height));
                 linea = linea + 30;
                 e.Graphics.DrawString("Gracias por su compra",
-                                 new Font("Times New Roman", 10),
+                                 new Font("Times New Roman", 12),
                                  new SolidBrush(Color.Black),
                                  new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
