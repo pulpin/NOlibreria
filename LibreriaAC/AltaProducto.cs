@@ -15,7 +15,7 @@ namespace Presentacion
     public partial class AltaProducto : Form
     {
         private int tipopro = 0, _alta, _producide;
-        string _codigo;
+        string _codigo,_preciosinmodi;
         OpenFileDialog openFileDialog1;
         private string rutacompleta, nombrearchivo, directorioactual, _iva;
         public AltaProducto()
@@ -35,7 +35,9 @@ namespace Presentacion
             pro.Editorial = Convert.ToInt32(lUEditorial.EditValue);
             pro.Genero = Convert.ToInt32(LUgenero.EditValue);
             pro.Codigo = this.Codigo;
+            
             txtprecio.Text = txtprecio.Text.Replace(",", ".");
+            pro.Preciosinmodificar = this._preciosinmodi;
             pro.Precio = txtprecio.Text;
             pro.Codigoprovee = txtcodprovee.Text;
             pro.Dividido = Convert.ToInt32(txtdividido.Text);
@@ -51,15 +53,11 @@ namespace Presentacion
             pro.Codigo = this.Codigo;
             txtcosto.Text = txtcosto.Text.Replace(",", ".");
             pro.Costo = txtcosto.Text;
-
             //txtiva.Text = txtiva.Text.Replace(",", ".");
             // pro.Iva = txtiva.Text;
             pro.Iva = Convert.ToString(lUporcentaje.EditValue);
-
             txtporcentaje.Text = txtporcentaje.Text.Replace(",", ".");
             pro.Ganancia = txtporcentaje.Text;
-
-            
             pro.Isbn = txtisbn.Text;
             pro.Barra = txtbarra.Text;
             if (nombrearchivo != string.Empty)
@@ -359,7 +357,7 @@ namespace Presentacion
             txtautor.Text = pro.Autor;
             lUEditorial.EditValue = pro.Editorial;
             LUgenero.EditValue = pro.Genero;
-
+            this._preciosinmodi = pro.Precio.Replace(",", ".");
             txtprecio.Text = pro.Precio.Replace(",", ".");
 
             txtcodprovee.Text = pro.Codigoprovee;

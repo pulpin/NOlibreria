@@ -385,7 +385,7 @@
             this.Controls.Add(this.btnagregar);
             this.Name = "AltaProductoConsigna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0";
+            this.Text = "Agregar producto a la consiguna...";
             this.Activated += new System.EventHandler(this.AltaProductoConsigna_Activated);
             this.Load += new System.EventHandler(this.AltaProducto_Load);
             this.gBtipopro.ResumeLayout(false);

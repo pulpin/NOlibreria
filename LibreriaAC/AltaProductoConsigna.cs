@@ -92,6 +92,11 @@ namespace Presentacion
             con.Precio = txtfactura.Text;
             con.Codigoconsig = this.CodigoConsignaM;
             con.Codigoeditorial = this.CodigoEditorial;
+            int cantidadreservas = con.spControlarReserva();
+            if (cantidadreservas > 0)
+            {
+                MessageBox.Show("Posee RESERVAS de este libro. Cantidad: " + cantidadreservas, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
             int retorno = con.spInsertarConsignaDetalle();
             if (retorno == 0)
