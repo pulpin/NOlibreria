@@ -52,6 +52,7 @@
             this.btndiferencia = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chksinimportarpre = new System.Windows.Forms.CheckBox();
             this.chkprovee = new System.Windows.Forms.CheckBox();
             this.chbEditorial = new System.Windows.Forms.CheckBox();
             this.chbTitulo = new System.Windows.Forms.CheckBox();
@@ -83,10 +84,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.chksinimportarpre = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
@@ -272,6 +274,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Otros items a modificar...";
             // 
+            // chksinimportarpre
+            // 
+            this.chksinimportarpre.AutoSize = true;
+            this.chksinimportarpre.ForeColor = System.Drawing.Color.Maroon;
+            this.chksinimportarpre.Location = new System.Drawing.Point(137, 48);
+            this.chksinimportarpre.Name = "chksinimportarpre";
+            this.chksinimportarpre.Size = new System.Drawing.Size(132, 18);
+            this.chksinimportarpre.TabIndex = 4;
+            this.chksinimportarpre.Text = "Sin importar precio";
+            this.chksinimportarpre.UseVisualStyleBackColor = true;
+            // 
             // chkprovee
             // 
             this.chkprovee.AutoSize = true;
@@ -403,7 +416,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
             this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(491, 292);
+            this.dgvProductos.Size = new System.Drawing.Size(608, 292);
             this.dgvProductos.TabIndex = 246;
             // 
             // groupBox3
@@ -653,6 +666,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label11);
@@ -660,11 +675,31 @@
             this.groupBox5.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox5.Location = new System.Drawing.Point(308, 105);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(289, 36);
+            this.groupBox5.Size = new System.Drawing.Size(323, 36);
             this.groupBox5.TabIndex = 244;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Formato del archivo excel...";
             this.groupBox5.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Moccasin;
+            this.label12.Location = new System.Drawing.Point(239, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(76, 14);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "precionuevo";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Moccasin;
+            this.label8.Location = new System.Drawing.Point(187, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 14);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "precio";
             // 
             // label9
             // 
@@ -695,17 +730,6 @@
             this.label11.Size = new System.Drawing.Size(44, 14);
             this.label11.TabIndex = 0;
             this.label11.Text = "codigo";
-            // 
-            // chksinimportarpre
-            // 
-            this.chksinimportarpre.AutoSize = true;
-            this.chksinimportarpre.ForeColor = System.Drawing.Color.Maroon;
-            this.chksinimportarpre.Location = new System.Drawing.Point(137, 48);
-            this.chksinimportarpre.Name = "chksinimportarpre";
-            this.chksinimportarpre.Size = new System.Drawing.Size(132, 18);
-            this.chksinimportarpre.TabIndex = 4;
-            this.chksinimportarpre.Text = "Sin importar precio";
-            this.chksinimportarpre.UseVisualStyleBackColor = true;
             // 
             // CambioPrecio
             // 
@@ -815,5 +839,7 @@
         private System.Windows.Forms.CheckBox chkprovee;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox chksinimportarpre;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
     }
 }

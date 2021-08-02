@@ -18,13 +18,14 @@ namespace Presentacion
     {
        // int tipop = 0;
        // string server = "127.0.0.1";
-        string server = "10.1.10.202";
-       // string server = "192.168.0.106";
+       // string server = "10.1.10.202";
+        string server = "192.168.0.106";
         string database = "libreria";
-        string uid = "cambioprecio";
-
-        //string uid = "hugo";
-        string password = "123123";
+         //  string uid = "cambioprecio";
+        string uid = "root";
+        
+        //string password = "123123";
+        string password = "Libreria99";
 
         Productos pro = new Productos();
         //int rendicionide;
@@ -1063,6 +1064,7 @@ namespace Presentacion
         private void recorrergrillasp1ArticulosVerificador()
         {
             int Valor_Retornado = 0;
+            String Valor_Retornado1 = string.Empty, Valor_Retornado2 = string.Empty;
             string modif = string.Empty;
             string cadenaconexion;
             int contador = 0;
@@ -1094,6 +1096,7 @@ namespace Presentacion
                 {
                     break;
                 }
+                
                 decimal pprecio = Convert.ToDecimal(row.Cells[1].Value);
                 //string ptitulo = (Convert.ToString(row.Cells[1].Value)).ToUpper();
                 //string pautor = (Convert.ToString(row.Cells[2].Value).ToUpper());
@@ -1113,11 +1116,19 @@ namespace Presentacion
                     myCommand.Parameters.AddWithValue("precio", pprecio);
 
                     MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
+                    MySqlParameter ValorRetorno1 = new MySqlParameter("@Rprecioactual", MySqlDbType.VarChar);
+                    MySqlParameter ValorRetorno2 = new MySqlParameter("@Rprecionuevo", MySqlDbType.VarChar);
                     //MySqlParameter ValorRetorno = new MySqlParameter("RETURN_VALUE", SqlDbType.Decimal);
                     ValorRetorno.Direction = ParameterDirection.Output;// Output;
+                    ValorRetorno1.Direction = ParameterDirection.Output;// Output;
+                    ValorRetorno2.Direction = ParameterDirection.Output;// Output;
                     myCommand.Parameters.Add(ValorRetorno);
+                    myCommand.Parameters.Add(ValorRetorno1);
+                    myCommand.Parameters.Add(ValorRetorno2);
                     myCommand.ExecuteNonQuery();
                     Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+                    Valor_Retornado1 = Convert.ToString(ValorRetorno1.Value);
+                    Valor_Retornado2 = Convert.ToString(ValorRetorno2.Value);
                     sqlTran.Commit();
                     // lbprocesados.Text = Convert.ToString(contador++);
                     contar++;
@@ -1151,10 +1162,11 @@ namespace Presentacion
                 else
                 {
                     modif = "SI";
-
+                    row.Cells[3].Value = Valor_Retornado1;
+                    row.Cells[4].Value = Valor_Retornado2;
                 }
                 row.Cells[2].Value = modif;
-
+               
             }
 
            /* for (int i = 0; i < gridViewPintarFilas.DataRowCount; i++)
@@ -1234,7 +1246,7 @@ namespace Presentacion
            // gConsulta.DataSource = null;
             //lbprocesados.Text = Convert.ToString(contar);
             //btndescontinuados.Visible = true;
-            MessageBox.Show("Se han recorrido los artículos, verificar...");
+            MessageBox.Show("Se han recorrido los artículos1, verificar...");
 
 
         }
@@ -1431,21 +1443,11 @@ namespace Presentacion
            // Conexion con = new Conexion("libreria", Globales.ip);
            // con.AbrirConexio();
 
-           /* if (gridViewPintarFilas.DataRowCount == 0)
-            {
-                MessageBox.Show("No existen registros para poder realizar un cambioPrecio");
-            }
-            else
-            {
-               
-                hilonuevo = new Thread(recorrergrillasp1ArticulosVerificador);
-                // recorrergrillaArticulos();
-                pictureBox1.Visible = true;
-                hilonuevo.Start();
-            }*/
+           
             hilonuevo = new Thread(recorrergrillasp1ArticulosVerificador);
-            // recorrergrillaArticulos();
+            //recorrergrillasp1ArticulosVerificador();
             pictureBox1.Visible = true;
+            btnagregar.Visible = true;
             hilonuevo.Start();
         }
 
@@ -1467,8 +1469,9 @@ namespace Presentacion
         {
             if (rBlibreria.Checked == true)
             {
-              //  lUEditorial.Visible = true;
-              //  label3.Visible = true;
+                //  lUEditorial.Visible = true;
+                //  label3.Visible = true;
+                btnagregar.Visible = false;
                 btndiferencia.Visible = true;
                 groupBox4.Visible = false;
                 groupBox5.Visible = true;
@@ -1479,8 +1482,9 @@ namespace Presentacion
         {
             if (rBlibros.Checked == true)
             {
-               // lUEditorial.Visible = false;
-               // label3.Visible = false;
+                // lUEditorial.Visible = false;
+                // label3.Visible = false;
+                btnagregar.Visible = true;
                 btndiferencia.Visible = false;
                 groupBox4.Visible = true;
                 groupBox5.Visible = false;
