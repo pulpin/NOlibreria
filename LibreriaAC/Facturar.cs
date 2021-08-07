@@ -1214,6 +1214,12 @@ pnombrecli, pcuit, pdire, ptipo;
            
         }
 
+        private void btnplatacaja_Click(object sender, EventArgs e)
+        {
+            ConsultaPlataCaja cpc = new ConsultaPlataCaja();
+            cpc.ShowDialog();
+        }
+
         private void btncargapedido_Click(object sender, EventArgs e)
         {
 
@@ -1898,6 +1904,13 @@ pnombrecli, pcuit, pdire, ptipo;
                 Elegirpto ele = new Elegirpto();
                 ele.ShowDialog();
                 lbpuntovta.Text = Convert.ToString(Globales.puntodeventa);
+                DineroCaja dc = new DineroCaja();
+                int cargocaja = dc.spVerDineroCaja();
+                if (cargocaja == 0)
+                {
+                    ConsultaPlataCaja cpc = new ConsultaPlataCaja();
+                    cpc.ShowDialog();
+                }
             }   
         }
 
@@ -2224,6 +2237,9 @@ pnombrecli, pcuit, pdire, ptipo;
             btncobrar.Visible = false;
             txtnumeropedido.Enabled = false;
             btncreditop.Enabled = false;
+            txtproforma.Enabled = false;
+            btnplatacaja.Enabled = false;
+            btnajuste.Enabled = false;
         }
 
 

@@ -112,6 +112,9 @@ namespace Presentacion
             ac.Contrase = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["USU_CONTRASE"]));
             ac.Contrasevta = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["USU_CONTRAVENTA"]));
             ac.Tipo = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["USU_TIPO"]));
+            ac.PuntodeVenta = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["USU_PTOVENTA"]));
+            ac.Colorelegido = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["USU_COLOR"]));
+            
             ac.colocardatosdelusuario();
 
             if (ac.ShowDialog() == System.Windows.Forms.DialogResult.OK)

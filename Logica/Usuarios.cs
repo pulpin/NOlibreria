@@ -10,8 +10,8 @@ namespace LogicaNegocios
 {
    public class Usuarios
     {
-        string _clavepedido, _nombre, _nombrecompleto, _contra, _contravta;
-        int _usuide, _menuide, _progide, _acceder, _modificar, _tipo;
+        string _clavepedido, _nombre, _nombrecompleto, _contra, _contravta, _colorfondo;
+        int _usuide, _menuide, _progide, _acceder, _modificar, _tipo, _puntodeventa;
         public Usuarios() { 
 
         }
@@ -358,6 +358,8 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("contrap", this.Contrase);
                 myCommand.Parameters.AddWithValue("contravtap", this.Contrasevta);
                 myCommand.Parameters.AddWithValue("tipop", this.Tipo);
+                myCommand.Parameters.AddWithValue("colorelep", this.Colorfondo);
+                myCommand.Parameters.AddWithValue("puntodevta", this.PuntodeVenta);
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
                 myCommand.Parameters.Add(ValorRetorno);
@@ -385,6 +387,100 @@ namespace LogicaNegocios
             return Valor_Retornado;
         }
 
+        public int spVerificarColorElegido()
+        {
+            int Valor_Retornado = 0;
+            string cadenaconexion;
+
+
+            Conexion con = new Conexion("usuarios", Globales.ip);
+            cadenaconexion = con.inicializa();
+            MySqlConnection mysql_conexion = con.AbrirConexion(cadenaconexion);
+            mysql_conexion.Open();
+            MySqlTransaction sqlTran = mysql_conexion.BeginTransaction();
+            MySqlCommand myCommand = mysql_conexion.CreateCommand();
+            myCommand.Transaction = sqlTran;
+
+            try
+            {
+                myCommand.Connection = mysql_conexion;
+                myCommand.CommandText = "usuarios.spColorElegido";
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.AddWithValue("coloreleg", this.Colorfondo);
+                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
+                ValorRetorno.Direction = ParameterDirection.Output;// Output;
+                myCommand.Parameters.Add(ValorRetorno);
+                myCommand.ExecuteNonQuery();
+                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+                sqlTran.Commit();
+                mysql_conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception if the transaction fails to commit.
+                Console.WriteLine(ex.Message);
+
+                try
+                {
+                    // Attempt to roll back the transaction.
+                    sqlTran.Rollback();
+                }
+                catch (Exception exRollback)
+                {
+                    Console.WriteLine(exRollback.Message);
+                }
+            }
+
+            return Valor_Retornado;
+        }
+
+        public int spVerificarColorElegidoLogueo()
+        {
+            int Valor_Retornado = 0;
+            string cadenaconexion;
+
+
+            Conexion con = new Conexion("usuarios", Globales.ip);
+            cadenaconexion = con.inicializa();
+            MySqlConnection mysql_conexion = con.AbrirConexion(cadenaconexion);
+            mysql_conexion.Open();
+            MySqlTransaction sqlTran = mysql_conexion.BeginTransaction();
+            MySqlCommand myCommand = mysql_conexion.CreateCommand();
+            myCommand.Transaction = sqlTran;
+
+            try
+            {
+                myCommand.Connection = mysql_conexion;
+                myCommand.CommandText = "usuarios.spColorElegidologueo";
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.AddWithValue("coloreleg", this.Colorfondo);
+                myCommand.Parameters.AddWithValue("usuidep", this.Usuide);
+                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
+                ValorRetorno.Direction = ParameterDirection.Output;// Output;
+                myCommand.Parameters.Add(ValorRetorno);
+                myCommand.ExecuteNonQuery();
+                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+                sqlTran.Commit();
+                mysql_conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception if the transaction fails to commit.
+                Console.WriteLine(ex.Message);
+
+                try
+                {
+                    // Attempt to roll back the transaction.
+                    sqlTran.Rollback();
+                }
+                catch (Exception exRollback)
+                {
+                    Console.WriteLine(exRollback.Message);
+                }
+            }
+
+            return Valor_Retornado;
+        }
 
         public int spModificaUsuario()
         {
@@ -411,6 +507,8 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("contravtap", this.Contrasevta);
                 myCommand.Parameters.AddWithValue("tipop", this.Tipo);
                 myCommand.Parameters.AddWithValue("usuidep", this.Usuide);
+                myCommand.Parameters.AddWithValue("puntodevta", this.PuntodeVenta);
+                myCommand.Parameters.AddWithValue("colorelep", this.Colorfondo);
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
                 myCommand.Parameters.Add(ValorRetorno);
@@ -502,5 +600,16 @@ namespace LogicaNegocios
             get { return this._tipo; }
             set { this._tipo = value; }
         }
+        public int PuntodeVenta
+        {
+            get { return this._puntodeventa; }
+            set { this._puntodeventa = value; }
+        }
+        public string Colorfondo
+        {
+            get { return this._colorfondo; }
+            set { this._colorfondo = value; }
+        }
+        
     }
 }

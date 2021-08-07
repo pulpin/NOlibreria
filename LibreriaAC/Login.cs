@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class Login : Form
     {
         private int _ideusu;
+        Usuarios usu = new Usuarios();
         public Login()
         {
             InitializeComponent();
@@ -97,11 +98,19 @@ namespace Presentacion
 
         private void colorEdit1_EditValueChanged(object sender, EventArgs e)
         {
-           // if (colorEdit1.ShowDialog() == DialogResult.OK)
-           // {
-                panelColor.BackColor = colorEdit1.Color;
-                Globales.colorfondo = colorEdit1.Color;
-           // }
+                /*usu.Colorfondo = Convert.ToString(colorEdit1.Color);
+                usu.Usuide = Globales.gbUsuide;
+                int resu = usu.spVerificarColorElegidoLogueo();
+                if (resu == 0)
+                {*/
+                    panelColor.BackColor = colorEdit1.Color;
+                    Globales.colorfondo = colorEdit1.Color;
+               /* }
+                else
+                {
+                MessageBox.Show("Debe seleccionar otro COLOR para el USUARIO");
+                }
+          */
         }
 
         private void Login_Load(object sender, EventArgs e)

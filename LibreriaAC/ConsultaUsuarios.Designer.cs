@@ -36,11 +36,13 @@
             this.USU_CONTRASE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.USU_CONTRAVENTA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.USU_TIPO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.USU_PTOVENTA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnaltacliente = new System.Windows.Forms.Button();
             this.btnmodificarcliente = new System.Windows.Forms.Button();
             this.btnborrarusu = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
+            this.USU_COLOR = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +66,9 @@
             this.USU_NOMBRE,
             this.USU_CONTRASE,
             this.USU_CONTRAVENTA,
-            this.USU_TIPO});
+            this.USU_TIPO,
+            this.USU_PTOVENTA,
+            this.USU_COLOR});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
@@ -113,6 +117,12 @@
             this.USU_TIPO.Caption = "USU_TIPO";
             this.USU_TIPO.FieldName = "USU_TIPO";
             this.USU_TIPO.Name = "USU_TIPO";
+            // 
+            // USU_PTOVENTA
+            // 
+            this.USU_PTOVENTA.Caption = "USU_PTOVENTA";
+            this.USU_PTOVENTA.FieldName = "USU_PTOVENTA";
+            this.USU_PTOVENTA.Name = "USU_PTOVENTA";
             // 
             // btncancelar
             // 
@@ -179,6 +189,12 @@
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
+            // USU_COLOR
+            // 
+            this.USU_COLOR.Caption = "USU_COLOR";
+            this.USU_COLOR.FieldName = "USU_COLOR";
+            this.USU_COLOR.Name = "USU_COLOR";
+            // 
             // ConsultaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,5 +232,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn USU_CONTRASE;
         private DevExpress.XtraGrid.Columns.GridColumn USU_CONTRAVENTA;
         private DevExpress.XtraGrid.Columns.GridColumn USU_TIPO;
+        private DevExpress.XtraGrid.Columns.GridColumn USU_PTOVENTA;
+        private DevExpress.XtraGrid.Columns.GridColumn USU_COLOR;
     }
 }

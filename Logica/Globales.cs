@@ -15,7 +15,7 @@ namespace LogicaNegocios
         public static int gbLocalide;
         public static string gbtipousuario;
         public static int gbtipousuarioide;
-
+        public static int gbpuntodeventapredetermindado;
         public static Color colorfondo;
 
         public static string ip;

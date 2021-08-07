@@ -14,8 +14,8 @@ namespace Presentacion
 {
     public partial class AltaUsuario : Form
     {
-        private int _alta, _situacion, _clienteide, _tipo, _usuide;
-        private string _iva, _cuit, _razonsocial, _domicilio, _telefono;
+        private int _alta, _situacion, _clienteide, _tipo, _usuide, _puntodeventa;
+        private string _iva, _cuit, _razonsocial, _domicilio, _telefono, _colorelegido;
         private string _nombre, _nombrecompleto, _contra, _contravta;
         public AltaUsuario()
         {
@@ -55,7 +55,8 @@ namespace Presentacion
             usu.NombreCompleto = txtnombrecompleto.Text;
             usu.Contrase = txtcontra.Text;
             usu.Contrasevta = txtcontravta.Text;
-
+            usu.PuntodeVenta = Convert.ToInt32(lUPuntovta.EditValue);
+            usu.Colorfondo = Convert.ToString(colorEdit1.Color.Name);
             if (Convert.ToString(lookUpEdit1.EditValue) == "No")
             {
                 usu.Tipo = 0;
@@ -64,17 +65,23 @@ namespace Presentacion
             {
                 usu.Tipo = 1;
             }
-
-
-            int resultado = usu.spAgregarUsuario();
-            if (resultado == 0)
+            int resultadov = usu.spVerificarColorElegido();
+            if (resultadov == 0)
             {
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha guardado creado Usuario!");
+                int resultado = usu.spAgregarUsuario();
+                if (resultado == 0)
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    MessageBox.Show("Se ha guardado creado Usuario!");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha producido un error!");
+                }
             }
             else
             {
-                MessageBox.Show("Se ha producido un error!");
+                MessageBox.Show("Debe seleccionar otro COLOR para el USUARIO");
             }
         }
 
@@ -86,6 +93,8 @@ namespace Presentacion
             usu.Contrase = txtcontra.Text;
             usu.Contrasevta = txtcontravta.Text;
             usu.Usuide = this.Usuide;
+            usu.PuntodeVenta = Convert.ToInt32(lUPuntovta.EditValue);
+            usu.Colorfondo = Convert.ToString(colorEdit1.Color.Name);
             if (Convert.ToString(lookUpEdit1.EditValue) == "No")
             {
                 usu.Tipo = 0;
@@ -95,16 +104,23 @@ namespace Presentacion
                 usu.Tipo = 1;
             }
 
-
-            int resultado = usu.spModificaUsuario();
-            if (resultado == 0)
+            int resultadov = usu.spVerificarColorElegido();
+            if (resultadov == 0)
             {
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha Modificado el Usuario!");
+                int resultado = usu.spModificaUsuario();
+                if (resultado == 0)
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    MessageBox.Show("Se ha Modificado el Usuario!");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha producido un error!");
+                }
             }
             else
             {
-                MessageBox.Show("Se ha producido un error!");
+                MessageBox.Show("Debe seleccionar otro COLOR para el USUARIO");
             }
         }
         private void btncancelar_Click(object sender, EventArgs e)
@@ -133,7 +149,7 @@ namespace Presentacion
 
         private void AltaProducto_Load(object sender, EventArgs e)
         {
-
+            iniciarptoventa();
         }
 
         private void txttitulo_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
@@ -250,6 +266,40 @@ namespace Presentacion
             get { return this._domicilio; }
             set { this._domicilio = value; }
         }
+
+        private void iniciarptoventa()
+        {
+
+            Puntodevta ptovta = new Puntodevta();
+            lUPuntovta.Properties.DisplayMember = "PTOVTA_DESC";
+            lUPuntovta.Properties.ValueMember = "PTOVTA_NUMERO";
+            lUPuntovta.Properties.DataSource = ptovta.Tabladedatos_ptodevta();
+            lUPuntovta.Properties.PopulateColumns();
+            lUPuntovta.EditValue = 4;
+            //lUPuntovta.Properties.Columns[0].Visible = false;
+            
+        }
+
+        private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToString(lookUpEdit1.EditValue) == "Si")
+            {
+                lUPuntovta.Visible = true;
+                label6.Visible = true;
+            }
+            else
+            {
+                lUPuntovta.Visible = false;
+                label6.Visible = false ;
+            }
+        }
+
+        private void colorEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            panelColor.BackColor = colorEdit1.Color;
+           // Globales.colorfondo = colorEdit1.Color;
+        }
+
         public string Telefono
         {
             get { return this._telefono; }
@@ -282,14 +332,21 @@ namespace Presentacion
             this.txtnombrecompleto.Text = this.NombreCompleto;
             this.txtcontra.Text = this.Contrase;
             this.txtcontravta.Text = this.Contrasevta;
+            this.lUPuntovta.EditValue = this.PuntodeVenta;
             if (this.Tipo == 0)
             {
                 lookUpEdit1.EditValue = "No";
+                lUPuntovta.Visible = false;
+                label6.Visible = false;
             }
             else
             {
                 lookUpEdit1.EditValue = "Si";
+                lUPuntovta.Visible = true;
+                label6.Visible = true;
             }
+            colorEdit1.Color = Color.FromName(this.Colorelegido);
+            //colorEdit1.Color = Color.FromName(Convert.ToString(LUEusuario.EditValue));
         }
         public string Nombre
         {
@@ -318,6 +375,16 @@ namespace Presentacion
         {
             get { return this._tipo; }
             set { this._tipo = value; }
+        }
+        public int PuntodeVenta
+        {
+            get { return this._puntodeventa; }
+            set { this._puntodeventa = value; }
+        }
+        public string Colorelegido
+        {
+            get { return this._colorelegido; }
+            set { this._colorelegido = value; }
         }
     }
 }

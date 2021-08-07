@@ -26,7 +26,8 @@ namespace Presentacion
             lUPuntovta.Properties.ValueMember = "PTOVTA_NUMERO";
             lUPuntovta.Properties.DataSource = ptovta.Tabladedatos_ptodevta();
             lUPuntovta.Properties.PopulateColumns();
-            lUPuntovta.EditValue = 4;
+            //lUPuntovta.EditValue = 4;
+            lUPuntovta.EditValue = LogicaNegocios.Globales.gbpuntodeventapredetermindado;
             //lUPuntovta.Properties.Columns[0].Visible = false;
         }
 

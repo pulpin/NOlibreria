@@ -38,9 +38,9 @@ namespace LogicaNegocios
                         LogicaNegocios.Globales.gbLocalide = 1;
                         LogicaNegocios.Globales.gbUsuide = Convert.ToInt32(reader["USU_IDE"].ToString());
                         LogicaNegocios.Globales.gbtipousuario = "Administrativo";
-
-
-                       // Conexion con1 = new Conexion("usuarios",Globales.ip);
+                        LogicaNegocios.Globales.gbpuntodeventapredetermindado = Convert.ToInt32(reader["USU_PTOVENTA"].ToString());
+                        
+                        // Conexion con1 = new Conexion("usuarios",Globales.ip);
                         con.AbrirConexio();
                         MySqlDataReader reader1 = null;
                         /*reader1 = con.Consultas("SELECT menu_nombre,per_acceder,per_modificar " +

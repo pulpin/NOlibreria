@@ -857,3 +857,5 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.exe.man
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.application
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.exe
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\LibreriaAC.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.AltaDineroCaja.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Debug\Presentacion.ConsultaPlataCaja.resources

@@ -41,8 +41,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
+            this.lUPuntovta = new DevExpress.XtraEditors.LookUpEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.colorEdit1 = new DevExpress.XtraEditors.ColorEdit();
+            this.panelColor = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lUPuntovta.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,7 +125,7 @@
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(199, 206);
+            this.lookUpEdit1.Location = new System.Drawing.Point(199, 245);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.lookUpEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -135,13 +142,14 @@
             this.lookUpEdit1.Properties.ShowHeader = false;
             this.lookUpEdit1.Size = new System.Drawing.Size(195, 22);
             this.lookUpEdit1.TabIndex = 4;
+            this.lookUpEdit1.EditValueChanged += new System.EventHandler(this.lookUpEdit1_EditValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label5.Location = new System.Drawing.Point(94, 209);
+            this.label5.Location = new System.Drawing.Point(94, 248);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 17);
             this.label5.TabIndex = 214;
@@ -183,7 +191,7 @@
             // 
             this.btncancelar.Image = global::Presentacion.Properties.Resources.cancelar64;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(231, 258);
+            this.btncancelar.Location = new System.Drawing.Point(231, 320);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(102, 79);
             this.btncancelar.TabIndex = 6;
@@ -196,7 +204,7 @@
             // 
             this.btnagregar.Image = global::Presentacion.Properties.Resources.guardar64;
             this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnagregar.Location = new System.Drawing.Point(93, 258);
+            this.btnagregar.Location = new System.Drawing.Point(93, 320);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(102, 79);
             this.btnagregar.TabIndex = 5;
@@ -205,12 +213,84 @@
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
+            // lUPuntovta
+            // 
+            this.lUPuntovta.Location = new System.Drawing.Point(199, 282);
+            this.lUPuntovta.Name = "lUPuntovta";
+            this.lUPuntovta.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.lUPuntovta.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lUPuntovta.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lUPuntovta.Properties.Appearance.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lUPuntovta.Properties.Appearance.Options.UseBackColor = true;
+            this.lUPuntovta.Properties.Appearance.Options.UseFont = true;
+            this.lUPuntovta.Properties.Appearance.Options.UseForeColor = true;
+            this.lUPuntovta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lUPuntovta.Properties.DropDownRows = 5;
+            this.lUPuntovta.Properties.HideSelection = false;
+            this.lUPuntovta.Properties.NullText = "";
+            this.lUPuntovta.Properties.ShowHeader = false;
+            this.lUPuntovta.Size = new System.Drawing.Size(159, 22);
+            this.lUPuntovta.TabIndex = 215;
+            this.lUPuntovta.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label6.Location = new System.Drawing.Point(75, 283);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 17);
+            this.label6.TabIndex = 216;
+            this.label6.Text = "Punto de venta:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Visible = false;
+            // 
+            // colorEdit1
+            // 
+            this.colorEdit1.EditValue = System.Drawing.Color.WhiteSmoke;
+            this.colorEdit1.Location = new System.Drawing.Point(199, 207);
+            this.colorEdit1.Name = "colorEdit1";
+            this.colorEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.colorEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.colorEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.colorEdit1.Size = new System.Drawing.Size(121, 20);
+            this.colorEdit1.TabIndex = 219;
+            this.colorEdit1.EditValueChanged += new System.EventHandler(this.colorEdit1_EditValueChanged);
+            // 
+            // panelColor
+            // 
+            this.panelColor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelColor.Location = new System.Drawing.Point(326, 196);
+            this.panelColor.Name = "panelColor";
+            this.panelColor.Size = new System.Drawing.Size(46, 46);
+            this.panelColor.TabIndex = 218;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label8.Location = new System.Drawing.Point(141, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 17);
+            this.label8.TabIndex = 220;
+            this.label8.Text = "Color:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // AltaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 349);
+            this.ClientSize = new System.Drawing.Size(426, 404);
             this.ControlBox = false;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.colorEdit1);
+            this.Controls.Add(this.panelColor);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lUPuntovta);
             this.Controls.Add(this.txtcontravta);
             this.Controls.Add(this.txtcontra);
             this.Controls.Add(this.lookUpEdit1);
@@ -230,6 +310,8 @@
             this.Load += new System.EventHandler(this.AltaProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lUPuntovta.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +332,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtcontra;
         private System.Windows.Forms.TextBox txtcontravta;
+        private DevExpress.XtraEditors.LookUpEdit lUPuntovta;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.ColorEdit colorEdit1;
+        private System.Windows.Forms.Panel panelColor;
+        private System.Windows.Forms.Label label8;
     }
 }

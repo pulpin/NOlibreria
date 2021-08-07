@@ -76,6 +76,11 @@
             this.lbexcento = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.lbcantidadpro = new System.Windows.Forms.Label();
+            this.txtproforma = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnplatacaja = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.btnajuste = new System.Windows.Forms.Button();
             this.btncobrar = new System.Windows.Forms.Button();
             this.btncargapedido = new System.Windows.Forms.Button();
@@ -90,10 +95,6 @@
             this.btnagregap = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtproforma = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LUComprobante.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.conMSdebito.SuspendLayout();
@@ -589,13 +590,73 @@
             this.lbcantidadpro.Text = "0";
             this.lbcantidadpro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtproforma
+            // 
+            this.txtproforma.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtproforma.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtproforma.Location = new System.Drawing.Point(201, 169);
+            this.txtproforma.Name = "txtproforma";
+            this.txtproforma.Size = new System.Drawing.Size(76, 30);
+            this.txtproforma.TabIndex = 233;
+            this.txtproforma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtproforma.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtproforma_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label5.Location = new System.Drawing.Point(214, 199);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 234;
+            this.label5.Text = "Proforma";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label6.Location = new System.Drawing.Point(71, 199);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 235;
+            this.label6.Text = "Pedido";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnplatacaja
+            // 
+            this.btnplatacaja.Image = global::Presentacion.Properties.Resources.dinero32;
+            this.btnplatacaja.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnplatacaja.Location = new System.Drawing.Point(5, 230);
+            this.btnplatacaja.Name = "btnplatacaja";
+            this.btnplatacaja.Size = new System.Drawing.Size(44, 55);
+            this.btnplatacaja.TabIndex = 236;
+            this.btnplatacaja.Text = "Caja";
+            this.btnplatacaja.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnplatacaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnplatacaja.UseVisualStyleBackColor = true;
+            this.btnplatacaja.Click += new System.EventHandler(this.btnplatacaja_Click);
+            // 
+            // button4
+            // 
+            this.button4.Image = global::Presentacion.Properties.Resources.pdf32;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.Location = new System.Drawing.Point(283, 163);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(43, 42);
+            this.button4.TabIndex = 232;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // btnajuste
             // 
             this.btnajuste.Image = global::Presentacion.Properties.Resources.ajuste32;
             this.btnajuste.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnajuste.Location = new System.Drawing.Point(6, 305);
             this.btnajuste.Name = "btnajuste";
-            this.btnajuste.Size = new System.Drawing.Size(44, 69);
+            this.btnajuste.Size = new System.Drawing.Size(44, 55);
             this.btnajuste.TabIndex = 231;
             this.btnajuste.Text = "Ajuste";
             this.btnajuste.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -770,52 +831,6 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txtproforma
-            // 
-            this.txtproforma.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtproforma.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtproforma.Location = new System.Drawing.Point(201, 169);
-            this.txtproforma.Name = "txtproforma";
-            this.txtproforma.Size = new System.Drawing.Size(76, 30);
-            this.txtproforma.TabIndex = 233;
-            this.txtproforma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtproforma.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtproforma_KeyPress);
-            // 
-            // button4
-            // 
-            this.button4.Image = global::Presentacion.Properties.Resources.pdf32;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.Location = new System.Drawing.Point(283, 163);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 42);
-            this.button4.TabIndex = 232;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label5.Location = new System.Drawing.Point(214, 199);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 234;
-            this.label5.Text = "Proforma";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label6.Location = new System.Drawing.Point(71, 199);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 13);
-            this.label6.TabIndex = 235;
-            this.label6.Text = "Pedido";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Facturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -823,6 +838,7 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1008, 682);
             this.ControlBox = false;
+            this.Controls.Add(this.btnplatacaja);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtproforma);
@@ -948,5 +964,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnplatacaja;
     }
 }

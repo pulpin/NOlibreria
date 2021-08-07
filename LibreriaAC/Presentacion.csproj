@@ -156,6 +156,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaDineroCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaDineroCaja.Designer.cs">
+      <DependentUpon>AltaDineroCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaPlataCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaPlataCaja.Designer.cs">
+      <DependentUpon>ConsultaPlataCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotadeCredito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -562,6 +574,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltaDineroCaja.resx">
+      <DependentUpon>AltaDineroCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaPlataCaja.resx">
+      <DependentUpon>ConsultaPlataCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NotadeCredito.resx">
       <DependentUpon>NotadeCredito.cs</DependentUpon>
     </EmbeddedResource>
@@ -902,6 +920,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="libreriaac.ico" />
+    <None Include="Resources\dinero32.png" />
     <None Include="Resources\buscar48.png" />
     <None Include="Resources\changeuser64.png" />
     <None Include="Resources\pdf64.png" />
