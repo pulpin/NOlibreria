@@ -102,7 +102,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1yU7njQfJIuBWvu/VFMqt46zHD0kGXOWP2oJFsf6cQo=</dsig:DigestValue>
+        <dsig:DigestValue>CPe54W2lc8MKSN1/9vQLxhu7NfUpzZwIpL6I7drs1s0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1278,19 +1278,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Zsnjr22qbSUeY+dF7aMcsVLqUkYejxd1aNgvUFAyUxw=</dsig:DigestValue>
+        <dsig:DigestValue>mhoTByQ7TY+DrjfwrgkHGcvEsUAG2RSwZGanm8Yz5y8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LogicaL.dll" size="132096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LogicaL.dll" size="132608">
       <assemblyIdentity name="LogicaL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8KhR+UWOWic94uouOy3qUBOR6ea9EvFh1e0w5wxZpu0=</dsig:DigestValue>
+        <dsig:DigestValue>PKF0eusFMseWambxGp0TtJJ+jKr+lP/pwWeWNEYc9H8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

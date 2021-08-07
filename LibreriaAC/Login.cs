@@ -41,27 +41,33 @@ namespace Presentacion
 
         public void seteousuario(String usu, String con) {
             SeteoUsuario se = new SeteoUsuario();
-            
+
             if (se.tryLogin(usu, con) == true)
             {
+                se.Usuide = Globales.gbUsuide;
+                se.ColorElegido = Convert.ToString(colorEdit1.Color.Name);
+                int cambiarcolor = se.spVerificarColorElegidoLogueo();
+                if (cambiarcolor == 0)
+                {
                 this.Hide();
                 Principal pri = new Principal();
                 pri.seteoUsuario(LogicaNegocios.Globales.gbUsuario, LogicaNegocios.Globales.gbUsuide, LogicaNegocios.Globales.gbLocalidad, LogicaNegocios.Globales.gbLocalide, LogicaNegocios.Globales.gbtipousuario);
-                /*  if ((LogicaNegocios.Globales.modipres == 1) || (LogicaNegocios.Globales.modipres == 2))
-                  {
-                      pri.activarprestadores();
-                  }
-                  */
+                
                 panelColor.BackColor = colorEdit1.Color;
                 Globales.colorfondo = colorEdit1.Color;
+                    
+                    se.Usuide = LogicaNegocios.Globales.gbUsuide;
+                    se.Colorfondo = Convert.ToString(colorEdit1.Color.Name);
+                    se.ModificarColorFondo();
+                    pri.cambiarfondo();
+                    pri.ShowDialog();
 
-                se.Usuide = LogicaNegocios.Globales.gbUsuide;
-                se.Colorfondo = Convert.ToString(colorEdit1.Color.Name);
-                se.ModificarColorFondo();
-
-                pri.cambiarfondo();
-                pri.ShowDialog();
-
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar otro COLOR para el usuario");
+                }
+                
             }
             else
             {
@@ -98,13 +104,16 @@ namespace Presentacion
 
         private void colorEdit1_EditValueChanged(object sender, EventArgs e)
         {
-                /*usu.Colorfondo = Convert.ToString(colorEdit1.Color);
-                usu.Usuide = Globales.gbUsuide;
-                int resu = usu.spVerificarColorElegidoLogueo();
-                if (resu == 0)
-                {*/
-                    panelColor.BackColor = colorEdit1.Color;
-                    Globales.colorfondo = colorEdit1.Color;
+            /*usu.Colorfondo = Convert.ToString(colorEdit1.Color);
+            usu.Usuide = Globales.gbUsuide;
+            int resu = usu.spVerificarColorElegidoLogueo();
+            if (resu == 0)
+            {*/
+
+
+
+            panelColor.BackColor = colorEdit1.Color;
+                Globales.colorfondo = colorEdit1.Color;
                /* }
                 else
                 {

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using AccesoaDatos;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace LogicaNegocios
 {
     public class SeteoUsuario
     {
-        string _colorfondo;
+        string _colorfondo, _colorelegido;
         int _usuide;
         public bool tryLogin(string username, string password)
         {
@@ -303,6 +304,56 @@ namespace LogicaNegocios
                 return false;
             }
         }
+
+        public int spVerificarColorElegidoLogueo()
+        {
+            int Valor_Retornado = 0;
+            string cadenaconexion;
+
+
+            Conexion con = new Conexion("usuarios", Globales.ip);
+            cadenaconexion = con.inicializa();
+            MySqlConnection mysql_conexion = con.AbrirConexion(cadenaconexion);
+            mysql_conexion.Open();
+            MySqlTransaction sqlTran = mysql_conexion.BeginTransaction();
+            MySqlCommand myCommand = mysql_conexion.CreateCommand();
+            myCommand.Transaction = sqlTran;
+
+            try
+            {
+                myCommand.Connection = mysql_conexion;
+                myCommand.CommandText = "usuarios.spColorElegidologueo";
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.AddWithValue("coloreleg", this.ColorElegido);
+                myCommand.Parameters.AddWithValue("usuidep", this.Usuide);
+                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
+                ValorRetorno.Direction = ParameterDirection.Output;// Output;
+                myCommand.Parameters.Add(ValorRetorno);
+                myCommand.ExecuteNonQuery();
+                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+                sqlTran.Commit();
+                mysql_conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception if the transaction fails to commit.
+                Console.WriteLine(ex.Message);
+
+                try
+                {
+                    // Attempt to roll back the transaction.
+                    sqlTran.Rollback();
+                }
+                catch (Exception exRollback)
+                {
+                    Console.WriteLine(exRollback.Message);
+                }
+            }
+
+            return Valor_Retornado;
+        }
+
+
         public void ModificarColorFondo()
         {
             Conexion con = new Conexion("usuarios", Globales.ip);
@@ -315,6 +366,12 @@ namespace LogicaNegocios
         {
             set { this._colorfondo = value; }
             get { return this._colorfondo; }
+        }
+
+        public string ColorElegido
+        {
+            set { this._colorelegido = value; }
+            get { return this._colorelegido; }
         }
         public int Usuide
         {

@@ -141,14 +141,18 @@ namespace Presentacion
         {
             if (MessageBox.Show("¿Desea eliminar la caja del día?", "Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                
-                DineroCaja dc = new DineroCaja();
-                
-                dc.Ide = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_IDE"]));
 
-                int valor = dc.spBajaDineroCaja();
-
-                this.cargar();
+                int ptodvta = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_PUNTODEVTA"]));
+                if (ptodvta == Globales.puntodeventa)
+                {
+                    DineroCaja dc = new DineroCaja();
+                    dc.Ide = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_IDE"]));
+                    int valor = dc.spBajaDineroCaja();
+                    this.cargar();
+                } else
+                {
+                    MessageBox.Show("No puede eliminar la CAJA de otro PUNTO DE VENTA");
+                }
             }
         }
 

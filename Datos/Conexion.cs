@@ -51,7 +51,7 @@ namespace AccesoaDatos
             //uid = "hugo";
             uid = "root";
             password = "Libreria99";
-            //password = "123123";
+           // password = "123123";
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";port=3306;" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
             connectionString1 = "SERVER=" + server + ";" + "DATABASE=" + database + ";port=3306;" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
         }

@@ -104,7 +104,7 @@ namespace Presentacion
                 usu.Tipo = 1;
             }
 
-            int resultadov = usu.spVerificarColorElegido();
+            int resultadov = usu.spVerificarColorElegidoLogueo();
             if (resultadov == 0)
             {
                 int resultado = usu.spModificaUsuario();

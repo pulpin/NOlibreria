@@ -1278,19 +1278,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Zsnjr22qbSUeY+dF7aMcsVLqUkYejxd1aNgvUFAyUxw=</dsig:DigestValue>
+        <dsig:DigestValue>G/CxXQund3G69zLuApf/ur94lC2+8S3Wdb0FzpZ3bC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LogicaL.dll" size="132096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LogicaL.dll" size="132608">
       <assemblyIdentity name="LogicaL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8KhR+UWOWic94uouOy3qUBOR6ea9EvFh1e0w5wxZpu0=</dsig:DigestValue>
+        <dsig:DigestValue>pWBzr8EeRMaCHWmIXoH3Yh+O7mWRzLgQksSv9zriNZs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
