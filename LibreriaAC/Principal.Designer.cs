@@ -748,7 +748,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Versión: 02/08/2021";
+            this.label5.Text = "Versión: 09/08/2021";
             // 
             // pictureBox1
             // 

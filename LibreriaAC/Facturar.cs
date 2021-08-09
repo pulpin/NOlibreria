@@ -1220,6 +1220,28 @@ pnombrecli, pcuit, pdire, ptipo;
             cpc.ShowDialog();
         }
 
+        private void ahora3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.Rows.Count > 0)
+            {
+                Tipodepago tp = new Tipodepago();
+                int valor = tp.spConsultaInteres(16);
+                this.aplicadescuento(valor, " Ahora 3?", 16);
+                // this.eliminardatosdelformulario();
+            }
+        }
+
+        private void ahora6ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.Rows.Count > 0)
+            {
+                Tipodepago tp = new Tipodepago();
+                int valor = tp.spConsultaInteres(17);
+                this.aplicadescuento(valor, " Ahora 6?", 17);
+                // this.eliminardatosdelformulario();
+            }
+        }
+
         private void btncargapedido_Click(object sender, EventArgs e)
         {
 

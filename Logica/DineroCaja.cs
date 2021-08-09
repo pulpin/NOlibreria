@@ -18,7 +18,7 @@ namespace LogicaNegocios
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
 
-            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA from plata_caja order by PC_FECHA desc");
+            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA from plata_caja where PC_PUNTODEVTA = "+ Globales.puntodeventa + " order by PC_FECHA desc");
 
         }
        
