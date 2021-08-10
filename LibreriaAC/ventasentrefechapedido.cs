@@ -152,7 +152,7 @@ namespace Presentacion
         }
         private void cargardatos()
         {
-            this.Codigo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["RESE_LI_CODIGOVIEJO"]));
+            this.Codigo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["codigo"]));
             ven.venproductoide = this.Codigo;
             gConsulta2.DataSource = ven.Mostrar_registrodelasventas();
 
