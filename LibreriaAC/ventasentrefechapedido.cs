@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class reservasentrefecha : Form
+    public partial class ventasentrefechapedido : Form
     {
         string _codigo;
         Reservas re = new Reservas();
         Venta ven = new Venta();
         Productos pro = new Productos();
         
-        public reservasentrefecha()
+        public ventasentrefechapedido()
         {
             InitializeComponent();
         }
@@ -83,7 +83,7 @@ namespace Presentacion
         private void btneliminar_Click(object sender, EventArgs e)
         {
             PrintableComponentLink pl = new PrintableComponentLink(new PrintingSystem());
-            pl.Component = gConsulta;
+            pl.Component = gConsultaPed;
             pl.CreateMarginalHeaderArea += new CreateAreaEventHandler(pl_CreateReportHeaderArea);
             pl.CreateReportHeaderArea += new CreateAreaEventHandler(pl_CreateReportHeaderArea2);
             pl.PaperKind = System.Drawing.Printing.PaperKind.A4;
@@ -99,7 +99,7 @@ namespace Presentacion
         {
             if (sfdRuta.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
-                gConsulta.ExportToXlsx(sfdRuta.FileName);
+                gConsultaPed.ExportToXlsx(sfdRuta.FileName);
 
             }
         }
@@ -108,7 +108,7 @@ namespace Presentacion
         {
             if (sfdRuta1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
-                gConsulta.ExportToPdf(sfdRuta1.FileName);
+                gConsultaPed.ExportToPdf(sfdRuta1.FileName);
             }
         }
         private void cargar()
@@ -131,8 +131,8 @@ namespace Presentacion
             {
                 todos = 0;
             }
-
-            gConsulta.DataSource = re.Mostrar_Reservasporfecha(fdesdee, fhastae);
+            gConsultaPed.DataSource = ve.Mostrar_VentasporfechaPedido(fdesdee, fhastae);
+            
 
         }
         private void button1_Click(object sender, EventArgs e)

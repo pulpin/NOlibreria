@@ -634,6 +634,12 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
             chd.ShowDialog();
         }
 
+        private void ventasEntreFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ventasentrefechapedido vefp = new ventasentrefechapedido();
+            vefp.ShowDialog();
+        }
+
         private void toolTurnosD_Click(object sender, EventArgs e)
             {
                 

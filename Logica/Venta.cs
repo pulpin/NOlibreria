@@ -938,6 +938,20 @@ namespace LogicaNegocios
 
         }
 
+        public DataTable Mostrar_VentasporfechaPedido(string fechadesde, string fechahasta)
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+
+            return con.Mostrar_Datos("select li.LI_IDE, li.LI_CODIGOVIEJO as codigo,li.LI_DESC,li.LI_AUTOR,edi.EDI_EDITORIAL,SUM(vend.VEND_CANTIDAD) as cantidad " +
+                                     " from venta as ven left join ventadetalle as vend on ven.VEN_IDE = vend.VEND_VEN_IDE " +
+                                     " left join libros as li on vend.VEND_LI_IDE = li.LI_CODIGOVIEJO " +
+                                     " left join editorial as edi on li.LI_EDI_CODIGO = edi.EDI_CODIGO " +
+                                     " where VEN_FECHA >= '" + fechadesde + "' and  VEN_FECHA <= '" + fechahasta + "' and li.LI_TIPOPRO = 0 " +
+                                     " group by LI_IDE ");
+
+        }
+
         public DataTable Tabladedatos_Ajustes(int ptovta,string fecha)
         {
             Conexion con = new Conexion("libreria", Globales.ip);

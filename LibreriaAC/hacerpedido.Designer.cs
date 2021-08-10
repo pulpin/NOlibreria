@@ -45,6 +45,7 @@
             this.gConsulta1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LI_CODIGOVIEJO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LI_BARRA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_AUTOR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.editorial = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,7 +56,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lUEproveedor = new DevExpress.XtraEditors.LookUpEdit();
             this.label18 = new System.Windows.Forms.Label();
-            this.LI_BARRA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
@@ -70,19 +70,19 @@
             this.exportarAExcelToolStripMenuItem,
             this.exportarAPDFToolStripMenuItem});
             this.cmdmenugrid.Name = "contextMenuStrip1";
-            this.cmdmenugrid.Size = new System.Drawing.Size(156, 48);
+            this.cmdmenugrid.Size = new System.Drawing.Size(158, 48);
             // 
             // exportarAExcelToolStripMenuItem
             // 
             this.exportarAExcelToolStripMenuItem.Name = "exportarAExcelToolStripMenuItem";
-            this.exportarAExcelToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportarAExcelToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportarAExcelToolStripMenuItem.Text = "Exportar a Excel";
             this.exportarAExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarAExcelToolStripMenuItem_Click);
             // 
             // exportarAPDFToolStripMenuItem
             // 
             this.exportarAPDFToolStripMenuItem.Name = "exportarAPDFToolStripMenuItem";
-            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportarAPDFToolStripMenuItem.Text = "Exportar a PDF";
             this.exportarAPDFToolStripMenuItem.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem_Click);
             // 
@@ -190,10 +190,10 @@
             // gConsulta1
             // 
             this.gConsulta1.ContextMenuStrip = this.cmdmenugrid;
-            this.gConsulta1.Location = new System.Drawing.Point(281, 40);
+            this.gConsulta1.Location = new System.Drawing.Point(256, 40);
             this.gConsulta1.MainView = this.gridView1;
             this.gConsulta1.Name = "gConsulta1";
-            this.gConsulta1.Size = new System.Drawing.Size(611, 453);
+            this.gConsulta1.Size = new System.Drawing.Size(667, 453);
             this.gConsulta1.TabIndex = 250;
             this.gConsulta1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -226,6 +226,17 @@
             this.LI_CODIGOVIEJO.Visible = true;
             this.LI_CODIGOVIEJO.VisibleIndex = 0;
             this.LI_CODIGOVIEJO.Width = 80;
+            // 
+            // LI_BARRA
+            // 
+            this.LI_BARRA.Caption = "Barra";
+            this.LI_BARRA.FieldName = "LI_BARRA";
+            this.LI_BARRA.MaxWidth = 95;
+            this.LI_BARRA.MinWidth = 95;
+            this.LI_BARRA.Name = "LI_BARRA";
+            this.LI_BARRA.Visible = true;
+            this.LI_BARRA.VisibleIndex = 1;
+            this.LI_BARRA.Width = 95;
             // 
             // LI_DESC
             // 
@@ -282,7 +293,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label1.Location = new System.Drawing.Point(278, 20);
+            this.label1.Location = new System.Drawing.Point(258, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 17);
             this.label1.TabIndex = 251;
@@ -346,23 +357,12 @@
             this.label18.Text = "Proveedor:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // LI_BARRA
-            // 
-            this.LI_BARRA.Caption = "Barra";
-            this.LI_BARRA.FieldName = "LI_BARRA";
-            this.LI_BARRA.MaxWidth = 95;
-            this.LI_BARRA.MinWidth = 95;
-            this.LI_BARRA.Name = "LI_BARRA";
-            this.LI_BARRA.Visible = true;
-            this.LI_BARRA.VisibleIndex = 1;
-            this.LI_BARRA.Width = 95;
-            // 
             // hacerpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(923, 581);
+            this.ClientSize = new System.Drawing.Size(935, 581);
             this.Controls.Add(this.lUEproveedor);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label6);

@@ -343,6 +343,12 @@
     <Compile Include="ControlaConsignas.Designer.cs">
       <DependentUpon>ControlaConsignas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ventasentrefechapedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventasentrefechapedido.Designer.cs">
+      <DependentUpon>ventasentrefechapedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="reservasentrefecha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -666,6 +672,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlaConsignas.resx">
       <DependentUpon>ControlaConsignas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventasentrefechapedido.resx">
+      <DependentUpon>ventasentrefechapedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reservasentrefecha.resx">
       <DependentUpon>reservasentrefecha.cs</DependentUpon>

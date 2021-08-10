@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class reservasentrefecha
+    partial class ventasentrefechapedido
     {
         /// <summary>
         /// Required designer variable.
@@ -48,17 +48,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.chbTitulo = new System.Windows.Forms.CheckBox();
-            this.gConsulta = new DevExpress.XtraGrid.GridControl();
+            this.gConsultaPed = new DevExpress.XtraGrid.GridControl();
             this.gridViewPintarFilas = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.RESE_EDITORIAL = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RESE_LI_CODIGOVIEJO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RESE_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RESE_AUTOR = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RESE_CANTIDAD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RESE_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RESE_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.codigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LI_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LI_AUTOR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cantidad = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gConsulta1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MOV_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fechahasta.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fechadesde.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fechadesde.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gConsultaPed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -280,16 +276,16 @@
             this.chbTitulo.UseVisualStyleBackColor = true;
             this.chbTitulo.CheckedChanged += new System.EventHandler(this.chbTitulo_CheckedChanged);
             // 
-            // gConsulta
+            // gConsultaPed
             // 
-            this.gConsulta.Location = new System.Drawing.Point(12, 159);
-            this.gConsulta.MainView = this.gridViewPintarFilas;
-            this.gConsulta.Name = "gConsulta";
-            this.gConsulta.Size = new System.Drawing.Size(618, 301);
-            this.gConsulta.TabIndex = 248;
-            this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gConsultaPed.Location = new System.Drawing.Point(12, 159);
+            this.gConsultaPed.MainView = this.gridViewPintarFilas;
+            this.gConsultaPed.Name = "gConsultaPed";
+            this.gConsultaPed.Size = new System.Drawing.Size(618, 301);
+            this.gConsultaPed.TabIndex = 248;
+            this.gConsultaPed.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
-            this.gConsulta.Click += new System.EventHandler(this.gConsulta_Click);
+            this.gConsultaPed.Click += new System.EventHandler(this.gConsulta_Click);
             // 
             // gridViewPintarFilas
             // 
@@ -302,103 +298,66 @@
             this.gridViewPintarFilas.Appearance.SelectedRow.Options.UseFont = true;
             this.gridViewPintarFilas.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridViewPintarFilas.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.RESE_EDITORIAL,
-            this.RESE_LI_CODIGOVIEJO,
-            this.RESE_DESC,
-            this.RESE_AUTOR,
-            this.RESE_CANTIDAD,
-            this.RESE_FECHA,
-            this.RESE_IDE,
             this.LI_IDE,
-            this.gridColumn1});
-            this.gridViewPintarFilas.GridControl = this.gConsulta;
+            this.codigo,
+            this.LI_DESC,
+            this.LI_AUTOR,
+            this.cantidad});
+            this.gridViewPintarFilas.GridControl = this.gConsultaPed;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPintarFilas_FocusedRowChanged);
             // 
-            // RESE_EDITORIAL
-            // 
-            this.RESE_EDITORIAL.Caption = "Editorial";
-            this.RESE_EDITORIAL.FieldName = "RESE_EDITORIAL";
-            this.RESE_EDITORIAL.MaxWidth = 120;
-            this.RESE_EDITORIAL.MinWidth = 120;
-            this.RESE_EDITORIAL.Name = "RESE_EDITORIAL";
-            this.RESE_EDITORIAL.Visible = true;
-            this.RESE_EDITORIAL.VisibleIndex = 0;
-            this.RESE_EDITORIAL.Width = 120;
-            // 
-            // RESE_LI_CODIGOVIEJO
-            // 
-            this.RESE_LI_CODIGOVIEJO.Caption = "Código";
-            this.RESE_LI_CODIGOVIEJO.FieldName = "RESE_LI_CODIGOVIEJO";
-            this.RESE_LI_CODIGOVIEJO.MaxWidth = 60;
-            this.RESE_LI_CODIGOVIEJO.MinWidth = 60;
-            this.RESE_LI_CODIGOVIEJO.Name = "RESE_LI_CODIGOVIEJO";
-            this.RESE_LI_CODIGOVIEJO.Visible = true;
-            this.RESE_LI_CODIGOVIEJO.VisibleIndex = 1;
-            this.RESE_LI_CODIGOVIEJO.Width = 60;
-            // 
-            // RESE_DESC
-            // 
-            this.RESE_DESC.Caption = "Descripción";
-            this.RESE_DESC.FieldName = "RESE_DESC";
-            this.RESE_DESC.MaxWidth = 200;
-            this.RESE_DESC.MinWidth = 200;
-            this.RESE_DESC.Name = "RESE_DESC";
-            this.RESE_DESC.Visible = true;
-            this.RESE_DESC.VisibleIndex = 2;
-            this.RESE_DESC.Width = 200;
-            // 
-            // RESE_AUTOR
-            // 
-            this.RESE_AUTOR.Caption = "Autor";
-            this.RESE_AUTOR.FieldName = "RESE_AUTOR";
-            this.RESE_AUTOR.Name = "RESE_AUTOR";
-            this.RESE_AUTOR.Visible = true;
-            this.RESE_AUTOR.VisibleIndex = 3;
-            // 
-            // RESE_CANTIDAD
-            // 
-            this.RESE_CANTIDAD.Caption = "Cantidad";
-            this.RESE_CANTIDAD.FieldName = "RESE_CANTIDAD";
-            this.RESE_CANTIDAD.MaxWidth = 80;
-            this.RESE_CANTIDAD.Name = "RESE_CANTIDAD";
-            this.RESE_CANTIDAD.Visible = true;
-            this.RESE_CANTIDAD.VisibleIndex = 4;
-            this.RESE_CANTIDAD.Width = 80;
-            // 
-            // RESE_FECHA
-            // 
-            this.RESE_FECHA.Caption = "Fecha";
-            this.RESE_FECHA.FieldName = "RESE_FECHA";
-            this.RESE_FECHA.MaxWidth = 70;
-            this.RESE_FECHA.MinWidth = 70;
-            this.RESE_FECHA.Name = "RESE_FECHA";
-            this.RESE_FECHA.Visible = true;
-            this.RESE_FECHA.VisibleIndex = 5;
-            this.RESE_FECHA.Width = 70;
-            // 
-            // RESE_IDE
-            // 
-            this.RESE_IDE.Caption = "RESE_IDE";
-            this.RESE_IDE.FieldName = "RESE_IDE";
-            this.RESE_IDE.Name = "RESE_IDE";
-            // 
             // LI_IDE
             // 
             this.LI_IDE.Caption = "LI_IDE";
             this.LI_IDE.FieldName = "LI_IDE";
+            this.LI_IDE.MaxWidth = 120;
+            this.LI_IDE.MinWidth = 120;
             this.LI_IDE.Name = "LI_IDE";
+            this.LI_IDE.Width = 120;
             // 
-            // gridColumn1
+            // codigo
             // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
+            this.codigo.Caption = "Código";
+            this.codigo.FieldName = "codigo";
+            this.codigo.MaxWidth = 60;
+            this.codigo.MinWidth = 60;
+            this.codigo.Name = "codigo";
+            this.codigo.Visible = true;
+            this.codigo.VisibleIndex = 0;
+            this.codigo.Width = 60;
+            // 
+            // LI_DESC
+            // 
+            this.LI_DESC.Caption = "Descripción";
+            this.LI_DESC.FieldName = "LI_DESC";
+            this.LI_DESC.MaxWidth = 200;
+            this.LI_DESC.MinWidth = 200;
+            this.LI_DESC.Name = "LI_DESC";
+            this.LI_DESC.Visible = true;
+            this.LI_DESC.VisibleIndex = 1;
+            this.LI_DESC.Width = 200;
+            // 
+            // LI_AUTOR
+            // 
+            this.LI_AUTOR.Caption = "Autor";
+            this.LI_AUTOR.FieldName = "LI_AUTOR";
+            this.LI_AUTOR.Name = "LI_AUTOR";
+            this.LI_AUTOR.Visible = true;
+            this.LI_AUTOR.VisibleIndex = 2;
+            // 
+            // cantidad
+            // 
+            this.cantidad.Caption = "Cantidad";
+            this.cantidad.FieldName = "cantidad";
+            this.cantidad.MaxWidth = 80;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Visible = true;
+            this.cantidad.VisibleIndex = 3;
+            this.cantidad.Width = 80;
             // 
             // gConsulta1
             // 
@@ -584,12 +543,12 @@
             this.label6.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.label6.Location = new System.Drawing.Point(12, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 254;
-            this.label6.Text = "Reservas";
+            this.label6.Text = "Ventas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // reservasentrefecha
+            // ventasentrefechapedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -601,7 +560,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gConsulta1);
             this.Controls.Add(this.gConsulta2);
-            this.Controls.Add(this.gConsulta);
+            this.Controls.Add(this.gConsultaPed);
             this.Controls.Add(this.gBtipopro);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -611,7 +570,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btncancelar);
-            this.Name = "reservasentrefecha";
+            this.Name = "ventasentrefechapedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservas por fecha...";
             this.Load += new System.EventHandler(this.ConsultasConsignas_Load);
@@ -622,7 +581,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fechahasta.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fechadesde.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fechadesde.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gConsultaPed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -653,15 +612,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox chbTitulo;
-        private DevExpress.XtraGrid.GridControl gConsulta;
+        private DevExpress.XtraGrid.GridControl gConsultaPed;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPintarFilas;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_LI_CODIGOVIEJO;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_DESC;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_AUTOR;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_EDITORIAL;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_CANTIDAD;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_FECHA;
-        private DevExpress.XtraGrid.Columns.GridColumn RESE_IDE;
+        private DevExpress.XtraGrid.Columns.GridColumn codigo;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_DESC;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_AUTOR;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_IDE;
+        private DevExpress.XtraGrid.Columns.GridColumn cantidad;
         private DevExpress.XtraGrid.GridControl gConsulta1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn MOV_FECHA;
@@ -679,7 +636,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraGrid.Columns.GridColumn LI_IDE;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

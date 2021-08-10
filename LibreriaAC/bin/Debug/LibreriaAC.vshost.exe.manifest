@@ -102,7 +102,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OqdGrNvd9p4JyQRxquJHjMEsmZfZim3DBaYoZVtcwUI=</dsig:DigestValue>
+        <dsig:DigestValue>7PpgCQ/AO2SR45OiaPAuchnOOERenWYEFIkxjnVKC98=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1271,26 +1271,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaAC.exe" size="1244672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaAC.exe" size="1254400">
       <assemblyIdentity name="LibreriaAC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pq5OT97l144T0DWSS4Ge3BH5cdWHWilB5Tksj73/PLU=</dsig:DigestValue>
+        <dsig:DigestValue>7EN/YGn2qaFnjFgcPv/2crodtoq+/Qw4xZQLyq3AT9E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LogicaL.dll" size="133120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LogicaL.dll" size="133632">
       <assemblyIdentity name="LogicaL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9lirtuI8XVc0eLAjhqGkFXNqxuvTxJSX+foqK+Gn4jk=</dsig:DigestValue>
+        <dsig:DigestValue>T4wgl7kfJy3mQf0l1n+hpNhKti5ZLT4eaAddwoqjwCY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
