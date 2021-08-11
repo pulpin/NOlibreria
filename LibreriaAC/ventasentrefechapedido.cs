@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraPrinting;
+﻿using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
 using LogicaNegocios;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,10 @@ namespace Presentacion
         Reservas re = new Reservas();
         Venta ven = new Venta();
         Productos pro = new Productos();
+
+
         
+
         public ventasentrefechapedido()
         {
             InitializeComponent();
@@ -28,10 +32,6 @@ namespace Presentacion
         {
             fechadesde.EditValue = DateTime.Today;
             fechahasta.EditValue = DateTime.Today;
-
-           
-
-
         }
 
 
@@ -154,31 +154,64 @@ namespace Presentacion
         {
             this.Codigo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["codigo"]));
             ven.venproductoide = this.Codigo;
+            int cantidaddereservas = ven.spConsultaCantiReservas();
+            lbcantidadreserva.Text = Convert.ToString(cantidaddereservas);
             gConsulta2.DataSource = ven.Mostrar_registrodelasventas();
-
             gConsulta1.DataSource = ven.Mostrar_movimientosdeproductos();
+            gConsulta3.DataSource = ven.Mostrar_reservasdeproducto();
         }
         private void gConsulta_Click(object sender, EventArgs e)
         {
 
         }
+        //this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
+        private void gridViewPintarFilas_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            GridView View = sender as GridView;
+            if (e.RowHandle >= 0)
+            {
+                int valorp = Convert.ToInt32(View.GetRowCellDisplayText(e.RowHandle, View.Columns["valor"]));
+
+                //e.Appearance.BackColor = Color.LemonChiffon;
+                
+                if (valorp == 1)
+                {
+                    e.Appearance.BackColor = Color.PaleGreen;  
+                }
+                
+            }
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AltaPedido ap = new AltaPedido();
-            ap.Producto = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["RESE_DESC"]));
+            ap.Producto = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_DESC"]));
             ap.Ide = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_IDE"]));
             ap.colocarnombre();
-            ap.CodigoViejo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["RESE_LI_CODIGOVIEJO"]));
+            ap.CodigoViejo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_CODIGOVIEJO"]));
             ap.Pedidos = 1;
-            ap.Cantidad = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["RESE_CANTIDAD"]));
+            ap.Cantidad = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["cantidad"]));
             ap.colocarcantidad();
             ap.Alta = 1;
+            
             if (ap.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                gridViewPintarFilas.SetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["valor"], 1);
                 //gConsulta.DataSource = cli.Mostrar_clientes();
                 //gConsulta.DataSource = pro.Mostrar_productos();
-                this.cargar();
+                // this.cargar();
+            }
+        }
+
+        private void lbcantidadreserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (gConsulta3.Visible == true)
+            {
+                gConsulta3.Visible = false;
+            }
+            else
+            {
+                gConsulta3.Visible = true;
             }
         }
     }

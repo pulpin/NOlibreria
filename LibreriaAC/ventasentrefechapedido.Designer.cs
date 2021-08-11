@@ -55,6 +55,7 @@
             this.LI_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_AUTOR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cantidad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.valor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gConsulta1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MOV_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,6 +73,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbcantidadreserva = new System.Windows.Forms.LinkLabel();
+            this.gConsulta3 = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.CLIEN_NOMBRE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RESE_CANTIDAD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RESE_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdmenugrid.SuspendLayout();
             this.gBtipopro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fechahasta.Properties.CalendarTimeProperties)).BeginInit();
@@ -84,6 +92,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gConsulta3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
@@ -139,7 +149,7 @@
             this.panel2.BackgroundImage = global::Presentacion.Properties.Resources.excel32;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(155, 461);
+            this.panel2.Location = new System.Drawing.Point(155, 480);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(38, 35);
             this.panel2.TabIndex = 239;
@@ -149,7 +159,7 @@
             this.panel1.BackgroundImage = global::Presentacion.Properties.Resources.pdf32;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(196, 461);
+            this.panel1.Location = new System.Drawing.Point(196, 480);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(38, 35);
             this.panel1.TabIndex = 238;
@@ -158,7 +168,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Firebrick;
-            this.label5.Location = new System.Drawing.Point(12, 463);
+            this.label5.Location = new System.Drawing.Point(12, 482);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 13);
             this.label5.TabIndex = 237;
@@ -182,7 +192,7 @@
             this.gBtipopro.Controls.Add(this.fechahasta);
             this.gBtipopro.Controls.Add(this.label2);
             this.gBtipopro.Controls.Add(this.fechadesde);
-            this.gBtipopro.Location = new System.Drawing.Point(221, 3);
+            this.gBtipopro.Location = new System.Drawing.Point(46, 13);
             this.gBtipopro.Name = "gBtipopro";
             this.gBtipopro.Size = new System.Drawing.Size(440, 53);
             this.gBtipopro.TabIndex = 247;
@@ -242,11 +252,11 @@
             // 
             this.button1.Image = global::Presentacion.Properties.Resources.buscar48;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(358, 72);
+            this.button1.Location = new System.Drawing.Point(523, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 70);
             this.button1.TabIndex = 246;
-            this.button1.Text = "Ver reservas";
+            this.button1.Text = "Ver ventas";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -255,7 +265,7 @@
             // 
             this.button2.Image = global::Presentacion.Properties.Resources.salir48;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(489, 72);
+            this.button2.Location = new System.Drawing.Point(654, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 70);
             this.button2.TabIndex = 245;
@@ -268,7 +278,7 @@
             this.chbTitulo.AutoSize = true;
             this.chbTitulo.Checked = true;
             this.chbTitulo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbTitulo.Location = new System.Drawing.Point(669, 17);
+            this.chbTitulo.Location = new System.Drawing.Point(405, 0);
             this.chbTitulo.Name = "chbTitulo";
             this.chbTitulo.Size = new System.Drawing.Size(56, 17);
             this.chbTitulo.TabIndex = 244;
@@ -278,10 +288,10 @@
             // 
             // gConsultaPed
             // 
-            this.gConsultaPed.Location = new System.Drawing.Point(12, 159);
+            this.gConsultaPed.Location = new System.Drawing.Point(12, 107);
             this.gConsultaPed.MainView = this.gridViewPintarFilas;
             this.gConsultaPed.Name = "gConsultaPed";
-            this.gConsultaPed.Size = new System.Drawing.Size(618, 301);
+            this.gConsultaPed.Size = new System.Drawing.Size(618, 367);
             this.gConsultaPed.TabIndex = 248;
             this.gConsultaPed.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
@@ -302,13 +312,15 @@
             this.codigo,
             this.LI_DESC,
             this.LI_AUTOR,
-            this.cantidad});
+            this.cantidad,
+            this.valor});
             this.gridViewPintarFilas.GridControl = this.gConsultaPed;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPintarFilas_FocusedRowChanged);
+            this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // LI_IDE
             // 
@@ -358,6 +370,12 @@
             this.cantidad.Visible = true;
             this.cantidad.VisibleIndex = 3;
             this.cantidad.Width = 80;
+            // 
+            // valor
+            // 
+            this.valor.Caption = "valor";
+            this.valor.FieldName = "valor";
+            this.valor.Name = "valor";
             // 
             // gConsulta1
             // 
@@ -541,12 +559,96 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label6.Location = new System.Drawing.Point(12, 139);
+            this.label6.Location = new System.Drawing.Point(9, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 254;
             this.label6.Text = "Ventas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.Location = new System.Drawing.Point(636, 107);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 17);
+            this.label7.TabIndex = 255;
+            this.label7.Text = "Reservas:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbcantidadreserva
+            // 
+            this.lbcantidadreserva.AutoSize = true;
+            this.lbcantidadreserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcantidadreserva.LinkColor = System.Drawing.Color.Yellow;
+            this.lbcantidadreserva.Location = new System.Drawing.Point(712, 108);
+            this.lbcantidadreserva.Name = "lbcantidadreserva";
+            this.lbcantidadreserva.Size = new System.Drawing.Size(16, 16);
+            this.lbcantidadreserva.TabIndex = 257;
+            this.lbcantidadreserva.TabStop = true;
+            this.lbcantidadreserva.Text = "0";
+            this.lbcantidadreserva.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbcantidadreserva_LinkClicked);
+            // 
+            // gConsulta3
+            // 
+            this.gConsulta3.ContextMenuStrip = this.cmdmenugrid;
+            this.gConsulta3.Location = new System.Drawing.Point(636, 127);
+            this.gConsulta3.MainView = this.gridView3;
+            this.gConsulta3.Name = "gConsulta3";
+            this.gConsulta3.Size = new System.Drawing.Size(284, 403);
+            this.gConsulta3.TabIndex = 258;
+            this.gConsulta3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            this.gConsulta3.Visible = false;
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.CLIEN_NOMBRE,
+            this.RESE_CANTIDAD,
+            this.RESE_FECHA});
+            this.gridView3.GridControl = this.gConsulta3;
+            this.gridView3.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Cantidad", null, "(Cantidad: Recuento={0})")});
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsBehavior.Editable = false;
+            this.gridView3.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.gridView3.OptionsView.ShowFooter = true;
+            // 
+            // CLIEN_NOMBRE
+            // 
+            this.CLIEN_NOMBRE.Caption = "Cliente";
+            this.CLIEN_NOMBRE.FieldName = "CLIEN_NOMBRE";
+            this.CLIEN_NOMBRE.MaxWidth = 110;
+            this.CLIEN_NOMBRE.MinWidth = 110;
+            this.CLIEN_NOMBRE.Name = "CLIEN_NOMBRE";
+            this.CLIEN_NOMBRE.Visible = true;
+            this.CLIEN_NOMBRE.VisibleIndex = 0;
+            this.CLIEN_NOMBRE.Width = 110;
+            // 
+            // RESE_CANTIDAD
+            // 
+            this.RESE_CANTIDAD.Caption = "Cantidad";
+            this.RESE_CANTIDAD.FieldName = "RESE_CANTIDAD";
+            this.RESE_CANTIDAD.MaxWidth = 65;
+            this.RESE_CANTIDAD.MinWidth = 65;
+            this.RESE_CANTIDAD.Name = "RESE_CANTIDAD";
+            this.RESE_CANTIDAD.Visible = true;
+            this.RESE_CANTIDAD.VisibleIndex = 1;
+            this.RESE_CANTIDAD.Width = 65;
+            // 
+            // RESE_FECHA
+            // 
+            this.RESE_FECHA.Caption = "Fecha";
+            this.RESE_FECHA.FieldName = "RESE_FECHA";
+            this.RESE_FECHA.MaxWidth = 70;
+            this.RESE_FECHA.MinWidth = 70;
+            this.RESE_FECHA.Name = "RESE_FECHA";
+            this.RESE_FECHA.Visible = true;
+            this.RESE_FECHA.VisibleIndex = 2;
+            this.RESE_FECHA.Width = 70;
             // 
             // ventasentrefechapedido
             // 
@@ -555,6 +657,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 581);
             this.ControlBox = false;
+            this.Controls.Add(this.gConsulta3);
+            this.Controls.Add(this.lbcantidadreserva);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
@@ -588,6 +693,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gConsulta3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,5 +744,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel lbcantidadreserva;
+        private DevExpress.XtraGrid.GridControl gConsulta3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn CLIEN_NOMBRE;
+        private DevExpress.XtraGrid.Columns.GridColumn RESE_CANTIDAD;
+        private DevExpress.XtraGrid.Columns.GridColumn RESE_FECHA;
+        private DevExpress.XtraGrid.Columns.GridColumn valor;
     }
 }

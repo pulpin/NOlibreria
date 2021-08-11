@@ -399,3 +399,4 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\LibreriaAC.exe
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\LibreriaAC.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.ConsultaPlataCaja.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.AltaDineroCaja.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.ventasentrefechapedido.resources

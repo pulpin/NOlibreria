@@ -155,6 +155,65 @@ namespace LogicaNegocios
             return Valor_Retornado;
         }
 
+
+        public int spConsultaCantiReservas()
+        {
+            string cadenaconexion;
+            int Valor_Retornado = 0;
+
+            Conexion con = new Conexion("libreria", Globales.ip);
+            cadenaconexion = con.inicializa();
+            MySqlConnection mysql_conexion = con.AbrirConexion(cadenaconexion);
+            // MySqlCommand myCommand = new  MySqlCommand();
+            mysql_conexion.Open();
+            MySqlTransaction sqlTran = mysql_conexion.BeginTransaction();
+            MySqlCommand myCommand = mysql_conexion.CreateCommand();
+            myCommand.Transaction = sqlTran;
+
+
+
+            try
+            {
+                myCommand.Connection = mysql_conexion;
+                myCommand.CommandText = "spConsultacantireservas";
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.AddWithValue("ncodigo", this.venproductoide);
+                
+
+                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
+                
+                //MySqlParameter ValorRetorno = new MySqlParameter("RETURN_VALUE", SqlDbType.Decimal);
+                ValorRetorno.Direction = ParameterDirection.Output;// Output;
+                
+                myCommand.Parameters.Add(ValorRetorno);
+                
+                myCommand.ExecuteNonQuery();
+                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+
+                sqlTran.Commit();
+                mysql_conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception if the transaction fails to commit.
+                Console.WriteLine(ex.Message);
+
+                try
+                {
+                    // Attempt to roll back the transaction.
+                    sqlTran.Rollback();
+                }
+                catch (Exception exRollback)
+                {
+                    Console.WriteLine(exRollback.Message);
+                }
+            }
+
+            //this.Titulo = Valor_Retornado;
+            //this.Precio = Valor_Retornado2;
+            return Valor_Retornado;
+        }
+
         public int spModificaProforma()
         {
             int Valor_Retornado = 0;
@@ -866,6 +925,15 @@ namespace LogicaNegocios
 
         }
 
+        public DataTable Mostrar_reservasdeproducto()
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+
+            return con.Mostrar_Datos("select CLIEN_NOMBRE,RESE_CANTIDAD,RESE_FECHA from reservas as re left join clientesli as cl on re.RESE_CLIE_IDE = cl.CLIEN_IDE " +
+                                    " where RESE_ESTADO = 0 and RESE_LI_CODIGOVIEJO = '" + this.venproductoide + "'");
+
+        }
         public DataTable Mostrar_ventasporproducto()
         {
             Conexion con = new Conexion("libreria", Globales.ip);
@@ -943,7 +1011,7 @@ namespace LogicaNegocios
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
 
-            return con.Mostrar_Datos("select li.LI_IDE, li.LI_CODIGOVIEJO as codigo,li.LI_DESC,li.LI_AUTOR,edi.EDI_EDITORIAL,SUM(vend.VEND_CANTIDAD) as cantidad " +
+            return con.Mostrar_Datos("select li.LI_IDE, li.LI_CODIGOVIEJO as codigo,li.LI_DESC,li.LI_AUTOR,edi.EDI_EDITORIAL,SUM(vend.VEND_CANTIDAD) as cantidad,0 as valor " +
                                      " from venta as ven left join ventadetalle as vend on ven.VEN_IDE = vend.VEND_VEN_IDE " +
                                      " left join libros as li on vend.VEND_LI_IDE = li.LI_CODIGOVIEJO " +
                                      " left join editorial as edi on li.LI_EDI_CODIGO = edi.EDI_CODIGO " +
