@@ -100,9 +100,9 @@
             // 
             this.btncancelar.Image = global::Presentacion.Properties.Resources.cancel48;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(431, 505);
+            this.btncancelar.Location = new System.Drawing.Point(468, 493);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(87, 67);
+            this.btncancelar.Size = new System.Drawing.Size(87, 78);
             this.btncancelar.TabIndex = 197;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -135,9 +135,9 @@
             // 
             this.btneliminar.Image = global::Presentacion.Properties.Resources.prin48;
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(337, 504);
+            this.btneliminar.Location = new System.Drawing.Point(370, 493);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(87, 67);
+            this.btneliminar.Size = new System.Drawing.Size(87, 78);
             this.btneliminar.TabIndex = 200;
             this.btneliminar.Text = "Imprimir";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -320,7 +320,6 @@
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPintarFilas_FocusedRowChanged);
-            this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // LI_IDE
             // 
@@ -545,11 +544,11 @@
             // 
             this.button3.Image = global::Presentacion.Properties.Resources.proforma48;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(242, 504);
+            this.button3.Location = new System.Drawing.Point(271, 493);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 67);
+            this.button3.Size = new System.Drawing.Size(87, 78);
             this.button3.TabIndex = 253;
-            this.button3.Text = "Pedir";
+            this.button3.Text = "Agregar al pedido";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

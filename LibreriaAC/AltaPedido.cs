@@ -71,7 +71,7 @@ namespace Presentacion
             if (resultado == 0)
             {
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha guardado el pedido!");
+                MessageBox.Show("Se ha agregado al pedido!");
             }
             else
             {

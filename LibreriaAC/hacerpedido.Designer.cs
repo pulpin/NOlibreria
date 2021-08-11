@@ -375,7 +375,7 @@
             this.Controls.Add(this.btneliminar);
             this.Name = "hacerpedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pedidos por editorial...";
+            this.Text = "Realizar el PEDIDO...";
             this.Load += new System.EventHandler(this.ConsultasConsignas_Load);
             this.cmdmenugrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).EndInit();
