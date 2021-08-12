@@ -267,7 +267,7 @@ namespace LogicaNegocios
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
 
-            return con.Mostrar_Datos("select li.LI_CODIGOVIEJO,li.LI_BARRA,li.LI_DESC,li.LI_AUTOR,EDI_EDITORIAL as editorial,li.LI_PEDIDOS,li.LI_EDI_CODIGO,li.LI_IDE from libros as li left join editorial as ed " +
+            return con.Mostrar_Datos("select li.LI_CODIGOVIEJO,li.LI_BARRA,li.LI_DESC,li.LI_AUTOR,EDI_EDITORIAL as editorial,li.LI_PEDIDOS,li.LI_EDI_CODIGO,li.LI_IDE,li.LI_CODIGOPROVEE from libros as li left join editorial as ed " +
                                        " on li.LI_EDI_CODIGO = ed.EDI_CODIGO " +
                                        " WHERE " + editoriales + " and LI_PEDIDOS > 0 " +
                                        " ");

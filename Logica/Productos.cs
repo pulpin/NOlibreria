@@ -11,7 +11,7 @@ namespace LogicaNegocios
 {
     public class Productos
     {
-        string _titulo = string.Empty, _autor = string.Empty, valor = string.Empty, contiene = string.Empty, _barra = string.Empty, _codigo = string.Empty,_isbn = string.Empty, _precio = string.Empty, _preciosinmodificar=string.Empty, _costo = string.Empty,_iva = string.Empty, _ganancia = string.Empty,_factura = string.Empty, _imagen = string.Empty, _cuerpo = string.Empty,_estante = string.Empty, _importevta = string.Empty, _codigointernoedi = string.Empty, _stock = string.Empty, _remito = string.Empty,_primervalor, _segundovalor, _codigoprovee;
+        string _titulo = string.Empty, _autor = string.Empty, valor = string.Empty, contiene = string.Empty, _barra = string.Empty, _codigo = string.Empty,_isbn = string.Empty, _precio = string.Empty, _preciosinmodificar=string.Empty, _costo = string.Empty,_iva = string.Empty, _ganancia = string.Empty,_factura = string.Empty, _imagen = string.Empty, _cuerpo = string.Empty,_estante = string.Empty, _importevta = string.Empty, _codigointernoedi = string.Empty, _stock = string.Empty, _remito = string.Empty,_primervalor, _segundovalor, _codigoprovee, _precioanterior;
         decimal _precioante, _preciol;
         int _titup, _autorp, _edip, _pedidos, _alta, _notaparcial;
         int _contengapala, _editorial, _genero, _tipo, _cantidad, _productoide, _nrodevta, _proveeide, _dividido, _rendido, _original, _consignacantidad,_consignanro, _consignaide, _consignaactual;
@@ -925,6 +925,7 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("nremito", this.Remito);
                 myCommand.Parameters.AddWithValue("pcodprovee", this.Codigoprovee);
                 myCommand.Parameters.AddWithValue("pcodigo", this.Codigo);
+                myCommand.Parameters.AddWithValue("pprecioante", this.Precioante);
 
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
@@ -1845,6 +1846,11 @@ namespace LogicaNegocios
         {
             get { return this._precioante; }
             set { this._precioante = value; }
+        }
+        public string Precioanterior
+        {
+            get { return this._precioanterior; }
+            set { this._precioanterior = value; }
         }
         public string Primervalor
         {

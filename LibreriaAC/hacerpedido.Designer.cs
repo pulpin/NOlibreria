@@ -56,6 +56,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lUEproveedor = new DevExpress.XtraEditors.LookUpEdit();
             this.label18 = new System.Windows.Forms.Label();
+            this.LI_CODIGOPROVEE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
@@ -207,7 +208,8 @@
             this.LI_AUTOR,
             this.editorial,
             this.LI_PEDIDOS,
-            this.LI_IDE});
+            this.LI_IDE,
+            this.LI_CODIGOPROVEE});
             this.gridView1.GridControl = this.gConsulta1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Cantidad", null, "(Cantidad: Recuento={0})")});
@@ -235,7 +237,7 @@
             this.LI_BARRA.MinWidth = 95;
             this.LI_BARRA.Name = "LI_BARRA";
             this.LI_BARRA.Visible = true;
-            this.LI_BARRA.VisibleIndex = 1;
+            this.LI_BARRA.VisibleIndex = 2;
             this.LI_BARRA.Width = 95;
             // 
             // LI_DESC
@@ -246,7 +248,7 @@
             this.LI_DESC.MinWidth = 250;
             this.LI_DESC.Name = "LI_DESC";
             this.LI_DESC.Visible = true;
-            this.LI_DESC.VisibleIndex = 2;
+            this.LI_DESC.VisibleIndex = 3;
             this.LI_DESC.Width = 250;
             // 
             // LI_AUTOR
@@ -257,7 +259,7 @@
             this.LI_AUTOR.MinWidth = 80;
             this.LI_AUTOR.Name = "LI_AUTOR";
             this.LI_AUTOR.Visible = true;
-            this.LI_AUTOR.VisibleIndex = 3;
+            this.LI_AUTOR.VisibleIndex = 4;
             this.LI_AUTOR.Width = 80;
             // 
             // editorial
@@ -268,7 +270,7 @@
             this.editorial.MinWidth = 80;
             this.editorial.Name = "editorial";
             this.editorial.Visible = true;
-            this.editorial.VisibleIndex = 4;
+            this.editorial.VisibleIndex = 5;
             this.editorial.Width = 80;
             // 
             // LI_PEDIDOS
@@ -279,7 +281,7 @@
             this.LI_PEDIDOS.MinWidth = 50;
             this.LI_PEDIDOS.Name = "LI_PEDIDOS";
             this.LI_PEDIDOS.Visible = true;
-            this.LI_PEDIDOS.VisibleIndex = 5;
+            this.LI_PEDIDOS.VisibleIndex = 6;
             this.LI_PEDIDOS.Width = 50;
             // 
             // LI_IDE
@@ -357,6 +359,17 @@
             this.label18.Text = "Proveedor:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // LI_CODIGOPROVEE
+            // 
+            this.LI_CODIGOPROVEE.Caption = "Cód_Provee";
+            this.LI_CODIGOPROVEE.FieldName = "LI_CODIGOPROVEE";
+            this.LI_CODIGOPROVEE.MaxWidth = 80;
+            this.LI_CODIGOPROVEE.MinWidth = 80;
+            this.LI_CODIGOPROVEE.Name = "LI_CODIGOPROVEE";
+            this.LI_CODIGOPROVEE.Visible = true;
+            this.LI_CODIGOPROVEE.VisibleIndex = 1;
+            this.LI_CODIGOPROVEE.Width = 80;
+            // 
             // hacerpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,5 +429,6 @@
         private System.Windows.Forms.Label label18;
         private DevExpress.XtraGrid.Columns.GridColumn LI_IDE;
         private DevExpress.XtraGrid.Columns.GridColumn LI_BARRA;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_CODIGOPROVEE;
     }
 }

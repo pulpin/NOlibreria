@@ -320,6 +320,7 @@
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPintarFilas_FocusedRowChanged);
+            this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // LI_IDE
             // 

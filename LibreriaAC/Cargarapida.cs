@@ -17,7 +17,7 @@ namespace Presentacion
     {
         private int tipopro = 0, _alta, _producide;
         OpenFileDialog openFileDialog1;
-        private string rutacompleta, nombrearchivo, directorioactual, _iva, _codigoviejo;
+        private string rutacompleta, nombrearchivo, directorioactual, _iva, _codigoviejo,precioanterior;
         public Cargarapida()
         {
             InitializeComponent();
@@ -37,7 +37,9 @@ namespace Presentacion
             // pro.Genero = Convert.ToInt32(LUgenero.EditValue);
             pro.Proveeide = Convert.ToInt32(lUEproveedor.EditValue);
             txtprecio.Text = txtprecio.Text.Replace(",", ".");
+            this.precioanterior = precioanterior.Replace(",", ".");
             pro.Precio = txtprecio.Text;
+            pro.Precioanterior = this.precioanterior;
             pro.Remito = txtfactura.Text;
             pro.Codigoprovee = txtcodprove.Text;
             if (txtcantidad.Text != string.Empty)
@@ -323,6 +325,7 @@ namespace Presentacion
                     lUEdito.EditValue = Convert.ToInt32(reader["LI_EDI_CODIGO"].ToString());
                     LUgenero.EditValue = Convert.ToInt32(reader["LI_GEN_IDE"].ToString());
                     txtprecio.Text = reader["LI_PRECIO"].ToString();
+                    precioanterior = reader["LI_PRECIO"].ToString();
                     txtcosto.Text = reader["LI_COSTO"].ToString();
                     lUporcentaje.Text = reader["LI_PORC_IVA"].ToString();
                     txtporcentaje.Text = reader["LI_PORC_GANAN"].ToString();

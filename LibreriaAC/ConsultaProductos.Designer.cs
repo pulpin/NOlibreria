@@ -868,6 +868,7 @@
             // lbultimaap
             // 
             this.lbultimaap.AutoSize = true;
+            this.lbultimaap.BackColor = System.Drawing.Color.LemonChiffon;
             this.lbultimaap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbultimaap.Location = new System.Drawing.Point(590, 11);
             this.lbultimaap.Name = "lbultimaap";
@@ -947,11 +948,11 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(647, 11);
+            this.label19.Location = new System.Drawing.Point(643, 11);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 20);
+            this.label19.Size = new System.Drawing.Size(85, 20);
             this.label19.TabIndex = 11;
-            this.label19.Text = "Lugares:";
+            this.label19.Text = "Depósitos:";
             // 
             // button6
             // 
