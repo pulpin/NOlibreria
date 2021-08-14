@@ -12,7 +12,7 @@ namespace LogicaNegocios
     public class Reservas
     {
         int _cliide, _cantidad, _reseide, _paraavisar, _avisado, _entregado, _alaventa, _estado;
-        string _clitelefono, _codigolibro, _desc, _editorial, _precio, _autor, _obs;
+        string _clitelefono=string.Empty, _codigolibro, _desc, _editorial, _precio, _autor, _obs, _nombre=string.Empty;
 
         public int spInsertarReserva()
         {
@@ -210,7 +210,35 @@ namespace LogicaNegocios
 
         }
 
-        public DataTable Mostrar_Reservasunproducto()
+        public DataTable Mostrar_ReservasBuscar()
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+            string contiene = "%",valor = string.Empty;
+            valor = "CLIEN_IDE > 0";
+            if(this.Nombre != string.Empty)
+            { 
+                valor = "CLIEN_NOMBRE like " + "'" + contiene + "" + this.Nombre + "%" + "'";
+                
+            }
+            if (this.Clitelefono != string.Empty)
+            {
+                valor = "CLIEN_TELEFONO = " + this.Clitelefono;
+            }
+            return con.Mostrar_Datos("select CLIEN_NOMBRE,CLIEN_TELEFONO,RESE_LI_CODIGOVIEJO,RESE_DESC,RESE_AUTOR, " +
+                                    " RESE_EDITORIAL, RESE_PRECIO, RESE_FECHA,RESE_CANTIDAD,  " +
+                                    " RESE_IDE,RESE_USUA_IDE,RESE_USUL_IDE,RESE_USUE_IDE,usu1.USU_NOMBRE as Cargado,usu4.USU_NOMBRE as paraavisar,RESE_USUP_FE,usu2.USU_NOMBRE as Avisado,RESE_USUL_FE,usu3.USU_NOMBRE as Entregado,usu5.USU_NOMBRE as Alaventa,RESE_USUV_FE,RESE_USUE_FE,RESE_ESTADO,RESE_CLIE_IDE,RESE_OBS,usu6.USU_NOMBRE as usumodificar,RESE_USUM_FE from reservas " +
+                                    " left join clientesli on RESE_CLIE_IDE = CLIEN_IDE " +
+                                    " left join usuarios.usuarios on RESE_USUA_IDE = USU_IDE " +
+                                    " left join usuarios.usuarios as usu1 on RESE_USUA_IDE = usu1.USU_IDE " +
+                                    " left join usuarios.usuarios as usu2 on RESE_USUL_IDE = usu2.USU_IDE " +
+                                    " left join usuarios.usuarios as usu3 on RESE_USUE_IDE = usu3.USU_IDE " +
+                                    " left join usuarios.usuarios as usu4 on RESE_USUP_IDE = usu4.USU_IDE " +
+                                    " left join usuarios.usuarios as usu5 on RESE_USUV_IDE = usu5.USU_IDE " +
+                                    " left join usuarios.usuarios as usu6 on RESE_USUM_IDE = usu6.USU_IDE  where " + valor + "");
+        }
+
+    public DataTable Mostrar_Reservasunproducto()
         {
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
@@ -344,6 +372,12 @@ namespace LogicaNegocios
         {
             get { return this._clitelefono; }
             set { this._clitelefono = value; }
+        }
+
+        public string Nombre
+        {
+            get { return this._nombre; }
+            set { this._nombre = value; }
         }
 
         public string Obs

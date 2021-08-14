@@ -59,20 +59,23 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnalaventa = new System.Windows.Forms.Button();
             this.btntodos = new System.Windows.Forms.Button();
+            this.txttitulo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.SuspendLayout();
             // 
             // gConsulta
             // 
-            this.gConsulta.Location = new System.Drawing.Point(12, 12);
+            this.gConsulta.Location = new System.Drawing.Point(12, 44);
             this.gConsulta.MainView = this.gridViewPintarFilas;
             this.gConsulta.Name = "gConsulta";
-            this.gConsulta.Size = new System.Drawing.Size(960, 364);
+            this.gConsulta.Size = new System.Drawing.Size(960, 332);
             this.gConsulta.TabIndex = 1;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
-            this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // gridViewPintarFilas
             // 
@@ -112,6 +115,7 @@
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
+            this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // CLIEN_NOMBRE
             // 
@@ -128,10 +132,12 @@
             // 
             this.CLIEN_TELEFONO.Caption = "Teléfono";
             this.CLIEN_TELEFONO.FieldName = "CLIEN_TELEFONO";
+            this.CLIEN_TELEFONO.MaxWidth = 85;
+            this.CLIEN_TELEFONO.MinWidth = 85;
             this.CLIEN_TELEFONO.Name = "CLIEN_TELEFONO";
             this.CLIEN_TELEFONO.Visible = true;
-            this.CLIEN_TELEFONO.VisibleIndex = 1;
-            this.CLIEN_TELEFONO.Width = 67;
+            this.CLIEN_TELEFONO.VisibleIndex = 9;
+            this.CLIEN_TELEFONO.Width = 85;
             // 
             // RESE_LI_CODIGOVIEJO
             // 
@@ -141,7 +147,7 @@
             this.RESE_LI_CODIGOVIEJO.MinWidth = 60;
             this.RESE_LI_CODIGOVIEJO.Name = "RESE_LI_CODIGOVIEJO";
             this.RESE_LI_CODIGOVIEJO.Visible = true;
-            this.RESE_LI_CODIGOVIEJO.VisibleIndex = 2;
+            this.RESE_LI_CODIGOVIEJO.VisibleIndex = 1;
             this.RESE_LI_CODIGOVIEJO.Width = 60;
             // 
             // RESE_DESC
@@ -152,44 +158,52 @@
             this.RESE_DESC.MinWidth = 200;
             this.RESE_DESC.Name = "RESE_DESC";
             this.RESE_DESC.Visible = true;
-            this.RESE_DESC.VisibleIndex = 3;
+            this.RESE_DESC.VisibleIndex = 2;
             this.RESE_DESC.Width = 200;
             // 
             // RESE_AUTOR
             // 
             this.RESE_AUTOR.Caption = "Autor";
             this.RESE_AUTOR.FieldName = "RESE_AUTOR";
+            this.RESE_AUTOR.MaxWidth = 80;
+            this.RESE_AUTOR.MinWidth = 80;
             this.RESE_AUTOR.Name = "RESE_AUTOR";
             this.RESE_AUTOR.Visible = true;
-            this.RESE_AUTOR.VisibleIndex = 4;
+            this.RESE_AUTOR.VisibleIndex = 3;
+            this.RESE_AUTOR.Width = 80;
             // 
             // RESE_EDITORIAL
             // 
             this.RESE_EDITORIAL.Caption = "Editorial";
             this.RESE_EDITORIAL.FieldName = "RESE_EDITORIAL";
-            this.RESE_EDITORIAL.MaxWidth = 80;
-            this.RESE_EDITORIAL.MinWidth = 80;
+            this.RESE_EDITORIAL.MaxWidth = 85;
+            this.RESE_EDITORIAL.MinWidth = 85;
             this.RESE_EDITORIAL.Name = "RESE_EDITORIAL";
             this.RESE_EDITORIAL.Visible = true;
-            this.RESE_EDITORIAL.VisibleIndex = 5;
-            this.RESE_EDITORIAL.Width = 80;
+            this.RESE_EDITORIAL.VisibleIndex = 4;
+            this.RESE_EDITORIAL.Width = 85;
             // 
             // RESE_PRECIO
             // 
             this.RESE_PRECIO.Caption = "Precio";
             this.RESE_PRECIO.FieldName = "RESE_PRECIO";
+            this.RESE_PRECIO.MaxWidth = 45;
+            this.RESE_PRECIO.MinWidth = 45;
             this.RESE_PRECIO.Name = "RESE_PRECIO";
             this.RESE_PRECIO.Visible = true;
-            this.RESE_PRECIO.VisibleIndex = 6;
-            this.RESE_PRECIO.Width = 59;
+            this.RESE_PRECIO.VisibleIndex = 5;
+            this.RESE_PRECIO.Width = 45;
             // 
             // RESE_CANTIDAD
             // 
             this.RESE_CANTIDAD.Caption = "Cantidad";
             this.RESE_CANTIDAD.FieldName = "RESE_CANTIDAD";
+            this.RESE_CANTIDAD.MaxWidth = 30;
+            this.RESE_CANTIDAD.MinWidth = 30;
             this.RESE_CANTIDAD.Name = "RESE_CANTIDAD";
             this.RESE_CANTIDAD.Visible = true;
-            this.RESE_CANTIDAD.VisibleIndex = 7;
+            this.RESE_CANTIDAD.VisibleIndex = 6;
+            this.RESE_CANTIDAD.Width = 30;
             // 
             // RESE_FECHA
             // 
@@ -199,7 +213,7 @@
             this.RESE_FECHA.MinWidth = 70;
             this.RESE_FECHA.Name = "RESE_FECHA";
             this.RESE_FECHA.Visible = true;
-            this.RESE_FECHA.VisibleIndex = 8;
+            this.RESE_FECHA.VisibleIndex = 7;
             this.RESE_FECHA.Width = 70;
             // 
             // RESE_IDE
@@ -213,32 +227,28 @@
             this.Cargado.Caption = "Cargado";
             this.Cargado.FieldName = "Cargado";
             this.Cargado.Name = "Cargado";
-            this.Cargado.Visible = true;
-            this.Cargado.VisibleIndex = 9;
+            this.Cargado.Width = 20;
             // 
             // paraavisar
             // 
             this.paraavisar.Caption = "Para_avisar";
             this.paraavisar.FieldName = "paraavisar";
             this.paraavisar.Name = "paraavisar";
-            this.paraavisar.Visible = true;
-            this.paraavisar.VisibleIndex = 10;
+            this.paraavisar.Width = 20;
             // 
             // Avisado
             // 
             this.Avisado.Caption = "Avisado";
             this.Avisado.FieldName = "Avisado";
             this.Avisado.Name = "Avisado";
-            this.Avisado.Visible = true;
-            this.Avisado.VisibleIndex = 11;
+            this.Avisado.Width = 20;
             // 
             // Entregado
             // 
             this.Entregado.Caption = "Entregado";
             this.Entregado.FieldName = "Entregado";
             this.Entregado.Name = "Entregado";
-            this.Entregado.Visible = true;
-            this.Entregado.VisibleIndex = 12;
+            this.Entregado.Width = 20;
             // 
             // RESE_ESTADO
             // 
@@ -251,8 +261,7 @@
             this.RESE_CLIE_IDE.Caption = "RESE_CLIE_IDE";
             this.RESE_CLIE_IDE.FieldName = "RESE_CLIE_IDE";
             this.RESE_CLIE_IDE.Name = "RESE_CLIE_IDE";
-            this.RESE_CLIE_IDE.Visible = true;
-            this.RESE_CLIE_IDE.VisibleIndex = 13;
+            this.RESE_CLIE_IDE.Width = 20;
             // 
             // Alaventa
             // 
@@ -274,7 +283,7 @@
             this.RESE_OBS.MinWidth = 100;
             this.RESE_OBS.Name = "RESE_OBS";
             this.RESE_OBS.Visible = true;
-            this.RESE_OBS.VisibleIndex = 14;
+            this.RESE_OBS.VisibleIndex = 8;
             this.RESE_OBS.Width = 100;
             // 
             // RESE_USUP_FE
@@ -284,8 +293,6 @@
             this.RESE_USUP_FE.MaxWidth = 50;
             this.RESE_USUP_FE.MinWidth = 50;
             this.RESE_USUP_FE.Name = "RESE_USUP_FE";
-            this.RESE_USUP_FE.Visible = true;
-            this.RESE_USUP_FE.VisibleIndex = 15;
             this.RESE_USUP_FE.Width = 50;
             // 
             // usumodificar
@@ -382,12 +389,52 @@
             this.btntodos.UseVisualStyleBackColor = false;
             this.btntodos.Click += new System.EventHandler(this.btntodos_Click);
             // 
+            // txttitulo
+            // 
+            this.txttitulo.Location = new System.Drawing.Point(196, 12);
+            this.txttitulo.Name = "txttitulo";
+            this.txttitulo.Size = new System.Drawing.Size(272, 20);
+            this.txttitulo.TabIndex = 253;
+            this.txttitulo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttitulo_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(100, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.TabIndex = 254;
+            this.label2.Text = "Apellido y nombre:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(555, 11);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(154, 20);
+            this.txttelefono.TabIndex = 255;
+            this.txttelefono.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttelefono_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(497, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 256;
+            this.label1.Text = "Teléfono:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 476);
             this.ControlBox = false;
+            this.Controls.Add(this.txttelefono);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txttitulo);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btntodos);
             this.Controls.Add(this.btnalaventa);
             this.Controls.Add(this.button4);
@@ -403,6 +450,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -439,5 +487,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn RESE_USUP_FE;
         private DevExpress.XtraGrid.Columns.GridColumn usumodificar;
         private DevExpress.XtraGrid.Columns.GridColumn RESE_USUM_FE;
+        private System.Windows.Forms.TextBox txttitulo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label label1;
     }
 }

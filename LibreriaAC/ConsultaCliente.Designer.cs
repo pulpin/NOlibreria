@@ -42,6 +42,8 @@
             this.btnseleccionado = new System.Windows.Forms.Button();
             this.btnaltacliente = new System.Windows.Forms.Button();
             this.btnmodificarcliente = new System.Windows.Forms.Button();
+            this.txttitulo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.SuspendLayout();
@@ -203,12 +205,32 @@
             this.btnmodificarcliente.UseVisualStyleBackColor = true;
             this.btnmodificarcliente.Click += new System.EventHandler(this.btnmodificarcliente_Click);
             // 
+            // txttitulo
+            // 
+            this.txttitulo.Location = new System.Drawing.Point(242, 12);
+            this.txttitulo.Name = "txttitulo";
+            this.txttitulo.Size = new System.Drawing.Size(272, 20);
+            this.txttitulo.TabIndex = 251;
+            this.txttitulo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttitulo_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(192, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 252;
+            this.label2.Text = "Nombre:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 443);
             this.ControlBox = false;
+            this.Controls.Add(this.txttitulo);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnmodificarcliente);
             this.Controls.Add(this.btnaltacliente);
             this.Controls.Add(this.btncancelar);
@@ -221,6 +243,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -240,5 +263,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn TIPI_IDE;
         private System.Windows.Forms.Button btnaltacliente;
         private System.Windows.Forms.Button btnmodificarcliente;
+        private System.Windows.Forms.TextBox txttitulo;
+        private System.Windows.Forms.Label label2;
     }
 }

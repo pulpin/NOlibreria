@@ -42,6 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.lbdescuento = new System.Windows.Forms.Label();
+            this.txtcaracteristica = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -137,6 +139,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtcaracteristica);
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Controls.Add(this.label1);
@@ -169,9 +173,9 @@
             this.txttelefono.BackColor = System.Drawing.SystemColors.Info;
             this.txttelefono.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelefono.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txttelefono.Location = new System.Drawing.Point(107, 65);
+            this.txttelefono.Location = new System.Drawing.Point(211, 65);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(186, 30);
+            this.txttelefono.Size = new System.Drawing.Size(114, 30);
             this.txttelefono.TabIndex = 240;
             this.txttelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -180,7 +184,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label1.Location = new System.Drawing.Point(5, 66);
+            this.label1.Location = new System.Drawing.Point(1, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 239;
@@ -192,9 +196,9 @@
             this.txtnombre.BackColor = System.Drawing.SystemColors.Info;
             this.txtnombre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombre.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtnombre.Location = new System.Drawing.Point(107, 19);
+            this.txtnombre.Location = new System.Drawing.Point(102, 19);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(217, 30);
+            this.txtnombre.Size = new System.Drawing.Size(223, 30);
             this.txtnombre.TabIndex = 238;
             // 
             // lbdescuento
@@ -202,12 +206,36 @@
             this.lbdescuento.AutoSize = true;
             this.lbdescuento.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdescuento.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.lbdescuento.Location = new System.Drawing.Point(16, 20);
+            this.lbdescuento.Location = new System.Drawing.Point(12, 20);
             this.lbdescuento.Name = "lbdescuento";
             this.lbdescuento.Size = new System.Drawing.Size(93, 23);
             this.lbdescuento.TabIndex = 237;
             this.lbdescuento.Text = "Nombre:";
             this.lbdescuento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtcaracteristica
+            // 
+            this.txtcaracteristica.BackColor = System.Drawing.SystemColors.Info;
+            this.txtcaracteristica.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcaracteristica.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtcaracteristica.Location = new System.Drawing.Point(102, 65);
+            this.txtcaracteristica.Name = "txtcaracteristica";
+            this.txtcaracteristica.Size = new System.Drawing.Size(70, 30);
+            this.txtcaracteristica.TabIndex = 241;
+            this.txtcaracteristica.Text = "2966";
+            this.txtcaracteristica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label2.Location = new System.Drawing.Point(175, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 23);
+            this.label2.TabIndex = 242;
+            this.label2.Text = "15";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ConsultaClienteLi
             // 
@@ -248,5 +276,7 @@
         private System.Windows.Forms.Label lbdescuento;
         private System.Windows.Forms.Button btnguardar;
         private DevExpress.XtraGrid.Columns.GridColumn CLIEN_IDE;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtcaracteristica;
     }
 }

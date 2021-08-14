@@ -50,8 +50,8 @@ namespace Presentacion
                 {
                 //  Globales.ip = "200.51.42.91";
                 //Globales.ip = "127.0.0.1";
-                Globales.ip = "10.1.10.202";
-                //Globales.ip = "192.168.0.106";
+                //Globales.ip = "10.1.10.202";
+                Globales.ip = "192.168.0.106";
                 /*Configuration conf = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
                 ConnectionStringsSection css = conf.ConnectionStrings;
                 string cadena = "server=" + Convert.ToString(Globales.ip) + ";User Id=root;password=r69775;Persist Security Info=True;database=derivacion";

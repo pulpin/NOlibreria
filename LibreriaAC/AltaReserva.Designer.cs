@@ -51,6 +51,9 @@
             this.btnagregar = new System.Windows.Forms.Button();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.txtcaracteristica = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.gBtipopro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +97,7 @@
             this.txttelefono.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txttelefono.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelefono.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txttelefono.Location = new System.Drawing.Point(148, 284);
+            this.txttelefono.Location = new System.Drawing.Point(228, 280);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(100, 24);
             this.txttelefono.TabIndex = 217;
@@ -240,7 +243,7 @@
             this.txtprecio.Enabled = false;
             this.txtprecio.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprecio.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtprecio.Location = new System.Drawing.Point(334, 284);
+            this.txtprecio.Location = new System.Drawing.Point(394, 283);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(77, 24);
             this.txtprecio.TabIndex = 224;
@@ -250,7 +253,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label8.Location = new System.Drawing.Point(277, 287);
+            this.label8.Location = new System.Drawing.Point(337, 286);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 17);
             this.label8.TabIndex = 223;
@@ -332,12 +335,51 @@
             this.label26.Text = "Cantidad:";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtcaracteristica
+            // 
+            this.txtcaracteristica.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtcaracteristica.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcaracteristica.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtcaracteristica.Location = new System.Drawing.Point(148, 280);
+            this.txtcaracteristica.Name = "txtcaracteristica";
+            this.txtcaracteristica.Size = new System.Drawing.Size(51, 24);
+            this.txtcaracteristica.TabIndex = 232;
+            this.txtcaracteristica.Text = "2966";
+            this.txtcaracteristica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label5.Location = new System.Drawing.Point(201, 284);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 17);
+            this.label5.TabIndex = 233;
+            this.label5.Text = "15";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Crimson;
+            this.label9.Location = new System.Drawing.Point(347, 252);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 13);
+            this.label9.TabIndex = 234;
+            this.label9.Text = "Enter para buscar";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // AltaReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 457);
             this.ControlBox = false;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtcaracteristica);
             this.Controls.Add(this.txtcantidad);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.btnnoaparececatalogo);
@@ -391,5 +433,8 @@
         private System.Windows.Forms.Button btnnoaparececatalogo;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtcaracteristica;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
     }
 }

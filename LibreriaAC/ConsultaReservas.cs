@@ -54,6 +54,34 @@ namespace Presentacion
 
         }
 
+        private void txttitulo_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //buscar acá
+                //    cli.Nombre = txttitulo.Text;
+                //  gConsulta.DataSource = cli.Mostrar_clientesBuscar();
+                re.Nombre = txttitulo.Text;
+                re.Clitelefono = string.Empty;
+                gConsulta.DataSource = re.Mostrar_ReservasBuscar();
+                txttitulo.Text = string.Empty;
+            }
+        }
+
+        private void txttelefono_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //buscar acá
+                // cli.Nombre = txttitulo.Text;
+                re.Clitelefono = txttelefono.Text;
+                re.Nombre = string.Empty;
+                gConsulta.DataSource = re.Mostrar_ReservasBuscar();
+                // gConsulta.DataSource = cli.Mostrar_clientesBuscar();
+                txttelefono.Text = string.Empty;
+            }
+        }
+
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();

@@ -80,6 +80,18 @@ namespace Presentacion
                 gConsulta.DataSource = cli.Mostrar_clientes();
             }
         }
+
+        private void txttitulo_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //buscar acá
+                cli.Nombre = txttitulo.Text;
+                gConsulta.DataSource = cli.Mostrar_clientesBuscar();
+                txttitulo.Text = string.Empty;
+            }
+        }
+
         public void desaparecerbotonselec()
         {
             btnseleccionado.Visible = false;

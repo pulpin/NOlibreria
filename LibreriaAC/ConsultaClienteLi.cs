@@ -130,7 +130,7 @@ namespace Presentacion
         {
             Clientes cli = new Clientes();
             cli.Nombre = txtnombre.Text;
-            cli.Telefono = txttelefono.Text;
+            cli.Telefono = txtcaracteristica.Text + txttelefono.Text;
             int valor = cli.spInsertarClienteReservas();
 
             IClienteRe formInterClientes = this.Owner as IClienteRe;

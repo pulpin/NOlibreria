@@ -50,7 +50,7 @@ namespace Presentacion
         {
             Reservas re = new Reservas();
             re.Cliide = this.Cliide;
-            re.Clitelefono = txttelefono.Text;
+            re.Clitelefono = txtcaracteristica + txttelefono.Text;
             re.Codigolibro = txtcodigo.Text;
             re.Desc = txttitulo.Text;
             re.Autor = txtautor.Text;
