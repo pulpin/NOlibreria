@@ -27,8 +27,16 @@ namespace Presentacion
         private void cargar()
         {
             gConsulta.DataSource = ve.Mostrar_ventas100();
-           // fechadesde.EditValue = DateTime.Today;
-           // fechahasta.EditValue = DateTime.Today;
+            // fechadesde.EditValue = DateTime.Today;
+            // fechahasta.EditValue = DateTime.Today;
+
+            Puntodevta pdv = new Puntodevta();
+            LUpunto.Properties.DisplayMember = "PTOVTA_DESC";
+            LUpunto.Properties.ValueMember = "PTOVTA_NUMERO";
+            LUpunto.Properties.DataSource = pdv.Tabladedatos_ptodevta();
+            LUpunto.Properties.PopulateColumns();
+            LUpunto.Properties.Columns[0].Visible = false;
+
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -172,8 +180,8 @@ namespace Presentacion
             {
                 nrofac = Convert.ToInt32(txtnrofactu.Text);
             }
-
-            gConsulta.DataSource = ve.Mostrar_ventasporparametro(fdesdee, fhastae, nrofac);
+            
+            gConsulta.DataSource = ve.Mostrar_ventasporparametro(fdesdee, fhastae, nrofac, Convert.ToInt32(LUpunto.EditValue));
 
         }
     }

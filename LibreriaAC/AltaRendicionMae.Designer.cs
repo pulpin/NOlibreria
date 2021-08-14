@@ -195,7 +195,7 @@
             this.gConsulta.Location = new System.Drawing.Point(11, 98);
             this.gConsulta.MainView = this.gridViewPintarFilas;
             this.gConsulta.Name = "gConsulta";
-            this.gConsulta.Size = new System.Drawing.Size(760, 359);
+            this.gConsulta.Size = new System.Drawing.Size(826, 359);
             this.gConsulta.TabIndex = 213;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
@@ -206,19 +206,19 @@
             this.exportarAExcelToolStripMenuItem,
             this.exportarAPDFToolStripMenuItem});
             this.cmdmenugrid.Name = "contextMenuStrip1";
-            this.cmdmenugrid.Size = new System.Drawing.Size(156, 48);
+            this.cmdmenugrid.Size = new System.Drawing.Size(158, 48);
             // 
             // exportarAExcelToolStripMenuItem
             // 
             this.exportarAExcelToolStripMenuItem.Name = "exportarAExcelToolStripMenuItem";
-            this.exportarAExcelToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportarAExcelToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportarAExcelToolStripMenuItem.Text = "Exportar a Excel";
             this.exportarAExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarAExcelToolStripMenuItem_Click_1);
             // 
             // exportarAPDFToolStripMenuItem
             // 
             this.exportarAPDFToolStripMenuItem.Name = "exportarAPDFToolStripMenuItem";
-            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportarAPDFToolStripMenuItem.Text = "Exportar a PDF";
             this.exportarAPDFToolStripMenuItem.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem_Click_1);
             // 
@@ -304,13 +304,14 @@
             // 
             this.PREN_CANTIDAD.Caption = "Cantidad";
             this.PREN_CANTIDAD.FieldName = "PREN_CANTIDAD";
-            this.PREN_CANTIDAD.MaxWidth = 75;
-            this.PREN_CANTIDAD.MinWidth = 75;
+            this.PREN_CANTIDAD.MaxWidth = 85;
+            this.PREN_CANTIDAD.MinWidth = 85;
             this.PREN_CANTIDAD.Name = "PREN_CANTIDAD";
             this.PREN_CANTIDAD.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_CANTIDAD", "{0:#.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_CANTIDAD", "Cant. Total: {0:#.##}")});
             this.PREN_CANTIDAD.Visible = true;
             this.PREN_CANTIDAD.VisibleIndex = 5;
+            this.PREN_CANTIDAD.Width = 85;
             // 
             // PREN_IMPORTE
             // 
@@ -322,7 +323,7 @@
             this.PREN_IMPORTE.FieldName = "PREN_IMPORTE";
             this.PREN_IMPORTE.Name = "PREN_IMPORTE";
             this.PREN_IMPORTE.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_IMPORTE", "{0:#.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_IMPORTE", "Importe Total: ${0:#.##}")});
             this.PREN_IMPORTE.Visible = true;
             this.PREN_IMPORTE.VisibleIndex = 7;
             this.PREN_IMPORTE.Width = 88;
@@ -402,7 +403,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 547);
+            this.ClientSize = new System.Drawing.Size(863, 547);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

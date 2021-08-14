@@ -856,13 +856,15 @@ namespace LogicaNegocios
                 " from venta ORDER BY VEN_IDE DESC limit 100");
         }
 
-        public DataTable Mostrar_ventasporparametro(string desde, string hasta, int nrofactu)
+        public DataTable Mostrar_ventasporparametro(string desde, string hasta, int nrofactu,int puntodvta)
         {
+            int ingresa = 0;
             string valor = string.Empty;
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
             if ((desde != string.Empty && hasta != string.Empty) && (desde != "0001-01-01" && hasta != "0001-01-01"))
             {
+                ingresa = 1;
                 valor = " VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "'";
                 if (nrofactu != 0)
                 {
@@ -871,9 +873,26 @@ namespace LogicaNegocios
             }
             else
             {
-                valor = " VEN_IDE = "+ nrofactu +" ";
+                
+                if (nrofactu > 0)
+                {
+                    ingresa = 1;
+                    valor = " VEN_IDE = " + nrofactu + " ";
+                }
+                
             }
-
+            if (puntodvta > 0)
+            {
+                if (ingresa == 1)
+                {
+                    valor = " and VEN_PTOVTA = " + puntodvta + " ";
+                }
+                else
+                {
+                    valor = " VEN_PTOVTA = " + puntodvta + " ";
+                }
+                
+            }
             return con.Mostrar_Datos("select VEN_IDE,VEN_TIPOFACTU, " +
                 " VEN_NROTICKET,VEN_FECHA,VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO " +
                 " from venta where "+ valor +" ORDER BY VEN_IDE DESC");
