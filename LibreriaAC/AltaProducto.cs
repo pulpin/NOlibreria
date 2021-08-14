@@ -27,6 +27,8 @@ namespace Presentacion
 
         private void modificaproduc()
         {
+            string imagenconide=string.Empty;
+            string extension;
             Productos pro = new Productos();
             pro.productoide = Producide;
             pro.Titulo = txttitulo.Text;
@@ -62,7 +64,11 @@ namespace Presentacion
             pro.Barra = txtbarra.Text;
             if (nombrearchivo != string.Empty)
             {
-                pro.Imagen = nombrearchivo;
+                extension = Path.GetExtension(nombrearchivo);
+                pro.Codigo = pro.Codigo.Replace(" ", String.Empty);
+                //pro.Imagen = nombrearchivo;
+                imagenconide = pro.Codigo + extension;
+                pro.Imagen = imagenconide;
             }
             pro.Tipo = this.tipopro;
             pro.Cuerpo = txtcuerpo.Text;
@@ -74,8 +80,13 @@ namespace Presentacion
                 if (rutacompleta != null)
                 {
                     string directorioacopiar = Directory.GetCurrentDirectory();
+                    
                     string archivoacopiar = directorioacopiar + "\\libros\\" + nombrearchivo;
+                    pro.Codigo = pro.Codigo.Replace(" ", String.Empty);
+                    string archivoarenombrar = directorioacopiar + "\\libros\\" + imagenconide;
+                    //string archivoacopiar = directorioacopiar + "\\libros\\" + pro.Codigo;
                     System.IO.File.Copy(rutacompleta, archivoacopiar, true);
+                    System.IO.File.Move(archivoacopiar, archivoarenombrar);
                 }
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 MessageBox.Show("Se ha modificado con éxito!");
@@ -89,6 +100,8 @@ namespace Presentacion
 
         private void altaproduc()
         {
+            string imagenconide = string.Empty;
+            string extension;
             Productos pro = new Productos();
             pro.Titulo = txttitulo.Text;
             pro.Autor = txtautor.Text;
@@ -117,7 +130,13 @@ namespace Presentacion
             pro.Barra = txtbarra.Text;
             if (nombrearchivo != string.Empty)
             {
-                pro.Imagen = nombrearchivo;
+                //pro.Imagen = nombrearchivo;
+                extension = Path.GetExtension(nombrearchivo);
+                pro.Codigo = pro.Codigo.Replace(" ", String.Empty);
+                //pro.Imagen = nombrearchivo;
+                imagenconide = pro.Codigo + extension;
+                pro.Imagen = imagenconide;
+
             }
             pro.Tipo = this.tipopro;
             pro.Cuerpo = txtcuerpo.Text;
@@ -130,8 +149,13 @@ namespace Presentacion
                 if (rutacompleta != null)
                 {
                     string directorioacopiar = Directory.GetCurrentDirectory();
+
                     string archivoacopiar = directorioacopiar + "\\libros\\" + nombrearchivo;
+                    pro.Codigo = pro.Codigo.Replace(" ", String.Empty);
+                    string archivoarenombrar = directorioacopiar + "\\libros\\" + imagenconide;
+                    //string archivoacopiar = directorioacopiar + "\\libros\\" + pro.Codigo;
                     System.IO.File.Copy(rutacompleta, archivoacopiar, true);
+                    System.IO.File.Move(archivoacopiar, archivoarenombrar);
                 }
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 MessageBox.Show("Se ha dado de alta con éxito!");
@@ -230,8 +254,26 @@ namespace Presentacion
             {
                 lUporcentaje.EditValue = "21.00";
             }
+            if (LogicaNegocios.Globales.accessocuerpoestante == 1)
+            {
+                bloqueoporcuerpoyestante();
+            }
         }
-
+        private void bloqueoporcuerpoyestante()
+        {
+            txttitulo.Enabled = false;
+            txtautor.Enabled = false;
+            lUEditorial.Enabled = false;
+            LUgenero.Enabled = false;
+            txtdividido.Enabled = false;
+            txtprecio.Enabled = false;
+            paneliva.Enabled = false;
+            txtcantidad.Enabled = false;
+            txtfactura.Enabled = false;
+            txtisbn.Enabled = false;
+            txtbarra.Enabled = false;
+            txtcodprovee.Enabled = false;
+        }
         private void txttitulo_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

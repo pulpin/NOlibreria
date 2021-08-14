@@ -378,7 +378,7 @@ namespace Presentacion
             txtcosto.Text = string.Empty;
             txtporcentaje.Text = string.Empty;
             txtcantidad.Text = string.Empty;
-            txtfactura.Text = string.Empty;
+           // txtfactura.Text = string.Empty;
             txtcuerpo.Text = string.Empty;
             txtestante.Text = string.Empty;
 

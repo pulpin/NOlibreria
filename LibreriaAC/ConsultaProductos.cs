@@ -139,7 +139,7 @@ namespace Presentacion
             tol.SetToolTip(this.btnmodificar, "Modificar producto");
             tol.SetToolTip(this.btneliminar, "Eliminar producto");
             tol.SetToolTip(this.btnzoom, "Ver imagen en tamaño completo");
-            if (LogicaNegocios.Globales.accesoaproductos == 2 )
+            if (LogicaNegocios.Globales.accesoaproductos == 2 || LogicaNegocios.Globales.accessocuerpoestante == 1)
             {
                 btnmodificar.Enabled = true;
             }
