@@ -162,6 +162,18 @@
     <Compile Include="AltaDineroCaja.Designer.cs">
       <DependentUpon>AltaDineroCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="AltaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaProveedor.Designer.cs">
+      <DependentUpon>AltaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaProveedor.Designer.cs">
+      <DependentUpon>ConsultaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaPlataCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -583,6 +595,12 @@
     <EmbeddedResource Include="AltaDineroCaja.resx">
       <DependentUpon>AltaDineroCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltaProveedor.resx">
+      <DependentUpon>AltaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaProveedor.resx">
+      <DependentUpon>ConsultaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPlataCaja.resx">
       <DependentUpon>ConsultaPlataCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -929,6 +947,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="libreriaac.ico" />
+    <None Include="Resources\proveedor642.png" />
+    <None Include="Resources\proveedor641.png" />
     <None Include="Resources\dinero32.png" />
     <None Include="Resources\buscar48.png" />
     <None Include="Resources\changeuser64.png" />

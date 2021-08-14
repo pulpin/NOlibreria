@@ -11,7 +11,7 @@ namespace LogicaNegocios
 {
     public class Productos
     {
-        string _titulo = string.Empty, _autor = string.Empty, valor = string.Empty, contiene = string.Empty, _barra = string.Empty, _codigo = string.Empty,_isbn = string.Empty, _precio = string.Empty, _preciosinmodificar=string.Empty, _costo = string.Empty,_iva = string.Empty, _ganancia = string.Empty,_factura = string.Empty, _imagen = string.Empty, _cuerpo = string.Empty,_estante = string.Empty, _importevta = string.Empty, _codigointernoedi = string.Empty, _stock = string.Empty, _remito = string.Empty,_primervalor, _segundovalor, _codigoprovee, _precioanterior;
+        string _titulo = string.Empty, _autor = string.Empty, valor = string.Empty, contiene = string.Empty, _barra = string.Empty, _codigo = string.Empty,_isbn = string.Empty, _precio = string.Empty, _preciosinmodificar=string.Empty, _costo = string.Empty,_iva = string.Empty, _ganancia = string.Empty,_factura = string.Empty, _imagen = string.Empty, _cuerpo = string.Empty,_estante = string.Empty, _importevta = string.Empty, _codigointernoedi = string.Empty, _stock = string.Empty, _remito = string.Empty,_primervalor, _segundovalor, _codigoprovee, _precioanterior, precioactual;
         decimal _precioante, _preciol;
         int _titup, _autorp, _edip, _pedidos, _alta, _notaparcial;
         int _contengapala, _editorial, _genero, _tipo, _cantidad, _productoide, _nrodevta, _proveeide, _dividido, _rendido, _original, _consignacantidad,_consignanro, _consignaide, _consignaactual;
@@ -102,14 +102,103 @@ namespace LogicaNegocios
             }
             //CONCAT(ifnull(LI_LETRA,''),LI_CODIGO)
             return con.Mostrar_Datos("select LI_CODIGOVIEJO as LI_CODIGO,LI_DESC,LI_AUTOR,EDI_EDITORIAL,GEN_DESC,ROUND(LI_PRECIO + (LI_PRECIO* 5/100)) as LI_PRECIO, " +
-                " LI_BARRA,LI_ISBN,LI_STOCK,LI_IMAGEN,LI_CUERPO,LI_ESTANTE,LI_FECHAPRE,LI_EDI_CODIGO,LI_IDE,LI_GEN_IDE,LI_TIPOPRO,LI_COSTO,LI_PORC_IVA,LI_PORC_GANAN,LI_CODIGOPROVEE,LI_PROPIO,LI_PRECIO AS li_precioori,LI_PEDIDOS,LI_PRECIOARTDI from libreria.libros left join libreria.editorial on LI_EDI_CODIGO = EDI_CODIGO " +
+                " LI_BARRA,LI_ISBN,LI_STOCK,LI_IMAGEN,LI_CUERPO,LI_ESTANTE,LI_FECHAPRE,LI_EDI_CODIGO,LI_IDE,LI_GEN_IDE,LI_TIPOPRO,LI_COSTO,LI_PORC_IVA,LI_PORC_GANAN,LI_CODIGOPROVEE,LI_PROPIO,LI_PRECIO AS li_precioori,LI_PEDIDOS,LI_PRECIOARTDI,LI_PRECIOAN from libreria.libros left join libreria.editorial on LI_EDI_CODIGO = EDI_CODIGO " +
                 " left join libreria.genero on LI_GEN_IDE = GEN_IDE " +
                 " where " + valor +"");
             
         }
 
+        public DataTable Mostrar_productosconsigna()
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+            if (this.Tipo == 0)
+            {
+                if (this.Contengapalabra == 1)
+                {
+                    contiene = "%";
+                }
+                if (this.Titulo != string.Empty)
+                {
+                    valor = "LI_DESC like " + "'" + contiene + "" + Titulo + "%" + "'";
 
-            //cambio de precios automatizado
+                    if (this.Autor != string.Empty)
+                    {
+                        valor = valor + " and LI_AUTOR like " + "'" + this.Autor + "%" + "'";
+                    }
+
+                }
+                else if (this.Autor != string.Empty)
+                {
+                    valor = "LI_AUTOR like " + "'" + this.Autor + "%" + "'";
+                }
+                if (Editorial != 0)
+                {
+                    valor = valor + " and LI_EDI_CODIGO = " + this.Editorial;
+                }
+                if (Genero != 0)
+                {
+                    valor = valor + " and LI_GEN_IDE = " + this.Genero;
+                }
+                if (valor == string.Empty)
+                {
+                    valor = valor + " LI_BAJA = 0 limit 100";
+                }
+                else
+                {
+                    valor = valor + " and LI_BAJA = 0";
+                }
+            }
+            else
+            {
+                this.Barra = this.Barra.Replace(" ", "");
+                if (this.Barra != string.Empty)
+                {
+                    valor = " LI_BARRA = " + this.Barra;
+                }
+                else if (this.Codigo != string.Empty)
+                {
+                    int number1 = 0;
+                    bool canConvert = int.TryParse(this.Codigo, out number1);
+                    if (canConvert == true)
+                    {
+                        valor = " LI_CODIGOVIEJO = " + "" + this.Codigo + "";
+                    }
+                    else
+                    {
+                        string letra = Codigo.Substring(0, 1);
+                        int ncodigo = Convert.ToInt32(Codigo.Substring(1, Codigo.Length - 1));
+                        valor = " LI_CODIGO = " + "" + ncodigo + "";
+                        valor = valor + " and LI_LETRA = " + "'" + letra + "'";
+                    }
+                }
+                else if (this.Isbn != string.Empty)
+                {
+                    valor = " LI_ISBN = '" + this.Isbn + "'";
+                }
+                else if (this.Codigoprovee != string.Empty)
+                {
+                    valor = " LI_CODIGOPROVEE = " + this.Codigoprovee;
+                }
+                if (valor == string.Empty)
+                {
+                    valor = valor + " LI_BAJA = 0 limit 100";
+                }
+                else
+                {
+                    valor = valor + " and LI_BAJA = 0";
+                }
+            }
+            //CONCAT(ifnull(LI_LETRA,''),LI_CODIGO)
+            return con.Mostrar_Datos("select LI_CODIGOVIEJO as LI_CODIGO,LI_DESC,LI_AUTOR,EDI_EDITORIAL,GEN_DESC,LI_PRECIO, " +
+                " LI_BARRA,LI_ISBN,LI_STOCK,LI_IMAGEN,LI_CUERPO,LI_ESTANTE,LI_FECHAPRE,LI_EDI_CODIGO,LI_IDE,LI_GEN_IDE,LI_TIPOPRO,LI_COSTO,LI_PORC_IVA,LI_PORC_GANAN,LI_CODIGOPROVEE,LI_PROPIO,LI_PRECIO AS li_precioori,LI_PEDIDOS,LI_PRECIOARTDI,LI_PRECIOAN from libreria.libros left join libreria.editorial on LI_EDI_CODIGO = EDI_CODIGO " +
+                " left join libreria.genero on LI_GEN_IDE = GEN_IDE " +
+                " where " + valor + "");
+
+        }
+
+
+        //cambio de precios automatizado
         public void spConCambioPrecio(string nbarra, string precio, int tipop)
         {
             string cadenaconexion;
@@ -1335,11 +1424,14 @@ namespace LogicaNegocios
                 {
                     while (rdr.Read())
                     {
+                        
                         stockp = rdr.GetInt32(rdr.GetOrdinal("CONS_CANTIDAD"));
                         consideactual = rdr.GetInt32(rdr.GetOrdinal("CONS_IDE"));
                         numerodeconsig = rdr.GetInt32(rdr.GetOrdinal("CONS_NROCONSIG"));
                         codigoedi = rdr.GetInt32(rdr.GetOrdinal("CONS_EDI_CODIGO"));
                         rendidos = rdr.GetInt32(rdr.GetOrdinal("CONS_RENDIDO"));
+                       
+                        
                         if (descontar <= stockp)
                         {
                             stockp = stockp - descontar;
@@ -1348,6 +1440,9 @@ namespace LogicaNegocios
                             string queryconsig = "UPDATE libreria.consignas SET CONS_CANTIDAD = " + stockp + " where  CONS_IDE = " + consideactual + "";
                             con.InsertarYactualiza(queryconsig);
 
+                            //se fija el precio actual para realizar el registro de la venta
+                            //esto se usa para la rendición.
+                            precioactual = this.spPrecioporcodigo(this.Codigo);
 
                             resultadop = this.spRegistrarlasVentas(numerodeconsig, descontar, codigoedi);
                             
@@ -1377,6 +1472,11 @@ namespace LogicaNegocios
 
                             string querypro = "UPDATE libreria.libros SET LI_STOCK = " + stockasetear + " where  LI_CODIGOVIEJO = '" + this.Codigo + "'";
                             con.InsertarYactualiza(querypro);
+
+                            //se fija el precio actual para realizar el registro de la venta
+                            //esto se usa para la rendición.
+                            precioactual = this.spPrecioporcodigo(this.Codigo);
+
 
                             resultadop = this.spRegistrarlasVentas(numerodeconsig, stockp, codigoedi);
                         }
@@ -1428,6 +1528,9 @@ namespace LogicaNegocios
                 int stockpropiop = this.spConsultastockpropi();
                 int eslibro = this.spConsultasiesLibro();
                 int stockactual,propioactual=0, stockasetear, stockpropio;
+
+                precioactual = this.spPrecioporcodigo(this.Codigo);
+
                 if (eslibro > 0) //aca pregunto si no es un libro que haga el descuento directamente.
                 {
                     stockactual = this.spConsultastockactual();
@@ -1648,9 +1751,23 @@ namespace LogicaNegocios
         {
             int Valor_Retornado = 0;
             string cadenaconexion;
+            
+            
 
-            this.Importevta = this.Importevta.Replace(",", ".");
-
+            if (Convert.ToDecimal(this.precioactual)>0)
+            {
+                this.precioactual = this.precioactual.Replace(".", ",");
+                this.precioactual = Convert.ToString((cantidadadescontar) * (Convert.ToDecimal(precioactual)));
+                this.precioactual = this.precioactual.Replace(",", ".");
+            }
+            else
+            {
+                this.Importevta = this.Importevta.Replace(".", ",");
+                this.precioactual = Convert.ToString((cantidadadescontar) * (Convert.ToDecimal(Importevta)));
+                this.Importevta = this.Importevta.Replace(",", ".");
+            }
+            
+            
             Conexion con = new Conexion("libreria", Globales.ip);
             cadenaconexion = con.inicializa();
             MySqlConnection mysql_conexion = con.AbrirConexion(cadenaconexion);
@@ -1670,7 +1787,7 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("pfactu", this.NrodeVta);
                 myCommand.Parameters.AddWithValue("pconsigna", consig);
                 myCommand.Parameters.AddWithValue("pcantidad", cantidadadescontar);
-                myCommand.Parameters.AddWithValue("pimporte", this.Importevta);
+                myCommand.Parameters.AddWithValue("pimporte", this.precioactual);
                 myCommand.Parameters.AddWithValue("pedicodigo", edicodigo);
 
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
@@ -1698,6 +1815,56 @@ namespace LogicaNegocios
             }
 
             return Valor_Retornado;
+        }
+
+
+        public string spPrecioporcodigo(string pcodigo)
+        {
+            string Valor_RetornadoPrecio = string.Empty;
+            string cadenaconexion;
+
+           
+            Conexion con = new Conexion("libreria", Globales.ip);
+            cadenaconexion = con.inicializa();
+            MySqlConnection mysql_conexion = con.AbrirConexion(cadenaconexion);
+            // MySqlCommand myCommand = new  MySqlCommand();
+            mysql_conexion.Open();
+            MySqlTransaction sqlTran = mysql_conexion.BeginTransaction();
+            MySqlCommand myCommand = mysql_conexion.CreateCommand();
+            myCommand.Transaction = sqlTran;
+
+            try
+            {
+                myCommand.Connection = mysql_conexion;
+                myCommand.CommandText = "spConsultaprecioporcodigo";
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.AddWithValue("ncodigo", pcodigo);
+
+                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.VarChar);
+                ValorRetorno.Direction = ParameterDirection.Output;// Output;
+                myCommand.Parameters.Add(ValorRetorno);
+                myCommand.ExecuteNonQuery();
+                Valor_RetornadoPrecio = Convert.ToString(ValorRetorno.Value);
+                sqlTran.Commit();
+                mysql_conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception if the transaction fails to commit.
+                Console.WriteLine(ex.Message);
+
+                try
+                {
+                    // Attempt to roll back the transaction.
+                    sqlTran.Rollback();
+                }
+                catch (Exception exRollback)
+                {
+                    Console.WriteLine(exRollback.Message);
+                }
+            }
+
+            return Valor_RetornadoPrecio;
         }
 
         public MySqlDataReader obtenerdatosproductos()

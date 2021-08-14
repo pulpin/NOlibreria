@@ -93,6 +93,7 @@
             this.descargarPeriodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tlSBed = new System.Windows.Forms.ToolStripButton();
+            this.tSBproveedor = new System.Windows.Forms.ToolStripButton();
             this.tSBEditorial = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -675,6 +676,7 @@
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlSBed,
+            this.tSBproveedor,
             this.tSBEditorial,
             this.toolStripSeparator7,
             this.toolStripButton2,
@@ -701,6 +703,22 @@
             this.tlSBed.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tlSBed.ToolTipText = "Consulta de editoriales...";
             this.tlSBed.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // tSBproveedor
+            // 
+            this.tSBproveedor.Enabled = false;
+            this.tSBproveedor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.tSBproveedor.Image = global::Presentacion.Properties.Resources.proveedor641;
+            this.tSBproveedor.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tSBproveedor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tSBproveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSBproveedor.Name = "tSBproveedor";
+            this.tSBproveedor.Size = new System.Drawing.Size(71, 82);
+            this.tSBproveedor.Text = "Proveedor";
+            this.tSBproveedor.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tSBproveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tSBproveedor.ToolTipText = "Consulta de editoriales...";
+            this.tSBproveedor.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // tSBEditorial
             // 
@@ -757,7 +775,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Versión: 10/08/2021";
+            this.label5.Text = "Versión: 14/08/2021";
             // 
             // pictureBox1
             // 
@@ -876,5 +894,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem históricoDeDevolucionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasEntreFechasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tSBproveedor;
     }
 }

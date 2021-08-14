@@ -50,7 +50,7 @@ namespace Presentacion
             pro.Barra = txtbarra.Text;
             pro.Codigo = txtcodigo.Text;
             pro.Isbn = txtisbn.Text;
-            gConsulta.DataSource = pro.Mostrar_productos();
+            gConsulta.DataSource = pro.Mostrar_productosconsigna();
             txtbarra.Text = string.Empty;
             txtcodigo.Text = string.Empty;
             txtisbn.Text = string.Empty;
@@ -72,7 +72,7 @@ namespace Presentacion
             }
             pro.Autor = txtautor.Text;
 
-            gConsulta.DataSource = pro.Mostrar_productos();
+            gConsulta.DataSource = pro.Mostrar_productosconsigna();
             this.limpiartextos();
         }
         private void button2_Click(object sender, EventArgs e)
@@ -310,7 +310,7 @@ namespace Presentacion
             lbestante.Text = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_ESTANTE"]));
             lbeditorial.Text = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["EDI_EDITORIAL"]));
             lbgenero.Text = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["GEN_DESC"]));
-
+            lbultimaap.Text = "";
             if (Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_FECHAPRE"])) != "")
             {
                 DateTime fechaactu = Convert.ToDateTime(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_FECHAPRE"]));

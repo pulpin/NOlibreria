@@ -128,6 +128,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtbarra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.LI_PRECIOAN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -181,7 +182,8 @@
             this.li_precioori,
             this.LI_CODIGOPROVEE,
             this.LI_PEDIDOS,
-            this.LI_PRECIOARTDI});
+            this.LI_PRECIOARTDI,
+            this.LI_PRECIOAN});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LI_CODIGO", this.LI_CODIGO, "")});
@@ -1179,6 +1181,12 @@
             this.label3.Text = "Barra:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // LI_PRECIOAN
+            // 
+            this.LI_PRECIOAN.Caption = "LI_PRECIOAN";
+            this.LI_PRECIOAN.FieldName = "LI_PRECIOAN";
+            this.LI_PRECIOAN.Name = "LI_PRECIOAN";
+            // 
             // ConsultaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1326,5 +1334,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn LI_PRECIOARTDI;
         private System.Windows.Forms.TextBox txtprovee;
         private System.Windows.Forms.Label label23;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_PRECIOAN;
     }
 }

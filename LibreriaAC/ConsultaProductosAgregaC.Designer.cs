@@ -111,6 +111,7 @@
             this.LI_PORC_IVA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_PORC_GANAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_CODIGOPROVEE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LI_PRECIOAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lUEgenero.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cBEeditorial.Properties)).BeginInit();
@@ -560,12 +561,12 @@
             // lbultimaap
             // 
             this.lbultimaap.AutoSize = true;
+            this.lbultimaap.BackColor = System.Drawing.Color.LemonChiffon;
             this.lbultimaap.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbultimaap.Location = new System.Drawing.Point(590, 11);
             this.lbultimaap.Name = "lbultimaap";
-            this.lbultimaap.Size = new System.Drawing.Size(96, 18);
+            this.lbultimaap.Size = new System.Drawing.Size(0, 18);
             this.lbultimaap.TabIndex = 5;
-            this.lbultimaap.Text = "12/12/2016";
             // 
             // label15
             // 
@@ -805,7 +806,8 @@
             this.LI_COSTO,
             this.LI_PORC_IVA,
             this.LI_PORC_GANAN,
-            this.LI_CODIGOPROVEE});
+            this.LI_CODIGOPROVEE,
+            this.LI_PRECIOAN});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LI_CODIGO", this.LI_CODIGO, "")});
@@ -961,6 +963,12 @@
             this.LI_CODIGOPROVEE.FieldName = "LI_CODIGOPROVEE";
             this.LI_CODIGOPROVEE.Name = "LI_CODIGOPROVEE";
             // 
+            // LI_PRECIOAN
+            // 
+            this.LI_PRECIOAN.Caption = "LI_PRECIOAN";
+            this.LI_PRECIOAN.FieldName = "LI_PRECIOAN";
+            this.LI_PRECIOAN.Name = "LI_PRECIOAN";
+            // 
             // ConsultaProductosAgregaC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1086,5 +1094,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn LI_PORC_IVA;
         private DevExpress.XtraGrid.Columns.GridColumn LI_PORC_GANAN;
         private DevExpress.XtraGrid.Columns.GridColumn LI_CODIGOPROVEE;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_PRECIOAN;
     }
 }

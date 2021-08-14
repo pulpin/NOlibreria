@@ -104,6 +104,7 @@ namespace Presentacion
             cli.Domicilio = txtdomicilio.Text;
             cli.Telefono = txttelefono.Text;
             cli.Situacion = Convert.ToInt32(lookUpEdit1.EditValue);
+            cli.Alta = this.Alta;
             int resultado = cli.spInsertarCliente();
             if (resultado == 0)
             {

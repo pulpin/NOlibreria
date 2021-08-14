@@ -47,7 +47,7 @@
             // 
             // lUEditorial
             // 
-            this.lUEditorial.Location = new System.Drawing.Point(84, 34);
+            this.lUEditorial.Location = new System.Drawing.Point(42, 34);
             this.lUEditorial.Name = "lUEditorial";
             this.lUEditorial.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.lUEditorial.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -62,7 +62,7 @@
             this.lUEditorial.Properties.HideSelection = false;
             this.lUEditorial.Properties.NullText = "";
             this.lUEditorial.Properties.ShowHeader = false;
-            this.lUEditorial.Size = new System.Drawing.Size(237, 22);
+            this.lUEditorial.Size = new System.Drawing.Size(327, 22);
             this.lUEditorial.TabIndex = 193;
             // 
             // label3

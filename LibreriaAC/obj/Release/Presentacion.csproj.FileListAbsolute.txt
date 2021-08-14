@@ -400,3 +400,5 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\LibreriaAC.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.ConsultaPlataCaja.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.AltaDineroCaja.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.ventasentrefechapedido.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.ConsultaProveedor.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\obj\Release\Presentacion.AltaProveedor.resources

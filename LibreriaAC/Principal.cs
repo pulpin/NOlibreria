@@ -416,6 +416,10 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
             {
                 usuariosToolStripMenuItem.Enabled = true;
             }
+            if (LogicaNegocios.Globales.accesoaproveedores == 2 || LogicaNegocios.Globales.accesoaproveedores == 1)
+            {
+                tSBproveedor.Enabled = true;
+            }
         }
         void dll_version()
         {
@@ -638,6 +642,12 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         {
             ventasentrefechapedido vefp = new ventasentrefechapedido();
             vefp.ShowDialog();
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            ConsultaProveedor cp = new ConsultaProveedor();
+            cp.ShowDialog();
         }
 
         private void toolTurnosD_Click(object sender, EventArgs e)

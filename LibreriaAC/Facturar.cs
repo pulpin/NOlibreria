@@ -943,8 +943,8 @@ pnombrecli, pcuit, pdire, ptipo;
         {
             if (Convert.ToInt32(LUComprobante.EditValue) == 1)
             {
-                if (lbtipoiva.Text == "I")
-                {
+              // if (lbtipoiva.Text == "I")
+              //  {
                     lbcomprador.Text = "Consumidor final";
                     lbcomdire.Text = "Dirección";
                     lbcomcuit.Text = "CUIT";
@@ -952,7 +952,7 @@ pnombrecli, pcuit, pdire, ptipo;
                     lbtipoiva.Text = "F";
                     //ConsultaCliente cc = new ConsultaCliente();
                     //cc.ShowDialog(this);
-                }
+                //}
                 this.BackColor = System.Drawing.Color.FromName("Control");
             }
             else if (Convert.ToInt32(LUComprobante.EditValue) == 2)
@@ -1931,6 +1931,7 @@ pnombrecli, pcuit, pdire, ptipo;
                 if (cargocaja == 0)
                 {
                     ConsultaPlataCaja cpc = new ConsultaPlataCaja();
+                    cpc.Verhoy = 1;
                     cpc.ShowDialog();
                 }
             }   
@@ -2159,7 +2160,7 @@ pnombrecli, pcuit, pdire, ptipo;
                     lbtipoiva.Text = ptipo;
                     lbcomcuit.Text = pcuit;
                 }
-                LUComprobante.Enabled = false;
+                //LUComprobante.Enabled = false;
                 nopedirclienteA = 0;
                 lbtipopago.Text = ptipopag;
                 lbexcento.Text = Convert.ToString(pexento);
@@ -2187,6 +2188,7 @@ pnombrecli, pcuit, pdire, ptipo;
             btncreditop.Enabled = false;
             btnproforma.Enabled = false;
         }
+        
         private void txtnumeropedido_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
 

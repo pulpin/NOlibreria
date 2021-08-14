@@ -943,6 +943,26 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap proveedor64 {
+            get {
+                object obj = ResourceManager.GetObject("proveedor64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proveedor641 {
+            get {
+                object obj = ResourceManager.GetObject("proveedor641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reservas24 {
             get {
                 object obj = ResourceManager.GetObject("reservas24", resourceCulture);

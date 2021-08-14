@@ -77,6 +77,8 @@
             this.lbstockactual = new System.Windows.Forms.Label();
             this.txtdividido = new System.Windows.Forms.TextBox();
             this.lbdividido = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lbprecioanterior = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lUEditorial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUgenero.Properties)).BeginInit();
             this.gBtipopro.SuspendLayout();
@@ -700,12 +702,38 @@
             this.lbdividido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbdividido.Visible = false;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label19.Location = new System.Drawing.Point(31, 301);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(90, 14);
+            this.label19.TabIndex = 223;
+            this.label19.Text = "Precio anterior:";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbprecioanterior
+            // 
+            this.lbprecioanterior.AutoSize = true;
+            this.lbprecioanterior.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbprecioanterior.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lbprecioanterior.Location = new System.Drawing.Point(129, 301);
+            this.lbprecioanterior.Name = "lbprecioanterior";
+            this.lbprecioanterior.Size = new System.Drawing.Size(14, 14);
+            this.lbprecioanterior.TabIndex = 224;
+            this.lbprecioanterior.Text = "0";
+            this.lbprecioanterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // AltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 658);
             this.ControlBox = false;
+            this.Controls.Add(this.lbprecioanterior);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.txtdividido);
             this.Controls.Add(this.lbdividido);
             this.Controls.Add(this.lbstockactual);
@@ -812,5 +840,7 @@
         private System.Windows.Forms.Label lbstockactual;
         private System.Windows.Forms.TextBox txtdividido;
         private System.Windows.Forms.Label lbdividido;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbprecioanterior;
     }
 }

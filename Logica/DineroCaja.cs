@@ -21,7 +21,16 @@ namespace LogicaNegocios
             return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA from plata_caja where PC_PUNTODEVTA = "+ Globales.puntodeventa + " order by PC_FECHA desc");
 
         }
-       
+
+        public DataTable Mostrar_dinerocajahoy()
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+
+            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA from plata_caja where PC_PUNTODEVTA = " + Globales.puntodeventa + " and PC_FECHA = CURDATE() order by PC_FECHA desc");
+
+        }
+
         public int spVerDineroCaja()
         {
             int Valor_Retornado = 0;

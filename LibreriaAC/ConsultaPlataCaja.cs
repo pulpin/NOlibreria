@@ -15,7 +15,7 @@ namespace Presentacion
     public partial class ConsultaPlataCaja : Form
     {
         string _codigo;
-        
+        int _verhoy;
         DineroCaja din = new DineroCaja();
         public ConsultaPlataCaja()
         {
@@ -28,7 +28,14 @@ namespace Presentacion
         }
         private void cargar()
         {
-            gConsulta.DataSource = din.Mostrar_dinerocaja();
+            if (this.Verhoy == 1)
+            {
+                gConsulta.DataSource = din.Mostrar_dinerocajahoy();
+            }
+            else
+            { 
+                gConsulta.DataSource = din.Mostrar_dinerocaja();
+            }
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -47,7 +54,12 @@ namespace Presentacion
             get { return this._codigo; }
             set { this._codigo = value; }
         }
-        
+
+        public int Verhoy
+        {
+            get { return this._verhoy; }
+            set { this._verhoy = value; }
+        }
 
         private void btnseleccionado_Click(object sender, EventArgs e)
         {
