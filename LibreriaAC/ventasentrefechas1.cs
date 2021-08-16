@@ -143,10 +143,15 @@ namespace Presentacion
             gConsulta.DataSource = ve.Mostrar_ventasporfecha(fdesdee, fhastae, Convert.ToInt32(LUpunto.EditValue), Convert.ToInt32(LUusuarios.EditValue),todos);
             gConsulta2.DataSource = ve.Mostrar_ventasporfecha1(fdesdee, fhastae, Convert.ToInt32(LUpunto.EditValue), Convert.ToInt32(LUusuarios.EditValue), todos);
             decimal importesuma=0;
+            int tipopag = 0;
             for (int i = 0; i < gridViewPintarFilas2.DataRowCount; i++)
             {
                 // ren.Factura = gridViewPintarFilas.GetRowCellValue(i, "PREN_FACTU").ToString();
-                importesuma = importesuma + Convert.ToDecimal(gridViewPintarFilas2.GetRowCellValue(i, "total").ToString());
+                tipopag = Convert.ToInt32(gridViewPintarFilas2.GetRowCellValue(i, "TIP_IDE").ToString());
+                if (tipopag == 12)
+                { 
+                    importesuma = importesuma + Convert.ToDecimal(gridViewPintarFilas2.GetRowCellValue(i, "total").ToString());
+                }
             }
             importesuma = decimal.Round(importesuma, 2);
             lbcreditop.Text = Convert.ToString(importesuma);

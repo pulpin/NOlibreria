@@ -845,6 +845,16 @@ namespace LogicaNegocios
                 " from venta ORDER BY VEN_IDE DESC");
         }
 
+        public DataTable Mostrar_pedidotemporal()
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+
+
+            return con.Mostrar_Datos("select VEN_IDE,VEN_TIPOFACTU,VEN_FECHA,VEN_NOMBRE,VEN_TOTAL " +
+                                     " from tempventa ORDER BY VEN_IDE DESC");
+        }
+
         public DataTable Mostrar_ventas100()
         {
             Conexion con = new Conexion("libreria", Globales.ip);
@@ -979,13 +989,13 @@ namespace LogicaNegocios
                 usuarioss = "ve.VEN_COBUSU_IDE = "+ usuario +" and ";
             }
 
-            return con.Mostrar_Datos("select tp.TIP_DESC as descrip,(case when VEN_TIP_IDE = 12 then 0 else SUM(ve.VEN_TOTAL) end) as total,ve.VEN_IDE from venta as ve left join tipopago as tp " +
+            return con.Mostrar_Datos("select tp.TIP_DESC as descrip,(case when VEN_TIP_IDE = 12 then 0 else SUM(ve.VEN_TOTAL) end) as total,ve.VEN_IDE, tp.TIP_IDE from venta as ve left join tipopago as tp " +
                                     " on ve.VEN_TIP_IDE = tp.TIP_IDE " +
                                     " where "+ usuarioss +" ve.VEN_PTOVTA = " + puntodevta +" and ve.VEN_FECHA >= '" + fechadesde + "' AND ve.VEN_FECHA <= '" + fechahasta + "' " +
                                     " and ve.VEN_CC_IDE is null " +
                                     " group by VEN_TIP_IDE " + 
                                     " union " +
-                                    " select taj.TIA_DESC as descrip, va.VENA_IMPORTE as total,va.VENA_IDE from ventaajuste as va " +
+                                    " select taj.TIA_DESC as descrip, va.VENA_IMPORTE as total,va.VENA_IDE,0 as TIP_IDE from ventaajuste as va " +
                                     " left join tipoajuste taj on va.VENA_TIA_IDE = taj.TIA_IDE " +
                                     " where va.VENA_FECHA >= '" + fechadesde + "' AND va.VENA_FECHA <= '" + fechahasta + "' " +
                                     " and va.VENA_PTOVTA = " + puntodevta +" ");
@@ -1012,13 +1022,13 @@ namespace LogicaNegocios
                 usuarioss = "ve.VEN_COBUSU_IDE = " + usuario + " and ";
             }
 
-            return con.Mostrar_Datos("select tp.TIP_DESC as descrip,SUM(ve.VEN_TOTAL) as total,ve.VEN_IDE from venta as ve left join tipopago as tp " +
+            return con.Mostrar_Datos("select tp.TIP_DESC as descrip,SUM(ve.VEN_TOTAL) as total,ve.VEN_IDE,tp.TIP_IDE from venta as ve left join tipopago as tp " +
                                     " on ve.VEN_TIP_IDE = tp.TIP_IDE " +
                                     " where " + usuarioss + " ve.VEN_PTOVTA = " + puntodevta + " and ve.VEN_FECHA >= '" + fechadesde + "' AND ve.VEN_FECHA <= '" + fechahasta + "' " +
                                     " and ve.VEN_CC_IDE is null " +
                                     " group by VEN_TIP_IDE " +
                                     " union " +
-                                    " select taj.TIA_DESC as descrip, va.VENA_IMPORTE as total,va.VENA_IDE from ventaajuste as va " +
+                                    " select taj.TIA_DESC as descrip, va.VENA_IMPORTE as total,va.VENA_IDE,0 AS TIP_IDE from ventaajuste as va " +
                                     " left join tipoajuste taj on va.VENA_TIA_IDE = taj.TIA_IDE " +
                                     " where va.VENA_FECHA >= '" + fechadesde + "' AND va.VENA_FECHA <= '" + fechahasta + "' " +
                                     " and va.VENA_PTOVTA = " + puntodevta + "");

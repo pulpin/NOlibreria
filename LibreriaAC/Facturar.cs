@@ -1244,7 +1244,8 @@ pnombrecli, pcuit, pdire, ptipo;
 
         private void btncargapedido_Click(object sender, EventArgs e)
         {
-
+            ConsultasPedidosVta cpv = new ConsultasPedidosVta();
+            cpv.ShowDialog();
         }
 
         private void btncobrar_Click(object sender, EventArgs e)

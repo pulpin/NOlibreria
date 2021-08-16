@@ -420,7 +420,11 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
             {
                 tSBproveedor.Enabled = true;
             }
-        }
+            if (Globales.imprimirfactura == 2)
+            {
+                tSBArqueo.Enabled = true;
+            }
+            }
         void dll_version()
         {
             const int str_len = 500;
@@ -648,6 +652,19 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         {
             ConsultaProveedor cp = new ConsultaProveedor();
             cp.ShowDialog();
+        }
+
+        private void tSBArqueo_Click(object sender, EventArgs e)
+        {
+            ArqueodeCaja adc = new ArqueodeCaja();
+            adc.ShowDialog();
+        }
+
+        private void menuReservas_Click(object sender, EventArgs e)
+        {
+            ConsultaReservas cr = new ConsultaReservas();
+            cr.cargar();
+            cr.ShowDialog();
         }
 
         private void toolTurnosD_Click(object sender, EventArgs e)

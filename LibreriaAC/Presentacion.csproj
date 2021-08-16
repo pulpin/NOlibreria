@@ -69,6 +69,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeRush.Common, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeRush.Interop, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
@@ -91,6 +92,9 @@
     <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -136,6 +140,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -167,6 +172,12 @@
     </Compile>
     <Compile Include="AltaProveedor.Designer.cs">
       <DependentUpon>AltaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasPedidosVta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasPedidosVta.Designer.cs">
+      <DependentUpon>ConsultasPedidosVta.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaProveedor.cs">
       <SubType>Form</SubType>
@@ -366,6 +377,12 @@
     </Compile>
     <Compile Include="reservasentrefecha.Designer.cs">
       <DependentUpon>reservasentrefecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArqueodeCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArqueodeCaja.Designer.cs">
+      <DependentUpon>ArqueodeCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="ventasentrefechas1.cs">
       <SubType>Form</SubType>
@@ -598,6 +615,9 @@
     <EmbeddedResource Include="AltaProveedor.resx">
       <DependentUpon>AltaProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasPedidosVta.resx">
+      <DependentUpon>ConsultasPedidosVta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaProveedor.resx">
       <DependentUpon>ConsultaProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -696,6 +716,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reservasentrefecha.resx">
       <DependentUpon>reservasentrefecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArqueodeCaja.resx">
+      <DependentUpon>ArqueodeCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ventasentrefechas1.resx">
       <DependentUpon>ventasentrefechas1.cs</DependentUpon>
@@ -947,6 +970,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="libreriaac.ico" />
+    <None Include="Resources\ventaspago64.png" />
     <None Include="Resources\proveedor642.png" />
     <None Include="Resources\proveedor641.png" />
     <None Include="Resources\dinero32.png" />

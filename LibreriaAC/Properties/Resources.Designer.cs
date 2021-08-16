@@ -1083,6 +1083,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ventaspago64 {
+            get {
+                object obj = ResourceManager.GetObject("ventaspago64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wrod32 {
             get {
                 object obj = ResourceManager.GetObject("wrod32", resourceCulture);
