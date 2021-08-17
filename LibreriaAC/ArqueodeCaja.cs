@@ -124,36 +124,36 @@ namespace Presentacion
             p.PrintPage += (s, e) =>
             {
                 e.Graphics.DrawString(cabecera,
-                                         new Font("Times New Roman", 16),
+                                         new Font("Times New Roman", 12),
                                          new SolidBrush(Color.Black),
-                                         new RectangleF(145, 5, p.DefaultPageSettings.PrintableArea.Width,
+                                         new RectangleF(10, 5, p.DefaultPageSettings.PrintableArea.Width,
                                                          p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire,
                                      new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
-                                     new RectangleF(230, 35, p.DefaultPageSettings.PrintableArea.Width,
+                                     new RectangleF(5, 35, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(dire2,
                                      new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
-                                     new RectangleF(230, 60, p.DefaultPageSettings.PrintableArea.Width,
+                                     new RectangleF(5, 60, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
                 e.Graphics.DrawString(dire3,
                                      new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
-                                     new RectangleF(230, 85, p.DefaultPageSettings.PrintableArea.Width,
+                                     new RectangleF(5, 85, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
                 e.Graphics.DrawString(dire4,
                                      new Font("Times New Roman", 11),
                                      new SolidBrush(Color.Black),
-                                     new RectangleF(230, 110, p.DefaultPageSettings.PrintableArea.Width,
+                                     new RectangleF(5, 110, p.DefaultPageSettings.PrintableArea.Width,
                                                      p.DefaultPageSettings.PrintableArea.Height));
                 e.Graphics.DrawString(dire5,
                                     new Font("Times New Roman", 11),
                                     new SolidBrush(Color.Black),
-                                    new RectangleF(230, 135, p.DefaultPageSettings.PrintableArea.Width,
+                                    new RectangleF(5, 135, p.DefaultPageSettings.PrintableArea.Width,
                                                     p.DefaultPageSettings.PrintableArea.Height));
 
                 
@@ -161,14 +161,14 @@ namespace Presentacion
                 e.Graphics.DrawString(dire10,
                                    new Font("Times New Roman", 11),
                                    new SolidBrush(Color.Black),
-                                   new RectangleF(310, 190, p.DefaultPageSettings.PrintableArea.Width,
+                                   new RectangleF(5, 190, p.DefaultPageSettings.PrintableArea.Width,
                                                    p.DefaultPageSettings.PrintableArea.Height));
 
 
                 //imprime productos
                 string productodesc, cantidad, precio, iva, codigointerno, imprimeproducto, imprimeprecioporcanti, preciosubim, preciototalim;
                 double preciod, preciosub, preciototal;
-                int linea = 310;
+                int linea = 240;
                 int linea2 = 0;
                
                 linea = linea + 10;
@@ -190,52 +190,52 @@ namespace Presentacion
                 e.Graphics.DrawString("Efectivo",
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(145, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(txtdinerocaja.Text,
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(350, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(205, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
 
                 linea = linea + 30;
                 e.Graphics.DrawString("Ventas y ajustes",
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(145, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(txttotalventas.Text,
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(350, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(205, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
 
                 linea = linea + 30;
                 e.Graphics.DrawString("Dinero en caja",
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(145, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
 
                 e.Graphics.DrawString(txtingresototal.Text,
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(350, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(205, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
 
                 linea = linea + 30;
                 e.Graphics.DrawString("Diferencia",
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(145, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(5, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
                // linea = linea + 30;
                 e.Graphics.DrawString(txtdiferencia.Text,
                                  new Font("Times New Roman", 10),
                                  new SolidBrush(Color.Black),
-                                 new RectangleF(350, linea, p.DefaultPageSettings.PrintableArea.Width,
+                                 new RectangleF(205, linea, p.DefaultPageSettings.PrintableArea.Width,
                                                  p.DefaultPageSettings.PrintableArea.Height));
          
 
