@@ -53,6 +53,7 @@
             this.bbuscar = new System.Windows.Forms.Button();
             this.LUpunto = new DevExpress.XtraEditors.LookUpEdit();
             this.label6 = new System.Windows.Forms.Label();
+            this.TIP_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.gBtipopro.SuspendLayout();
@@ -68,7 +69,7 @@
             this.gConsulta.Location = new System.Drawing.Point(29, 88);
             this.gConsulta.MainView = this.gridViewPintarFilas;
             this.gConsulta.Name = "gConsulta";
-            this.gConsulta.Size = new System.Drawing.Size(704, 315);
+            this.gConsulta.Size = new System.Drawing.Size(812, 315);
             this.gConsulta.TabIndex = 1;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
@@ -83,7 +84,8 @@
             this.VEN_FECHA,
             this.VEN_NOMBRE,
             this.VEN_TOTAL,
-            this.VEN_ANULADO});
+            this.VEN_ANULADO,
+            this.TIP_DESC});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
@@ -152,9 +154,9 @@
             // 
             this.btncancelar.Image = global::Presentacion.Properties.Resources.cancelar32;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(464, 410);
+            this.btncancelar.Location = new System.Drawing.Point(563, 410);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(73, 59);
+            this.btncancelar.Size = new System.Drawing.Size(104, 59);
             this.btncancelar.TabIndex = 12;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -166,7 +168,7 @@
             this.btnnotadecredito.BackColor = System.Drawing.SystemColors.Control;
             this.btnnotadecredito.Image = global::Presentacion.Properties.Resources.agregarE322;
             this.btnnotadecredito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnotadecredito.Location = new System.Drawing.Point(101, 410);
+            this.btnnotadecredito.Location = new System.Drawing.Point(200, 410);
             this.btnnotadecredito.Name = "btnnotadecredito";
             this.btnnotadecredito.Size = new System.Drawing.Size(104, 59);
             this.btnnotadecredito.TabIndex = 15;
@@ -180,7 +182,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Image = global::Presentacion.Properties.Resources.ajuste32;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(222, 410);
+            this.button3.Location = new System.Drawing.Point(321, 410);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 59);
             this.button3.TabIndex = 16;
@@ -193,7 +195,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(583, 418);
+            this.label1.Location = new System.Drawing.Point(682, 418);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 17;
@@ -203,7 +205,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.IndianRed;
-            this.label2.Location = new System.Drawing.Point(583, 433);
+            this.label2.Location = new System.Drawing.Point(682, 433);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 18;
@@ -214,7 +216,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Image = global::Presentacion.Properties.Resources.buscar32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(343, 409);
+            this.button1.Location = new System.Drawing.Point(442, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 59);
             this.button1.TabIndex = 19;
@@ -233,7 +235,7 @@
             this.gBtipopro.Controls.Add(this.fechadesde);
             this.gBtipopro.Location = new System.Drawing.Point(29, 30);
             this.gBtipopro.Name = "gBtipopro";
-            this.gBtipopro.Size = new System.Drawing.Size(638, 53);
+            this.gBtipopro.Size = new System.Drawing.Size(676, 53);
             this.gBtipopro.TabIndex = 248;
             this.gBtipopro.TabStop = false;
             this.gBtipopro.Text = "Elegir las fechas...";
@@ -313,7 +315,7 @@
             // bbuscar
             // 
             this.bbuscar.Image = global::Presentacion.Properties.Resources.buscar32;
-            this.bbuscar.Location = new System.Drawing.Point(673, 22);
+            this.bbuscar.Location = new System.Drawing.Point(726, 12);
             this.bbuscar.Name = "bbuscar";
             this.bbuscar.Size = new System.Drawing.Size(60, 39);
             this.bbuscar.TabIndex = 250;
@@ -322,7 +324,7 @@
             // 
             // LUpunto
             // 
-            this.LUpunto.Location = new System.Drawing.Point(325, 6);
+            this.LUpunto.Location = new System.Drawing.Point(384, 6);
             this.LUpunto.Name = "LUpunto";
             this.LUpunto.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.LUpunto.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -345,18 +347,26 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label6.Location = new System.Drawing.Point(207, 9);
+            this.label6.Location = new System.Drawing.Point(266, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 17);
             this.label6.TabIndex = 252;
             this.label6.Text = "Punto de venta:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // TIP_DESC
+            // 
+            this.TIP_DESC.Caption = "Tipo_pago";
+            this.TIP_DESC.FieldName = "TIP_DESC";
+            this.TIP_DESC.Name = "TIP_DESC";
+            this.TIP_DESC.Visible = true;
+            this.TIP_DESC.VisibleIndex = 6;
+            // 
             // ConsultaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 474);
+            this.ClientSize = new System.Drawing.Size(867, 474);
             this.ControlBox = false;
             this.Controls.Add(this.LUpunto);
             this.Controls.Add(this.label6);
@@ -414,5 +424,6 @@
         private System.Windows.Forms.Button bbuscar;
         private DevExpress.XtraEditors.LookUpEdit LUpunto;
         private System.Windows.Forms.Label label6;
+        private DevExpress.XtraGrid.Columns.GridColumn TIP_DESC;
     }
 }
