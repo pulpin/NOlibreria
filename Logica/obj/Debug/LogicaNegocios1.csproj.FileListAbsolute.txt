@@ -1,7 +1,0 @@
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\Logica.dll
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\Logica.pdb
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\Datos.dll
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\bin\Debug\Datos.pdb
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\obj\Debug\LogicaNegocios1.csprojResolveAssemblyReference.cache
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\obj\Debug\Logica.dll
-C:\Users\hmarsiglia\Documents\Visual Studio 2012\Projects\Turno\Logica\obj\Debug\Logica.pdb
