@@ -1,0 +1,10 @@
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.Properties.Resources.resources
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.GenerateResource.Cache
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\bin\Debug\AccesoaDatos.exe.config
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\bin\Debug\AccesoaDatos.exe
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\bin\Debug\AccesoaDatos.pdb
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.exe
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.pdb
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\bin\Debug\MySql.Data.dll
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\bin\Debug\MySql.Data.xml
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.csprojResolveAssemblyReference.cache

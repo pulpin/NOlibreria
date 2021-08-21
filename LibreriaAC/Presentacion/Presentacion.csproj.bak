@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAE2B366-176C-4EA2-8674-765E03E26136}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Turnos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>c:\Hugo\compi\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconoMedico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>789F25805AE2F4F7D745E2871D3EEC63D784C752</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Presentacion_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\derivaciones\derivacionesNew\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MySQL\MySQL Connector Net 6.5.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aviso.Designer.cs">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaAfi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaAfi.Designer.cs">
+      <DependentUpon>BusquedaAfi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaPacientes.Designer.cs">
+      <DependentUpon>BusquedaPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiaFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiaFecha.Designer.cs">
+      <DependentUpon>CambiaFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CargaHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargaHorarios.Designer.cs">
+      <DependentUpon>CargaHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CargarAfiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargarAfiliado.Designer.cs">
+      <DependentUpon>CargarAfiliado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CargaViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargaViaje.Designer.cs">
+      <DependentUpon>CargaViaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CantDias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CantDias.Designer.cs">
+      <DependentUpon>CantDias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoTur.cs">
+      <DependentUpon>ConjuntoTur.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConjuntoTur.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConjuntoTur.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosTurnos.cs">
+      <DependentUpon>DatosTurnos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatosTurnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosTurnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DNumberFormatInfo.cs" />
+    <Compile Include="HistoriaAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoriaAtencion.Designer.cs">
+      <DependentUpon>HistoriaAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimirPacientes.Designer.cs">
+      <DependentUpon>ImprimirPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoDias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoDias.Designer.cs">
+      <DependentUpon>ListadoDias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sobreturno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobreturno.Designer.cs">
+      <DependentUpon>Sobreturno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos.Designer.cs">
+      <DependentUpon>Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TurnosdeHoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurnosdeHoy.Designer.cs">
+      <DependentUpon>TurnosdeHoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viajes.Designer.cs">
+      <DependentUpon>Viajes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aviso.resx">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaAfi.resx">
+      <DependentUpon>BusquedaAfi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaPacientes.resx">
+      <DependentUpon>BusquedaPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiaFecha.resx">
+      <DependentUpon>CambiaFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargaHorarios.resx">
+      <DependentUpon>CargaHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargarAfiliado.resx">
+      <DependentUpon>CargarAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargaViaje.resx">
+      <DependentUpon>CargaViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CantDias.resx">
+      <DependentUpon>CantDias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoriaAtencion.resx">
+      <DependentUpon>HistoriaAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirPacientes.resx">
+      <DependentUpon>ImprimirPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDias.resx">
+      <DependentUpon>ListadoDias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoPa.rdlc" />
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sobreturno.resx">
+      <DependentUpon>Sobreturno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos.resx">
+      <DependentUpon>Turnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TurnosdeHoy.resx">
+      <DependentUpon>TurnosdeHoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viajes.resx">
+      <DependentUpon>Viajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\DevExpress.Data.v14.1.fakes" />
+    <None Include="ConjuntoTur.xsc">
+      <DependentUpon>ConjuntoTur.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoTur.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConjuntoTur.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoTur.xss">
+      <DependentUpon>ConjuntoTur.xsd</DependentUpon>
+    </None>
+    <None Include="DatosTurnos.xsc">
+      <DependentUpon>DatosTurnos.xsd</DependentUpon>
+    </None>
+    <None Include="DatosTurnos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosTurnos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosTurnos.xss">
+      <DependentUpon>DatosTurnos.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\LogicaNegocios.csproj">
+      <Project>{16b0f682-3158-4209-a333-84635751f864}</Project>
+      <Name>LogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentacion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOCSS.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action Remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alert-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gimp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valor64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\padlock closed_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\print_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\edit file_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block email_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travel-globe3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address book_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSS-color2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open in browser_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows Stand By.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows Turn Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5days.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find2_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom+_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert 2_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert 2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip backward_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip forward_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom+_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save 2_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_48x481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create-ticket-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quicktime.png" />
+    <None Include="Resources\avion1_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\fondo nuevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\CSS-color2NUEVA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesave1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\todo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_cal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\asignar_fecha.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IconoDoctor.ico" />
+    <Content Include="IconoMedico.ico" />
+    <None Include="Resources\paste_64x64.png" />
+    <None Include="Resources\options_64x64.png" />
+    <None Include="Resources\ayuda_consultas2.png" />
+    <None Include="Resources\ayuda_consultas12.png" />
+    <None Include="Resources\ayuda_consultas1.png" />
+    <None Include="Resources\ayuda_consultas11.png" />
+    <None Include="Resources\ayuda_consultas.jpg" />
+    <None Include="Resources\ayuda_consultas.png" />
+    <None Include="Resources\muneco1.jpg" />
+    <None Include="Resources\Muñecos bonitos interrogación Question A.jpg" />
+    <None Include="Resources\muneco_pregunta.jpg" />
+    <None Include="Resources\address book_24x24.png" />
+    <None Include="Resources\zoom+_24x24.png" />
+    <None Include="Resources\atencion7.png" />
+    <None Include="Resources\calendariohugo2.gif" />
+    <None Include="Resources\jeringa.jpg" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\Sin título.png" />
+    <None Include="Resources\calendar_16x16.png" />
+    <None Include="Resources\edit_16x16.png" />
+    <None Include="Resources\edit_24x24.png" />
+    <None Include="Resources\calendar_32x32.png" />
+    <None Include="Resources\papelera.gif" />
+    <None Include="Resources\eliminar1.png" />
+    <None Include="Resources\eliminar.gif" />
+    <None Include="Resources\eliminar.png" />
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

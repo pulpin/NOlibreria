@@ -1,0 +1,12 @@
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\obj\Debug\LogicaNegocios.Properties.Resources.resources
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\obj\Debug\LogicaNegocios.csproj.GenerateResource.Cache
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\LogicaNegocios.exe.config
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\LogicaNegocios.exe
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\LogicaNegocios.pdb
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\AccesoaDatos.exe
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\AccesoaDatos.pdb
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\obj\Debug\LogicaNegocios.exe
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\obj\Debug\LogicaNegocios.pdb
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\MySql.Data.dll
+c:\users\hugoo\documents\visual studio 2015\Presentacion\Logica\LogicaNegocios\bin\Debug\MySql.Data.xml
