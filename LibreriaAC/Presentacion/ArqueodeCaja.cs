@@ -361,7 +361,9 @@ namespace Presentacion
             dc.Totaltarjeta = (txttarjeta.Text).Replace(",", ".");
             dc.Totalajuste = (txtajustes.Text).Replace(",", ".");
             dc.Subtotalvta = (txttotalventas.Text).Replace(",", ".");
-            dc.DineroCaja1 = (txtdinerocaja.Text).Replace(",", ".");
+            dc.DineroCaja1 = (txtingresototal.Text).Replace(",", ".");
+            dc.Tarjetaencaja = (txttarjetascaja.Text).Replace(",", ".");
+            dc.Subtotalencaja = (txttotalencaja.Text).Replace(",", ".");
             dc.Diferencia = (txtdiferencia.Text).Replace(",", ".");
             dc.Ide = this.PCIde;
             int valor = dc.spAltaArqueo();

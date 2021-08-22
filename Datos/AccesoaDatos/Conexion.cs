@@ -39,8 +39,8 @@ namespace AccesoaDatos
                 //server = "200.51.42.91";
                 //  server = "200.51.42.91"; 
                //server = "127.0.0.1"; 
-               //server = "10.1.10.202";
-               server = "192.168.0.106";
+               server = "10.1.10.202";
+               //server = "192.168.0.106";
             }
 
             else

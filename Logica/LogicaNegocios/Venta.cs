@@ -969,8 +969,8 @@ namespace LogicaNegocios
 
 
             return con.Mostrar_Datos("select VEN_IDE,VEN_TIPOFACTU, " +
-                " VEN_NROTICKET,VEN_FECHA,VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO " +
-                " from venta ORDER BY VEN_IDE DESC limit 100");
+                " VEN_NROTICKET,VEN_FECHA,VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO,TIP_DESC " +
+                " from venta left join tipopago on VEN_TIP_IDE = TIP_IDE ORDER BY VEN_IDE DESC limit 100");
         }
 
         public DataTable Mostrar_ventasporparametro(string desde, string hasta, int nrofactu,int puntodvta)

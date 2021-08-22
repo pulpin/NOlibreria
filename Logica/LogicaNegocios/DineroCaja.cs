@@ -11,7 +11,7 @@ namespace LogicaNegocios
 {
     public class DineroCaja
     {
-        string _obs, _precio, _totalefectivo, _totaltarjeta, _totalajuste, _subtotalvta, _dinerocaja1, _diferencia;
+        string _obs, _precio, _totalefectivo, _totaltarjeta, _totalajuste, _subtotalvta, _dinerocaja1, _diferencia, _tarjetaencaja, _subtotalencaja;
         int _ide;
         public DataTable Mostrar_dinerocaja()
         {
@@ -201,7 +201,8 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("ptotalajuste", this.Totalajuste);
                 myCommand.Parameters.AddWithValue("psubtotalvta", this.Subtotalvta);
                 myCommand.Parameters.AddWithValue("pdineroencaja", this.DineroCaja1);
-
+                myCommand.Parameters.AddWithValue("ptarjetaencaja", this.Tarjetaencaja);
+                myCommand.Parameters.AddWithValue("psubtotalencaja", this.Subtotalencaja);
                 myCommand.Parameters.AddWithValue("pdiferencia", this.Diferencia);
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
@@ -313,7 +314,19 @@ namespace LogicaNegocios
             get { return this._dinerocaja1; }
             set { this._dinerocaja1 = value; }
         }
-        
+
+        public string Tarjetaencaja
+        {
+            get { return this._tarjetaencaja; }
+            set { this._tarjetaencaja = value; }
+        }
+
+        public string Subtotalencaja
+        {
+            get { return this._subtotalencaja; }
+            set { this._subtotalencaja = value; }
+        }
+
         public string Diferencia
         {
             get { return this._diferencia; }
