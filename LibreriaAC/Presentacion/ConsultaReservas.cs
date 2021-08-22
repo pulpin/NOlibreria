@@ -63,6 +63,7 @@ namespace Presentacion
                 //  gConsulta.DataSource = cli.Mostrar_clientesBuscar();
                 re.Nombre = txttitulo.Text;
                 re.Clitelefono = string.Empty;
+                re.Desc =string.Empty;
                 gConsulta.DataSource = re.Mostrar_ReservasBuscar();
                 txttitulo.Text = string.Empty;
             }
@@ -92,6 +93,7 @@ namespace Presentacion
                 // cli.Nombre = txttitulo.Text;
                 re.Clitelefono = txttelefono.Text;
                 re.Nombre = string.Empty;
+                re.Desc = string.Empty;
                 gConsulta.DataSource = re.Mostrar_ReservasBuscar();
                 // gConsulta.DataSource = cli.Mostrar_clientesBuscar();
                 txttelefono.Text = string.Empty;

@@ -313,6 +313,19 @@ namespace LogicaNegocios
                                 }
 
                             }
+                            if ((reader1["menu_nombre"].ToString() == "Credito personal"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accessoventacredito = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accessoventacredito = 2;
+                                }
+                            }
 
 
 

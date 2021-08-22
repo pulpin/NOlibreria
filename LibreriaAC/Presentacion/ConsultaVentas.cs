@@ -123,6 +123,7 @@ namespace Presentacion
             {
                 NotadeCredito ndc = new NotadeCredito();
                 ndc.Ultimavta = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["VEN_IDE"]));
+                ndc.Puntodev = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["VEN_PTOVTA"]));
                 ndc.NotaParcial = 1;
                 
                 if (ndc.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -145,6 +146,7 @@ namespace Presentacion
             {
                 NotadeCredito ndc = new NotadeCredito();
                 ndc.Ultimavta = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["VEN_IDE"]));
+                ndc.Puntodev = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["VEN_PTOVTA"]));
                 ndc.NotaParcial = 0;
                 
                 if (ndc.ShowDialog() == System.Windows.Forms.DialogResult.OK)

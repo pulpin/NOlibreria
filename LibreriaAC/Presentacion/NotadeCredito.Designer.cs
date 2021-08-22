@@ -381,7 +381,6 @@
             this.lbpuntovta.TabIndex = 218;
             this.lbpuntovta.Text = "9";
             this.lbpuntovta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbpuntovta.Visible = false;
             // 
             // lbpunto
             // 

@@ -147,11 +147,13 @@ pnombrecli, pcuit, pdire, ptipo;
         string ptipofactu, ptipopag;
         int ptipopagide, ptipopagideNuevo=0, retornar=0,pusuariopedidoide, pventemporalaborrar = 0, _notaparcial;
         double pventotal,pexento;
-        string nroticket=string.Empty;
+        string nroticket=string.Empty, _puntodev;
         public static int clientecuentacorriente;
         int _tipopago, _ultimavta, _ultimanota, nopedirclienteA = 0;
         object[] rowsenviar;
         Venta vta;
+        private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
+        private static int PUERTO = 0;
         public NotadeCredito()
         {
             InitializeComponent();
@@ -194,6 +196,7 @@ pnombrecli, pcuit, pdire, ptipo;
 
             buscarnumeroped();
             Bloquearbotones();
+            lbpuntovta.Text = this.Puntodev;
         }
 
 
@@ -434,6 +437,170 @@ pnombrecli, pcuit, pdire, ptipo;
                 MessageBox.Show("Error al desconectar impresora: " + error.ToString());
             }
         }
+
+        private void imprimirticketNuevaIFU()
+        {
+            string productodesc = string.Empty; //descripción del producto
+            string iva, codigointerno;
+            double cantidad, tasaiva, montopago, precio;
+
+            try
+            {
+
+                IFUniversal.IDriver Fiscal = new IFUniversal.Driver();
+                Fiscal.Modelo = MODELO;
+
+
+                if (Fiscal.Error != 0)
+                {
+                    MessageBox.Show(Fiscal.ErrorDesc);
+                }
+
+                Fiscal.Puerto = PUERTO;
+                Fiscal.Baudios = IFUniversal.Baudio.bd9600;
+
+                if (!Fiscal.Inicializar())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                Fiscal.CancelarComprobante();
+
+                if (!Fiscal.AbrirComprobante(IFUniversal.TipoDeComprobante.tcTiqueNotaCredito))
+                {
+                    throw new Exception(Fiscal.ErrorDesc);
+                }
+                /* if (!Fiscal.ImprimirTextoFiscal("Venta AC"))
+                 {
+                     throw new Exception(Fiscal.ErrorDesc);
+                 }*/
+
+                foreach (DataGridViewRow row in dgvProductos.Rows)
+                {
+
+                    productodesc = Convert.ToString(row.Cells[2].Value);
+                    cantidad = Convert.ToDouble(row.Cells[0].Value);
+                    precio = Convert.ToDouble(row.Cells[4].Value);
+                    iva = Convert.ToString(row.Cells[10].Value);
+                    codigointerno = Convert.ToString(row.Cells[1].Value);
+
+                    if (iva == "21" || iva == "21.00" || iva == "21,00")
+                    {
+                        tasaiva = 21;
+                    }
+                    else if (iva == "0" || iva == "0.00" || iva == "0,00")
+                    {
+                        tasaiva = 0;
+                    }
+                    else
+                    {
+                        tasaiva = 10.5;
+                    }
+
+                    if (!Fiscal.ImprimirItem2g(productodesc, cantidad, precio, tasaiva, 0, IFUniversal.CondicionesIVA.Gravado, 0, 1, codigointerno, "", IFUniversal.UnidadesMedida.Unidad))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+                string montoin = lbtotalg.Text;
+
+                montopago = Convert.ToDouble(montoin);
+
+                if (ptipopagide == 1)
+                {
+                    //tipodepago = 8;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Efectivo", montopago, "", IFUniversal.TiposPago.Efectivo, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 2 || ptipopagide == 3)
+                {
+                    //tipodepago = 21;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Maestro", montopago, "", IFUniversal.TiposPago.TarjetaDeDebito, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 4 || ptipopagide == 5 || ptipopagide == 6 || ptipopagide == 8 || ptipopagide == 9)
+                {
+                    //tipodepago = 20;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 7) //Plan z
+                {
+                    // tipodepago = 20;
+                    //cuotas = 11;
+                    if (!Fiscal.ImprimirPago2g("Plan Z", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 11, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 10) //2 cuotas
+                {
+                    //tipodepago = 20;
+                    //cuotas = 2;
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 2, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 11) //3 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 3, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 14) //12 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 12, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 15) //6 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 6, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 16) //ahora 3
+                {
+                    if (!Fiscal.ImprimirPago2g("Ahora 3", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 3, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 17) //ahora 6
+                {
+                    if (!Fiscal.ImprimirPago2g("Ahora 6", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 6, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+
+                Fiscal.CerrarComprobante();
+
+               
+
+                MessageBox.Show("Comprobante impreso exitosamente");
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+
+        }
+
         private void imprimirticketNuevaB()
         {
             int tipocomprobante = 3, id_modificador = 200, ptipodeiva=0; //1 es ticket 200 agregar venta
@@ -583,6 +750,212 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
+
+        private void imprimirticketNuevaBIFU()
+        {
+            string productodesc = string.Empty; //descripción del producto
+            string iva, codigointerno;
+            double cantidad, tasaiva, montopago, precio;
+
+            try
+            {
+
+                IFUniversal.IDriver Fiscal = new IFUniversal.Driver();
+                Fiscal.Modelo = MODELO;
+
+
+                if (Fiscal.Error != 0)
+                {
+                    MessageBox.Show(Fiscal.ErrorDesc);
+                }
+
+                Fiscal.Puerto = PUERTO;
+                Fiscal.Baudios = IFUniversal.Baudio.bd9600;
+
+                if (!Fiscal.Inicializar())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                Fiscal.CancelarComprobante();
+
+
+                if (lbtipoiva.Text == "I")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riResponsableInscripto, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "E")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riExento, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "M")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riMonotributo, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "N")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riNoResponsable, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "S")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riNoCategorizado, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riConsumidorFinal, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+
+                if (!Fiscal.AbrirComprobante(IFUniversal.TipoDeComprobante.tcNota_Credito_B))
+                {
+                    throw new Exception(Fiscal.ErrorDesc);
+                }
+
+                foreach (DataGridViewRow row in dgvProductos.Rows)
+                {
+
+                    productodesc = Convert.ToString(row.Cells[2].Value);
+                    cantidad = Convert.ToDouble(row.Cells[0].Value);
+                    precio = Convert.ToDouble(row.Cells[4].Value);
+                    iva = Convert.ToString(row.Cells[10].Value);
+                    codigointerno = Convert.ToString(row.Cells[1].Value);
+
+                    if (iva == "21" || iva == "21.00" || iva == "21,00")
+                    {
+                        tasaiva = 21;
+                    }
+                    else if (iva == "0" || iva == "0.00" || iva == "0,00")
+                    {
+                        tasaiva = 0;
+                    }
+                    else
+                    {
+                        tasaiva = 10.5;
+                    }
+
+                    if (!Fiscal.ImprimirItem2g(productodesc, cantidad, precio, tasaiva, 0, IFUniversal.CondicionesIVA.Gravado, 0, 1, codigointerno, "", IFUniversal.UnidadesMedida.Unidad))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+                string montoin = lbtotalg.Text;
+
+                montopago = Convert.ToDouble(montoin);
+
+                if (ptipopagide == 1)
+                {
+                    //tipodepago = 8;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Efectivo", montopago, "", IFUniversal.TiposPago.Efectivo, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 2 || ptipopagide == 3)
+                {
+                    //tipodepago = 21;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Maestro", montopago, "", IFUniversal.TiposPago.TarjetaDeDebito, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 4 || ptipopagide == 5 || ptipopagide == 6 || ptipopagide == 8 || ptipopagide == 9)
+                {
+                    //tipodepago = 20;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 7) //Plan z
+                {
+                    // tipodepago = 20;
+                    //cuotas = 11;
+                    if (!Fiscal.ImprimirPago2g("Plan Z", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 11, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 10) //2 cuotas
+                {
+                    //tipodepago = 20;
+                    //cuotas = 2;
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 2, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 11) //3 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 3, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 14) //12 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 12, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 15) //6 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 6, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 16) //ahora 3
+                {
+                    if (!Fiscal.ImprimirPago2g("Ahora 3", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 3, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 17) //ahora 6
+                {
+                    if (!Fiscal.ImprimirPago2g("Ahora 6", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 6, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+
+                Fiscal.CerrarComprobante();
+                
+
+                MessageBox.Show("Comprobante impreso exitosamente");
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+
+        }
+
+
+
         private void imprimirticketNuevaA()
         {
             int tipocomprobante = 3, id_modificador = 200, ptipodeiva = 0; //1 es ticket 200 agregar venta
@@ -739,6 +1112,208 @@ pnombrecli, pcuit, pdire, ptipo;
             {
                 MessageBox.Show("Error al desconectar impresora: " + error.ToString());
             }
+        }
+
+
+        private void imprimirticketNuevaAIFU()
+        {
+            string productodesc = string.Empty; //descripción del producto
+            string iva, codigointerno;
+            double cantidad, tasaiva, montopago, precio;
+
+            try
+            {
+
+                IFUniversal.IDriver Fiscal = new IFUniversal.Driver();
+                Fiscal.Modelo = MODELO;
+
+
+                if (Fiscal.Error != 0)
+                {
+                    MessageBox.Show(Fiscal.ErrorDesc);
+                }
+
+                Fiscal.Puerto = PUERTO;
+                Fiscal.Baudios = IFUniversal.Baudio.bd9600;
+
+                if (!Fiscal.Inicializar())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                Fiscal.CancelarComprobante();
+
+
+                if (lbtipoiva.Text == "I")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riResponsableInscripto, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "E")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riExento, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "M")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riMonotributo, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "N")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riNoResponsable, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (lbtipoiva.Text == "S")
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riNoCategorizado, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else
+                {
+                    if (!Fiscal.DatosCliente(lbcomprador.Text, IFUniversal.TipoDeDocumento.tdCUIT, lbcomcuit.Text, IFUniversal.ResponsabilidadIVA.riConsumidorFinal, lbcomdire.Text))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+
+                if (!Fiscal.AbrirComprobante(IFUniversal.TipoDeComprobante.tcNota_Credito_A))
+                {
+                    throw new Exception(Fiscal.ErrorDesc);
+                }
+
+                foreach (DataGridViewRow row in dgvProductos.Rows)
+                {
+
+                    productodesc = Convert.ToString(row.Cells[2].Value);
+                    cantidad = Convert.ToDouble(row.Cells[0].Value);
+                    precio = Convert.ToDouble(row.Cells[4].Value);
+                    iva = Convert.ToString(row.Cells[10].Value);
+                    codigointerno = Convert.ToString(row.Cells[1].Value);
+
+                    if (iva == "21" || iva == "21.00" || iva == "21,00")
+                    {
+                        tasaiva = 21;
+                    }
+                    else if (iva == "0" || iva == "0.00" || iva == "0,00")
+                    {
+                        tasaiva = 0;
+                    }
+                    else
+                    {
+                        tasaiva = 10.5;
+                    }
+
+                    if (!Fiscal.ImprimirItem2g(productodesc, cantidad, precio, tasaiva, 0, IFUniversal.CondicionesIVA.Gravado, 0, 1, codigointerno, "", IFUniversal.UnidadesMedida.Unidad))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+
+                string montoin = lbtotalg.Text;
+
+                montopago = Convert.ToDouble(montoin);
+
+                if (ptipopagide == 1)
+                {
+                    //tipodepago = 8;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Efectivo", montopago, "", IFUniversal.TiposPago.Efectivo, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 2 || ptipopagide == 3)
+                {
+                    //tipodepago = 21;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Maestro", montopago, "", IFUniversal.TiposPago.TarjetaDeDebito, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 4 || ptipopagide == 5 || ptipopagide == 6 || ptipopagide == 8 || ptipopagide == 9)
+                {
+                    //tipodepago = 20;
+                    //cuotas = 1;
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 1, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 7) //Plan z
+                {
+                    // tipodepago = 20;
+                    //cuotas = 11;
+                    if (!Fiscal.ImprimirPago2g("Plan Z", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 11, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 10) //2 cuotas
+                {
+                    //tipodepago = 20;
+                    //cuotas = 2;
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 2, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 11) //3 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 3, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 14) //12 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 12, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 15) //6 cuotas
+                {
+                    if (!Fiscal.ImprimirPago2g("Crédito", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 6, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 16) //ahora 3
+                {
+                    if (!Fiscal.ImprimirPago2g("Ahora 3", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 3, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                else if (ptipopagide == 17) //ahora 6
+                {
+                    if (!Fiscal.ImprimirPago2g("Ahora 6", montopago, "", IFUniversal.TiposPago.TarjetaDeCredito, 6, "", ""))
+                    {
+                        throw new Exception(Fiscal.ErrorDesc);
+                    }
+                }
+                
+                Fiscal.CerrarComprobante();
+                
+                MessageBox.Show("Comprobante impreso exitosamente");
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+
         }
 
         private void LUComprobante_EditValueChanged(object sender, EventArgs e)
@@ -1333,14 +1908,17 @@ pnombrecli, pcuit, pdire, ptipo;
                     if (vta.ventipofactura == "T")
                     {
                         this.imprimirticketNueva();
+                        //this.imprimirticketNuevaIFU();
                     }
                     else if (vta.ventipofactura == "A")
                     {
                         this.imprimirticketNuevaA();
+                        //this.imprimirticketNuevaAIFU();
                     }
                     else
                     {
                         this.imprimirticketNuevaB();
+                        //this.imprimirticketNuevaBIFU();
                     }
 
                 }
@@ -1970,6 +2548,12 @@ pnombrecli, pcuit, pdire, ptipo;
         {
             get { return this._ultimavta; }
             set { this._ultimavta = value; }
+        }
+
+        public string Puntodev
+        {
+            get { return this._puntodev; }
+            set { this._puntodev = value; }
         }
         public int NotaParcial
         {

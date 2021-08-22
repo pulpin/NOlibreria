@@ -210,10 +210,6 @@ C:\Users\hugoo\Documents\Visual Studio 2015\Projects\Presentacion\LibreriaAC\Pre
 C:\Users\hugoo\Documents\Visual Studio 2015\Projects\Presentacion\LibreriaAC\Presentacion\obj\Debug\Presentacion.exe.licenses
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Interop.IFUniversal.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.csproj.ResolveComReference.cache
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.exe
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\Presentacion.exe
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\Presentacion.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\DevExpress.Data.v15.1.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\DevExpress.Printing.v15.1.Core.dll
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
@@ -368,4 +364,8 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Prese
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.ventasentrefechapedido.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.ventasentrefechas1.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
-C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.exe.licenses
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\LibreriaAC.exe
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\bin\Debug\LibreriaAC.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\LibreriaAC.exe.licenses
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\LibreriaAC.exe
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\LibreriaAC.pdb

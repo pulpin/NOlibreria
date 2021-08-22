@@ -129,7 +129,8 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
                                                                        CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
         public static extern int ReanudarLog();
 
-
+        private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
+        private static int PUERTO = 0;
         /* Globa variable */
         private bool _WorkThreadRunning = false;
         public void WorkThreadFunction()
@@ -442,96 +443,137 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         }
         private void cierreXToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dll_version();
+          //  this.CierreXIFU();
+
+           
+           // dll_version();
 
             int error;
 
-                /* active log */
+            
                 error = ComenzarLog(true);
 
-                /* config baudrate */
+               
                 ConfigurarVelocidad(9600);
 
-                /* config port */
+               
                 ConfigurarPuerto("0");
-                //ConfigurarPuerto("usb:USB");
-                //ConfigurarPuerto("lan:172.22.107.226");
-
-                /* real conection */
+              
+               
                 error = Conectar();
                 MessageBox.Show("Se conecta: " + error.ToString());
 
-                /* print x */
+               
                 error = ImprimirCierreX();
                 MessageBox.Show("Cierre x #1: " + error.ToString());
-
-
-                /* test DLL into threads  (Remember: this DLL HL is MONO-THREAD)
-                   the programer must
-                   implemente the MUTEX  (Attention!!!) */
+            
                 _WorkThreadRunning = true;
                 System.Threading.Thread thread = new System.Threading.Thread(new System.Threading.ThreadStart(WorkThreadFunction));
                 thread.Start();
 
-                /* wait */
+                
                 do
                 {
-                    /* nothing to do */
+                  
                     System.Threading.Thread.Sleep(0);
 
                 } while (_WorkThreadRunning);
 
-
-            /* download */
-            //error = DescargarPeriodoPendiente(@"C:\");
-            //MessageBox.Show("Download: " + error.ToString());
-
-
-            /* print z */
+            
             error = Desconectar();
             MessageBox.Show("Disconect: " + error.ToString());
 
-            /* deactive log */
+            
             DetenerLog();
             
+            
+        }
+
+
+        private void CierreXIFU()
+        {
+            try
+            {
+
+                IFUniversal.IDriver Fiscal = new IFUniversal.Driver();
+                Fiscal.Modelo = MODELO;
+
+                if (Fiscal.Error != 0)
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                Fiscal.Puerto = PUERTO;
+                Fiscal.Baudios = IFUniversal.Baudio.bd9600;
+
+                if (!Fiscal.Inicializar())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                Fiscal.CancelarComprobante();
+
+                if (!Fiscal.CierreX())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                MessageBox.Show("Cierre realizado exitosamente");
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+        }
+
+        private void CierreZIFU()
+        {
+            try
+            {
+
+                IFUniversal.IDriver Fiscal = new IFUniversal.Driver();
+                Fiscal.Modelo = MODELO;
+
+                if (Fiscal.Error != 0)
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                Fiscal.Puerto = PUERTO;
+                Fiscal.Baudios = IFUniversal.Baudio.bd9600;
+
+                if (!Fiscal.Inicializar())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+
+                Fiscal.CancelarComprobante();
+
+                if (!Fiscal.CierreZ())
+                    throw new Exception(Fiscal.ErrorDesc);
+
+                MessageBox.Show("Cierre realizado exitosamente");
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
         }
 
         private void cierraZToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //this.CierreZIFU();
+            
             int error;
-
-            /* active log */
+            
             error = ComenzarLog(true);
-
-            /* config baudrate */
+            
             ConfigurarVelocidad(9600);
-
-            /* config port */
+            
             ConfigurarPuerto("0");
-            //ConfigurarPuerto("usb:USB");
-            //ConfigurarPuerto("lan:172.22.107.226");
-
-            /* real conection */
+           
             error = Conectar();
             MessageBox.Show("Se conecta: " + error.ToString());
-
-           
-            /* download */
-            //error = DescargarPeriodoPendiente(@"C:\");
-            //MessageBox.Show("Download: " + error.ToString());
-
-
-            /* print z */
+            
             error = ImprimirCierreZ();
             MessageBox.Show("Closure Day: " + error.ToString());
-
-            /* clsoe port */
+            
             error = Desconectar();
             MessageBox.Show("Disconect: " + error.ToString());
-
-            /* deactive log */
+            
             DetenerLog();
+            
         }
 
         private void versionToolStripMenuItem_Click(object sender, EventArgs e)

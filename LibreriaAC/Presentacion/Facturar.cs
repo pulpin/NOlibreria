@@ -241,9 +241,12 @@ pnombrecli, pcuit, pdire, ptipo;
             dgvProductos.Columns[5].DefaultCellStyle.Alignment =
         DataGridViewContentAlignment.MiddleCenter;
 
-          //  dgvProductos.Columns[6].Visible = false;
-          //  dgvProductos.Columns[7].Visible = false;
-    
+            //  dgvProductos.Columns[6].Visible = false;
+            //  dgvProductos.Columns[7].Visible = false;
+            if ((Globales.accessoventacredito == 1)|| (Globales.accessoventacredito == 2))
+            {
+                btncreditop.Enabled = true;
+            }
         }
 
         private void btnagregap_Click(object sender, EventArgs e)
@@ -2387,15 +2390,22 @@ pnombrecli, pcuit, pdire, ptipo;
             //Si es tipo crédito
             if (tipop2 == 12)
             {
+
                 vta.venccorriente = Facturar.clientecuentacorriente;
+                int valor2 = vta.spVentaProducto();
+                MessageBox.Show("El número de la venta es: " + valor2);
+                this.Ultimavta = valor2;
+                this.guardarventadetalledefinitiva();
+
             }
-
-            //faltan los parámetros de la tabla cuentacorriente.
-
-            int valor = vta.spVentaProducto();
-            MessageBox.Show("El número del pedido es: " + valor);
-            this.Ultimavta = valor;
-            this.guardarventadetalle();
+            else
+            {
+                //faltan los parámetros de la tabla cuentacorriente.
+                int valor = vta.spVentaProducto();
+                MessageBox.Show("El número del pedido es: " + valor);
+                this.Ultimavta = valor;
+                this.guardarventadetalle();
+            }
         }
 
         private void guardarlaproformamaestro(int tipop2)

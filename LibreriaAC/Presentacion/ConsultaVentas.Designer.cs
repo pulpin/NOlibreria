@@ -37,6 +37,8 @@
             this.VEN_NOMBRE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VEN_TOTAL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VEN_ANULADO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TIP_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.VEN_PTOVTA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnnotadecredito = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -53,7 +55,6 @@
             this.bbuscar = new System.Windows.Forms.Button();
             this.LUpunto = new DevExpress.XtraEditors.LookUpEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.TIP_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.gBtipopro.SuspendLayout();
@@ -85,13 +86,15 @@
             this.VEN_NOMBRE,
             this.VEN_TOTAL,
             this.VEN_ANULADO,
-            this.TIP_DESC});
+            this.TIP_DESC,
+            this.VEN_PTOVTA});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
+            //this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // VEN_IDE
             // 
@@ -149,6 +152,25 @@
             this.VEN_ANULADO.Caption = "VEN_ANULADO";
             this.VEN_ANULADO.FieldName = "VEN_ANULADO";
             this.VEN_ANULADO.Name = "VEN_ANULADO";
+            // 
+            // TIP_DESC
+            // 
+            this.TIP_DESC.Caption = "Tipo_pago";
+            this.TIP_DESC.FieldName = "TIP_DESC";
+            this.TIP_DESC.Name = "TIP_DESC";
+            this.TIP_DESC.Visible = true;
+            this.TIP_DESC.VisibleIndex = 6;
+            // 
+            // VEN_PTOVTA
+            // 
+            this.VEN_PTOVTA.Caption = "Punto";
+            this.VEN_PTOVTA.FieldName = "VEN_PTOVTA";
+            this.VEN_PTOVTA.MaxWidth = 30;
+            this.VEN_PTOVTA.MinWidth = 30;
+            this.VEN_PTOVTA.Name = "VEN_PTOVTA";
+            this.VEN_PTOVTA.Visible = true;
+            this.VEN_PTOVTA.VisibleIndex = 7;
+            this.VEN_PTOVTA.Width = 30;
             // 
             // btncancelar
             // 
@@ -354,14 +376,6 @@
             this.label6.Text = "Punto de venta:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // TIP_DESC
-            // 
-            this.TIP_DESC.Caption = "Tipo_pago";
-            this.TIP_DESC.FieldName = "TIP_DESC";
-            this.TIP_DESC.Name = "TIP_DESC";
-            this.TIP_DESC.Visible = true;
-            this.TIP_DESC.VisibleIndex = 6;
-            // 
             // ConsultaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,5 +439,6 @@
         private DevExpress.XtraEditors.LookUpEdit LUpunto;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraGrid.Columns.GridColumn TIP_DESC;
+        private DevExpress.XtraGrid.Columns.GridColumn VEN_PTOVTA;
     }
 }
