@@ -121,6 +121,11 @@ namespace Presentacion
             }
         }
 
+        public void consultaparavervendidos()
+        {
+           
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             int todos;
@@ -168,6 +173,20 @@ namespace Presentacion
             {
                 LUusuarios.Enabled = true;
             }
+        }
+
+        private void gConsulta_DoubleClick(object sender, EventArgs e)
+        {
+            ConsultaVentas cv = new ConsultaVentas();
+            DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
+            string fdesdee = fdesde.ToString("yyyy-MM-dd");
+
+            DateTime fhasta = Convert.ToDateTime(fechahasta.EditValue);
+            string fhastae = fhasta.ToString("yyyy-MM-dd");
+            int tipop = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["TIP_IDE"]));
+            cv.consultaventasfiltros(fdesde, fhasta, Convert.ToInt32(LUpunto.EditValue),tipop);
+            cv.Filtro = 1;
+            cv.ShowDialog();
         }
     }
 }

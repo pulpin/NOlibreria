@@ -62,6 +62,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.lbcreditop = new System.Windows.Forms.Label();
+            this.TIP_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
@@ -99,6 +100,7 @@
             this.gConsulta.TabIndex = 195;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
+            this.gConsulta.DoubleClick += new System.EventHandler(this.gConsulta_DoubleClick);
             // 
             // cmdmenugrid
             // 
@@ -126,7 +128,8 @@
             // 
             this.gridViewPintarFilas.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.descrip,
-            this.total});
+            this.total,
+            this.TIP_IDE});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "total", this.total, "")});
@@ -446,12 +449,19 @@
             this.lbcreditop.Text = "0";
             this.lbcreditop.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // TIP_IDE
+            // 
+            this.TIP_IDE.Caption = "TIP_IDE";
+            this.TIP_IDE.FieldName = "TIP_IDE";
+            this.TIP_IDE.Name = "TIP_IDE";
+            // 
             // ventasentrefechas1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(834, 569);
+            this.ControlBox = false;
             this.Controls.Add(this.lbcreditop);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gConsulta2);
@@ -525,5 +535,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbcreditop;
+        private DevExpress.XtraGrid.Columns.GridColumn TIP_IDE;
     }
 }

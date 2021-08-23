@@ -94,7 +94,6 @@
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
-            //this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
             // 
             // VEN_IDE
             // 
@@ -261,6 +260,7 @@
             this.gBtipopro.TabIndex = 248;
             this.gBtipopro.TabStop = false;
             this.gBtipopro.Text = "Elegir las fechas...";
+            this.gBtipopro.Enter += new System.EventHandler(this.gBtipopro_Enter);
             // 
             // label5
             // 

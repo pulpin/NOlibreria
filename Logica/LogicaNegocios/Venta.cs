@@ -969,8 +969,9 @@ namespace LogicaNegocios
 
 
             return con.Mostrar_Datos("select VEN_IDE,VEN_TIPOFACTU, " +
-                " VEN_NROTICKET,VEN_FECHA,VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO,TIP_DESC,VEN_PTOVTA " +
-                " from venta left join tipopago on VEN_TIP_IDE = TIP_IDE where VEN_PTOVTA = "+ Globales.gbpuntodeventapredetermindado +"  ORDER BY VEN_IDE DESC limit 100");
+                " VEN_NROTICKET,VEN_FECHA,(case when VEN_TIP_IDE = 12 then CC_NOMBRE else VEN_NOMBRE END) as VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO,TIP_DESC,VEN_PTOVTA " +
+                " from venta left join tipopago on VEN_TIP_IDE = TIP_IDE left join cuentacorriente as cc on VEN_IDE = CUCO_VEN_IDE " +
+                " left join cccliente as ccc on CUCO_CC_IDE = CC_IDE where VEN_PTOVTA = "+ Globales.gbpuntodeventapredetermindado +"  ORDER BY VEN_IDE DESC limit 100");
         }
 
         public DataTable Mostrar_ventasporparametro(string desde, string hasta, int nrofactu,int puntodvta)
@@ -1011,8 +1012,22 @@ namespace LogicaNegocios
                 
             }
             return con.Mostrar_Datos("select VEN_IDE,VEN_TIPOFACTU, " +
-                " VEN_NROTICKET,VEN_FECHA,VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO,TIP_DESC,VEN_PTOVTA " +
-                " from venta left join tipopago on VEN_TIP_IDE = TIP_IDE where " + valor +" ORDER BY VEN_IDE DESC");
+                " VEN_NROTICKET,VEN_FECHA,(case when VEN_TIP_IDE = 12 then CC_NOMBRE else VEN_NOMBRE END) as VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO,TIP_DESC,VEN_PTOVTA " +
+                " from venta left join tipopago on VEN_TIP_IDE = TIP_IDE left join cuentacorriente as cc on VEN_IDE = CUCO_VEN_IDE " +
+                " left join cccliente as ccc on CUCO_CC_IDE = CC_IDE where " + valor +" ORDER BY VEN_IDE DESC");
+        }
+
+        public DataTable Mostrar_ventasporparametrofiltro(string desde, string hasta, int puntodvta, int tipop)
+        {
+            int ingresa = 0;
+            string valor = string.Empty;
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+           
+            return con.Mostrar_Datos("select VEN_IDE,VEN_TIPOFACTU, " +
+                " VEN_NROTICKET,VEN_FECHA,(case when VEN_TIP_IDE = 12 then CC_NOMBRE else VEN_NOMBRE END) as VEN_NOMBRE,VEN_TOTAL,VEN_ANULADO,TIP_DESC,VEN_PTOVTA " +
+                " from venta left join tipopago on VEN_TIP_IDE = TIP_IDE left join cuentacorriente as cc on VEN_IDE = CUCO_VEN_IDE " +
+                " left join cccliente as ccc on CUCO_CC_IDE = CC_IDE where (VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "') and VEN_PTOVTA = " + puntodvta + " and VEN_TIP_IDE = "+ tipop + " ORDER BY VEN_IDE DESC");
         }
 
 

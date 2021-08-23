@@ -2392,6 +2392,7 @@ pnombrecli, pcuit, pdire, ptipo;
             {
 
                 vta.venccorriente = Facturar.clientecuentacorriente;
+                vta.venptodeventa = Globales.puntodeventa;
                 int valor2 = vta.spVentaProducto();
                 MessageBox.Show("El número de la venta es: " + valor2);
                 this.Ultimavta = valor2;

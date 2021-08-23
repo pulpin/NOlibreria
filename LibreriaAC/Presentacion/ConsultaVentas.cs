@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class ConsultaVentas : Form
     {
         Venta ve = new Venta();
+        int _filtro;
         public ConsultaVentas()
         {
             InitializeComponent();
@@ -26,7 +27,10 @@ namespace Presentacion
         }
         private void cargar()
         {
-            gConsulta.DataSource = ve.Mostrar_ventas100();
+            if (this.Filtro == 0)
+            { 
+                gConsulta.DataSource = ve.Mostrar_ventas100();
+            }
             // fechadesde.EditValue = DateTime.Today;
             // fechahasta.EditValue = DateTime.Today;
 
@@ -62,6 +66,8 @@ namespace Presentacion
                 cvp.Vendidep = venidep1;
                 cvp.ShowDialog();            
         }
+
+
 
         private void gConsulta_DoubleClick(object sender, EventArgs e)
         {
@@ -186,5 +192,25 @@ namespace Presentacion
             gConsulta.DataSource = ve.Mostrar_ventasporparametro(fdesdee, fhastae, nrofac, Convert.ToInt32(LUpunto.EditValue));
 
         }
+
+        public void consultaventasfiltros(DateTime fdesde, DateTime fhasta,int puntod, int tipop)
+        {
+            string fdesdee = fdesde.ToString("yyyy-MM-dd");
+            string fhastae = fhasta.ToString("yyyy-MM-dd");
+
+            gConsulta.DataSource = ve.Mostrar_ventasporparametrofiltro(fdesdee, fhastae, puntod, tipop);
+
+        }
+
+        private void gBtipopro_Enter(object sender, EventArgs e)
+        {
+
+        }
+        public int Filtro
+        {
+            get { return this._filtro; }
+            set { this._filtro = value; }
+        }
+
     }
 }
