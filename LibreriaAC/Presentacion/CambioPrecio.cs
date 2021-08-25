@@ -19,9 +19,9 @@ namespace Presentacion
        // int tipop = 0;
        // string server = "127.0.0.1";
         string server = "10.1.10.202";
-       // string server = "192.168.0.106";
+      //  string server = "192.168.0.106";
         string database = "libreria";
-         string uid = "cambioprecio";
+        string uid = "cambioprecio";
         //string uid = "root";
         
         string password = "123123";
@@ -1551,6 +1551,18 @@ namespace Presentacion
             else
             {
                 label7.Visible = false;
+            }
+        }
+
+        private void dgvProductos_DoubleClick(object sender, EventArgs e)
+        {
+            if (rBlibreria.Checked == true)
+            {
+                string codigoc = Convert.ToString(dgvProductos.CurrentRow.Cells[0].Value);
+                ConsultaProductos cp = new ConsultaProductos();
+                cp.busquedasporprovee(codigoc);
+                cp.ShowDialog();
+               // MessageBox.Show("Ver");
             }
         }
 

@@ -58,7 +58,6 @@
             this.RESE_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RESE_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gConsulta1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MOV_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,7 +75,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.cmdmenugrid.SuspendLayout();
             this.gBtipopro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fechahasta.Properties.CalendarTimeProperties)).BeginInit();
@@ -310,8 +308,7 @@
             this.RESE_CANTIDAD,
             this.RESE_FECHA,
             this.RESE_IDE,
-            this.LI_IDE,
-            this.gridColumn1});
+            this.LI_IDE});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
@@ -392,14 +389,6 @@
             this.LI_IDE.Caption = "LI_IDE";
             this.LI_IDE.FieldName = "LI_IDE";
             this.LI_IDE.Name = "LI_IDE";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
             // 
             // gConsulta1
             // 
@@ -590,16 +579,6 @@
             this.label6.Text = "Reservas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(689, 40);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 55);
-            this.button4.TabIndex = 255;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // reservasentrefecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,7 +586,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 581);
             this.ControlBox = false;
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
@@ -693,7 +671,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraGrid.Columns.GridColumn LI_IDE;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private System.Windows.Forms.Button button4;
     }
 }

@@ -401,7 +401,14 @@ namespace Presentacion
             LUgenero.EditValue = pro.Genero;
             this._preciosinmodi = pro.Precio.Replace(",", ".");
             txtprecio.Text = pro.Precio.Replace(",", ".");
-            lbprecioanterior.Text = pro.Precioanterior.Replace(",", ".");
+            if (pro.Precioanterior == null)
+            {
+                lbprecioanterior.Text = string.Empty;
+            }
+            else
+            { 
+                lbprecioanterior.Text = pro.Precioanterior.Replace(",", ".");
+            }
             txtcodprovee.Text = pro.Codigoprovee;
             txtisbn.Text = pro.Isbn;
             txtbarra.Text = pro.Barra;

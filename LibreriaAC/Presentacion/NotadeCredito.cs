@@ -1920,7 +1920,9 @@ pnombrecli, pcuit, pdire, ptipo;
                         this.imprimirticketNuevaB();
                         //this.imprimirticketNuevaBIFU();
                     }
-
+                    //guardar que se imprimió en la fiscal
+                    int valord = vta.spMarcarImprimioNotadeCredito();
+                    
                 }
             }
             this.resetearloscontroles();

@@ -80,6 +80,16 @@
             this.CLIEN_NOMBRE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RESE_CANTIDAD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RESE_FECHA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbsockactual = new System.Windows.Forms.Label();
+            this.gConsulta4 = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lbpedidos = new System.Windows.Forms.LinkLabel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.EDI_EDITORIAL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdmenugrid.SuspendLayout();
             this.gBtipopro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fechahasta.Properties.CalendarTimeProperties)).BeginInit();
@@ -94,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gConsulta4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
@@ -313,7 +325,8 @@
             this.LI_DESC,
             this.LI_AUTOR,
             this.cantidad,
-            this.valor});
+            this.valor,
+            this.EDI_EDITORIAL});
             this.gridViewPintarFilas.GridControl = this.gConsultaPed;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
@@ -368,7 +381,7 @@
             this.cantidad.MaxWidth = 80;
             this.cantidad.Name = "cantidad";
             this.cantidad.Visible = true;
-            this.cantidad.VisibleIndex = 3;
+            this.cantidad.VisibleIndex = 4;
             this.cantidad.Width = 80;
             // 
             // valor
@@ -650,6 +663,127 @@
             this.RESE_FECHA.VisibleIndex = 2;
             this.RESE_FECHA.Width = 70;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.Location = new System.Drawing.Point(766, 108);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 17);
+            this.label8.TabIndex = 259;
+            this.label8.Text = "Stock:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbsockactual
+            // 
+            this.lbsockactual.AutoSize = true;
+            this.lbsockactual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsockactual.ForeColor = System.Drawing.Color.Yellow;
+            this.lbsockactual.Location = new System.Drawing.Point(815, 109);
+            this.lbsockactual.Name = "lbsockactual";
+            this.lbsockactual.Size = new System.Drawing.Size(16, 16);
+            this.lbsockactual.TabIndex = 261;
+            this.lbsockactual.Text = "0";
+            // 
+            // gConsulta4
+            // 
+            this.gConsulta4.Location = new System.Drawing.Point(639, 128);
+            this.gConsulta4.MainView = this.gridView4;
+            this.gConsulta4.Name = "gConsulta4";
+            this.gConsulta4.Size = new System.Drawing.Size(277, 402);
+            this.gConsulta4.TabIndex = 262;
+            this.gConsulta4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            this.gConsulta4.Visible = false;
+            // 
+            // gridView4
+            // 
+            this.gridView4.Appearance.SelectedRow.BackColor = System.Drawing.Color.Transparent;
+            this.gridView4.Appearance.SelectedRow.BackColor2 = System.Drawing.Color.Transparent;
+            this.gridView4.Appearance.SelectedRow.BorderColor = System.Drawing.Color.Transparent;
+            this.gridView4.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gridView4.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView4.Appearance.SelectedRow.Options.UseBorderColor = true;
+            this.gridView4.Appearance.SelectedRow.Options.UseFont = true;
+            this.gridView4.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
+            this.gridView4.GridControl = this.gConsulta4;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsBehavior.Editable = false;
+            this.gridView4.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.gridView4.OptionsView.ShowFooter = true;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Proveedor";
+            this.gridColumn1.FieldName = "PROV_DESC";
+            this.gridColumn1.MaxWidth = 120;
+            this.gridColumn1.MinWidth = 120;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 120;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Fecha";
+            this.gridColumn2.FieldName = "PED_FECHA";
+            this.gridColumn2.MaxWidth = 60;
+            this.gridColumn2.MinWidth = 60;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 60;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Cantidad";
+            this.gridColumn3.FieldName = "PEDD_CANTIDAD";
+            this.gridColumn3.MaxWidth = 50;
+            this.gridColumn3.MinWidth = 50;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 50;
+            // 
+            // lbpedidos
+            // 
+            this.lbpedidos.AutoSize = true;
+            this.lbpedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpedidos.ForeColor = System.Drawing.Color.SeaShell;
+            this.lbpedidos.LinkColor = System.Drawing.Color.SeaShell;
+            this.lbpedidos.Location = new System.Drawing.Point(712, 88);
+            this.lbpedidos.Name = "lbpedidos";
+            this.lbpedidos.Size = new System.Drawing.Size(16, 16);
+            this.lbpedidos.TabIndex = 264;
+            this.lbpedidos.TabStop = true;
+            this.lbpedidos.Text = "0";
+            this.lbpedidos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbpedidos_LinkClicked);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.SeaShell;
+            this.label9.Location = new System.Drawing.Point(636, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 17);
+            this.label9.TabIndex = 263;
+            this.label9.Text = "Pedidos:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // EDI_EDITORIAL
+            // 
+            this.EDI_EDITORIAL.Caption = "Editorial";
+            this.EDI_EDITORIAL.FieldName = "EDI_EDITORIAL";
+            this.EDI_EDITORIAL.Name = "EDI_EDITORIAL";
+            this.EDI_EDITORIAL.Visible = true;
+            this.EDI_EDITORIAL.VisibleIndex = 3;
+            // 
             // ventasentrefechapedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,6 +791,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 581);
             this.ControlBox = false;
+            this.Controls.Add(this.lbpedidos);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.gConsulta4);
+            this.Controls.Add(this.lbsockactual);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.gConsulta3);
             this.Controls.Add(this.lbcantidadreserva);
             this.Controls.Add(this.label7);
@@ -695,6 +834,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gConsulta4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -752,5 +893,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn RESE_CANTIDAD;
         private DevExpress.XtraGrid.Columns.GridColumn RESE_FECHA;
         private DevExpress.XtraGrid.Columns.GridColumn valor;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbsockactual;
+        private DevExpress.XtraGrid.GridControl gConsulta4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private System.Windows.Forms.LinkLabel lbpedidos;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraGrid.Columns.GridColumn EDI_EDITORIAL;
     }
 }

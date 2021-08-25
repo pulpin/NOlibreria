@@ -418,6 +418,7 @@
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(608, 292);
             this.dgvProductos.TabIndex = 246;
+            this.dgvProductos.DoubleClick += new System.EventHandler(this.dgvProductos_DoubleClick);
             // 
             // groupBox3
             // 

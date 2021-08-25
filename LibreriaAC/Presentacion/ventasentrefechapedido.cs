@@ -154,11 +154,18 @@ namespace Presentacion
         {
             this.Codigo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["codigo"]));
             ven.venproductoide = this.Codigo;
-            int cantidaddereservas = ven.spConsultaCantiReservas();
-            lbcantidadreserva.Text = Convert.ToString(cantidaddereservas);
+            //int cantidaddereservas = ven.spConsultaCantiReservas();
+            //lbcantidadreserva.Text = Convert.ToString(cantidaddereservas);
             gConsulta2.DataSource = ven.Mostrar_registrodelasventas();
             gConsulta1.DataSource = ven.Mostrar_movimientosdeproductos();
             gConsulta3.DataSource = ven.Mostrar_reservasdeproducto();
+            lbcantidadreserva.Text = Convert.ToString(gridView3.DataRowCount);
+            gConsulta4.DataSource = ven.Mostrar_pedidosrealizados();
+            int cantidadpedidos = gridView4.DataRowCount;
+            lbpedidos.Text = Convert.ToString(cantidadpedidos);
+            pro.Codigo = this.Codigo;
+            lbsockactual.Text = Convert.ToString(pro.spConsultastockactual());
+
         }
         private void gConsulta_Click(object sender, EventArgs e)
         {
@@ -208,10 +215,26 @@ namespace Presentacion
             if (gConsulta3.Visible == true)
             {
                 gConsulta3.Visible = false;
+                gConsulta4.Visible = false;
             }
             else
             {
                 gConsulta3.Visible = true;
+                gConsulta4.Visible = false;
+            }
+        }
+
+        private void lbpedidos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (gConsulta4.Visible == true)
+            {
+                gConsulta4.Visible = false;
+                gConsulta3.Visible = false;
+            }
+            else
+            {
+                gConsulta4.Visible = true;
+                gConsulta3.Visible = false;
             }
         }
     }
