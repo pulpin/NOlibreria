@@ -158,8 +158,9 @@ namespace Presentacion
         private void cargardatos()
         {
             this.Editorialide = Convert.ToInt32(lUEditorial.EditValue);
-            this.Barra = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["BARRA"]));
-            
+            this.Barra = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["isbn"]));
+            //MessageBox.Show(Convert.ToString(this.Editorialide));
+            //MessageBox.Show(this.Barra);
             pro.spConsultaCodigoPorBarra(this.Barra);
             this.Codigo = pro.Codigo;
             con.Codigo = this.Codigo;

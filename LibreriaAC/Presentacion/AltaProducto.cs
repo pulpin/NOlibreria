@@ -254,7 +254,7 @@ namespace Presentacion
             {
                 lUporcentaje.EditValue = "21.00";
             }
-            if (LogicaNegocios.Globales.accessocuerpoestante == 1)
+            if ((LogicaNegocios.Globales.accessocuerpoestante == 1)||(LogicaNegocios.Globales.accessocuerpoestante == 2))
             {
                 bloqueoporcuerpoyestante();
             }

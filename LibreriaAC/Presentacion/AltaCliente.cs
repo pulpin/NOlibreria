@@ -36,6 +36,35 @@ namespace Presentacion
            // lookUpEdit1.Properties.Columns[0].Visible = false;
         }
 
+        public static bool Validate(string cuit)
+        {
+            //cuit = cuit.Replace("-", "");
+            if (string.IsNullOrEmpty(cuit)) throw new ArgumentNullException(nameof(cuit));
+            if (cuit.Length != 11) throw new ArgumentException(nameof(cuit));
+            bool rv = false;
+            int verificador;
+            int resultado = 0;
+            string cuit_nro = cuit.Replace("-", string.Empty);
+            string codes = "6789456789";
+            long cuit_long = 0;
+            if (long.TryParse(cuit_nro, out cuit_long))
+            {
+                verificador = int.Parse(cuit_nro[cuit_nro.Length - 1].ToString());
+                int x = 0;
+                while (x < 10)
+                {
+                    int digitoValidador = int.Parse(codes.Substring((x), 1));
+                    int digito = int.Parse(cuit_nro.Substring((x), 1));
+                    int digitoValidacion = digitoValidador * digito;
+                    resultado += digitoValidacion;
+                    x++;
+                }
+                resultado = resultado % 11;
+                rv = (resultado == verificador);
+            }
+            return rv;
+        }
+
         private bool validateCuit(string Cuit)
         {
             Regex rg = new Regex("[A-Z_a-z]");
@@ -68,7 +97,8 @@ namespace Presentacion
         private void btnagregar_Click(object sender, EventArgs e)
         {
             //verifica si el cuit/cuil es válido.
-            bool valor = validateCuit(txtcuit.Text);
+            //bool valor = validateCuit(txtcuit.Text);
+            bool valor = Validate(txtcuit.Text);
             if (valor == true)
             {
                 //si es válido, verifica que no exista ya cargado en la base de datos.
