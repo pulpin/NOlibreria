@@ -33,15 +33,15 @@ namespace Presentacion
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (txttitulo.Text == string.Empty && txtautor.Text == string.Empty)
+            /*if (txttitulo.Text == string.Empty && txtautor.Text == string.Empty)
             {
                 MessageBox.Show("Debe ingresar el texto a buscar");
 
             }
             else
-            {
+            {*/
                 this.busquedaavanzada();
-            }
+           // }
         }
 
         private void busquedasimple()

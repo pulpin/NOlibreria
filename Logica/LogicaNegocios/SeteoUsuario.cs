@@ -70,6 +70,7 @@ namespace LogicaNegocios
                         LogicaNegocios.Globales.accesoausuarios = 0;
                         LogicaNegocios.Globales.imprimirfactura = 0;
                         LogicaNegocios.Globales.accesoaproveedores = 0;
+                        LogicaNegocios.Globales.accessoporcentajesedi = 0;
 
                         reader1 = con.Consultas(" SELECT menu_nombre,per_acceder,per_modificar " +
                                                                 " FROM usuarios.menu " +
@@ -324,6 +325,20 @@ namespace LogicaNegocios
                                 if (modificar == 1)
                                 {
                                     LogicaNegocios.Globales.accessoventacredito = 2;
+                                }
+                            }
+
+                            if ((reader1["menu_nombre"].ToString() == "Porcentaje de editoriales"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accessoporcentajesedi = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accessoporcentajesedi = 2;
                                 }
                             }
 

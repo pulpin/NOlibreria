@@ -128,17 +128,24 @@ namespace Presentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            Clientes cli = new Clientes();
-            cli.Nombre = txtnombre.Text;
-            cli.Telefono = txtcaracteristica.Text + txttelefono.Text;
-            int valor = cli.spInsertarClienteReservas();
-
-            IClienteRe formInterClientes = this.Owner as IClienteRe;
-            if (formInterClientes != null)
+            if ((txtnombre.Text == string.Empty)||(txttelefono.Text == string.Empty))
             {
-                formInterClientes.agregacliente(valor, txtnombre.Text, txttelefono.Text);
-                this.Dispose();
-                this.Hide();
+                MessageBox.Show("Debe completar Apellido, nombre y teléfono");
+            }
+            else
+            { 
+                Clientes cli = new Clientes();
+                cli.Nombre = txtnombre.Text;
+                cli.Telefono = txtcaracteristica.Text + txttelefono.Text;
+                int valor = cli.spInsertarClienteReservas();
+
+                IClienteRe formInterClientes = this.Owner as IClienteRe;
+                if (formInterClientes != null)
+                {
+                    formInterClientes.agregacliente(valor, txtnombre.Text, txttelefono.Text);
+                    this.Dispose();
+                    this.Hide();
+                }
             }
         }
     }

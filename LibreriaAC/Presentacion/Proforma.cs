@@ -138,7 +138,7 @@ namespace Presentacion
             brick9.Font = new Font(FontFamily.GenericSansSerif, 12, FontStyle.Bold);
 
             TextBrick brick10 = e.Graph.DrawString("Observación:" + txtobs.Text, Color.Red,
-            new RectangleF(0, 210, 620, 20), DevExpress.XtraPrinting.BorderSide.None);
+            new RectangleF(0, 210, 620, 100),DevExpress.XtraPrinting.BorderSide.None);
             brick10.Font = new Font(FontFamily.GenericSansSerif, 12, FontStyle.Bold);
         }
 

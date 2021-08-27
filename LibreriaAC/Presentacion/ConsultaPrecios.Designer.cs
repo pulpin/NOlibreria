@@ -112,7 +112,7 @@
             this.lbtitulo.AutoSize = true;
             this.lbtitulo.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtitulo.ForeColor = System.Drawing.Color.PowderBlue;
-            this.lbtitulo.Location = new System.Drawing.Point(12, 132);
+            this.lbtitulo.Location = new System.Drawing.Point(12, 162);
             this.lbtitulo.Name = "lbtitulo";
             this.lbtitulo.Size = new System.Drawing.Size(0, 25);
             this.lbtitulo.TabIndex = 188;
@@ -123,7 +123,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label4.Location = new System.Drawing.Point(130, 204);
+            this.label4.Location = new System.Drawing.Point(130, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 189;
@@ -135,7 +135,7 @@
             this.lbprecio.AutoSize = true;
             this.lbprecio.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbprecio.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.lbprecio.Location = new System.Drawing.Point(281, 183);
+            this.lbprecio.Location = new System.Drawing.Point(281, 210);
             this.lbprecio.Name = "lbprecio";
             this.lbprecio.Size = new System.Drawing.Size(176, 77);
             this.lbprecio.TabIndex = 190;
@@ -147,7 +147,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label5.Location = new System.Drawing.Point(208, 183);
+            this.label5.Location = new System.Drawing.Point(208, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 77);
             this.label5.TabIndex = 191;

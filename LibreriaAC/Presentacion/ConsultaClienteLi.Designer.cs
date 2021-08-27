@@ -158,7 +158,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(235, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 23);
@@ -207,7 +207,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(76, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 19);
@@ -229,7 +229,7 @@
             // 
             this.lbdescuento.AutoSize = true;
             this.lbdescuento.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdescuento.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.lbdescuento.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbdescuento.Location = new System.Drawing.Point(0, 20);
             this.lbdescuento.Name = "lbdescuento";
             this.lbdescuento.Size = new System.Drawing.Size(163, 19);

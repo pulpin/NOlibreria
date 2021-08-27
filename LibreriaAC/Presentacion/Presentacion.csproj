@@ -420,6 +420,12 @@
     <Compile Include="DevolucionConsigna.designer.cs">
       <DependentUpon>DevolucionConsigna.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambiarPorcentaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarPorcentaje.designer.cs">
+      <DependentUpon>CambiarPorcentaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Elegirpto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,6 +694,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DevolucionConsigna.resx">
       <DependentUpon>DevolucionConsigna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarPorcentaje.resx">
+      <DependentUpon>CambiarPorcentaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elegirpto.resx">
       <DependentUpon>Elegirpto.cs</DependentUpon>

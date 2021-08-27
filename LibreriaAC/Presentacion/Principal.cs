@@ -426,7 +426,11 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
             {
                 tSBArqueo.Enabled = true;
             }
+            if (LogicaNegocios.Globales.accessoporcentajesedi == 2 || LogicaNegocios.Globales.accessoporcentajesedi == 1)
+            {
+                TsMIPorcentaje.Enabled = true;
             }
+        }
         void dll_version()
         {
             const int str_len = 500;
@@ -726,6 +730,12 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         private void cierreXNuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TsMIPorcentaje_Click(object sender, EventArgs e)
+        {
+            CambiarPorcentaje cp = new CambiarPorcentaje();
+            cp.ShowDialog();
         }
 
         private void toolTurnosD_Click(object sender, EventArgs e)

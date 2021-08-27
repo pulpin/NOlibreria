@@ -64,6 +64,7 @@
             this.TSMIcambiopre = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMIcliente = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMIccorrientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsMIPorcentaje = new System.Windows.Forms.ToolStripMenuItem();
             this.consignasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaTSMIacons = new System.Windows.Forms.ToolStripMenuItem();
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,10 +101,10 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -416,7 +417,8 @@
             this.editorialToolStripMenuItem1,
             this.TSMIcambiopre,
             this.TSMIcliente,
-            this.TSMIccorrientes});
+            this.TSMIccorrientes,
+            this.TsMIPorcentaje});
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.modificarToolStripMenuItem.Text = "Modificar";
@@ -457,6 +459,14 @@
             this.TSMIccorrientes.Size = new System.Drawing.Size(204, 22);
             this.TSMIccorrientes.Text = "Cuentas corrientes";
             this.TSMIccorrientes.Click += new System.EventHandler(this.TSMIccorrientes_Click);
+            // 
+            // TsMIPorcentaje
+            // 
+            this.TsMIPorcentaje.Enabled = false;
+            this.TsMIPorcentaje.Name = "TsMIPorcentaje";
+            this.TsMIPorcentaje.Size = new System.Drawing.Size(204, 22);
+            this.TsMIPorcentaje.Text = "Porcentaje de editoriales";
+            this.TsMIPorcentaje.Click += new System.EventHandler(this.TsMIPorcentaje_Click);
             // 
             // consignasToolStripMenuItem
             // 
@@ -796,16 +806,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Versión: 26/08/2021";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.AC64;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 617);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 65);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.label5.Text = "Versión: 27/08/2021";
             // 
             // textBox2
             // 
@@ -834,6 +835,15 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 14;
             this.textBox1.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.AC64;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 617);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 65);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Principal
             // 
@@ -951,5 +961,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem TsMIPorcentaje;
     }
 }
