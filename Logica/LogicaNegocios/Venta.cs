@@ -1080,6 +1080,21 @@ namespace LogicaNegocios
                 " left join cccliente as ccc on CUCO_CC_IDE = CC_IDE where (VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "') and VEN_PTOVTA = " + puntodvta + " and VEN_TIP_IDE = "+ tipop + " ORDER BY VEN_IDE DESC");
         }
 
+        public DataTable Mostrar_ventasparacontador(string desde, string hasta, int puntodvta)
+        {
+            int ingresa = 0;
+            string valor = string.Empty;
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+
+            return con.Mostrar_Datos("select VEN_PTOVTA, VEN_TIPOFACTU, VEN_NROTICKET, VEN_NOMBRE, " +
+                                    " VEN_CUIT, VEN_DIRE, VEN_FECHA, VEN_IMP21, " +
+                                    " VEN_IVA21, VEN_IMP1050, VEN_IMPIVA1050, VEN_EXENTO, " +
+                                    " VEN_TOTAL " +
+                                    " from venta " +
+                                    " where (VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "') and VEN_PTOVTA = " + puntodvta + " ORDER BY VEN_IDE DESC");
+        }
+
 
         public DataTable Mostrar_proformas()
         {

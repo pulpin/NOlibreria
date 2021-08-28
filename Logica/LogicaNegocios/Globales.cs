@@ -39,6 +39,7 @@ namespace LogicaNegocios
         public static int accessocuerpoestante;
         public static int accessoventacredito;
         public static int accessoporcentajesedi;
+        public static int accesocontador;
 
         public static int usuventaide;
 

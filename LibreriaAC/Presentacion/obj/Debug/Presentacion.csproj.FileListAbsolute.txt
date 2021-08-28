@@ -370,3 +370,4 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Libre
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\LibreriaAC.exe
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\LibreriaAC.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.CambiarPorcentaje.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.Contador.resources

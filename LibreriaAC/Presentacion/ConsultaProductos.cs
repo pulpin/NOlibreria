@@ -44,21 +44,6 @@ namespace Presentacion
            // }
         }
 
-        private void busquedasimple()
-        {
-            pro.Tipo = 1;
-            pro.Barra = txtbarra.Text;
-            pro.Codigo = txtcodigo.Text;
-            pro.Codigoprovee = txtprovee.Text;
-            pro.Isbn = txtisbn.Text;
-            gConsulta.DataSource = pro.Mostrar_productos();
-            txtbarra.Text = string.Empty;
-            txtcodigo.Text = string.Empty;
-            txtprovee.Text = string.Empty;
-            txtisbn.Text = string.Empty;
-            this.cargardatos();
-        }
-
         public void busquedasporprovee(string codprovee)
         {
             pro.Tipo = 1;
@@ -73,6 +58,24 @@ namespace Presentacion
             txtisbn.Text = string.Empty;
             this.cargardatos();
         }
+
+        private void busquedasimple()
+        {
+            pro.Tipo = 1;
+            pro.Barra = txtbarra.Text;
+            pro.Codigo = txtcodigo.Text;
+            pro.Codigoprovee = txtprovee.Text;
+            pro.Isbn = txtisbn.Text;
+            gConsulta.DataSource = pro.Mostrar_productos();
+            /*txtbarra.Text = string.Empty;
+            txtcodigo.Text = string.Empty;
+            txtprovee.Text = string.Empty;
+            txtisbn.Text = string.Empty;*/
+            this.limpiartextos();
+            this.cargardatos();
+            //this.cargardatos();
+        }
+              
 
         private void busquedaavanzada()
         {
@@ -421,6 +424,7 @@ namespace Presentacion
             ap.Alta = 0;
             
             ap.colocardatos(pro2);
+            pro.Codigo = string.Empty;
             if (ap.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 gConsulta.DataSource = pro.Mostrar_productos();

@@ -430,6 +430,10 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
             {
                 TsMIPorcentaje.Enabled = true;
             }
+            if (LogicaNegocios.Globales.accesocontador == 2 || LogicaNegocios.Globales.accesocontador == 1)
+            {
+                TSMIContador.Enabled = true;
+            }
         }
         void dll_version()
         {
@@ -736,6 +740,12 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         {
             CambiarPorcentaje cp = new CambiarPorcentaje();
             cp.ShowDialog();
+        }
+
+        private void TSMIContador_Click(object sender, EventArgs e)
+        {
+            Contador cn = new Contador();
+            cn.ShowDialog();
         }
 
         private void toolTurnosD_Click(object sender, EventArgs e)

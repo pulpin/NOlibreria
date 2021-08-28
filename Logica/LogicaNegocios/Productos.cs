@@ -97,7 +97,7 @@ namespace LogicaNegocios
                 }
                 else if (this.Codigoprovee != string.Empty)
                 {
-                    valor = " LI_CODIGOPROVEE = " + this.Codigoprovee;
+                    valor = " trim(LI_CODIGOPROVEE) = '" + (this.Codigoprovee).Trim() +"'";
                 }
                 if (valor == string.Empty)
                 {

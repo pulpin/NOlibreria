@@ -518,6 +518,12 @@
     <Compile Include="ventasentrefechapedido.designer.cs">
       <DependentUpon>ventasentrefechapedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contador.designer.cs">
+      <DependentUpon>Contador.cs</DependentUpon>
+    </Compile>
     <Compile Include="ventasentrefechas1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -753,6 +759,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ventasentrefechapedido.resx">
       <DependentUpon>ventasentrefechapedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contador.resx">
+      <DependentUpon>Contador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ventasentrefechas1.resx">
       <DependentUpon>ventasentrefechas1.cs</DependentUpon>
