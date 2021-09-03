@@ -169,7 +169,7 @@ namespace Presentacion
             dev.Codigo = this.Codigo;
             dev.CodigoEditorial = this.Editorialide;
             gConsulta2.DataSource = dev.Mostrar_devoluciones();
-
+            lbsockactual.Text = Convert.ToString(pro.spConsultastockactual());
             ren.Codigo = this.Codigo;
             ren.editorialide = this.Editorialide;
             gConsulta3.DataSource = ren.Mostrar_rendicionporproducto();

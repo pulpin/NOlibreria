@@ -39,7 +39,7 @@ namespace AccesoaDatos
                 //server = "200.51.42.91";
                 //  server = "200.51.42.91"; 
                //server = "127.0.0.1"; 
-               //server = "10.1.10.202";
+              // server = "10.1.10.202";
                server = "192.168.0.106";
             }
 
@@ -51,7 +51,7 @@ namespace AccesoaDatos
             //uid = "hugo";
             uid = "root";
             password = "Libreria99";
-            //password = "123123";
+           // password = "123123";
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";port=3306;" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
             connectionString1 = "SERVER=" + server + ";" + "DATABASE=" + database + ";port=3306;" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";
         }

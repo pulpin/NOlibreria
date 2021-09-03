@@ -52,7 +52,7 @@ namespace LogicaNegocios
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
 
-            return con.Mostrar_Datos("SELECT PREN_LI_CODIGOVIEJO,LI_DESC,LI_AUTOR,PREN_CANTIDAD,PREN_FECHAVTA,PREN_FACTU, " +
+            return con.Mostrar_Datos("SELECT PREN_LI_CODIGOVIEJO,LI_CODIGOPROVEE,LI_DESC,LI_AUTOR,PREN_CANTIDAD,PREN_FECHAVTA,PREN_FACTU, " +
                                     " PREN_CONSIGNA, PREN_IMPORTE,EDI_EDITORIAL,EDI_CALLE,EDI_NRO,EDI_PORCEN,LI_BARRA FROM pararendicion left join libros on PREN_LI_CODIGOVIEJO = LI_CODIGOVIEJO " +
                                     " left join pararendicionmaestro on PRENMA_IDE = PREN_NRORENDICION left join editorial on PRENMA_EDI_IDE = EDI_CODIGO where PREN_NRORENDICION = '" + this.Codigo + "' order by PREN_FACTU");
 

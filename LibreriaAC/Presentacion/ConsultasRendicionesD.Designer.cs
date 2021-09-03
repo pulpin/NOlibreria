@@ -77,6 +77,7 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LI_CODIGOPROVEE = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
@@ -114,19 +115,19 @@
             this.exportarAExcelToolStripMenuItem,
             this.exportarAPDFToolStripMenuItem});
             this.cmdmenugrid.Name = "contextMenuStrip1";
-            this.cmdmenugrid.Size = new System.Drawing.Size(156, 48);
+            this.cmdmenugrid.Size = new System.Drawing.Size(158, 48);
             // 
             // exportarAExcelToolStripMenuItem
             // 
             this.exportarAExcelToolStripMenuItem.Name = "exportarAExcelToolStripMenuItem";
-            this.exportarAExcelToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportarAExcelToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportarAExcelToolStripMenuItem.Text = "Exportar a Excel";
             this.exportarAExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarAExcelToolStripMenuItem_Click);
             // 
             // exportarAPDFToolStripMenuItem
             // 
             this.exportarAPDFToolStripMenuItem.Name = "exportarAPDFToolStripMenuItem";
-            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportarAPDFToolStripMenuItem.Text = "Exportar a PDF";
             this.exportarAPDFToolStripMenuItem.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem_Click);
             // 
@@ -145,7 +146,8 @@
             this.EDI_EDITORIAL,
             this.EDI_CALLE,
             this.EDI_NRO,
-            this.EDI_PORCEN});
+            this.EDI_PORCEN,
+            this.LI_CODIGOPROVEE});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Max, null, this.EDI_PORCEN, "(Cantidad: Recuento={0})")});
@@ -180,12 +182,12 @@
             // 
             this.LI_BARRA.Caption = "Barra";
             this.LI_BARRA.FieldName = "LI_BARRA";
-            this.LI_BARRA.MaxWidth = 85;
-            this.LI_BARRA.MinWidth = 85;
+            this.LI_BARRA.MaxWidth = 95;
+            this.LI_BARRA.MinWidth = 95;
             this.LI_BARRA.Name = "LI_BARRA";
             this.LI_BARRA.Visible = true;
-            this.LI_BARRA.VisibleIndex = 2;
-            this.LI_BARRA.Width = 85;
+            this.LI_BARRA.VisibleIndex = 3;
+            this.LI_BARRA.Width = 95;
             // 
             // LI_DESC
             // 
@@ -195,7 +197,7 @@
             this.LI_DESC.MinWidth = 300;
             this.LI_DESC.Name = "LI_DESC";
             this.LI_DESC.Visible = true;
-            this.LI_DESC.VisibleIndex = 3;
+            this.LI_DESC.VisibleIndex = 4;
             this.LI_DESC.Width = 300;
             // 
             // LI_AUTOR
@@ -206,7 +208,7 @@
             this.LI_AUTOR.MinWidth = 120;
             this.LI_AUTOR.Name = "LI_AUTOR";
             this.LI_AUTOR.Visible = true;
-            this.LI_AUTOR.VisibleIndex = 4;
+            this.LI_AUTOR.VisibleIndex = 5;
             this.LI_AUTOR.Width = 120;
             // 
             // PREN_CONSIGNA
@@ -217,7 +219,7 @@
             this.PREN_CONSIGNA.MinWidth = 70;
             this.PREN_CONSIGNA.Name = "PREN_CONSIGNA";
             this.PREN_CONSIGNA.Visible = true;
-            this.PREN_CONSIGNA.VisibleIndex = 5;
+            this.PREN_CONSIGNA.VisibleIndex = 6;
             this.PREN_CONSIGNA.Width = 70;
             // 
             // PREN_CANTIDAD
@@ -230,7 +232,7 @@
             this.PREN_CANTIDAD.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "PREN_CANTIDAD", "{0}")});
             this.PREN_CANTIDAD.Visible = true;
-            this.PREN_CANTIDAD.VisibleIndex = 6;
+            this.PREN_CANTIDAD.VisibleIndex = 7;
             this.PREN_CANTIDAD.Width = 90;
             // 
             // PREN_FECHAVTA
@@ -248,7 +250,7 @@
             this.PREN_IMPORTE.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_IMPORTE", "{0:#.##}")});
             this.PREN_IMPORTE.Visible = true;
-            this.PREN_IMPORTE.VisibleIndex = 7;
+            this.PREN_IMPORTE.VisibleIndex = 8;
             this.PREN_IMPORTE.Width = 50;
             // 
             // EDI_EDITORIAL
@@ -456,7 +458,7 @@
             this.gridColumn2.MinWidth = 70;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             this.gridColumn2.Width = 70;
             // 
             // gridColumn3
@@ -467,7 +469,7 @@
             this.gridColumn3.MinWidth = 85;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 85;
             // 
             // gridColumn4
@@ -478,7 +480,7 @@
             this.gridColumn4.MinWidth = 300;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 2;
             this.gridColumn4.Width = 300;
             // 
             // gridColumn5
@@ -489,7 +491,7 @@
             this.gridColumn5.MinWidth = 120;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 3;
             this.gridColumn5.Width = 120;
             // 
             // gridColumn6
@@ -500,7 +502,7 @@
             this.gridColumn6.MinWidth = 70;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 70;
             // 
             // gridColumn7
@@ -513,7 +515,7 @@
             this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "PREN_CANTIDAD", "{0}")});
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 5;
             this.gridColumn7.Width = 90;
             // 
             // gridColumn8
@@ -531,7 +533,7 @@
             this.gridColumn9.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_IMPORTE", "{0:#.##}")});
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 7;
+            this.gridColumn9.VisibleIndex = 6;
             this.gridColumn9.Width = 50;
             // 
             // gridColumn10
@@ -557,6 +559,17 @@
             this.gridColumn13.Caption = "Porcentaje";
             this.gridColumn13.FieldName = "EDI_PORCEN";
             this.gridColumn13.Name = "gridColumn13";
+            // 
+            // LI_CODIGOPROVEE
+            // 
+            this.LI_CODIGOPROVEE.Caption = "CodigoProvee";
+            this.LI_CODIGOPROVEE.FieldName = "LI_CODIGOPROVEE";
+            this.LI_CODIGOPROVEE.MaxWidth = 90;
+            this.LI_CODIGOPROVEE.MinWidth = 90;
+            this.LI_CODIGOPROVEE.Name = "LI_CODIGOPROVEE";
+            this.LI_CODIGOPROVEE.Visible = true;
+            this.LI_CODIGOPROVEE.VisibleIndex = 2;
+            this.LI_CODIGOPROVEE.Width = 90;
             // 
             // ConsultasRendicionesD
             // 
@@ -642,5 +655,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn LI_CODIGOPROVEE;
     }
 }

@@ -2533,34 +2533,47 @@ pnombrecli, pcuit, pdire, ptipo;
             {
                 MessageBox.Show("Se produjo un error al eliminar el pedido!.");
             }
-            
-            if (MessageBox.Show("¿Desea imprimir la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+
+            if (vta.ventipofactura == "A")
             {
-                if (vta.ventipofactura == "T")
-                {//hugohugo
-                    this.imprimirticketNueva();
-                    //this.imprimirticketNuevaIFU();
-                }
-                else if (vta.ventipofactura == "A")
-                {
-                     this.imprimirticketNuevaA();
-                    //this.imprimirticketNuevaAIFU();
-                }
-                else
-                {
-                    this.imprimirticketNuevaB();
-                    //this.imprimirticketNuevaBIFU();
-                }
-
-                //guardar el número de ticket de la impresora fiscal
-                
-                
-                //this.Ultimavta
-
+                this.imprimirticketNuevaA();
+                //this.imprimirticketNuevaAIFU();
             }
-            else //imprimir en la tiqueadora
+            else if(vta.ventipofactura == "B")
             {
-                this.imprimirtiqueadora();
+                this.imprimirticketNuevaB();
+                //this.imprimirticketNuevaBIFU();
+            }
+            else
+            { 
+                if (MessageBox.Show("¿Desea imprimir la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                   // if (vta.ventipofactura == "T")
+                   // {//hugohugo
+                        this.imprimirticketNueva();
+                        //this.imprimirticketNuevaIFU();
+                   // }
+                   /* else if (vta.ventipofactura == "A")
+                    {
+                         this.imprimirticketNuevaA();
+                        //this.imprimirticketNuevaAIFU();
+                    }
+                    else
+                    {
+                        this.imprimirticketNuevaB();
+                        //this.imprimirticketNuevaBIFU();
+                    }*/
+
+                    //guardar el número de ticket de la impresora fiscal
+                
+                
+                    //this.Ultimavta
+
+                }
+                else //imprimir en la tiqueadora
+                {
+                    this.imprimirtiqueadora();
+                }
             }
             this.resetearloscontroles();
         }

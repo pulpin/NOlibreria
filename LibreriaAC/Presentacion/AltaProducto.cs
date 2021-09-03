@@ -258,6 +258,11 @@ namespace Presentacion
             {
                 bloqueoporcuerpoyestante();
             }
+            if ((LogicaNegocios.Globales.accesomodificartitulo == 1) || (LogicaNegocios.Globales.accesomodificartitulo == 2))
+            {
+                desbloqueotitulo();
+            }
+            
         }
         private void bloqueoporcuerpoyestante()
         {
@@ -273,6 +278,13 @@ namespace Presentacion
             txtisbn.Enabled = false;
             txtbarra.Enabled = false;
             txtcodprovee.Enabled = false;
+        }
+        private void desbloqueotitulo()
+        {
+            txttitulo.Enabled = true;
+            txtautor.Enabled = true;
+            lUEditorial.Enabled = true;
+            LUgenero.Enabled = true;
         }
         private void txttitulo_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {

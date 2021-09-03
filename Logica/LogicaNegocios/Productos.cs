@@ -1976,6 +1976,16 @@ namespace LogicaNegocios
 
         }
 
+        public DataTable Mostrar_cambiosdepreciosporfecha(string desde, string hasta, int editorial)
+        {
+            Conexion con = new Conexion("libreria", Globales.ip);
+            con.AbrirConexio();
+
+            return con.Mostrar_Datos("select LI_CODIGOVIEJO,LI_DESC,LI_AUTOR,EDI_EDITORIAL,LI_PRECIO,LI_PRECIOAN from libros " +
+                                     " left join editorial on LI_EDI_CODIGO = EDI_codigo where (LI_FECHAPRE >= '" + desde + "' and LI_FECHAPRE <= '" + hasta + "') " +
+                                     " and LI_EDI_CODIGO = " + editorial + " ORDER BY LI_CODIGOVIEJO");
+        }
+
         public int productoide
         {
             get { return this._productoide; }

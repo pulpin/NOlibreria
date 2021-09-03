@@ -308,7 +308,7 @@
             this.PREN_CANTIDAD.MinWidth = 85;
             this.PREN_CANTIDAD.Name = "PREN_CANTIDAD";
             this.PREN_CANTIDAD.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_CANTIDAD", "Cant. Total: {0:#.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_CANTIDAD", "{0:#.##}")});
             this.PREN_CANTIDAD.Visible = true;
             this.PREN_CANTIDAD.VisibleIndex = 5;
             this.PREN_CANTIDAD.Width = 85;
@@ -323,7 +323,7 @@
             this.PREN_IMPORTE.FieldName = "PREN_IMPORTE";
             this.PREN_IMPORTE.Name = "PREN_IMPORTE";
             this.PREN_IMPORTE.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_IMPORTE", "Importe Total: ${0:#.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PREN_IMPORTE", "{0:#.##}")});
             this.PREN_IMPORTE.Visible = true;
             this.PREN_IMPORTE.VisibleIndex = 7;
             this.PREN_IMPORTE.Width = 88;

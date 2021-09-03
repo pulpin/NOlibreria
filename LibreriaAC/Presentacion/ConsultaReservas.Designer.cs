@@ -118,6 +118,7 @@
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
+            
             // 
             // CLIEN_NOMBRE
             // 

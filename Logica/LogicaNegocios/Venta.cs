@@ -1090,11 +1090,17 @@ namespace LogicaNegocios
             return con.Mostrar_Datos("select VEN_PTOVTA, VEN_TIPOFACTU, VEN_NROTICKET, VEN_NOMBRE, " +
                                     " VEN_CUIT, VEN_DIRE, VEN_FECHA, VEN_IMP21, " +
                                     " VEN_IVA21, VEN_IMP1050, VEN_IMPIVA1050, VEN_EXENTO, " +
-                                    " VEN_TOTAL " +
+                                    " VEN_TOTAL,'' as Obs,ven_ide  " +
                                     " from venta " +
-                                    " where (VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "') and VEN_PTOVTA = " + puntodvta + " ORDER BY VEN_IDE DESC");
+                                    " where (VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "') and VEN_PTOVTA = " + puntodvta + " and VEN_NROTICKET > 0 " +
+                                    " union select VEN_PTOVTA, VEN_TIPOFACTU, VEN_NROTICKET, VEN_NOMBRE, " +
+                                    " VEN_CUIT, VEN_DIRE, VEN_FECHA, (VEN_IMP21 * -1) as VEN_IMP21, " +
+                                    " (VEN_IVA21 * -1) as VEN_IVA21, (VEN_IMP1050 *-1) as VEN_IMP1050, (VEN_IMPIVA1050*-1) as VEN_IMPIVA1050, (VEN_EXENTO *-1) as VEN_EXENTO, " +
+                                    " (VEN_TOTAL*-1) as VEN_TOTAL, 'Nota de credito' as Obs, ven_ide from notadecredito " +
+                                    " where (VEN_FECHA >= '" + desde + "' and VEN_FECHA <= '" + hasta + "') and VEN_PTOVTA = " + puntodvta + " ORDER BY ven_ide DESC ");
         }
 
+       
 
         public DataTable Mostrar_proformas()
         {

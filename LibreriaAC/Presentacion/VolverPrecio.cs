@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraPrinting;
+﻿using DevExpress.XtraPrinting;
 using LogicaNegocios;
 using System;
 using System.Collections.Generic;
@@ -13,25 +12,24 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Contador : Form
+    public partial class VolverPrecio : Form
     {
         string _codigo;
         Rendiciones ren = new Rendiciones();
-        public Contador()
+        Editorial edi = new Editorial();
+        public VolverPrecio()
         {
             InitializeComponent();
         }
 
         private void ConsultasConsignas_Load(object sender, EventArgs e)
         {
-            
-            Puntodevta pdv = new Puntodevta();
-            LUpunto.Properties.DisplayMember = "PTOVTA_DESC";
-            LUpunto.Properties.ValueMember = "PTOVTA_NUMERO";
-            LUpunto.Properties.DataSource =  pdv.Tabladedatos_ptodevta();
-            LUpunto.Properties.PopulateColumns();
-            LUpunto.Properties.Columns[0].Visible = false;
 
+            cBEeditorial.Properties.DisplayMember = "EDI_EDITORIAL";
+            cBEeditorial.Properties.ValueMember = "EDI_CODIGO";
+            cBEeditorial.Properties.DataSource = edi.Tabladedatos_editoriales();
+            cBEeditorial.Properties.PopulateColumns();
+            cBEeditorial.Properties.Columns[0].Visible = false;
             
             fechadesde.EditValue = DateTime.Today;
             fechahasta.EditValue = DateTime.Today;
@@ -119,29 +117,11 @@ namespace Presentacion
         {
            
         }
-        //this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
-        private void gridViewPintarFilas_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
-        {
-            GridView View = sender as GridView;
-            if (e.RowHandle >= 0)
-            {
-                string estadorese = View.GetRowCellDisplayText(e.RowHandle, View.Columns["Obs"]);
-
-                //  e.Appearance.BackColor = Color.LemonChiffon;
-
-                if (estadorese != "")
-                {
-                    e.Appearance.BackColor = Color.PaleGreen;
-                    //e.Appearance.BackColor2 = Color.SeaShell;
-                }
-               
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
-            LogicaNegocios.Venta ve = new LogicaNegocios.Venta();
+            LogicaNegocios.Productos pro = new LogicaNegocios.Productos();
 
             DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
             string fdesdee = fdesde.ToString("yyyy-MM-dd");
@@ -151,12 +131,7 @@ namespace Presentacion
 
             
 
-            gConsulta.DataSource = ve.Mostrar_ventasparacontador(fdesdee, fhastae, Convert.ToInt32(LUpunto.EditValue));
-            
-            decimal importesuma=0;
-            int tipopag = 0;
-            
-            importesuma = decimal.Round(importesuma, 2);
+            gConsulta.DataSource = pro.Mostrar_cambiosdepreciosporfecha(fdesdee, fhastae, Convert.ToInt32(cBEeditorial.EditValue));
             
         }
         
@@ -176,7 +151,7 @@ namespace Presentacion
             string fhastae = fhasta.ToString("yyyy-MM-dd");
             //int tipop = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["TIP_IDE"]));
             
-            gConsulta.DataSource = ve.Mostrar_ventasparacontador(fdesdee, fhastae, Convert.ToInt32(LUpunto.EditValue));
+            gConsulta.DataSource = ve.Mostrar_ventasparacontador(fdesdee, fhastae, Convert.ToInt32(cBEeditorial.EditValue));
             
         }
     }

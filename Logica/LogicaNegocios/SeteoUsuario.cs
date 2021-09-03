@@ -72,7 +72,8 @@ namespace LogicaNegocios
                         LogicaNegocios.Globales.accesoaproveedores = 0;
                         LogicaNegocios.Globales.accessoporcentajesedi = 0;
                         LogicaNegocios.Globales.accesocontador = 0;
-                        
+                        LogicaNegocios.Globales.accesomodificartitulo = 0;
+
 
                         reader1 = con.Consultas(" SELECT menu_nombre,per_acceder,per_modificar " +
                                                                 " FROM usuarios.menu " +
@@ -356,9 +357,21 @@ namespace LogicaNegocios
                                     LogicaNegocios.Globales.accesocontador = 2;
                                 }
                             }
+                            if ((reader1["menu_nombre"].ToString() == "Modificar titulo"))
+                            {
+                                int acceder = reader1.GetInt32(reader1.GetOrdinal("per_acceder"));
+                                int modificar = reader1.GetInt32(reader1.GetOrdinal("per_modificar"));
+                                if (acceder == 1)
+                                {
+                                    LogicaNegocios.Globales.accesomodificartitulo = 1;
+                                }
+                                if (modificar == 1)
+                                {
+                                    LogicaNegocios.Globales.accesomodificartitulo = 2;
+                                }
+                            }
 
-
-
+                            
 
                         }
 
