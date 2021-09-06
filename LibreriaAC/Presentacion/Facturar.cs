@@ -158,8 +158,8 @@ pnombrecli, pcuit, pdire, ptipo;
         int _tipopago, _ultimavta,nopedirclienteA = 0;
         object[] rowsenviar;
         Venta vta;
-        private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
-        private static int PUERTO = 0;
+        //private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
+        //private static int PUERTO = 0;
         public Facturar()
         {
             InitializeComponent();
@@ -515,6 +515,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
             
         }
+        /*
         private void ImprimirComprobante(IFUniversal.TipoDeComprobante Tipo, Boolean EnviaDatosCliente)
         {
 
@@ -586,7 +587,8 @@ pnombrecli, pcuit, pdire, ptipo;
                 MessageBox.Show(E.Message);
             }
         }
-
+        */
+        /*
         private void imprimirticketNuevaIFU()
         {
             string productodesc = string.Empty; //descripción del producto
@@ -617,10 +619,7 @@ pnombrecli, pcuit, pdire, ptipo;
                 {
                     throw new Exception(Fiscal.ErrorDesc);
                 }
-               /* if (!Fiscal.ImprimirTextoFiscal("Venta AC"))
-                {
-                    throw new Exception(Fiscal.ErrorDesc);
-                }*/
+              
                 
                 foreach (DataGridViewRow row in dgvProductos.Rows)
                 {
@@ -745,23 +744,7 @@ pnombrecli, pcuit, pdire, ptipo;
                     MessageBox.Show("Hubo un error al guardar el número del comprobante fiscal");
                 }
 
-                /*
-                const int str_len = 20;
-                StringBuilder str = new StringBuilder(str_len);
-
-                ConsultarNumeroComprobanteUltimo("83", str, str_len);
-                int comprobanteaguardar = Convert.ToInt32(str.ToString());
-                error = Desconectar();
-                if (error != ERROR_NINGUNO)
-                {
-                    MessageBox.Show("Error al desconectar impresora: " + error.ToString());
-                }
-                //ConsultarNumeroComprobanteUltimo
-                int valor1 = vta.spGuardarTicketFiscal(this.Ultimavta, comprobanteaguardar);
-                if (valor1 != 0)
-                {
-                    MessageBox.Show("Hubo un error al guardar el número del comprobante fiscal");
-                }*/
+           
 
 
 
@@ -774,7 +757,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
-
+*/
         private void imprimirticketNuevaB()
         {
             int tipocomprobante = 2, id_modificador = 200, ptipodeiva=0; //1 es ticket 200 agregar venta
@@ -999,7 +982,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
             
         }
-
+        /*
         private void imprimirticketNuevaBIFU()
         {
             string productodesc = string.Empty; //descripción del producto
@@ -1199,24 +1182,7 @@ pnombrecli, pcuit, pdire, ptipo;
                     MessageBox.Show("Hubo un error al guardar el número del comprobante fiscal");
                 }
 
-                /*
-                const int str_len = 20;
-                StringBuilder str = new StringBuilder(str_len);
-
-                ConsultarNumeroComprobanteUltimo("83", str, str_len);
-                int comprobanteaguardar = Convert.ToInt32(str.ToString());
-                error = Desconectar();
-                if (error != ERROR_NINGUNO)
-                {
-                    MessageBox.Show("Error al desconectar impresora: " + error.ToString());
-                }
-                //ConsultarNumeroComprobanteUltimo
-                int valor1 = vta.spGuardarTicketFiscal(this.Ultimavta, comprobanteaguardar);
-                if (valor1 != 0)
-                {
-                    MessageBox.Show("Hubo un error al guardar el número del comprobante fiscal");
-                }*/
-
+              
 
 
                 MessageBox.Show("Comprobante impreso exitosamente");
@@ -1228,7 +1194,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
-
+*/
 
         private void imprimirticketNuevaA()
         {
@@ -1465,7 +1431,7 @@ pnombrecli, pcuit, pdire, ptipo;
             
         }
 
-
+        /*
         private void imprimirticketNuevaAIFU()
         {
             string productodesc = string.Empty; //descripción del producto
@@ -1665,23 +1631,7 @@ pnombrecli, pcuit, pdire, ptipo;
                     MessageBox.Show("Hubo un error al guardar el número del comprobante fiscal");
                 }
 
-                /*
-                const int str_len = 20;
-                StringBuilder str = new StringBuilder(str_len);
-
-                ConsultarNumeroComprobanteUltimo("83", str, str_len);
-                int comprobanteaguardar = Convert.ToInt32(str.ToString());
-                error = Desconectar();
-                if (error != ERROR_NINGUNO)
-                {
-                    MessageBox.Show("Error al desconectar impresora: " + error.ToString());
-                }
-                //ConsultarNumeroComprobanteUltimo
-                int valor1 = vta.spGuardarTicketFiscal(this.Ultimavta, comprobanteaguardar);
-                if (valor1 != 0)
-                {
-                    MessageBox.Show("Hubo un error al guardar el número del comprobante fiscal");
-                }*/
+              
 
 
 
@@ -1695,7 +1645,7 @@ pnombrecli, pcuit, pdire, ptipo;
 
         }
 
-
+*/
         private void imprimirtiqueadora()
         {
             string cabecera = "DISTRIBUIDORA AC SANTA CRUZ";
@@ -2055,7 +2005,7 @@ pnombrecli, pcuit, pdire, ptipo;
             string productodesc = string.Empty; //descripción del producto
             string cantidad, precio, iva, codigointerno;
             double preciod;
-            const int ERROR_NINGUNO = 0;
+           // const int ERROR_NINGUNO = 0;
             //int error, tasaiva, tipodepago = 0, cuotas = 1;
 
             foreach (DataGridViewRow row in dgvProductos.Rows)

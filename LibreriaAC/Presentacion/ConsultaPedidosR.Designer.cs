@@ -63,6 +63,9 @@
             this.PEDD_CANTIDAD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rBlibreria = new System.Windows.Forms.RadioButton();
+            this.rBlibros = new System.Windows.Forms.RadioButton();
             this.cmdmenugrid.SuspendLayout();
             this.gBtipopro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fechahasta.Properties.CalendarTimeProperties)).BeginInit();
@@ -73,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btncancelar
@@ -426,12 +430,49 @@
             this.label6.Text = "Pedidos por proveedor";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rBlibreria);
+            this.groupBox2.Controls.Add(this.rBlibros);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox2.Location = new System.Drawing.Point(41, 17);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(193, 33);
+            this.groupBox2.TabIndex = 258;
+            this.groupBox2.TabStop = false;
+            // 
+            // rBlibreria
+            // 
+            this.rBlibreria.AutoSize = true;
+            this.rBlibreria.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibreria.Location = new System.Drawing.Point(87, 8);
+            this.rBlibreria.Name = "rBlibreria";
+            this.rBlibreria.Size = new System.Drawing.Size(87, 18);
+            this.rBlibreria.TabIndex = 200;
+            this.rBlibreria.Text = "Art. librería";
+            this.rBlibreria.UseVisualStyleBackColor = true;
+            // 
+            // rBlibros
+            // 
+            this.rBlibros.AutoSize = true;
+            this.rBlibros.Checked = true;
+            this.rBlibros.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibros.Location = new System.Drawing.Point(19, 8);
+            this.rBlibros.Name = "rBlibros";
+            this.rBlibros.Size = new System.Drawing.Size(61, 18);
+            this.rBlibros.TabIndex = 199;
+            this.rBlibros.TabStop = true;
+            this.rBlibros.Text = "Libros";
+            this.rBlibros.UseVisualStyleBackColor = true;
+            // 
             // ConsultaPedidosR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(923, 581);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gConsulta1);
@@ -460,6 +501,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,5 +542,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraGrid.Columns.GridColumn PED_IDE;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rBlibreria;
+        private System.Windows.Forms.RadioButton rBlibros;
     }
 }

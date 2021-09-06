@@ -224,7 +224,7 @@ namespace Presentacion
 
         private void Modificarprecioarticulos()
         {
-            string npproveedor, npcodigo, costo, nalta, modif;
+            string npproveedor, npcodigo, costo, modif;
             Decimal valor1, valor2, valor3,valor4,nuevovalor, nuevovalor2,diferencia;
 
           //  npproveedor = gridViewPintarFilas.GetRowCellValue(0, "proveedor").ToString();
@@ -333,7 +333,7 @@ namespace Presentacion
         private void dardealtaNuevaGrilla(Productos pro, int i)
         {
 
-            string precio2;
+           // string precio2;
             //precio2 = gridViewPintarFilas.GetRowCellValue(i, "precio").ToString();
             //precio2 = Convert.ToString(row.Cells[0].Value);
             //si es vacio es que no existe el articulo, crear nuevo
@@ -376,7 +376,7 @@ namespace Presentacion
 
         private void modificarproducto(Productos pro, int i)
         {
-            int titu=0,aut=0,edit=0;
+            int titu=0,edit=0;
 
             //titulo y autor
             if (chbTitulo.Checked == true)
@@ -389,7 +389,7 @@ namespace Presentacion
                 edit = 1;
             }
 
-            string precio2,titulop,edip,precioante;
+            string precio2,precioante;
             precio2 = gridViewPintarFilas.GetRowCellValue(i, "precio").ToString();
 
             precioante = gridViewPintarFilas.GetRowCellValue(i, "precioactual").ToString();
@@ -425,7 +425,7 @@ namespace Presentacion
         {
 
 
-            string titulop, edip, precioante;
+           // string titulop, edip, precioante;
             pro.Codigoprovee = gridViewPintarFilas.GetRowCellValue(i, "proveedor").ToString();
             pro.Codigo = gridViewPintarFilas.GetRowCellValue(i, "codigo").ToString();
             pro.PrecioL = Convert.ToDecimal(gridViewPintarFilas.GetRowCellValue(i, "costo").ToString());
@@ -501,7 +501,7 @@ namespace Presentacion
                 {
                     //dardealta(pro, i);
                     MessageBox.Show("ALTA");
-                    string precio2;
+                  //  string precio2;
                    /* precio2 = gridViewPintarFilas.GetRowCellValue(i, "precio").ToString();
                     si es vacio es que no existe el articulo, crear nuevo
                     pro.Titulo = gridViewPintarFilas.GetRowCellValue(i, "titulo").ToString();

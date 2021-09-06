@@ -102,7 +102,7 @@ namespace Presentacion
 
         public void pl_CreateReportHeaderArea2(object sender, CreateAreaEventArgs e)
         {
-            string fecha,nombre,nombre2,nombre3,planilla;
+            string nombre,nombre2,nombre3,planilla;
            // fecha = "fecha: " + DateTime.Now;
             nombre = "Librería Editorial Distribuidora A.C. Santa Cruz";
             nombre2 = "de Juan C. Alvado";

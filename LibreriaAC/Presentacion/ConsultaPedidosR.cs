@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class ConsultaPedidosR : Form
     {
         string _codigo;
+        int EsLibro1 = 0;
         Pedidos pe = new Pedidos();
         
         Productos pro = new Productos();
@@ -123,7 +124,15 @@ namespace Presentacion
             int todos;
             LogicaNegocios.Venta ve = new LogicaNegocios.Venta();
 
-            
+            if (rBlibros.Checked == true)
+            {
+                this.EsLibro1 = 1;
+            }
+            else
+            {
+                this.EsLibro1 = 0;
+            }
+
 
             DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
             string fdesdee = fdesde.ToString("yyyy-MM-dd");
@@ -139,7 +148,7 @@ namespace Presentacion
             {
                 todos = 0;
             }
-            gConsulta.DataSource = pe.Mostrar_Pedidosporfecha(fdesdee, fhastae);
+            gConsulta.DataSource = pe.Mostrar_Pedidosporfecha(fdesdee, fhastae,EsLibro1);
 
 
         }

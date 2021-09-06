@@ -11,14 +11,22 @@ namespace LogicaNegocios
     public class Pedidos
     {
         int _codigo;
-        public DataTable Mostrar_Pedidosporfecha(string fechadesde, string fechahasta)
+        string esli = string.Empty;
+        public DataTable Mostrar_Pedidosporfecha(string fechadesde, string fechahasta,int Eslibro)
         {
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
-
+            if (Eslibro == 1)
+            {
+                esli = " and PROV_LIBRO = 0";
+            }
+            else
+            {
+                esli = " and PROV_LIBRO = 1";
+            }
             return con.Mostrar_Datos("select pr.PROV_DESC AS proveedor,pm.PED_FECHA,pm.PED_IDE from pedidosmaestro as pm " +
                                     " left join proveedor as pr on pm.PED_PROV_IDE = pr.PROV_IDE where " +
-                                    " PED_FECHA >= '" + fechadesde + "' AND PED_FECHA <= '" + fechahasta + "'");
+                                    " (PED_FECHA >= '" + fechadesde + "' AND PED_FECHA <= '" + fechahasta + "') "+ esli +"");
 
         }
 

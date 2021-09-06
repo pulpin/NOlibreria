@@ -159,16 +159,25 @@ namespace Presentacion
 
 
             LogicaNegocios.Venta ve = new LogicaNegocios.Venta();
-
-     
-            gConsulta.DataSource = re.Mostrar_pedidos();
             Proveedor prove = new Proveedor();
+            if (rBlibros.Checked == true)
+            {
+                prove.EsLibro = 1;
+            }
+            else
+            {
+                prove.EsLibro = 0;
+            }
 
+            gConsulta.DataSource = re.Mostrar_pedidos(prove.EsLibro);
+           
+            
             lUEproveedor.Properties.DisplayMember = "PROV_DESC";
             lUEproveedor.Properties.ValueMember = "PROV_IDE";
             lUEproveedor.Properties.DataSource = prove.Tabladedatos_proveedores();
             lUEproveedor.Properties.PopulateColumns();
             lUEproveedor.Properties.Columns[0].Visible = false;
+            lUEproveedor.Properties.Columns[2].Visible = false;
 
 
         }
@@ -255,6 +264,16 @@ namespace Presentacion
         {
             this.Dispose();
             this.Hide();
+        }
+
+        private void rBlibros_CheckedChanged(object sender, EventArgs e)
+        {
+            this.cargar();
+        }
+
+        private void rBlibreria_CheckedChanged(object sender, EventArgs e)
+        {
+            this.cargar();
         }
     }
 }

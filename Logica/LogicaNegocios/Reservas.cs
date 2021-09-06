@@ -282,14 +282,23 @@ namespace LogicaNegocios
 
         }
 
-        public DataTable Mostrar_pedidos()
+        public DataTable Mostrar_pedidos(int eslibro)
         {
             Conexion con = new Conexion("libreria", Globales.ip);
+            string tipopro = string.Empty;
+            
             con.AbrirConexio();
-
+            if (eslibro == 1)
+            {
+                tipopro = " and li.LI_TIPOPRO = 0 ";
+            }
+            else
+            {
+                tipopro = " and li.LI_TIPOPRO > 0 ";
+            }
             return con.Mostrar_Datos("select EDI_EDITORIAL,EDI_CODIGO from libros as li left join editorial as ed " +
                                     " on li.LI_EDI_CODIGO = ed.EDI_CODIGO " +
-                                    " WHERE LI_PEDIDOS > 0 " +
+                                    " WHERE LI_PEDIDOS > 0  " + tipopro + "" +
                                     " GROUP BY EDI_EDITORIAL");
 
         }

@@ -183,13 +183,17 @@ namespace Presentacion
 
             DateTime fhasta = Convert.ToDateTime(fechahasta.EditValue);
             string fhastae = fhasta.ToString("yyyy-MM-dd");
-            int nrofac = 0;
+            int nrofac = 0,ticket=0;
             if (txtnrofactu.Text != string.Empty)
             {
                 nrofac = Convert.ToInt32(txtnrofactu.Text);
             }
+            if (txtticket.Text != string.Empty)
+            {
+                ticket = Convert.ToInt32(txtticket.Text);
+            }
             
-            gConsulta.DataSource = ve.Mostrar_ventasporparametro(fdesdee, fhastae, nrofac, Convert.ToInt32(LUpunto.EditValue));
+            gConsulta.DataSource = ve.Mostrar_ventasporparametro(fdesdee, fhastae, nrofac, Convert.ToInt32(LUpunto.EditValue),ticket);
 
         }
 

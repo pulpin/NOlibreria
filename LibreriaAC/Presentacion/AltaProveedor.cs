@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class AltaProveedor : Form
     {
-        private int _alta, _situacion, _clienteide, _tipo, _usuide,_numero, _ide, _porcentaje;
+        private int _alta, _situacion, _clienteide, _tipo, _usuide,_numero, _ide, _porcentaje, _eslibro;
         private string _iva, _cuit, _razonsocial, _domicilio, _telefono;
         private string _nombre, _nombrecompleto, _contra, _contravta;
         string _titulo, _calle, _localidad, _provincia, _cliente;
@@ -53,6 +53,14 @@ namespace Presentacion
             txteditorial.Text = this.Titulo;
            
             btnagregar.Text = "Modificar";
+            if (this.EsLibro == 0)
+            {
+                rBlibros.Checked=true;
+            }
+            else
+            {
+                rBlibreria.Checked = true;
+            }
             this.Alta = 0;
         }
 
@@ -60,7 +68,14 @@ namespace Presentacion
         {
             Proveedor provee = new Proveedor();
             provee.Titulo = (txteditorial.Text).ToUpper();
-
+            if (rBlibros.Checked == true)
+            {
+                provee.EsLibro = 0;
+            }
+            else
+            {
+                provee.EsLibro = 1;
+            }
             provee.Alta = 1;
             int resultado = provee.spAgregarProveedor();
             if (resultado == 0)
@@ -81,7 +96,14 @@ namespace Presentacion
             prov.Titulo = txteditorial.Text;
             prov.Alta = 0;
             prov.Ide = this.Ide;
-
+            if (rBlibros.Checked == true)
+            {
+                prov.EsLibro = 0;
+            }
+            else
+            {
+                prov.EsLibro = 1;
+            }
             int resultado = prov.spModificarProveedor();
             if (resultado == 0)
             {
@@ -302,6 +324,11 @@ namespace Presentacion
         {
             get { return this._tipo; }
             set { this._tipo = value; }
+        }
+        public int EsLibro
+        {
+            get { return this._eslibro; }
+            set { this._eslibro = value; }
         }
 
         public string Titulo

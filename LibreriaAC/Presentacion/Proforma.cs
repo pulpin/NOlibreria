@@ -18,7 +18,7 @@ namespace Presentacion
         string _codigo, _nombre,_direccion,_telefono,_cuit;
         int _ide;
         Pedidos pe = new Pedidos();
-        DataGridView dgvproductos;
+        //DataGridView dgvproductos;
         Productos pro = new Productos();
         Venta ven = new Venta();
         public Proforma()

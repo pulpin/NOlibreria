@@ -33,7 +33,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rBlibreria = new System.Windows.Forms.RadioButton();
+            this.rBlibros = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +77,7 @@
             // 
             this.btncancelar.Image = global::Presentacion.Properties.Resources.cancelar64;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(241, 144);
+            this.btncancelar.Location = new System.Drawing.Point(240, 201);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(102, 79);
             this.btncancelar.TabIndex = 10;
@@ -86,7 +90,7 @@
             // 
             this.btnagregar.Image = global::Presentacion.Properties.Resources.guardar64;
             this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnagregar.Location = new System.Drawing.Point(103, 144);
+            this.btnagregar.Location = new System.Drawing.Point(102, 201);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(102, 79);
             this.btnagregar.TabIndex = 9;
@@ -95,12 +99,49 @@
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rBlibreria);
+            this.groupBox2.Controls.Add(this.rBlibros);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox2.Location = new System.Drawing.Point(123, 141);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(193, 33);
+            this.groupBox2.TabIndex = 243;
+            this.groupBox2.TabStop = false;
+            // 
+            // rBlibreria
+            // 
+            this.rBlibreria.AutoSize = true;
+            this.rBlibreria.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibreria.Location = new System.Drawing.Point(86, 9);
+            this.rBlibreria.Name = "rBlibreria";
+            this.rBlibreria.Size = new System.Drawing.Size(87, 18);
+            this.rBlibreria.TabIndex = 200;
+            this.rBlibreria.Text = "Art. librería";
+            this.rBlibreria.UseVisualStyleBackColor = true;
+            // 
+            // rBlibros
+            // 
+            this.rBlibros.AutoSize = true;
+            this.rBlibros.Checked = true;
+            this.rBlibros.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibros.Location = new System.Drawing.Point(19, 8);
+            this.rBlibros.Name = "rBlibros";
+            this.rBlibros.Size = new System.Drawing.Size(61, 18);
+            this.rBlibros.TabIndex = 199;
+            this.rBlibros.TabStop = true;
+            this.rBlibros.Text = "Libros";
+            this.rBlibros.UseVisualStyleBackColor = true;
+            // 
             // AltaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 236);
+            this.ClientSize = new System.Drawing.Size(437, 292);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txteditorial);
             this.Controls.Add(this.label1);
@@ -111,6 +152,8 @@
             this.Text = "Alta de Proveedor...";
             this.Load += new System.EventHandler(this.AltaProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +166,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txteditorial;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rBlibreria;
+        private System.Windows.Forms.RadioButton rBlibros;
     }
 }

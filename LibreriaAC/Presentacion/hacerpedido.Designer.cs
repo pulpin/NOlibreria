@@ -51,18 +51,22 @@
             this.editorial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_PEDIDOS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LI_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LI_CODIGOPROVEE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lUEproveedor = new DevExpress.XtraEditors.LookUpEdit();
             this.label18 = new System.Windows.Forms.Label();
-            this.LI_CODIGOPROVEE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rBlibreria = new System.Windows.Forms.RadioButton();
+            this.rBlibros = new System.Windows.Forms.RadioButton();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lUEproveedor.Properties)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmdmenugrid
@@ -194,7 +198,7 @@
             this.gConsulta1.Location = new System.Drawing.Point(256, 40);
             this.gConsulta1.MainView = this.gridView1;
             this.gConsulta1.Name = "gConsulta1";
-            this.gConsulta1.Size = new System.Drawing.Size(667, 453);
+            this.gConsulta1.Size = new System.Drawing.Size(735, 453);
             this.gConsulta1.TabIndex = 250;
             this.gConsulta1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -290,6 +294,17 @@
             this.LI_IDE.FieldName = "LI_IDE";
             this.LI_IDE.Name = "LI_IDE";
             // 
+            // LI_CODIGOPROVEE
+            // 
+            this.LI_CODIGOPROVEE.Caption = "Cód_Provee";
+            this.LI_CODIGOPROVEE.FieldName = "LI_CODIGOPROVEE";
+            this.LI_CODIGOPROVEE.MaxWidth = 80;
+            this.LI_CODIGOPROVEE.MinWidth = 80;
+            this.LI_CODIGOPROVEE.Name = "LI_CODIGOPROVEE";
+            this.LI_CODIGOPROVEE.Visible = true;
+            this.LI_CODIGOPROVEE.VisibleIndex = 1;
+            this.LI_CODIGOPROVEE.Width = 80;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -359,23 +374,51 @@
             this.label18.Text = "Proveedor:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // LI_CODIGOPROVEE
+            // groupBox2
             // 
-            this.LI_CODIGOPROVEE.Caption = "Cód_Provee";
-            this.LI_CODIGOPROVEE.FieldName = "LI_CODIGOPROVEE";
-            this.LI_CODIGOPROVEE.MaxWidth = 80;
-            this.LI_CODIGOPROVEE.MinWidth = 80;
-            this.LI_CODIGOPROVEE.Name = "LI_CODIGOPROVEE";
-            this.LI_CODIGOPROVEE.Visible = true;
-            this.LI_CODIGOPROVEE.VisibleIndex = 1;
-            this.LI_CODIGOPROVEE.Width = 80;
+            this.groupBox2.Controls.Add(this.rBlibreria);
+            this.groupBox2.Controls.Add(this.rBlibros);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox2.Location = new System.Drawing.Point(602, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(193, 33);
+            this.groupBox2.TabIndex = 257;
+            this.groupBox2.TabStop = false;
+            // 
+            // rBlibreria
+            // 
+            this.rBlibreria.AutoSize = true;
+            this.rBlibreria.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibreria.Location = new System.Drawing.Point(87, 8);
+            this.rBlibreria.Name = "rBlibreria";
+            this.rBlibreria.Size = new System.Drawing.Size(87, 18);
+            this.rBlibreria.TabIndex = 200;
+            this.rBlibreria.Text = "Art. librería";
+            this.rBlibreria.UseVisualStyleBackColor = true;
+            this.rBlibreria.CheckedChanged += new System.EventHandler(this.rBlibreria_CheckedChanged);
+            // 
+            // rBlibros
+            // 
+            this.rBlibros.AutoSize = true;
+            this.rBlibros.Checked = true;
+            this.rBlibros.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibros.Location = new System.Drawing.Point(19, 8);
+            this.rBlibros.Name = "rBlibros";
+            this.rBlibros.Size = new System.Drawing.Size(61, 18);
+            this.rBlibros.TabIndex = 199;
+            this.rBlibros.TabStop = true;
+            this.rBlibros.Text = "Libros";
+            this.rBlibros.UseVisualStyleBackColor = true;
+            this.rBlibros.CheckedChanged += new System.EventHandler(this.rBlibros_CheckedChanged);
             // 
             // hacerpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(935, 581);
+            this.ClientSize = new System.Drawing.Size(1003, 581);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lUEproveedor);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label6);
@@ -396,6 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lUEproveedor.Properties)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,5 +475,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn LI_IDE;
         private DevExpress.XtraGrid.Columns.GridColumn LI_BARRA;
         private DevExpress.XtraGrid.Columns.GridColumn LI_CODIGOPROVEE;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rBlibreria;
+        private System.Windows.Forms.RadioButton rBlibros;
     }
 }

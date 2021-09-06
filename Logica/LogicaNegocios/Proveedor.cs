@@ -12,12 +12,20 @@ namespace LogicaNegocios
     public class Proveedor
     {
         string _titulo;
-        int _alta, _ide;
+        int _alta, _ide, _eslibro;
         public DataTable Tabladedatos_proveedores()
         {
             Conexion con = new Conexion("libreria", Globales.ip);
+            int esli = 0;
             con.AbrirConexio();
-            return con.Mostrar_Datos("select PROV_IDE,PROV_DESC from libreria.proveedor order by PROV_DESC");
+            if (EsLibro == 1)
+            {
+                esli = 0;
+            }else
+            {
+                esli = 1;
+            }
+            return con.Mostrar_Datos("select PROV_IDE,PROV_DESC,PROV_LIBRO from libreria.proveedor where PROV_LIBRO = "+ esli +" order by PROV_DESC");
         }
 
         public DataTable Tabladedatos_proveedoresbuscar()
@@ -28,7 +36,15 @@ namespace LogicaNegocios
                 contiene = "%";
                 valor = "PROV_DESC like " + "'" + contiene + "" + Titulo + "%" + "'";
             }
-
+            if (this.EsLibro == 1)
+            {
+                valor = valor + " and PROV_LIBRO = 0";
+            }
+            else
+            {
+                valor = valor + " and PROV_LIBRO = 1";
+            }
+            
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
             return con.Mostrar_Datos("select * from libreria.proveedor where " + valor + " order by PROV_DESC");
@@ -57,6 +73,7 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("palta", 1);
                 myCommand.Parameters.AddWithValue("pide", 0);
                 myCommand.Parameters.AddWithValue("pusuide", Globales.gbUsuide);
+                myCommand.Parameters.AddWithValue("peslibro", this.EsLibro);
 
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
@@ -107,7 +124,7 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("palta", this.Alta);
                 myCommand.Parameters.AddWithValue("pide", this.Ide);
                 myCommand.Parameters.AddWithValue("pusuide", Globales.gbUsuide);
-
+                myCommand.Parameters.AddWithValue("peslibro", this.EsLibro);
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
                 myCommand.Parameters.Add(ValorRetorno);
@@ -192,6 +209,11 @@ namespace LogicaNegocios
         {
             get { return this._alta; }
             set { this._alta = value; }
+        }
+        public int EsLibro
+        {
+            get { return this._eslibro; }
+            set { this._eslibro = value; }
         }
         public int Ide
         {

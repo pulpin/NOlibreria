@@ -32,19 +32,24 @@
             this.gridViewPintarFilas = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PROV_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PROV_DESC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PROV_LIBRO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnaltacliente = new System.Windows.Forms.Button();
             this.btnborrarusu = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.txttitulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rBlibreria = new System.Windows.Forms.RadioButton();
+            this.rBlibros = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gConsulta
             // 
-            this.gConsulta.Location = new System.Drawing.Point(12, 71);
+            this.gConsulta.Location = new System.Drawing.Point(60, 71);
             this.gConsulta.MainView = this.gridViewPintarFilas;
             this.gConsulta.Name = "gConsulta";
             this.gConsulta.Size = new System.Drawing.Size(466, 292);
@@ -57,7 +62,8 @@
             // 
             this.gridViewPintarFilas.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.PROV_IDE,
-            this.PROV_DESC});
+            this.PROV_DESC,
+            this.PROV_LIBRO});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
@@ -81,6 +87,12 @@
             this.PROV_DESC.Visible = true;
             this.PROV_DESC.VisibleIndex = 1;
             this.PROV_DESC.Width = 200;
+            // 
+            // PROV_LIBRO
+            // 
+            this.PROV_LIBRO.Caption = "PROV_LIBRO";
+            this.PROV_LIBRO.FieldName = "PROV_LIBRO";
+            this.PROV_LIBRO.Name = "PROV_LIBRO";
             // 
             // btncancelar
             // 
@@ -139,7 +151,7 @@
             // 
             // txttitulo
             // 
-            this.txttitulo.Location = new System.Drawing.Point(300, 29);
+            this.txttitulo.Location = new System.Drawing.Point(322, 43);
             this.txttitulo.Name = "txttitulo";
             this.txttitulo.Size = new System.Drawing.Size(178, 20);
             this.txttitulo.TabIndex = 197;
@@ -148,19 +160,58 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(241, 31);
+            this.label1.Location = new System.Drawing.Point(263, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 198;
             this.label1.Text = "Proveedor:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rBlibreria);
+            this.groupBox2.Controls.Add(this.rBlibros);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox2.Location = new System.Drawing.Point(285, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(193, 33);
+            this.groupBox2.TabIndex = 258;
+            this.groupBox2.TabStop = false;
+            // 
+            // rBlibreria
+            // 
+            this.rBlibreria.AutoSize = true;
+            this.rBlibreria.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibreria.Location = new System.Drawing.Point(87, 8);
+            this.rBlibreria.Name = "rBlibreria";
+            this.rBlibreria.Size = new System.Drawing.Size(87, 18);
+            this.rBlibreria.TabIndex = 200;
+            this.rBlibreria.Text = "Art. librería";
+            this.rBlibreria.UseVisualStyleBackColor = true;
+            this.rBlibreria.CheckedChanged += new System.EventHandler(this.rBlibreria_CheckedChanged);
+            // 
+            // rBlibros
+            // 
+            this.rBlibros.AutoSize = true;
+            this.rBlibros.Checked = true;
+            this.rBlibros.ForeColor = System.Drawing.Color.Maroon;
+            this.rBlibros.Location = new System.Drawing.Point(19, 8);
+            this.rBlibros.Name = "rBlibros";
+            this.rBlibros.Size = new System.Drawing.Size(61, 18);
+            this.rBlibros.TabIndex = 199;
+            this.rBlibros.TabStop = true;
+            this.rBlibros.Text = "Libros";
+            this.rBlibros.UseVisualStyleBackColor = true;
+            this.rBlibros.CheckedChanged += new System.EventHandler(this.rBlibros_CheckedChanged);
+            // 
             // ConsultaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 434);
+            this.ClientSize = new System.Drawing.Size(570, 434);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txttitulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnmodificar);
@@ -174,6 +225,8 @@
             this.Load += new System.EventHandler(this.ConsultaInteres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +244,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn PROV_DESC;
         private System.Windows.Forms.TextBox txttitulo;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn PROV_LIBRO;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rBlibreria;
+        private System.Windows.Forms.RadioButton rBlibros;
     }
 }

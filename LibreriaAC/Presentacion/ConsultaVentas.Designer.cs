@@ -53,6 +53,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.fechadesde = new DevExpress.XtraEditors.DateEdit();
             this.bbuscar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtticket = new System.Windows.Forms.TextBox();
             this.LUpunto = new DevExpress.XtraEditors.LookUpEdit();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
@@ -248,18 +250,23 @@
             // 
             // gBtipopro
             // 
+            this.gBtipopro.Controls.Add(this.bbuscar);
+            this.gBtipopro.Controls.Add(this.label7);
+            this.gBtipopro.Controls.Add(this.LUpunto);
+            this.gBtipopro.Controls.Add(this.txtticket);
+            this.gBtipopro.Controls.Add(this.label6);
             this.gBtipopro.Controls.Add(this.label5);
             this.gBtipopro.Controls.Add(this.txtnrofactu);
             this.gBtipopro.Controls.Add(this.label3);
             this.gBtipopro.Controls.Add(this.fechahasta);
             this.gBtipopro.Controls.Add(this.label4);
             this.gBtipopro.Controls.Add(this.fechadesde);
-            this.gBtipopro.Location = new System.Drawing.Point(29, 30);
+            this.gBtipopro.Location = new System.Drawing.Point(29, 1);
             this.gBtipopro.Name = "gBtipopro";
-            this.gBtipopro.Size = new System.Drawing.Size(676, 53);
+            this.gBtipopro.Size = new System.Drawing.Size(807, 82);
             this.gBtipopro.TabIndex = 248;
             this.gBtipopro.TabStop = false;
-            this.gBtipopro.Text = "Elegir las fechas...";
+            this.gBtipopro.Text = "Seleccionar filtro";
             this.gBtipopro.Enter += new System.EventHandler(this.gBtipopro_Enter);
             // 
             // label5
@@ -268,7 +275,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label5.Location = new System.Drawing.Point(468, 28);
+            this.label5.Location = new System.Drawing.Point(246, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 252;
@@ -280,9 +287,9 @@
             this.txtnrofactu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtnrofactu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnrofactu.ForeColor = System.Drawing.Color.Maroon;
-            this.txtnrofactu.Location = new System.Drawing.Point(544, 27);
+            this.txtnrofactu.Location = new System.Drawing.Point(313, 53);
             this.txtnrofactu.Name = "txtnrofactu";
-            this.txtnrofactu.Size = new System.Drawing.Size(84, 22);
+            this.txtnrofactu.Size = new System.Drawing.Size(74, 22);
             this.txtnrofactu.TabIndex = 251;
             // 
             // label3
@@ -291,7 +298,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label3.Location = new System.Drawing.Point(225, 28);
+            this.label3.Location = new System.Drawing.Point(516, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 208;
@@ -301,7 +308,7 @@
             // fechahasta
             // 
             this.fechahasta.EditValue = null;
-            this.fechahasta.Location = new System.Drawing.Point(327, 27);
+            this.fechahasta.Location = new System.Drawing.Point(618, 18);
             this.fechahasta.Name = "fechahasta";
             this.fechahasta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -315,7 +322,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label4.Location = new System.Drawing.Point(14, 28);
+            this.label4.Location = new System.Drawing.Point(305, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 17);
             this.label4.TabIndex = 206;
@@ -325,7 +332,7 @@
             // fechadesde
             // 
             this.fechadesde.EditValue = null;
-            this.fechadesde.Location = new System.Drawing.Point(116, 27);
+            this.fechadesde.Location = new System.Drawing.Point(407, 18);
             this.fechadesde.Name = "fechadesde";
             this.fechadesde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -337,16 +344,39 @@
             // bbuscar
             // 
             this.bbuscar.Image = global::Presentacion.Properties.Resources.buscar32;
-            this.bbuscar.Location = new System.Drawing.Point(726, 12);
+            this.bbuscar.Location = new System.Drawing.Point(741, 21);
             this.bbuscar.Name = "bbuscar";
             this.bbuscar.Size = new System.Drawing.Size(60, 39);
             this.bbuscar.TabIndex = 250;
             this.bbuscar.UseVisualStyleBackColor = true;
             this.bbuscar.Click += new System.EventHandler(this.bbuscar_Click);
             // 
+            // label7
+            // 
+            this.label7.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label7.Location = new System.Drawing.Point(401, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.TabIndex = 254;
+            this.label7.Text = "Ticket:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtticket
+            // 
+            this.txtticket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtticket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtticket.ForeColor = System.Drawing.Color.Maroon;
+            this.txtticket.Location = new System.Drawing.Point(458, 53);
+            this.txtticket.Name = "txtticket";
+            this.txtticket.Size = new System.Drawing.Size(66, 22);
+            this.txtticket.TabIndex = 253;
+            // 
             // LUpunto
             // 
-            this.LUpunto.Location = new System.Drawing.Point(384, 6);
+            this.LUpunto.Location = new System.Drawing.Point(130, 18);
             this.LUpunto.Name = "LUpunto";
             this.LUpunto.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.LUpunto.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -362,17 +392,17 @@
             this.LUpunto.Properties.NullText = "";
             this.LUpunto.Properties.ShowHeader = false;
             this.LUpunto.Size = new System.Drawing.Size(159, 22);
-            this.LUpunto.TabIndex = 251;
+            this.LUpunto.TabIndex = 253;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label6.Location = new System.Drawing.Point(266, 9);
+            this.label6.Location = new System.Drawing.Point(12, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 17);
-            this.label6.TabIndex = 252;
+            this.label6.TabIndex = 254;
             this.label6.Text = "Punto de venta:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -382,9 +412,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 474);
             this.ControlBox = false;
-            this.Controls.Add(this.LUpunto);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.bbuscar);
             this.Controls.Add(this.gBtipopro);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -436,9 +463,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtnrofactu;
         private System.Windows.Forms.Button bbuscar;
-        private DevExpress.XtraEditors.LookUpEdit LUpunto;
-        private System.Windows.Forms.Label label6;
         private DevExpress.XtraGrid.Columns.GridColumn TIP_DESC;
         private DevExpress.XtraGrid.Columns.GridColumn VEN_PTOVTA;
+        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.LookUpEdit LUpunto;
+        private System.Windows.Forms.TextBox txtticket;
+        private System.Windows.Forms.Label label6;
     }
 }

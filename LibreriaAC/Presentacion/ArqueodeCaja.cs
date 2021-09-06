@@ -166,10 +166,10 @@ namespace Presentacion
 
 
                 //imprime productos
-                string productodesc, cantidad, precio, iva, codigointerno, imprimeproducto, imprimeprecioporcanti, preciosubim, preciototalim;
-                double preciod, preciosub, preciototal;
+               // string productodesc, cantidad, precio, iva, codigointerno, imprimeproducto, imprimeprecioporcanti, preciosubim, preciototalim;
+                //double preciod, preciosub, preciototal;
                 int linea = 240;
-                int linea2 = 0;
+               // int linea2 = 0;
                
                 linea = linea + 10;
                 //preciototal = Convert.ToDouble(lbtotalg.Text);
@@ -290,7 +290,7 @@ namespace Presentacion
 
                 gConsulta.DataSource = ve.Mostrar_ventasporfecha(fdesdee, fdesdee, Convert.ToInt32(LUpunto.EditValue), Convert.ToInt32(LUusuarios.EditValue), todos);
 
-                decimal importesumaefe = 0, importetarjeta = 0, importeajuste = 0, importetotalventas = 0;
+                decimal importesumaefe = 0, importetarjeta = 0, importeajuste = 0;
                 int tipopag = 0;
                 for (int i = 0; i < gridViewPintarFilas.DataRowCount; i++)
                 {

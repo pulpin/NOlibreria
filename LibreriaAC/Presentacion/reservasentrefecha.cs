@@ -19,7 +19,7 @@ namespace Presentacion
         Venta ven = new Venta();
         Productos pro = new Productos();
 
-        private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
+        //private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
         private static int PUERTO = 0;
         public reservasentrefecha()
         {
@@ -186,7 +186,7 @@ namespace Presentacion
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            /*
             try
             {
                  
@@ -214,6 +214,7 @@ namespace Presentacion
             {
                 MessageBox.Show(E.Message);
             }
+            */
         }
     }
 }

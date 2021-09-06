@@ -1024,7 +1024,7 @@ namespace LogicaNegocios
                 " left join cccliente as ccc on CUCO_CC_IDE = CC_IDE where VEN_PTOVTA = "+ Globales.gbpuntodeventapredetermindado +"  ORDER BY VEN_IDE DESC limit 100");
         }
 
-        public DataTable Mostrar_ventasporparametro(string desde, string hasta, int nrofactu,int puntodvta)
+        public DataTable Mostrar_ventasporparametro(string desde, string hasta, int nrofactu,int puntodvta, int ticket)
         {
             int ingresa = 0;
             string valor = string.Empty;
@@ -1044,16 +1044,38 @@ namespace LogicaNegocios
                 
                 if (nrofactu > 0)
                 {
+                    if (ingresa == 0)
+                    {
+                        valor = " VEN_IDE = " + nrofactu + " ";
+                    }
+                    else
+                    {
+                        
+                        valor = valor + " and VEN_IDE = " + nrofactu + " ";
+                    }
                     ingresa = 1;
-                    valor = " VEN_IDE = " + nrofactu + " ";
+
                 }
-                
+                if (ticket > 0)
+                {
+                    if (ingresa == 0)
+                    {
+                        valor = " VEN_NROTICKET = " + ticket + " ";
+                    }
+                    else
+                    {
+                        valor = valor + " AND VEN_NROTICKET = " + ticket + " ";
+                    }
+                    ingresa = 1;
+                    
+                }
+
             }
             if (puntodvta > 0)
             {
                 if (ingresa == 1)
                 {
-                    valor = " and VEN_PTOVTA = " + puntodvta + " ";
+                    valor = valor + " and VEN_PTOVTA = " + puntodvta + " ";
                 }
                 else
                 {
@@ -1069,7 +1091,7 @@ namespace LogicaNegocios
 
         public DataTable Mostrar_ventasporparametrofiltro(string desde, string hasta, int puntodvta, int tipop)
         {
-            int ingresa = 0;
+           // int ingresa = 0;
             string valor = string.Empty;
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
@@ -1082,7 +1104,7 @@ namespace LogicaNegocios
 
         public DataTable Mostrar_ventasparacontador(string desde, string hasta, int puntodvta)
         {
-            int ingresa = 0;
+           // int ingresa = 0;
             string valor = string.Empty;
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();

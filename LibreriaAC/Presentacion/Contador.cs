@@ -154,7 +154,7 @@ namespace Presentacion
             gConsulta.DataSource = ve.Mostrar_ventasparacontador(fdesdee, fhastae, Convert.ToInt32(LUpunto.EditValue));
             
             decimal importesuma=0;
-            int tipopag = 0;
+            //int tipopag = 0;
             
             importesuma = decimal.Round(importesuma, 2);
             

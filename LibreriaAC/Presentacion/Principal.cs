@@ -129,8 +129,8 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
                                                                        CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
         public static extern int ReanudarLog();
 
-        private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
-        private static int PUERTO = 0;
+        //private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
+        //private static int PUERTO = 0;
         /* Globa variable */
         private bool _WorkThreadRunning = false;
         public void WorkThreadFunction()
@@ -497,7 +497,7 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
             
         }
 
-
+        /*
         private void CierreXIFU()
         {
             try
@@ -527,7 +527,8 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
                 MessageBox.Show(E.Message);
             }
         }
-
+        */
+        /*
         private void CierreZIFU()
         {
             try
@@ -558,7 +559,7 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
                 MessageBox.Show(E.Message);
             }
         }
-
+        */
         private void cierraZToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //this.CierreZIFU();

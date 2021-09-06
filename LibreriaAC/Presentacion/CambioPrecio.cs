@@ -383,7 +383,7 @@ namespace Presentacion
                 edit = 1;
             }
 
-            string precio2,titulop,edip,precioante;
+            string precio2,precioante;
             precio2 = gridViewPintarFilas.GetRowCellValue(i, "precio").ToString();
 
             precioante = gridViewPintarFilas.GetRowCellValue(i, "precioactual").ToString();
@@ -419,7 +419,7 @@ namespace Presentacion
         {
 
 
-            string titulop, edip, precioante;
+            //string titulop, edip, precioante;
             pro.Codigoprovee = gridViewPintarFilas.GetRowCellValue(i, "proveedor").ToString();
             pro.Codigo = gridViewPintarFilas.GetRowCellValue(i, "codigo").ToString();
             pro.PrecioL = Convert.ToDecimal(gridViewPintarFilas.GetRowCellValue(i, "costo").ToString());
@@ -440,7 +440,7 @@ namespace Presentacion
             DialogResult result = MessageBox.Show("¿Seguro que desea realizar el cambio de precios?", "Opción", MessageBoxButtons.YesNo);
             string isbn=string.Empty;
             
-            DialogResult resultad;
+            //DialogResult resultad;
             
             if (result == DialogResult.Yes)
             {
@@ -497,8 +497,8 @@ namespace Presentacion
 
         private void recorrergrilla()
         {
-            int Valor_Retornado = 0;
-            string cadenaconexion;
+            //int Valor_Retornado = 0;
+            //string cadenaconexion;
 
             //string server = "10.1.10.202";
             string server = "127.0.0.1";
@@ -654,7 +654,7 @@ namespace Presentacion
         private void recorrergrillasp()
         {
             int Valor_Retornado = 0;
-            string cadenaconexion;
+           // string cadenaconexion;
             int contador = 0;
             //string server = "10.1.10.202";
             string server = "127.0.0.1";
@@ -746,8 +746,8 @@ namespace Presentacion
         private void recorrergrillasp1()
         {
             int Valor_Retornado = 0;
-            string cadenaconexion;
-            int contador = 0;
+           // string cadenaconexion;
+           // int contador = 0;
           //  string server = "10.1.10.202";
           //  string server = "127.0.0.1";
           //  string database = "libreria";
@@ -1066,8 +1066,8 @@ namespace Presentacion
             int Valor_Retornado = 0;
             String Valor_Retornado1 = string.Empty, Valor_Retornado2 = string.Empty;
             string modif = string.Empty;
-            string cadenaconexion;
-            int contador = 0;
+            //string cadenaconexion;
+            //int contador = 0;
             //  string server = "10.1.10.202";
 
             string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "Allow Zero Datetime=true";

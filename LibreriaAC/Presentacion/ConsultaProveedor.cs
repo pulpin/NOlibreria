@@ -26,6 +26,14 @@ namespace Presentacion
         }
         private void cargar()
         {
+            if (rBlibros.Checked == true)
+            {
+                prov.EsLibro = 1;
+            }
+            else
+            {
+                prov.EsLibro = 0;
+            }
             gConsulta.DataSource = prov.Tabladedatos_proveedores();
             if (LogicaNegocios.Globales.accesoaproveedores == 2 )
             {
@@ -112,7 +120,7 @@ namespace Presentacion
             ap.Alta = 0;
             ap.Ide = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PROV_IDE"]));
             ap.Titulo = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PROV_DESC"]));
-            
+            ap.EsLibro = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PROV_LIBRO"]));
             ap.colocardatosEdi();
 
             if (ap.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -128,9 +136,27 @@ namespace Presentacion
             {
                 //buscar acá
                 prov.Titulo = txttitulo.Text;
+                if (rBlibros.Checked == true)
+                {
+                    prov.EsLibro = 1;
+                }
+                else
+                {
+                    prov.EsLibro = 0;
+                }
                 gConsulta.DataSource = prov.Tabladedatos_proveedoresbuscar();
                 txttitulo.Text = string.Empty;
             }
+        }
+
+        private void rBlibros_CheckedChanged(object sender, EventArgs e)
+        {
+            this.cargar();
+        }
+
+        private void rBlibreria_CheckedChanged(object sender, EventArgs e)
+        {
+            this.cargar();
         }
     }
 }

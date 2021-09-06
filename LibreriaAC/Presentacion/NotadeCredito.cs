@@ -152,8 +152,8 @@ pnombrecli, pcuit, pdire, ptipo;
         int _tipopago, _ultimavta, _ultimanota, nopedirclienteA = 0;
         object[] rowsenviar;
         Venta vta;
-        private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
-        private static int PUERTO = 0;
+        //private static IFUniversal.ModeloPrn MODELO = IFUniversal.ModeloPrn.modEpsonTMT900FA;
+        //private static int PUERTO = 0;
         public NotadeCredito()
         {
             InitializeComponent();
@@ -265,43 +265,43 @@ pnombrecli, pcuit, pdire, ptipo;
         private void imprimirticket()
         {
 
-            Boolean respuesta;
+           // Boolean respuesta;
            // string x = "X";
            // string p = "P";
-            string cantiarti = "Cant. Articulos: 1";
-            string atendido = "Vendedor: Hugo";
-            string controlinterno = "Codigo interno: 1546";
+            //string cantiarti = "Cant. Articulos: 1";
+            //string atendido = "Vendedor: Hugo";
+            //string controlinterno = "Codigo interno: 1546";
 
-            string argumento = "G";
+          //  string argumento = "G";
            // respuesta = this.axPrinterFiscal1.OpenTicket(ref argumento);
 
-            string estado = "C";
+          //  string estado = "C";
             //respuesta = this.axPrinterFiscal1.Status(ref estado);
 
-            string establece = "S";
+           /* string establece = "S";
             string linea11 = "11";
             string linea12 = "12";
             string linea13 = "13";
-
+            */
           /*  this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea11, ref controlinterno);
             this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea12, ref atendido);
             this.axPrinterFiscal1.SetGetHeaderTrailer(ref establece, ref linea13, ref cantiarti);
             */
-            string articulo = "Mochila negra palo";
-            string cantidad = Convert.ToString(1 * 1000);
-            string precioUnitario = Convert.ToString(1 * 100);
+           // string articulo = "Mochila negra palo";
+         //   string cantidad = Convert.ToString(1 * 1000);
+           // string precioUnitario = Convert.ToString(1 * 100);
             //   string iva = Convert.ToString(21 * 100);
-            string iva = "2100";
-            string venta = "M";
-            string bultos = "0";
-            string ImpuestosInternos = "0";
+          //  string iva = "2100";
+          //  string venta = "M";
+          //  string bultos = "0";
+//string ImpuestosInternos = "0";
 
-            string printer = "P";
-            string texto = "SUB";
+         //   string printer = "P";
+          //  string texto = "SUB";
 
-            string pago = "Efectivo";
+//string pago = "Efectivo";
             string importeabona = Convert.ToString(1 * 100);
-            string descripcion = "T";
+           // string descripcion = "T";
 
          /*   this.axPrinterFiscal1.SendTicketItem(ref articulo, ref cantidad, ref precioUnitario, ref iva, ref venta, ref bultos, ref ImpuestosInternos);
 
@@ -438,7 +438,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
         }
 
-        private void imprimirticketNuevaIFU()
+       /* private void imprimirticketNuevaIFU()
         {
             string productodesc = string.Empty; //descripción del producto
             string iva, codigointerno;
@@ -468,10 +468,7 @@ pnombrecli, pcuit, pdire, ptipo;
                 {
                     throw new Exception(Fiscal.ErrorDesc);
                 }
-                /* if (!Fiscal.ImprimirTextoFiscal("Venta AC"))
-                 {
-                     throw new Exception(Fiscal.ErrorDesc);
-                 }*/
+               
 
                 foreach (DataGridViewRow row in dgvProductos.Rows)
                 {
@@ -600,7 +597,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
-
+        */
         private void imprimirticketNuevaB()
         {
             int tipocomprobante = 3, id_modificador = 200, ptipodeiva=0; //1 es ticket 200 agregar venta
@@ -750,7 +747,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
-
+        /*
         private void imprimirticketNuevaBIFU()
         {
             string productodesc = string.Empty; //descripción del producto
@@ -953,7 +950,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
-
+        */
 
 
         private void imprimirticketNuevaA()
@@ -1114,7 +1111,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
         }
 
-
+        /*
         private void imprimirticketNuevaAIFU()
         {
             string productodesc = string.Empty; //descripción del producto
@@ -1315,7 +1312,7 @@ pnombrecli, pcuit, pdire, ptipo;
             }
 
         }
-
+        */
         private void LUComprobante_EditValueChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(LUComprobante.EditValue) == 1)
@@ -1466,16 +1463,16 @@ pnombrecli, pcuit, pdire, ptipo;
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int tipocomprobante = 2, id_modificador = 200, ptipodeiva = 0; //1 es ticket 200 agregar venta
+           // int tipocomprobante = 2, id_modificador = 200, ptipodeiva = 0; //1 es ticket 200 agregar venta
             string productodesc = string.Empty; //descripción del producto
             string cantidad, precio, iva, codigointerno;
             double preciod;
-            const int ERROR_NINGUNO = 0;
-            int error, tasaiva, tipodepago = 0, cuotas = 1;
+            //const int ERROR_NINGUNO = 0;
+            //int cuotas = 1;
 
             foreach (DataGridViewRow row in dgvProductos.Rows)
             {
-                string preciotemporal;
+               // string preciotemporal;
                 productodesc = Convert.ToString(row.Cells[2].Value);
                 cantidad = Convert.ToString(row.Cells[0].Value);
 

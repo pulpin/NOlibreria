@@ -114,7 +114,7 @@ namespace Presentacion
         private void cargar()
         {
 
-            int todos;
+            int todos=0;
             LogicaNegocios.Venta ve = new LogicaNegocios.Venta();
 
             DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
