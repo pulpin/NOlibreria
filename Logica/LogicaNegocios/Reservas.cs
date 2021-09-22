@@ -198,7 +198,7 @@ namespace LogicaNegocios
 
             return con.Mostrar_Datos("select CLIEN_NOMBRE,CLIEN_TELEFONO,RESE_LI_CODIGOVIEJO,RESE_DESC,RESE_AUTOR, " +
                                     " RESE_EDITORIAL, RESE_PRECIO, RESE_FECHA,RESE_CANTIDAD,  " +
-                                    " RESE_IDE,RESE_USUA_IDE,RESE_USUL_IDE,RESE_USUE_IDE,usu1.USU_NOMBRE as Cargado,usu4.USU_NOMBRE as paraavisar,RESE_USUP_FE,usu2.USU_NOMBRE as Avisado,RESE_USUL_FE,usu3.USU_NOMBRE as Entregado,usu5.USU_NOMBRE as Alaventa,RESE_USUV_FE,RESE_USUE_FE,RESE_ESTADO,RESE_CLIE_IDE,RESE_OBS,usu6.USU_NOMBRE as usumodificar,RESE_USUM_FE from reservas " +
+                                    " RESE_IDE,RESE_USUA_IDE,RESE_USUL_IDE,RESE_USUE_IDE,usu1.USU_NOMBRE as Cargado,usu4.USU_NOMBRE as paraavisar,RESE_USUP_FE,usu2.USU_NOMBRE as Avisado,RESE_USUL_FE,usu3.USU_NOMBRE as Entregado,RESE_USUE_FE,usu5.USU_NOMBRE as Alaventa,RESE_USUV_FE,RESE_USUE_FE,RESE_ESTADO,RESE_CLIE_IDE,RESE_OBS,usu6.USU_NOMBRE as usumodificar,RESE_USUM_FE from reservas " +
                                     " left join clientesli on RESE_CLIE_IDE = CLIEN_IDE " +
                                     " left join usuarios.usuarios on RESE_USUA_IDE = USU_IDE " +
                                     " left join usuarios.usuarios as usu1 on RESE_USUA_IDE = usu1.USU_IDE " +

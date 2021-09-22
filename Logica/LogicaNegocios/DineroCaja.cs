@@ -12,13 +12,13 @@ namespace LogicaNegocios
     public class DineroCaja
     {
         string _obs, _precio, _totalefectivo, _totaltarjeta, _totalajuste, _subtotalvta, _dinerocaja1, _diferencia, _tarjetaencaja, _subtotalencaja;
-        int _ide;
+        int _ide, _alta;
         public DataTable Mostrar_dinerocaja()
         {
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
 
-            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA from plata_caja where PC_PUNTODEVTA = "+ Globales.puntodeventa + " order by PC_FECHA desc");
+            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA,PC_TOTALEFECTIVO,PC_TOTALTARJETA,PC_TOTALAJUSTE,PC_SUBTOTALVENTAS,PC_DINEROENCAJA,PC_TARJETAENCAJA,PC_SUBTOTALENCAJA,PC_DIFERENCIA from plata_caja where PC_PUNTODEVTA = " + Globales.puntodeventa + " order by PC_FECHA desc");
 
         }
 
@@ -27,7 +27,7 @@ namespace LogicaNegocios
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
 
-            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA from plata_caja where PC_PUNTODEVTA = " + Globales.puntodeventa + " and PC_FECHA = CURDATE() order by PC_FECHA desc");
+            return con.Mostrar_Datos("select PC_FECHA,PC_DINERO,PC_OBS,PC_IDE,PC_PUNTODEVTA,PC_TOTALEFECTIVO,PC_TOTALTARJETA,PC_TOTALAJUSTE,PC_SUBTOTALVENTAS,PC_DINEROENCAJA,PC_TARJETAENCAJA,PC_SUBTOTALENCAJA,PC_DIFERENCIA from plata_caja where PC_PUNTODEVTA = " + Globales.puntodeventa + " and PC_FECHA = CURDATE() order by PC_FECHA desc");
 
         }
 
@@ -336,6 +336,11 @@ namespace LogicaNegocios
         {
             get { return this._ide; }
             set { this._ide = value; }
+        }
+        public int Alta
+        {
+            get { return this._alta; }
+            set { this._alta = value; }
         }
 
     }

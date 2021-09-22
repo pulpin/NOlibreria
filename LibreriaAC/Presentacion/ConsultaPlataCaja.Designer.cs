@@ -39,6 +39,7 @@
             this.PC_DINERO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PC_OBS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PC_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_PUNTODEVTA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btneliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,7 +49,14 @@
             this.sfdRuta1 = new System.Windows.Forms.SaveFileDialog();
             this.btnborrarusu = new System.Windows.Forms.Button();
             this.btnaltacliente = new System.Windows.Forms.Button();
-            this.PC_PUNTODEVTA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_TOTALEFECTIVO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_TOTALTARJETA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_TOTALAJUSTE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_SUBTOTALVENTAS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_DINEROENCAJA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_TARJETAENCAJA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_SUBTOTALENCAJA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PC_DIFERENCIA = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             this.cmdmenugrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
@@ -77,6 +85,7 @@
             this.gConsulta.TabIndex = 195;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
+            this.gConsulta.DoubleClick += new System.EventHandler(this.gConsulta_DoubleClick);
             // 
             // cmdmenugrid
             // 
@@ -107,7 +116,15 @@
             this.PC_DINERO,
             this.PC_OBS,
             this.PC_IDE,
-            this.PC_PUNTODEVTA});
+            this.PC_PUNTODEVTA,
+            this.PC_TOTALEFECTIVO,
+            this.PC_TOTALTARJETA,
+            this.PC_TOTALAJUSTE,
+            this.PC_SUBTOTALVENTAS,
+            this.PC_DINEROENCAJA,
+            this.PC_TARJETAENCAJA,
+            this.PC_SUBTOTALENCAJA,
+            this.PC_DIFERENCIA});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Cantidad", null, "(Cantidad: Recuento={0})")});
@@ -152,6 +169,14 @@
             this.PC_IDE.Caption = "PC_IDE";
             this.PC_IDE.FieldName = "PC_IDE";
             this.PC_IDE.Name = "PC_IDE";
+            // 
+            // PC_PUNTODEVTA
+            // 
+            this.PC_PUNTODEVTA.Caption = "PuntoDeVenta";
+            this.PC_PUNTODEVTA.FieldName = "PC_PUNTODEVTA";
+            this.PC_PUNTODEVTA.Name = "PC_PUNTODEVTA";
+            this.PC_PUNTODEVTA.Visible = true;
+            this.PC_PUNTODEVTA.VisibleIndex = 3;
             // 
             // btneliminar
             // 
@@ -234,13 +259,53 @@
             this.btnaltacliente.UseVisualStyleBackColor = true;
             this.btnaltacliente.Click += new System.EventHandler(this.btnaltacliente_Click);
             // 
-            // PC_PUNTODEVTA
+            // PC_TOTALEFECTIVO
             // 
-            this.PC_PUNTODEVTA.Caption = "PuntoDeVenta";
-            this.PC_PUNTODEVTA.FieldName = "PC_PUNTODEVTA";
-            this.PC_PUNTODEVTA.Name = "PC_PUNTODEVTA";
-            this.PC_PUNTODEVTA.Visible = true;
-            this.PC_PUNTODEVTA.VisibleIndex = 3;
+            this.PC_TOTALEFECTIVO.Caption = "PC_TOTALEFECTIVO";
+            this.PC_TOTALEFECTIVO.FieldName = "PC_TOTALEFECTIVO";
+            this.PC_TOTALEFECTIVO.Name = "PC_TOTALEFECTIVO";
+            // 
+            // PC_TOTALTARJETA
+            // 
+            this.PC_TOTALTARJETA.Caption = "PC_TOTALTARJETA";
+            this.PC_TOTALTARJETA.FieldName = "PC_TOTALTARJETA";
+            this.PC_TOTALTARJETA.Name = "PC_TOTALTARJETA";
+            // 
+            // PC_TOTALAJUSTE
+            // 
+            this.PC_TOTALAJUSTE.Caption = "PC_TOTALAJUSTE";
+            this.PC_TOTALAJUSTE.FieldName = "PC_TOTALAJUSTE";
+            this.PC_TOTALAJUSTE.Name = "PC_TOTALAJUSTE";
+            // 
+            // PC_SUBTOTALVENTAS
+            // 
+            this.PC_SUBTOTALVENTAS.Caption = "PC_SUBTOTALVENTAS";
+            this.PC_SUBTOTALVENTAS.FieldName = "PC_SUBTOTALVENTAS";
+            this.PC_SUBTOTALVENTAS.Name = "PC_SUBTOTALVENTAS";
+            // 
+            // PC_DINEROENCAJA
+            // 
+            this.PC_DINEROENCAJA.Caption = "PC_DINEROENCAJA";
+            this.PC_DINEROENCAJA.FieldName = "PC_DINEROENCAJA";
+            this.PC_DINEROENCAJA.Name = "PC_DINEROENCAJA";
+            // 
+            // PC_TARJETAENCAJA
+            // 
+            this.PC_TARJETAENCAJA.Caption = "PC_TARJETAENCAJA";
+            this.PC_TARJETAENCAJA.FieldName = "PC_TARJETAENCAJA";
+            this.PC_TARJETAENCAJA.Name = "PC_TARJETAENCAJA";
+            // 
+            // PC_SUBTOTALENCAJA
+            // 
+            this.PC_SUBTOTALENCAJA.Caption = "PC_SUBTOTALENCAJA";
+            this.PC_SUBTOTALENCAJA.FieldName = "PC_SUBTOTALENCAJA";
+            this.PC_SUBTOTALENCAJA.Name = "PC_SUBTOTALENCAJA";
+            // 
+            // PC_DIFERENCIA
+            // 
+            this.PC_DIFERENCIA.Caption = "PC_DIFERENCIA";
+            this.PC_DIFERENCIA.FieldName = "PC_DIFERENCIA";
+            this.PC_DIFERENCIA.Name = "PC_DIFERENCIA";
             // 
             // ConsultaPlataCaja
             // 
@@ -289,5 +354,13 @@
         private System.Windows.Forms.Button btnaltacliente;
         private DevExpress.XtraGrid.Columns.GridColumn PC_IDE;
         private DevExpress.XtraGrid.Columns.GridColumn PC_PUNTODEVTA;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_TOTALEFECTIVO;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_TOTALTARJETA;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_TOTALAJUSTE;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_SUBTOTALVENTAS;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_DINEROENCAJA;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_TARJETAENCAJA;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_SUBTOTALENCAJA;
+        private DevExpress.XtraGrid.Columns.GridColumn PC_DIFERENCIA;
     }
 }

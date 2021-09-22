@@ -598,6 +598,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.button3_Click);
             // 
             // ArqueodeCaja
@@ -606,6 +607,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(875, 654);
+            this.ControlBox = false;
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

@@ -16,7 +16,7 @@ namespace Presentacion
     public partial class ArqueodeCaja : Form
     {
         string _codigo;
-        int _pcide;
+        int _pcide, _alta;
         Rendiciones ren = new Rendiciones();
         public ArqueodeCaja()
         {
@@ -41,10 +41,14 @@ namespace Presentacion
             LUusuarios.Properties.PopulateColumns();
             LUusuarios.Properties.Columns[1].Visible = false;
 
-            fechadesde.EditValue = DateTime.Today;
+           // fechadesde.EditValue = DateTime.Today;
             
         }
-        
+
+        public void colocardiaactual()
+        {
+            fechadesde.EditValue = DateTime.Today;
+        }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
@@ -272,9 +276,12 @@ namespace Presentacion
 
                 DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
                 string fdesdee = fdesde.ToString("yyyy-MM-dd");
-
+                
                 string dinerodelacaja = dc.spConsultaCajadeDia(Convert.ToInt32(LUpunto.EditValue));
-                this.PCIde = dc.Ide;
+                if (this.Alta == 0)
+                { 
+                    this.PCIde = dc.Ide;
+                }
                 dinerodelacaja = dinerodelacaja.Replace(".", ",");
                 decimal dinerodelacajad = Convert.ToDecimal(dinerodelacaja);
                 txtdinerocaja.Text = dinerodelacaja;
@@ -328,6 +335,7 @@ namespace Presentacion
 
                 diferencia = totalenlacaja - subtotal;
                 txtdiferencia.Text = Convert.ToString(diferencia);
+                btnGuardar.Visible = true;
 
             }
             else
@@ -356,28 +364,62 @@ namespace Presentacion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DineroCaja dc = new DineroCaja();
-            dc.Totalefectivo = (txtefectivo.Text).Replace(",", ".");
-            dc.Totaltarjeta = (txttarjeta.Text).Replace(",", ".");
-            dc.Totalajuste = (txtajustes.Text).Replace(",", ".");
-            dc.Subtotalvta = (txttotalventas.Text).Replace(",", ".");
-            dc.DineroCaja1 = (txtingresototal.Text).Replace(",", ".");
-            dc.Tarjetaencaja = (txttarjetascaja.Text).Replace(",", ".");
-            dc.Subtotalencaja = (txttotalencaja.Text).Replace(",", ".");
-            dc.Diferencia = (txtdiferencia.Text).Replace(",", ".");
-            dc.Ide = this.PCIde;
-            int valor = dc.spAltaArqueo();
-            if (valor == 0)
-            {
-                //this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha dado de alta el Arqueo");
-            }
+           
+                DineroCaja dc = new DineroCaja();
+                dc.Totalefectivo = (txtefectivo.Text).Replace(",", ".");
+                dc.Totaltarjeta = (txttarjeta.Text).Replace(",", ".");
+                dc.Totalajuste = (txtajustes.Text).Replace(",", ".");
+                dc.Subtotalvta = (txttotalventas.Text).Replace(",", ".");
+                dc.DineroCaja1 = (txtingresototal.Text).Replace(",", ".");
+                dc.Tarjetaencaja = (txttarjetascaja.Text).Replace(",", ".");
+                dc.Subtotalencaja = (txttotalencaja.Text).Replace(",", ".");
+                dc.Diferencia = (txtdiferencia.Text).Replace(",", ".");
+                dc.Ide = this.PCIde;
+                dc.Alta = this.Alta;
+                int valor = dc.spAltaArqueo();
+                if (valor == 0)
+                {
+                    if (this.Alta == 1)
+                    {
+                        this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    }
+                    //this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    MessageBox.Show("Se ha dado de alta el Arqueo");
+                }
+           
+        }
+        public void Colocardatos(int pcide, DateTime Fecha,string dinero, int puntodevta, string totalefec, string totaltarje, string totalajus, string subtoventas, string dineroencaja, string tarjetaencaja, string subencaja, string diferencia)
+        {
+            LUpunto.EditValue = puntodevta;
+            LUpunto.Enabled = false;
+            fechadesde.EditValue = new DateTime(Fecha.Year,Fecha.Month,Fecha.Day);
+
+            //DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
+            //string fdesdee = fdesde.ToString("yyyy-MM-dd");
+            this.PCIde = pcide;
+            fechadesde.Enabled = false;
+            txtdinerocaja.Text = dinero;
+            txtefectivo.Text = totalefec;
+            txttarjeta.Text = totaltarje;
+            txtajustes.Text = totalajus;
+            txttotalventas.Text = subtoventas;
+            txtingresototal.Text = dineroencaja;
+            txttarjetascaja.Text = tarjetaencaja;
+            txttotalencaja.Text = subencaja;
+            txtdiferencia.Text = diferencia;
+            //btnGuardar.Enabled = false;
+            btnGuardar.Text = "Modificar";
 
         }
         public int PCIde
         {
             get { return this._pcide; }
             set { this._pcide = value; }
+        }
+        public int Alta
+        {
+            get { return this._alta; }
+            set { this._alta = value; }
         }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\LogicaNegocios.exe.config
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\LogicaNegocios.exe
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\LogicaNegocios.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\AccesoaDatos.exe
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\MySql.Data.dll
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\AccesoaDatos.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\bin\Release\MySql.Data.xml
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\obj\Release\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\obj\Release\LogicaNegocios.Properties.Resources.resources
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\obj\Release\LogicaNegocios.csproj.GenerateResource.Cache
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\obj\Release\LogicaNegocios.exe
+C:\Users\hugoo\Documents\GitHub\libreria\Logica\LogicaNegocios\obj\Release\LogicaNegocios.pdb

@@ -13,8 +13,8 @@ C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\bin\Debug\AccesoaDat
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\bin\Debug\AccesoaDatos.pdb
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\bin\Debug\MySql.Data.dll
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\bin\Debug\MySql.Data.xml
-C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.csprojResolveAssemblyReference.cache
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.Properties.Resources.resources
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.GenerateResource.Cache
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.exe
 C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.pdb
+C:\Users\hugoo\Documents\GitHub\libreria\Datos\AccesoaDatos\obj\Debug\AccesoaDatos.csprojResolveAssemblyReference.cache

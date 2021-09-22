@@ -18,6 +18,7 @@ namespace Presentacion
         private int tipopro = 0, _alta, _producide;
         OpenFileDialog openFileDialog1;
         private string rutacompleta, nombrearchivo, directorioactual, _iva, _codigoviejo,precioanterior;
+        
         public Cargarapida()
         {
             InitializeComponent();
@@ -27,33 +28,33 @@ namespace Presentacion
 
         private void modificaproduc()
         {
-            Productos pro = new Productos();
-            pro.productoide = this.Producide;
-            pro.Codigo = this.Codigoviejo;
+            Productos pro1 = new Productos();
+            pro1.productoide = this.Producide;
+            pro1.Codigo = this.Codigoviejo;
             // pro.Titulo = txttitulo.Text;
             // pro.Autor = txtautor.Text;
             // pro.Editorial = Convert.ToInt32(lUEdito.EditValue);
             // pro.Editorial = Convert.ToInt32(lUEdito.EditValue);
             // pro.Genero = Convert.ToInt32(LUgenero.EditValue);
-            pro.Proveeide = Convert.ToInt32(lUEproveedor.EditValue);
+            pro1.Proveeide = Convert.ToInt32(lUEproveedor.EditValue);
             txtprecio.Text = txtprecio.Text.Replace(",", ".");
             this.precioanterior = precioanterior.Replace(",", ".");
-            pro.Precio = txtprecio.Text;
-            pro.Precioanterior = this.precioanterior;
-            pro.Remito = txtfactura.Text;
-            pro.Codigoprovee = txtcodprove.Text;
+            pro1.Precio = txtprecio.Text;
+            pro1.Precioanterior = this.precioanterior;
+            pro1.Remito = txtfactura.Text;
+            pro1.Codigoprovee = txtcodprove.Text;
             if (txtcantidad.Text != string.Empty)
             {
-                pro.Cantidad = Convert.ToInt32(txtcantidad.Text);
-                pro.Factura = txtfactura.Text;
+                pro1.Cantidad = Convert.ToInt32(txtcantidad.Text);
+                pro1.Factura = txtfactura.Text;
             }
             else
             {
-                pro.Cantidad = 0;
+                pro1.Cantidad = 0;
             }
-            
-           // txtcosto.Text = txtcosto.Text.Replace(",", ".");
-           // pro.Costo = txtcosto.Text;
+
+            // txtcosto.Text = txtcosto.Text.Replace(",", ".");
+            // pro.Costo = txtcosto.Text;
 
             //txtiva.Text = txtiva.Text.Replace(",", ".");
             // pro.Iva = txtiva.Text;
@@ -62,17 +63,17 @@ namespace Presentacion
             //txtporcentaje.Text = txtporcentaje.Text.Replace(",", ".");
             //pro.Ganancia = txtporcentaje.Text;
 
-            
+
             //pro.Isbn = txtisbn.Text;
             //pro.Barra = txtbarra.Text;
             //if (nombrearchivo != string.Empty)
             //{
-              //  pro.Imagen = nombrearchivo;
+            //  pro.Imagen = nombrearchivo;
             //}
             //pro.Tipo = this.tipopro;
-            pro.Cuerpo = txtcuerpo.Text;
-            pro.Estante = txtestante.Text;
-            int retorno = pro.spModificarProductoCarga();
+            pro1.Cuerpo = txtcuerpo.Text;
+            pro1.Estante = txtestante.Text;
+            int retorno = pro1.spModificarProductoCarga();
             if (retorno == 0)
             {
                 if (rutacompleta != null)
@@ -81,8 +82,19 @@ namespace Presentacion
                     string archivoacopiar = directorioacopiar + "\\libros\\" + nombrearchivo;
                     System.IO.File.Copy(rutacompleta, archivoacopiar, true);
                 }
-               // this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha modificado con éxito!");
+                // this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                Venta ven = new Venta();
+                ven.venproductoide = this.Codigoviejo;
+                int cantidadreser = ven.spConsultaCantiReservas();
+                if (cantidadreser > 0)
+                {
+                    MessageBox.Show("Existen: " + cantidadreser + " Reservas de este artículos", "Atención hay reservas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("Se ha modificado con éxito!");
+                }
+                
                 this.vaciartexto();
             }
             else

@@ -65,6 +65,7 @@
             this.TSMIcliente = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMIccorrientes = new System.Windows.Forms.ToolStripMenuItem();
             this.TsMIPorcentaje = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMIgenero = new System.Windows.Forms.ToolStripMenuItem();
             this.consignasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaTSMIacons = new System.Windows.Forms.ToolStripMenuItem();
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,6 +94,7 @@
             this.cierraZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descargarPeriodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.menuReservas = new System.Windows.Forms.ToolStripButton();
             this.tlSBed = new System.Windows.Forms.ToolStripButton();
@@ -419,7 +421,8 @@
             this.TSMIcambiopre,
             this.TSMIcliente,
             this.TSMIccorrientes,
-            this.TsMIPorcentaje});
+            this.TsMIPorcentaje,
+            this.TSMIgenero});
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.modificarToolStripMenuItem.Text = "Modificar";
@@ -468,6 +471,13 @@
             this.TsMIPorcentaje.Size = new System.Drawing.Size(204, 22);
             this.TsMIPorcentaje.Text = "Porcentaje de editoriales";
             this.TsMIPorcentaje.Click += new System.EventHandler(this.TsMIPorcentaje_Click);
+            // 
+            // TSMIgenero
+            // 
+            this.TSMIgenero.Name = "TSMIgenero";
+            this.TSMIgenero.Size = new System.Drawing.Size(204, 22);
+            this.TSMIgenero.Text = "Género";
+            this.TSMIgenero.Click += new System.EventHandler(this.TSMIgenero_Click);
             // 
             // consignasToolStripMenuItem
             // 
@@ -660,7 +670,8 @@
             this.cierreXToolStripMenuItem,
             this.cierraZToolStripMenuItem,
             this.versionToolStripMenuItem,
-            this.descargarPeriodoToolStripMenuItem});
+            this.descargarPeriodoToolStripMenuItem,
+            this.cerrarToolStripMenuItem});
             this.impresoraToolStripMenuItem.Name = "impresoraToolStripMenuItem";
             this.impresoraToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.impresoraToolStripMenuItem.Text = "Impresora";
@@ -692,6 +703,13 @@
             this.descargarPeriodoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.descargarPeriodoToolStripMenuItem.Text = "Descargar periodo";
             this.descargarPeriodoToolStripMenuItem.Click += new System.EventHandler(this.descargarPeriodoToolStripMenuItem_Click);
+            // 
+            // cerrarToolStripMenuItem
+            // 
+            this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.cerrarToolStripMenuItem.Text = "Cerrar";
+            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
             // toolStrip2
             // 
@@ -816,7 +834,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Versión: 06/09/2021";
+            this.label5.Text = "Versión: 21/09/2021";
             // 
             // textBox2
             // 
@@ -973,5 +991,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem TsMIPorcentaje;
         private System.Windows.Forms.ToolStripMenuItem TSMIContador;
+        private System.Windows.Forms.ToolStripMenuItem TSMIgenero;
+        private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
     }
 }

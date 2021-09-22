@@ -254,5 +254,27 @@ namespace Presentacion
             get { return this._codigo; }
             set { this._codigo = value; }
         }
+
+        private void gConsulta_DoubleClick(object sender, EventArgs e)
+        {
+            IngresoClaveRe ic = new IngresoClaveRe();
+            Globales.usureservaide = 0;
+            ic.ShowDialog();
+
+            if (Globales.usureservaide != 0)
+            {
+                this.abrirmodificar();
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar una clave válida!");
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            gConsulta.DataSource = re.Mostrar_Reservas(0);
+        }
     }
 }

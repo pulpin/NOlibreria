@@ -371,3 +371,5 @@ C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Libre
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.CambiarPorcentaje.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.Contador.resources
 C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.VolverPrecio.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.ConsultaGenero.resources
+C:\Users\hugoo\Documents\GitHub\libreria\LibreriaAC\Presentacion\obj\Debug\Presentacion.AltaGenero.resources

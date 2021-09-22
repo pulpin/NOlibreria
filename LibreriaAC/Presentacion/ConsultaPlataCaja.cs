@@ -175,5 +175,29 @@ namespace Presentacion
             clh.colocarcodigo();
             clh.ShowDialog();
         }
+
+        private void gConsulta_DoubleClick(object sender, EventArgs e)
+        {
+            ArqueodeCaja ac = new ArqueodeCaja();
+            int pcide = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_IDE"]));
+            DateTime fecha = Convert.ToDateTime(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_FECHA"]));
+            string dinero = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_DINERO"]));
+            int punto = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_PUNTODEVTA"]));
+            string totalefe = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_TOTALEFECTIVO"]));
+            string totaltarje = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_TOTALTARJETA"]));
+            string totalajus = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_TOTALAJUSTE"]));
+            string subtotalven = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_SUBTOTALVENTAS"]));
+            string dineenca = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_DINEROENCAJA"]));
+            string tarjetaenca = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_TARJETAENCAJA"]));
+            string subtotalencaja = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_SUBTOTALENCAJA"]));
+            string dife = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["PC_DIFERENCIA"]));
+            ac.Alta = 1;
+            ac.Colocardatos(pcide, fecha, dinero,punto,totalefe,totaltarje, totalajus, subtotalven, dineenca, tarjetaenca, subtotalencaja, dife);
+            if (ac.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //gConsulta.DataSource = cli.Mostrar_clientes();
+                this.cargar();
+            }
+        }
     }
 }

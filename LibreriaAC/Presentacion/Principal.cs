@@ -709,6 +709,7 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         private void tSBArqueo_Click(object sender, EventArgs e)
         {
             ArqueodeCaja adc = new ArqueodeCaja();
+            adc.colocardiaactual();
             adc.ShowDialog();
         }
 
@@ -747,6 +748,32 @@ Typedef from exported Prototypes of "EpsonFiscalInterface.h"
         {
             Contador cn = new Contador();
             cn.ShowDialog();
+        }
+
+        private void TSMIgenero_Click(object sender, EventArgs e)
+        {
+            ConsultaGenero cg = new ConsultaGenero();
+            cg.ShowDialog();
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int error;
+            const int ERROR_NINGUNO = 0;
+            ConfigurarVelocidad(9600);
+            ConfigurarPuerto("0");
+
+
+            error = Conectar();
+            //MessageBox.Show("Se conecta: " + error.ToString());
+            error = CerrarComprobante();
+            if (error != ERROR_NINGUNO)
+            {
+                MessageBox.Show("Error al cerrar comprobante: " + error.ToString());
+            }
+
+            error = Desconectar();
+            //MessageBox.Show("Disconect: " + error.ToString());
         }
 
         private void toolTurnosD_Click(object sender, EventArgs e)

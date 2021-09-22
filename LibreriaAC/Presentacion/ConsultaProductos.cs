@@ -405,6 +405,7 @@ namespace Presentacion
             pro2.Precioanterior = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_PRECIOAN"]));
             pro2.Stock = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_STOCK"]));
             int tipopro = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_TIPOPRO"]));
+            pro2.Tipopro = tipopro; 
             pro2.Codigoprovee = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_CODIGOPROVEE"]));
             pro2.Dividido = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_PRECIOARTDI"]));
             pro2.Tipo = tipopro;
@@ -481,15 +482,23 @@ namespace Presentacion
 
         private void button6_Click(object sender, EventArgs e)
         {
+            var topRowIndex = gridViewPintarFilas.TopRowIndex;
+            var focusedRowHandle = gridViewPintarFilas.FocusedRowHandle;
             AltaPedido ap = new AltaPedido();
             ap.Producto = Convert.ToString(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_DESC"]));
             ap.colocarnombre();
             ap.Ide = Convert.ToInt32(this.gridViewPintarFilas.GetRowCellValue(gridViewPintarFilas.FocusedRowHandle, this.gridViewPintarFilas.Columns["LI_IDE"]));
             ap.Alta = 1;
-            if (ap.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            /*if (ap.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //gConsulta.DataSource = cli.Mostrar_clientes();
                 gConsulta.DataSource = pro.Mostrar_productos();
+            }*/
+            if (ap.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                gConsulta.DataSource = pro.Mostrar_productos();
+                gridViewPintarFilas.FocusedRowHandle = focusedRowHandle;
+                gridViewPintarFilas.TopRowIndex = topRowIndex;
             }
         }
 

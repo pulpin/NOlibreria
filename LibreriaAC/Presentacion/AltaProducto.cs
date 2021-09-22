@@ -18,6 +18,7 @@ namespace Presentacion
         string _codigo,_preciosinmodi;
         OpenFileDialog openFileDialog1;
         private string rutacompleta, nombrearchivo, directorioactual, _iva;
+        
         public AltaProducto()
         {
             InitializeComponent();
@@ -193,7 +194,7 @@ namespace Presentacion
         }
         private void desactivariva()
         {
-            this.tipopro = 0;
+            //this.tipopro = 0;
             paneliva.Visible = false;
             lbletra.Visible = false;
             txtdividido.Visible = false;
@@ -205,6 +206,14 @@ namespace Presentacion
             this.tipopro = 1;
             lbletra.Text = "L";
             this.activariva();
+            Genero gen = new Genero();
+            gen.EsLibro = this.tipopro;
+            LUgenero.Properties.DisplayMember = "GEN_DESC";
+            LUgenero.Properties.ValueMember = "GEN_IDE";
+            LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
+            LUgenero.Properties.PopulateColumns();
+            //LUgenero.Properties.Columns[0].Visible = false;
+            //LUgenero.Properties.Columns[2].Visible = false;
         }
 
         private void rbmarro_CheckedChanged(object sender, EventArgs e)
@@ -212,7 +221,14 @@ namespace Presentacion
             this.tipopro = 2;
             lbletra.Text = "M";
             this.activariva();
-
+            Genero gen = new Genero();
+            gen.EsLibro = 1;
+            LUgenero.Properties.DisplayMember = "GEN_DESC";
+            LUgenero.Properties.ValueMember = "GEN_IDE";
+            LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
+            LUgenero.Properties.PopulateColumns();
+           // LUgenero.Properties.Columns[0].Visible = false;
+           // LUgenero.Properties.Columns[2].Visible = false;
         }
 
         private void rbdida_CheckedChanged(object sender, EventArgs e)
@@ -220,6 +236,14 @@ namespace Presentacion
             this.tipopro = 3;
             lbletra.Text = "D";
             this.activariva();
+            Genero gen = new Genero();
+            gen.EsLibro = 1;
+            LUgenero.Properties.DisplayMember = "GEN_DESC";
+            LUgenero.Properties.ValueMember = "GEN_IDE";
+            LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
+            LUgenero.Properties.PopulateColumns();
+            //LUgenero.Properties.Columns[0].Visible = false;
+            //LUgenero.Properties.Columns[2].Visible = false;
         }
 
         private void AltaProducto_Load(object sender, EventArgs e)
@@ -233,11 +257,13 @@ namespace Presentacion
             lUEditorial.Properties.Columns[0].Visible = false;
 
             Genero gen = new Genero();
+            gen.EsLibro = this.tipopro;
             LUgenero.Properties.DisplayMember = "GEN_DESC";
             LUgenero.Properties.ValueMember = "GEN_IDE";
-            LUgenero.Properties.DataSource = gen.Tabladedatos_genero();
+            LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
             LUgenero.Properties.PopulateColumns();
             LUgenero.Properties.Columns[0].Visible = false;
+            LUgenero.Properties.Columns[2].Visible = false;
 
 
             PorcenIVA pori = new PorcenIVA();
@@ -406,6 +432,16 @@ namespace Presentacion
 
         public void colocardatos(Productos pro)
         {
+            Genero gen = new Genero();
+            gen.EsLibro = pro.Tipopro;
+            this.tipopro = pro.Tipopro;
+            
+            LUgenero.Properties.DisplayMember = "GEN_DESC";
+            LUgenero.Properties.ValueMember = "GEN_IDE";
+            LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
+            LUgenero.Properties.PopulateColumns();
+            // LUgenero.Properties.Columns[0].Visible = false;
+
             Producide = pro.productoide;
             txttitulo.Text = pro.Titulo;
             txtautor.Text = pro.Autor;
@@ -469,6 +505,8 @@ namespace Presentacion
 
             gBtipopro.Enabled = false;
             btnagregar.Text = "Modificar";
+
+           
         }
 
         private void lUporcentaje_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
@@ -487,6 +525,15 @@ namespace Presentacion
         private void rblibro_CheckedChanged(object sender, EventArgs e)
         {
             this.desactivariva();
+            Genero gen = new Genero();
+            gen.EsLibro = this.tipopro;
+            //gen.EsLibro = produc.Tipopro;
+            LUgenero.Properties.DisplayMember = "GEN_DESC";
+            LUgenero.Properties.ValueMember = "GEN_IDE";
+            LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
+            LUgenero.Properties.PopulateColumns();
+           // LUgenero.Properties.Columns[0].Visible = false;
+           // LUgenero.Properties.Columns[2].Visible = false;
         }
         
         public int Alta

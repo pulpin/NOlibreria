@@ -138,6 +138,12 @@
     <Compile Include="AltaProductoConsigna.designer.cs">
       <DependentUpon>AltaProductoConsigna.cs</DependentUpon>
     </Compile>
+    <Compile Include="AltaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaGenero.designer.cs">
+      <DependentUpon>AltaGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="AltaProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,12 @@
     </Compile>
     <Compile Include="ConsultaProfor.designer.cs">
       <DependentUpon>ConsultaProfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaGenero.designer.cs">
+      <DependentUpon>ConsultaGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaProveedor.cs">
       <SubType>Form</SubType>
@@ -566,6 +578,9 @@
     <EmbeddedResource Include="AltaProductoConsigna.resx">
       <DependentUpon>AltaProductoConsigna.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltaGenero.resx">
+      <DependentUpon>AltaGenero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaProveedor.resx">
       <DependentUpon>AltaProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -655,6 +670,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaProfor.resx">
       <DependentUpon>ConsultaProfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaGenero.resx">
+      <DependentUpon>ConsultaGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaProveedor.resx">
       <DependentUpon>ConsultaProveedor.cs</DependentUpon>

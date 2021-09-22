@@ -13,7 +13,7 @@ namespace LogicaNegocios
     {
         string _titulo = string.Empty, _autor = string.Empty, valor = string.Empty, contiene = string.Empty, _barra = string.Empty, _codigo = string.Empty,_isbn = string.Empty, _precio = string.Empty, _preciosinmodificar=string.Empty, _costo = string.Empty,_iva = string.Empty, _ganancia = string.Empty,_factura = string.Empty, _imagen = string.Empty, _cuerpo = string.Empty,_estante = string.Empty, _importevta = string.Empty, _codigointernoedi = string.Empty, _stock = string.Empty, _remito = string.Empty,_primervalor, _segundovalor, _codigoprovee, _precioanterior, precioactual;
         decimal _precioante, _preciol;
-        int _titup, _autorp, _edip, _pedidos, _alta, _notaparcial;
+        int _titup, _autorp, _edip, _pedidos, _alta, _notaparcial, _tipopro;
         int _contengapala, _editorial, _genero, _tipo, _cantidad, _productoide, _nrodevta, _proveeide, _dividido, _rendido, _original, _consignacantidad,_consignanro, _consignaide, _consignaactual;
         Conexion con = new Conexion("libreria", Globales.ip);
         int stockp, consideactual, resultadop;
@@ -2254,6 +2254,11 @@ namespace LogicaNegocios
         {
             get { return this._codigoprovee; }
             set { this._codigoprovee = value; }
+        }
+        public int Tipopro
+        {
+            get { return this._tipopro; }
+            set { this._tipopro = value; }
         }
     }
     

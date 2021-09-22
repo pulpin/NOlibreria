@@ -52,6 +52,8 @@
             this.RESE_USUP_FE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.usumodificar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RESE_USUM_FE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RESE_USUL_FE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RESE_USUE_FE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnparaavisar = new System.Windows.Forms.Button();
@@ -65,6 +67,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtlibro = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +81,7 @@
             this.gConsulta.TabIndex = 1;
             this.gConsulta.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPintarFilas});
+            this.gConsulta.DoubleClick += new System.EventHandler(this.gConsulta_DoubleClick);
             // 
             // gridViewPintarFilas
             // 
@@ -111,14 +115,15 @@
             this.RESE_OBS,
             this.RESE_USUP_FE,
             this.usumodificar,
-            this.RESE_USUM_FE});
+            this.RESE_USUM_FE,
+            this.RESE_USUL_FE,
+            this.RESE_USUE_FE});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.Name = "gridViewPintarFilas";
             this.gridViewPintarFilas.OptionsBehavior.Editable = false;
             this.gridViewPintarFilas.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridViewPintarFilas.OptionsView.ShowFooter = true;
             this.gridViewPintarFilas.RowStyle += gridViewPintarFilas_RowStyle;
-            
             // 
             // CLIEN_NOMBRE
             // 
@@ -310,6 +315,18 @@
             this.RESE_USUM_FE.FieldName = "RESE_USUM_FE";
             this.RESE_USUM_FE.Name = "RESE_USUM_FE";
             // 
+            // RESE_USUL_FE
+            // 
+            this.RESE_USUL_FE.Caption = "RESE_USUL_FE";
+            this.RESE_USUL_FE.FieldName = "RESE_USUL_FE";
+            this.RESE_USUL_FE.Name = "RESE_USUL_FE";
+            // 
+            // RESE_USUE_FE
+            // 
+            this.RESE_USUE_FE.Caption = "RESE_USUE_FE";
+            this.RESE_USUE_FE.FieldName = "RESE_USUE_FE";
+            this.RESE_USUE_FE.Name = "RESE_USUE_FE";
+            // 
             // btncancelar
             // 
             this.btncancelar.Image = global::Presentacion.Properties.Resources.Cancel64;
@@ -340,7 +357,7 @@
             // btnparaavisar
             // 
             this.btnparaavisar.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnparaavisar.Location = new System.Drawing.Point(49, 401);
+            this.btnparaavisar.Location = new System.Drawing.Point(163, 401);
             this.btnparaavisar.Name = "btnparaavisar";
             this.btnparaavisar.Size = new System.Drawing.Size(108, 21);
             this.btnparaavisar.TabIndex = 22;
@@ -362,7 +379,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(163, 401);
+            this.button4.Location = new System.Drawing.Point(277, 401);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(108, 21);
             this.button4.TabIndex = 24;
@@ -384,7 +401,7 @@
             // btntodos
             // 
             this.btntodos.BackColor = System.Drawing.Color.White;
-            this.btntodos.Location = new System.Drawing.Point(277, 401);
+            this.btntodos.Location = new System.Drawing.Point(277, 433);
             this.btntodos.Name = "btntodos";
             this.btntodos.Size = new System.Drawing.Size(108, 21);
             this.btntodos.TabIndex = 26;
@@ -446,12 +463,24 @@
             this.label3.Text = "Título:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(49, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 21);
+            this.button1.TabIndex = 259;
+            this.button1.Text = "Cargados";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 476);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtlibro);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txttelefono);
@@ -516,5 +545,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtlibro;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraGrid.Columns.GridColumn RESE_USUL_FE;
+        private DevExpress.XtraGrid.Columns.GridColumn RESE_USUE_FE;
+        private System.Windows.Forms.Button button1;
     }
 }
