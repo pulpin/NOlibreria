@@ -88,7 +88,7 @@ namespace Presentacion
                 int cantidadreser = ven.spConsultaCantiReservas();
                 if (cantidadreser > 0)
                 {
-                    MessageBox.Show("Existen: " + cantidadreser + " Reservas de este artículos", "Atención hay reservas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Existen: " + cantidadreser + " Reservas de este artículo ", "Atención hay reservas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -140,8 +140,8 @@ namespace Presentacion
             pro.Tipo = this.tipopro;
             pro.Cuerpo = txtcuerpo.Text;
             pro.Estante = txtestante.Text;
-            int retorno = pro.spInsertarProducto();
-            if (retorno == 0)
+            string retorno = pro.spInsertarProducto();
+            if (retorno != "error")
             {
 
                 if (rutacompleta != null)
@@ -151,7 +151,7 @@ namespace Presentacion
                     System.IO.File.Copy(rutacompleta, archivoacopiar, true);
                 }
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha dado de alta con éxito!");
+                MessageBox.Show("Se ha dado de alta con éxito: " + retorno);
             }
             else
             {

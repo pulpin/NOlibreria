@@ -38,6 +38,7 @@
             this.VENA_IDE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.fechadesde = new DevExpress.XtraEditors.DateEdit();
+            this.VENA_OBS = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPintarFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fechadesde.Properties.CalendarTimeProperties)).BeginInit();
@@ -98,7 +99,8 @@
             this.gridViewPintarFilas.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.descrip,
             this.total,
-            this.VENA_IDE});
+            this.VENA_IDE,
+            this.VENA_OBS});
             this.gridViewPintarFilas.GridControl = this.gConsulta;
             this.gridViewPintarFilas.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Cantidad", null, "(Cantidad: Recuento={0})")});
@@ -147,15 +149,23 @@
             // fechadesde
             // 
             this.fechadesde.EditValue = null;
-            this.fechadesde.Enabled = false;
             this.fechadesde.Location = new System.Drawing.Point(320, 26);
             this.fechadesde.Name = "fechadesde";
             this.fechadesde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.fechadesde.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.fechadesde.Size = new System.Drawing.Size(100, 20);
+            this.fechadesde.Size = new System.Drawing.Size(176, 20);
             this.fechadesde.TabIndex = 206;
+            this.fechadesde.EditValueChanged += new System.EventHandler(this.fechadesde_EditValueChanged);
+            // 
+            // VENA_OBS
+            // 
+            this.VENA_OBS.Caption = "Observación";
+            this.VENA_OBS.FieldName = "VENA_OBS";
+            this.VENA_OBS.Name = "VENA_OBS";
+            this.VENA_OBS.Visible = true;
+            this.VENA_OBS.VisibleIndex = 2;
             // 
             // ConsultaAjustes
             // 
@@ -193,5 +203,6 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.DateEdit fechadesde;
         private DevExpress.XtraGrid.Columns.GridColumn VENA_IDE;
+        private DevExpress.XtraGrid.Columns.GridColumn VENA_OBS;
     }
 }

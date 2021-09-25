@@ -500,10 +500,10 @@ namespace LogicaNegocios
             return Valor_Retornado;
         }
 
-        public int spInsertarProducto()
+        public string spInsertarProducto()
         {
-            int Valor_Retornado = 0;
-            string cadenaconexion;
+            //int Valor_Retornado = 0;
+            string cadenaconexion, Valor_Retornado=string.Empty;
 
             Conexion con = new Conexion("libreria", Globales.ip);
             cadenaconexion = con.inicializa();
@@ -539,12 +539,12 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("pcodigoprovee", this.Codigoprovee);
                 myCommand.Parameters.AddWithValue("dividido", this.Dividido);
 
-                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
+                MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.VarChar);
                 //MySqlParameter ValorRetorno = new MySqlParameter("RETURN_VALUE", SqlDbType.Decimal);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
                 myCommand.Parameters.Add(ValorRetorno);
                 myCommand.ExecuteNonQuery();
-                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+                Valor_Retornado = Convert.ToString(ValorRetorno.Value);
                 sqlTran.Commit();
                 mysql_conexion.Close();
             }
@@ -566,6 +566,8 @@ namespace LogicaNegocios
 
             return Valor_Retornado;
         }
+
+       
 
         public int spEnvioproductoprecioautomatico()
         {

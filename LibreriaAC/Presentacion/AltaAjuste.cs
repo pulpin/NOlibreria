@@ -17,7 +17,7 @@ namespace Presentacion
         private int _alta, _situacion, _clienteide, _tipo, _usuide,_numero, _ide;
         private string _iva, _cuit, _razonsocial, _domicilio, _telefono;
         private string _nombre, _nombrecompleto, _contra, _contravta;
-        string _titulo, _calle, _localidad, _provincia, _cliente,_precio;
+        string _titulo, _calle, _localidad, _provincia, _cliente,_precio, _fecha;
         public AltaAjuste()
         {
             InitializeComponent();
@@ -57,7 +57,8 @@ namespace Presentacion
             //ta. = txtprecio.Text;
             ta.Precio = txtprecio.Text;
             ta.Tipo = Convert.ToInt32(lUTipoajuste.EditValue);
-
+            ta.Fecha = this.Fecha;
+            ta.Obs = txtobs.Text;
             int resultado = ta.spAgregarTipoajuste();
             if (resultado == 0)
             {
@@ -311,5 +312,11 @@ namespace Presentacion
             get { return this._precio; }
             set { this._precio = value; }
         }
+        public string Fecha
+        {
+            get { return this._fecha; }
+            set { this._fecha = value; }
+        }
+
     }
 }

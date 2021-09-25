@@ -14,8 +14,8 @@ namespace Presentacion
 {
     public partial class AltaReserva : Form,IClienteRe
     {
-        private int _liide, _cliide, _alta;
-        string _codigo, _titulo, _autor, _editorial,_precio, _barra;
+        private int _liide, _cliide, _alta, _editorialcodigo;
+        string _codigo, _titulo, _autor, _editorial,_precio, _barra, _isbn;
         public AltaReserva()
         {
             InitializeComponent();
@@ -48,29 +48,71 @@ namespace Presentacion
 
         private void altaReserva()
         {
+            string retorno;
+            int pasar = 0;
             Reservas re = new Reservas();
-            re.Cliide = this.Cliide;
-            re.Clitelefono = txtcaracteristica + txttelefono.Text;
-            re.Codigolibro = txtcodigo.Text;
-            re.Desc = txttitulo.Text;
-            re.Autor = txtautor.Text;
-            re.Editorial = txteditorial.Text;
-            txtprecio.Text = txtprecio.Text.Replace(",", ".");
-            re.Precio = txtprecio.Text;
-            re.Cantidad = Convert.ToInt32(txtcantidad.Text);
 
-            int retorno = re.spInsertarReserva1();
-            //int retorno = pro.spInsertarProducto();
-            
-            if (retorno == 0)
+            if (txtcodigo.Text == string.Empty)
             {
+                if ((txtbarra.Text == string.Empty) && (txtisbn1.Text == string.Empty) && (txttitulo.Text == string.Empty) && (txtautor.Text == string.Empty) && (txtprecio.Text == string.Empty))
+                {
+                    MessageBox.Show("Debe completar todos los campos para guardar la reserva.");
+                    pasar = 1;
+                }
+                else
+                { 
+                    Productos pro = new Productos();
+                    pro.Titulo = (txttitulo.Text).ToUpper();
+                    pro.Autor = (txtautor.Text).ToUpper();
+                    pro.Editorial = Convert.ToInt32(lUEditorial.EditValue);
+                    pro.Genero = 1;
+                    txtprecio.Text = txtprecio.Text.Replace(",", ".");
+                    pro.Precio = txtprecio.Text;
+                    pro.Cantidad = Convert.ToInt32(txtcantidad.Text);
+                    pro.Dividido = 1;
+                    pro.Isbn = txtisbn1.Text;
+                    pro.Barra = txtbarra.Text;
+                    pro.Tipo = 0;
+                    retorno = pro.spInsertarProducto();
+                    if (retorno == "error")
+                    {
+                        MessageBox.Show("Se ha producido un error al insertar el producto");
+                    }
+                    else
+                    {
+                        re.Codigolibro = retorno;
+                    }
+                }
 
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha dado de alta con éxito!");
             }
             else
             {
-                MessageBox.Show("Hubo un problema, por favor intentelo de nuevo.");
+                re.Codigolibro = txtcodigo.Text;
+            }
+            if (pasar==0)
+            { 
+                re.Cliide = this.Cliide;
+                re.Clitelefono = txtcaracteristica + txttelefono.Text;
+            
+                re.Desc = txttitulo.Text;
+                re.Autor = txtautor.Text;
+                re.Editorial = lUEditorial.Text;
+                txtprecio.Text = txtprecio.Text.Replace(",", ".");
+                re.Precio = txtprecio.Text;
+                re.Cantidad = Convert.ToInt32(txtcantidad.Text);
+
+                int retornore = re.spInsertarReserva1();
+            
+                    if (retornore == 0)
+                    {
+
+                        this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                        MessageBox.Show("Se ha dado de alta con éxito!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un problema, por favor intentelo de nuevo.");
+                    }
             }
         }
 
@@ -103,14 +145,20 @@ namespace Presentacion
 
         private void AltaProducto_Load(object sender, EventArgs e)
         {
+            Editorial edi = new Editorial();
 
+            lUEditorial.Properties.DisplayMember = "EDI_EDITORIAL";
+            lUEditorial.Properties.ValueMember = "EDI_CODIGO";
+            lUEditorial.Properties.DataSource = edi.Tabladedatos_editoriales();
+            lUEditorial.Properties.PopulateColumns();
+            lUEditorial.Properties.Columns[0].Visible = false;
         }
 
         private void txttitulo_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txteditorial.Focus();
+                txtisbn1.Focus();
             }
         }
 
@@ -229,7 +277,16 @@ namespace Presentacion
             get { return this._barra; }
             set { this._barra = value; }
         }
-
+        public String Isbn
+        {
+            get { return this._isbn; }
+            set { this._isbn = value; }
+        }
+        public int EditorialCodigo
+        {
+            get { return this._editorialcodigo; }
+            set { this._editorialcodigo = value; }
+        }
         private void btnnoaparececatalogo_Click(object sender, EventArgs e)
         {
 
@@ -241,10 +298,11 @@ namespace Presentacion
             txttitulo.Enabled = true;
             txtautor.Text = string.Empty;
             txtautor.Enabled = true;
-            txteditorial.Text = string.Empty;
-            txteditorial.Enabled = true;
+            txtisbn1.Text = string.Empty;
+            txtisbn1.Enabled = true;
             txtprecio.Text = string.Empty;
             txtprecio.Enabled = true;
+            lUEditorial.Enabled = true;
         }
 
         public String Precio
@@ -259,10 +317,11 @@ namespace Presentacion
             txtcodigo.Text = this.Codigo;
             txttitulo.Text = this.Titulo;
             txtautor.Text = this.Autor;
-            txteditorial.Text = this.Editorial;
             txtprecio.Text = this.Precio;
             txtbarra.Text = this.Barra;
-
+            txtisbn1.Text = this.Isbn;
+            lUEditorial.EditValue = this.EditorialCodigo;
+            lUEditorial.Enabled = false;
         }
         private void btnbuscacli_Click(object sender, EventArgs e)
         {

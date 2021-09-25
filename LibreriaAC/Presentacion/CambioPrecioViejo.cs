@@ -322,8 +322,8 @@ namespace Presentacion
                 pro.Tipo = 0;
                 pro.Cuerpo = string.Empty;
                 pro.Estante = string.Empty;
-                int valor = pro.spInsertarProducto();
-                if (valor == 0)
+                string valor = pro.spInsertarProducto();
+                if (valor != "error")
                 {
                     //MessageBox.Show("se dió de alta");
                 }
@@ -366,8 +366,8 @@ namespace Presentacion
             pro.Tipo = 0;
             pro.Cuerpo = string.Empty;
             pro.Estante = string.Empty;
-            int valor = pro.spInsertarProducto();
-            if (valor == 0)
+            string valor = pro.spInsertarProducto();
+            if (valor != "error")
             {
                 //MessageBox.Show("se dió de alta");
             }

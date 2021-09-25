@@ -104,8 +104,8 @@ namespace Presentacion
             string imagenconide = string.Empty;
             string extension;
             Productos pro = new Productos();
-            pro.Titulo = txttitulo.Text;
-            pro.Autor = txtautor.Text;
+            pro.Titulo = (txttitulo.Text).ToUpper();
+            pro.Autor = (txtautor.Text).ToUpper();
             pro.Editorial = Convert.ToInt32(lUEditorial.EditValue);
             pro.Genero = Convert.ToInt32(LUgenero.EditValue);
 
@@ -143,8 +143,8 @@ namespace Presentacion
             pro.Cuerpo = txtcuerpo.Text;
             pro.Estante = txtestante.Text;
             pro.Codigoprovee = txtcodprovee.Text;
-            int retorno = pro.spInsertarProducto();
-            if (retorno == 0)
+            string retorno = pro.spInsertarProducto();
+            if (retorno != "error")
             {
 
                 if (rutacompleta != null)
@@ -159,7 +159,7 @@ namespace Presentacion
                     System.IO.File.Move(archivoacopiar, archivoarenombrar);
                 }
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                MessageBox.Show("Se ha dado de alta con éxito!");
+                MessageBox.Show("Se ha dado de alta con éxito: "+retorno);
             }
             else
             {
@@ -441,7 +441,7 @@ namespace Presentacion
             LUgenero.Properties.DataSource = gen.Tabladedatos_generos();
             LUgenero.Properties.PopulateColumns();
             // LUgenero.Properties.Columns[0].Visible = false;
-
+            
             Producide = pro.productoide;
             txttitulo.Text = pro.Titulo;
             txtautor.Text = pro.Autor;

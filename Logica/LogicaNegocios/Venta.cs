@@ -1281,7 +1281,7 @@ namespace LogicaNegocios
         {
             Conexion con = new Conexion("libreria", Globales.ip);
             con.AbrirConexio();
-            return con.Mostrar_Datos("select taj.TIA_DESC as descrip,va.VENA_IMPORTE as total,va.VENA_IDE from ventaajuste as va " +
+            return con.Mostrar_Datos("select taj.TIA_DESC as descrip,va.VENA_IMPORTE as total,va.VENA_IDE,va.VENA_OBS from ventaajuste as va " +
                         " left join tipoajuste taj on va.VENA_TIA_IDE = taj.TIA_IDE " +
                         " where va.VENA_FECHA >= '" + fecha + "' AND va.VENA_FECHA <= '" + fecha + "' " +
                         " and va.VENA_PTOVTA = " + ptovta + " " + 

@@ -22,11 +22,12 @@ namespace Presentacion
 
         private void ConsultaInteres_Load(object sender, EventArgs e)
         {
+            fechadesde.EditValue = DateTime.Today;
             this.cargar();
         }
         private void cargar()
         {
-            fechadesde.EditValue = DateTime.Today;
+            
             DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
             string fdesdee = fdesde.ToString("yyyy-MM-dd");
             gConsulta.DataSource = ven.Tabladedatos_Ajustes(Globales.puntodeventa, fdesdee);
@@ -71,9 +72,11 @@ namespace Presentacion
 
         private void btnaltacliente_Click(object sender, EventArgs e)
         {
+            DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
+            string fdesdee = fdesde.ToString("yyyy-MM-dd");
             AltaAjuste aa = new AltaAjuste();
             aa.Alta = 1;
-            
+            aa.Fecha = fdesdee;
             if (aa.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //gConsulta.DataSource = cli.Mostrar_clientes();
@@ -137,6 +140,11 @@ namespace Presentacion
                 //gConsulta.DataSource = edi.Tabladedatos_editorialesAva();
                 //txttitulo.Text = string.Empty;
             }
+        }
+
+        private void fechadesde_EditValueChanged(object sender, EventArgs e)
+        {
+            this.cargar();
         }
     }
 }

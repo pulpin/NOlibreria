@@ -150,7 +150,7 @@
             // 
             // lUEditorial
             // 
-            this.lUEditorial.Location = new System.Drawing.Point(127, 168);
+            this.lUEditorial.Location = new System.Drawing.Point(127, 167);
             this.lUEditorial.Name = "lUEditorial";
             this.lUEditorial.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.lUEditorial.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;

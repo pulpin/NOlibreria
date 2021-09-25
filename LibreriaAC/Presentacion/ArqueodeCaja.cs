@@ -277,7 +277,7 @@ namespace Presentacion
                 DateTime fdesde = Convert.ToDateTime(fechadesde.EditValue);
                 string fdesdee = fdesde.ToString("yyyy-MM-dd");
                 
-                string dinerodelacaja = dc.spConsultaCajadeDia(Convert.ToInt32(LUpunto.EditValue));
+                string dinerodelacaja = dc.spConsultaCajadeDia(Convert.ToInt32(LUpunto.EditValue), fdesdee);
                 if (this.Alta == 0)
                 { 
                     this.PCIde = dc.Ide;

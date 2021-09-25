@@ -78,7 +78,7 @@ namespace LogicaNegocios
             return Valor_Retornado;
         }
 
-        public string spConsultaCajadeDia(int puntodeventa)
+        public string spConsultaCajadeDia(int puntodeventa,string fecha)
         {
             string Valor_Retornado = string.Empty;
             string cadenaconexion;
@@ -98,6 +98,7 @@ namespace LogicaNegocios
                 myCommand.CommandText = "spConsultaCajadelDia";
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.Parameters.AddWithValue("ptodeventa", puntodeventa);
+                myCommand.Parameters.AddWithValue("pfecha", fecha);
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.VarChar);
                 MySqlParameter ValorRetorno2 = new MySqlParameter("@Resultado2", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;

@@ -12,7 +12,7 @@ namespace LogicaNegocios
     public class Tipoajuste
     {
         int _tipo,_ide;
-        string _precio, _saldo, _saldoactual;
+        string _precio, _saldo, _saldoactual, _fecha, _obs;
 
         public DataTable Tabladedatos_tiposdeajustes()
         {
@@ -43,7 +43,8 @@ namespace LogicaNegocios
                 myCommand.Parameters.AddWithValue("ptipo", this.Tipo);
                 myCommand.Parameters.AddWithValue("ptovta", Globales.puntodeventa);
                 myCommand.Parameters.AddWithValue("pusuide", Globales.gbUsuide);
-
+                myCommand.Parameters.AddWithValue("pfecha", this.Fecha);
+                myCommand.Parameters.AddWithValue("pobs", this.Obs);
                 MySqlParameter ValorRetorno = new MySqlParameter("@Resultado", MySqlDbType.Int32);
                 ValorRetorno.Direction = ParameterDirection.Output;// Output;
                 myCommand.Parameters.Add(ValorRetorno);
@@ -245,6 +246,16 @@ namespace LogicaNegocios
         {
             get { return this._ide; }
             set { this._ide = value; }
+        }
+        public string Fecha
+        {
+            get { return this._fecha; }
+            set { this._fecha = value; }
+        }
+        public string Obs
+        {
+            get { return this._obs; }
+            set { this._obs = value; }
         }
     }
 }
