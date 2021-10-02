@@ -125,7 +125,7 @@ namespace Presentacion
         {
             this.seleccionado();
         }
-
+       
         private void btnguardar_Click(object sender, EventArgs e)
         {
             if ((txtnombre.Text == string.Empty)||(txttelefono.Text == string.Empty))
@@ -134,17 +134,26 @@ namespace Presentacion
             }
             else
             { 
+
                 Clientes cli = new Clientes();
-                cli.Nombre = txtnombre.Text;
                 cli.Telefono = txtcaracteristica.Text + txttelefono.Text;
+                //Controlo si existe telefono
+                int cantidad = cli.spControlaSiExisteTele(cli.Telefono);
+                if (cantidad > 0)
+                { MessageBox.Show("Este teléfono ya se encuentra cargado"); }
+                else
+                { 
+                cli.Nombre = txtnombre.Text;
+                
                 int valor = cli.spInsertarClienteReservas();
 
-                IClienteRe formInterClientes = this.Owner as IClienteRe;
-                if (formInterClientes != null)
-                {
-                    formInterClientes.agregacliente(valor, txtnombre.Text, txttelefono.Text);
-                    this.Dispose();
-                    this.Hide();
+                    IClienteRe formInterClientes = this.Owner as IClienteRe;
+                    if (formInterClientes != null)
+                    {
+                        formInterClientes.agregacliente(valor, txtnombre.Text, txttelefono.Text);
+                        this.Dispose();
+                        this.Hide();
+                    }
                 }
             }
         }

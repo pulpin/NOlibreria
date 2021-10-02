@@ -45,7 +45,6 @@ namespace Presentacion
 
 
         }
-
         private void altaReserva()
         {
             string retorno;
@@ -61,6 +60,7 @@ namespace Presentacion
                 }
                 else
                 { 
+
                     Productos pro = new Productos();
                     pro.Titulo = (txttitulo.Text).ToUpper();
                     pro.Autor = (txtautor.Text).ToUpper();
@@ -345,7 +345,7 @@ namespace Presentacion
             if (e.KeyCode == Keys.Enter)
             {
                 ConsultaClienteLi ccl = new ConsultaClienteLi();
-                ccl.Telefono = txttelefono.Text;
+                ccl.Telefono = txtcaracteristica.Text + txttelefono.Text;
                 ccl.Entranombre = 0;
                 ccl.inicio();
                 ccl.ShowDialog(this);
